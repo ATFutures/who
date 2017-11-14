@@ -1,6 +1,12 @@
 devtools::load_all ()
-message ("getting kathmandu schools ... ", appendLF = FALSE)
-get_who_data (city = "kathmandu", key = "building", value = "school")
-message ("\ndone; getting accra schools ... ", appendLF = FALSE)
-get_who_data (city = "accra", key = "building", value = "school")
+
+message ("getting kathmandu streets ... ", appendLF = FALSE)
+get_who_streets (city = "kathmandu")
+message ("\ndone; getting kathmandu buildings ... ", appendLF = FALSE)
+get_who_buildings (city = "kathmandu")
+
+message ("\ndone; getting accra streets ... ", appendLF = FALSE)
+get_who_streets (city = "accra")
+message ("\ndone; getting accra buildings ... ", appendLF = FALSE)
+get_who_buildings (city = "accra")
 message ("\ndone")

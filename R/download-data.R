@@ -1,45 +1,73 @@
-#' get_who_data
+#' get_who_streets
 #'
-#' Extract OSM data for given location (\code{city}), and save it in the data
-#' directory
-#' @param city Name of city for which data are to be obtained
-#' @param key List of OSM keys
-#' @param value List of corresponding OSM values
+#' Extract OSM streets for given location (\code{city}), and save them in the
+#' data directory
+#' @param city Name of city for which streets are to be obtained
 #' @return The \pkg{sf}-formatted data object (invisibly)
 #'
-#' @note \code{value} must either be \code{NULL}, or have the same length as
-#' \code{key}. To return all values for one particular \code{key} from a vector,
-#' set corresponding \code{value = ""}.
-#'
 #' @export
-get_who_data <- function (city = "kathmandu", key = NULL, value = NULL)
+get_who_streets <- function (city = "kathmandu")
 {
     region_shape <- getbb(place_name = city, format_out = "polygon")
     if (is.list (region_shape))
         region_shape <- region_shape [[1]]
 
-    if (length (key) == 1 & is.null (value))
-        value <- ""
-    else if (length (key) != length (value))
-        stop ("value must have same length as key")
+    dat <- osmdata::opq (bbox = city) %>%
+        osmdata::add_osm_feature (key = "highway") %>%
+        osmdata::osmdata_sf (quiet = FALSE) %>%
+        osmdata::trim_osmdata (region_shape) %>%
+        osmdata::osm_poly2line () %>%
+        magrittr::extract2 ("osm_lines")
 
-    q <- opq (bbox = city)
-    for (i in seq (key))
-        q <- add_osm_feature (q, key = key [i], value = value [i])
+    # Reduce to only fields with > 1 unique value
+    n <- apply (dat, 2, function (i) length (unique (i)))
+    dat <- dat [, which (n > 1)]
 
-    dat <- osmdata_sf (q) %>% trim_osmdata (region_shape)
-
-    nm <- paste0 (city, "_", key [1])
-    assign (nm, dat)
-    data_dir <- get_who_data_dir (city = city)
-    fname <- file.path (data_dir, paste0 (city, "-", value))
-    if (value [1] != "")
-        fname <- paste0 (fname, "-", key)
-    fname <- paste0 (fname, ".Rds")
-    saveRDS (get (nm), fname)
-    message ("saved ", fname)
+    write_who_data (dat, city = city, suffix = "hw")
 
     invisible (dat)
+}
+
+#' get_who_buildings
+#'
+#' Extract OSM buildings for given location (\code{city}), and save them in the
+#' data directory
+#' @param city Name of city for which buildings are to be obtained
+#' @return The \pkg{sf}-formatted data object (invisibly)
+#'
+#' @export
+get_who_buildings <- function (city = "kathmandu")
+{
+    region_shape <- getbb(place_name = city, format_out = "polygon")
+    if (is.list (region_shape))
+        region_shape <- region_shape [[1]]
+
+    dat <- osmdata::opq (bbox = city) %>%
+        osmdata::add_osm_feature (key = "building") %>%
+        osmdata::osmdata_sf (quiet = FALSE) %>%
+        osmdata::trim_osmdata (region_shape)
+
+    # Reduce to only fields with > 1 unique value
+    n <- apply (dat$osm_polygons, 2, function (i) length (unique (i)))
+    dat$osm_polygons <- dat$osm_polygons [, which (n > 1)]
+    n <- apply (dat$osm_multipolygons, 2, function (i) length (unique (i)))
+    dat$osm_multipolygons <- dat$osm_multipolygons [, which (n > 1)]
+
+    dat$osm_points <- dat$osm_lines <- dat$osm_multilines <- NULL
+
+    write_who_data (dat, city = city, suffix = "bldg")
+
+    invisible (dat)
+}
+
+write_who_data <- function (dat, city, suffix)
+{
+    nm <- paste0 (city, "_", suffix)
+    assign (nm, dat)
+    data_dir <- get_who_data_dir (city = city)
+    fname <- file.path (data_dir, paste0 (city, "-", suffix, ".Rds"))
+    saveRDS (get (nm), fname)
+    message ("saved ", fname)
 }
 
 #' get_who_data_dir
