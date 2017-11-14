@@ -4,7 +4,7 @@
 \alias{get_who_data}
 \title{get_who_data}
 \usage{
-get_who_data(city = "kathmandu", key, value)
+get_who_data(city = "kathmandu", key = NULL, value = NULL)
 }
 \arguments{
 \item{city}{Name of city for which data are to be obtained}
@@ -12,6 +12,9 @@ get_who_data(city = "kathmandu", key, value)
 \item{key}{List of OSM keys}
 
 \item{value}{List of corresponding OSM values}
+}
+\value{
+The \pkg{sf}-formatted data object (invisibly)
 }
 \description{
 Extract OSM data for given location (\code{city}), and save it in the data
