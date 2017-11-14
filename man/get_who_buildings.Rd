@@ -4,7 +4,7 @@
 \alias{get_who_buildings}
 \title{get_who_buildings}
 \usage{
-get_who_buildings(city = "kathmandu")
+get_who_buildings(city = "kathmandu", n = 2)
 }
 \arguments{
 \item{city}{Name of city for which buildings are to be obtained}

@@ -4,10 +4,12 @@
 \alias{get_who_streets}
 \title{get_who_streets}
 \usage{
-get_who_streets(city = "kathmandu")
+get_who_streets(city = "kathmandu", n = 1)
 }
 \arguments{
 \item{city}{Name of city for which streets are to be obtained}
+
+\item{n}{Number of chunks into which to divide the file (see details)}
 }
 \value{
 The \pkg{sf}-formatted data object (invisibly)
@@ -15,4 +17,9 @@ The \pkg{sf}-formatted data object (invisibly)
 \description{
 Extract OSM streets for given location (\code{city}), and save them in the
 data directory
+}
+\note{
+github only stores single files under 5MB, so setting n > 1 enables a
+file to be divided into individual chunks smaller than this limit which can
+be stored and easily \code{rbind}-ed back together on loading.
 }
