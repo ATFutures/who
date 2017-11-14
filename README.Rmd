@@ -1,0 +1,42 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# who
+
+The goal of who is to ...
+
+[![Build Status](https://travis-ci.org/ATFutures/who.svg)](https://travis-ci.org/ATFutures/who) 
+[![Project Status: Concept - Minimal or no implementation has been done yet.](http://www.repostatus.org/badges/0.1.0/concept.svg)](http://www.repostatus.org/#concept)
+
+### Installation
+
+```{r, eval=FALSE}
+devtools::install_github("ATFutures/who")
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+options(width=120)
+```
+
+### Usage
+
+```{r, eval=FALSE}
+library(who)
+
+# current verison
+packageVersion("who")
+
+```

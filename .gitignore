@@ -1,5 +1,6 @@
+aaa.Rmd
 .Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-who-data
+
+# vim files
+.*.un~
+.*.swp

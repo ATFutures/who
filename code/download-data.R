@@ -1,9 +1,6 @@
-devtools::load_all()
-# get input data
-region_name = "kathmandu"
-region_shape = getbb(place_name = region_name, format_out = "polygon")
-region_shape = region_shape[[1]]
-schools = opq(bbox = region_name) %>% 
-  add_osm_feature(key = "building", value = "school") %>% 
-  trim_osmdata(region_shape)
-saveRDS(schools, "who-data/schools.Rds")
+devtools::load_all ()
+message ("getting kathmandu schools ... ", appendLF = FALSE)
+get_who_data (city = "kathmandu", key = "building", value = "school")
+message ("\ndone; getting accra schools ... ", appendLF = FALSE)
+get_who_data (city = "accra", key = "building", value = "school")
+message ("\ndone")
