@@ -1,0 +1,12 @@
+[.]md$
+^README\.Rmd$
+^README\.md$
+^\.gitignore$
+^\.travis\.yml$
+^makefile$
+^vignettes/makefile$
+^.*\.Rproj$
+^aaa\.Rmd$
+^docs$
+^code$
+^\.Rproj\.user$
