@@ -1,8 +1,8 @@
 ---
 title: "Estimating cycling potential on the route network in Accra and Kathmandu: a feasibility study using open data and open source software"
-# output:
-#   md_document:
-#     variant: markdown_github
+output:
+  md_document:
+    variant: markdown_github
 # output: pdf_document
 author: ATFutures
 date: '`r Sys.Date()`'
