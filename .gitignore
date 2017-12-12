@@ -1,6 +1,7 @@
 aaa.Rmd
 .Rproj.user
-
 # vim files
 .*.un~
 .*.swp
+.Rhistory
+who-data
