@@ -18,3 +18,5 @@ id <- id [indx]
 dens <- dens [indx]
 
 s <- dodgr_spatial_interaction (net, nodes = id, dens = dens, k = 2)
+f <- dodgr_flows(net, id, id, flows = s, contract = T)
+dodgr_flowmap(f, "/data/who/flow")
