@@ -1,12 +1,15 @@
 ---
 title: "Estimating cycling potential on the route network in Accra and Kathmandu: a feasibility study using open data and open source software"
-output:
-  md_document:
-    variant: markdown_github
+# output:
+#   md_document:
+#     variant: markdown_github
 # output: pdf_document
 author: ATFutures
 date: '`r Sys.Date()`'
 bibliography: ../ATF-ideas/ATF.bib
+output: 
+  html_document: 
+    number_sections: yes
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
@@ -21,7 +24,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Introduction
+# Introduction
 
 There is now incontrovertible evidence of health benefits of active travel, especially cycling [e.g. @celis-morales_association_2017].
 This project aims to provide an evidence base to prioritise investment in cycling.
@@ -47,9 +50,34 @@ Comparing the cities at the outset will help put the results in perspective and 
 
 ## An overview of Accra from an active travel perspective
 
+Monsuru (1 day's work)
+
+- Institutions working in transport and their aims
+- References about the transport system in Accra
+- Photos of current set-up
+- What is the current modal split?
+- Recent transport policies.
+- How well developed are other infrastructures (e.g. sewerage.)
+
 ## An overview of Kathmandu from an active travel perspective
 
 # Results I: Accra
+
+## Data quality
+
+- How well is the road network represented on OSM?
+
+```{r, fig.cap="Overview of Accra"}
+knitr::include_graphics("fig/accra-osm-overview.png")
+```
+
+
+The aggregated flows for Accra are illustrated below.
+
+```{r, fig.cap="Aggregated flows for Kathmandu", out.width="100%"}
+knitr::include_graphics("fig/test.png")
+```
+
 
 # Results II: Kathmandu
 
@@ -72,3 +100,5 @@ Comparing the cities at the outset will help put the results in perspective and 
 # References
 
 <!-- Anything else to consider here guys? -->
+
+

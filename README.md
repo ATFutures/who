@@ -30,8 +30,6 @@ An overview of Kathmandu from an active travel perspective
 Results I: Accra
 ================
 
-![](./fig/test.png)
-
 Results II: Kathmandu
 =====================
 
