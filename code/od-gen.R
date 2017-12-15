@@ -20,3 +20,7 @@ dens <- dens [indx]
 s <- dodgr_spatial_interaction (net, nodes = id, dens = dens, k = 2)
 f <- dodgr_flows(net, id, id, flows = s, contract = T)
 dodgr_flowmap(f, "/data/who/flow")
+rnet_g <- dodgr_to_sf(net) 
+length(rnet_g)
+nrow(f)
+rnet = st_sf(geometry = rnet_g, f)
