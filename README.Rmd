@@ -78,6 +78,14 @@ The aggregated flows for Accra are illustrated below.
 knitr::include_graphics("fig/test.png")
 ```
 
+We have developed a method for re-allocating the results of the routing algorithm back onto the road network.
+A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version](http://rpubs.com/RobinLovelace/341996)):
+
+```{r, echo=FALSE}
+knitr::include_graphics("fig/accra-flow1-interactive.png")
+```
+
+
 
 # Results II: Kathmandu
 

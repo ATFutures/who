@@ -63,3 +63,8 @@ match_to_sf <- function (flows, finite = TRUE)
     return (sf_xy)
 }
 flows <- match_to_sf (flows, finite = TRUE)
+tmap_mode("view")
+tm_shape(flows) +
+  tm_lines(col = "flow", lwd = "flow", scale = 20, alpha = 0.8,
+           palette = viridis::viridis(n=5, direction = -1,option = "C"), breaks = c(0, 500, 1000, 2000)) +
+  tm_scale_bar()
