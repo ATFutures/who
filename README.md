@@ -1,7 +1,7 @@
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
 Can go elsewhere, e.g. as a vignette before this is open sourced. -->
 Introduction
-------------
+============
 
 There is now incontrovertible evidence of health benefits of active travel, especially cycling (e.g. Celis-Morales et al. 2017). This project aims to provide an evidence base to prioritise investment in cycling.
 
@@ -24,11 +24,41 @@ This section provides a high-level overview about the geography of each city as 
 An overview of Accra from an active travel perspective
 ------------------------------------------------------
 
+Monsuru (1 day's work)
+
+-   Institutions working in transport and their aims
+-   References about the transport system in Accra
+-   Photos of current set-up
+-   What is the current modal split?
+-   Recent transport policies.
+-   How well developed are other infrastructures (e.g. sewerage.)
+
 An overview of Kathmandu from an active travel perspective
 ----------------------------------------------------------
 
 Results I: Accra
 ================
+
+Data quality
+------------
+
+-   How well is the road network represented on OSM?
+
+<img src="fig/accra-osm-overview.png" alt="Overview of Accra" width="1577" />
+<p class="caption">
+Overview of Accra
+</p>
+
+The aggregated flows for Accra are illustrated below.
+
+<img src="fig/test.png" alt="Aggregated flows for Kathmandu" width="100%" />
+<p class="caption">
+Aggregated flows for Kathmandu
+</p>
+
+We have developed a method for re-allocating the results of the routing algorithm back onto the road network. A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version](http://rpubs.com/RobinLovelace/341996)):
+
+<img src="fig/accra-flow1-interactive.png" width="1911" />
 
 Results II: Kathmandu
 =====================

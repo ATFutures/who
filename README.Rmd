@@ -1,15 +1,15 @@
 ---
 title: "Estimating cycling potential on the route network in Accra and Kathmandu: a feasibility study using open data and open source software"
-# output:
-#   md_document:
-#     variant: markdown_github
+output:
+  md_document:
+    variant: markdown_github
 # output: pdf_document
 author: ATFutures
 date: '`r Sys.Date()`'
 bibliography: ../ATF-ideas/ATF.bib
-output: 
-  html_document: 
-    number_sections: yes
+# output: 
+#   html_document: 
+#     number_sections: yes
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
