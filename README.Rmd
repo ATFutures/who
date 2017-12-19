@@ -91,6 +91,17 @@ knitr::include_graphics("fig/accra-flow1-interactive.png")
 
 # Data deliverables
 
+The OpenStreetMap network for Accra has 145,827 street segments connecting
+131,349 distinct points, and extends over 4,072km. The OSM data also include
+24,490 buildings, of which 23,102 include geometric descriptions only, while the
+remaining 1,388 buildings are divided between 28 distinct categories.
+
+The equivalent network for Kathmandu has 79,832 street segments connecting
+37,770 distinct points, and extends of 1,062km. The OSM data also include 82,333
+buildings of which 75.778 include geometric descriptions only, while the
+remaining 6,555 are divided between 344 distinct categories (in this case
+including many named buildings).
+
 # Discussion
 
 ## Policy relevance of results
