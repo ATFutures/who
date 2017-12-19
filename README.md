@@ -66,9 +66,23 @@ Results II: Kathmandu
 Data deliverables
 =================
 
+OpenStreetMap data
+------------------
+
 The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km. The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
 
-The equivalent network for Kathmandu has 79,832 street segments connecting 37,770 distinct points, and extends of 1,062km. The OSM data also include 82,333 buildings of which 75.778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
+The equivalent network for Kathmandu has 79,832 street segments connecting 37,770 distinct points, and extends over 1,062km. The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
+
+City | Num. Street Segments | Num. OSM Data points | Road Lengths (km) | Num. Buildings (all) | Num. Buildings (no description) | Num. Building Classes | --- | --- | --- | --- | --- | --- | --- | | Accra | 145,827 | 131,349 | 4,072 | 24,490 | 23,102 | 28 | | Kathmandu | 79,832 | 37,770 | 1,062 | 82,333 | 75,778 | 344 |
+
+The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
+
+Demographic data
+----------------
+
+Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells. Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
+
+Demographic data for Kathmandu are not as detailed, and also do not include age classes...
 
 Discussion
 ==========
