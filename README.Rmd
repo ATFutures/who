@@ -112,7 +112,8 @@ including many named buildings).
 
 ```{r, echo=FALSE}
 r = readRDS("extdata/r.rds")
-knitr::kable(r)
+names(r) = c("City", "Street nodes", "Street segments", "Network distance (km)", "Population (on network)", "N. Buildings", "nb_no_desc", "Num. Building Classes")
+knitr::kable(r[-7])
 ```
 
 
