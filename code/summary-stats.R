@@ -18,6 +18,12 @@ count_streets <- function (city = "accra")
              " vertices and ", format (nrow (net), big.mark = ","),
              " edges for ", format (round (sum (net$d)), big.mark = ","),
              "km of streets")
+    out <- data.frame(
+      vertices = nrow (verts),
+      edges = nrow (net),
+      net_dist = round (sum (net$d))
+    )
+    return(out)
 }
 
 count_buildings <- function (city = "accra")
@@ -56,6 +62,12 @@ count_buildings <- function (city = "accra")
              format (nbuildings - nno_description, big.mark = ","),
              " are divded between ", length (tb) - 1,
              " distinct building types (including building names)")
+    out <- data.frame(
+      nbuildings = nbuildings,
+      nb_no_desc = nno_description,
+      n_btypes = length (tb) - 1
+    )
+    return(out)
 }
 
 count_popdens_nodes <- function (city = "accra")
@@ -64,4 +76,19 @@ count_popdens_nodes <- function (city = "accra")
     nodes <- readRDS (file.path (data_dir, city, "osm", "nodes_new.Rds"))
     message ("Population density contains values for ",
              format (nrow (nodes), big.mark = ","), " points")
+    out <- data.frame(
+      pop = sum(nodes$pop, na.rm = T)
+      # pop_per_node = sum(nodes$pop) / nrow (nodes)
+    )
+    return(out)
 }
+
+cities = c("accra", "kathmandu")
+s = purrr::map_df(cities, count_streets)
+p = purrr::map_df(cities[1], count_popdens_nodes)
+p[2, ] = NA
+b = purrr::map_df(cities, count_buildings)
+
+r = cbind(cities, s, p, b)
+dir.create("extdata")
+saveRDS(r, "extdata/r.rds")

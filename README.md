@@ -73,7 +73,15 @@ The OpenStreetMap network for Accra has 145,827 street segments connecting 131,3
 
 The equivalent network for Kathmandu has 79,832 street segments connecting 37,770 distinct points, and extends over 1,062km. The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
 
-City | Num. Street Segments | Num. OSM Data points | Road Lengths (km) | Num. Buildings (all) | Num. Buildings (no description) | Num. Building Classes | --- | --- | --- | --- | --- | --- | --- | | Accra | 145,827 | 131,349 | 4,072 | 24,490 | 23,102 | 28 | | Kathmandu | 79,832 | 37,770 | 1,062 | 82,333 | 75,778 | 344 |
+<!-- City | Num. Street Segments | Num. OSM Data points | Road Lengths (km) | Num. Buildings (all) | -->
+<!-- Num. Buildings (no description) | Num. Building Classes -->
+<!-- | --- | --- | --- | --- | --- | --- | --- | -->
+<!-- | Accra | 145,827 | 131,349 | 4,072 | 24,490 | 23,102 | 28 | -->
+<!-- | Kathmandu | 79,832 | 37,770 | 1,062 | 82,333 | 75,778 | 344 | -->
+| cities    |  vertices|   edges|  net\_dist|      pop|  nbuildings|  nb\_no\_desc|  n\_btypes|
+|:----------|---------:|-------:|----------:|--------:|-----------:|-------------:|----------:|
+| accra     |    131349|  145827|       4072|  2238470|       24490|         23102|         29|
+| kathmandu |     37770|   40405|        539|       NA|       82333|         75778|        344|
 
 The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
 
