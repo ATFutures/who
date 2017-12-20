@@ -50,6 +50,16 @@ Data were accessed from the following sources:
 <!-- former provides static fine-resolution data (100$m^2$, for the year 2013 only), while the latter provides coarser (1$km^2$) future projections -->
 <!-- out to 2020. -->
 
+# Methods
+
+We have made a number of technical breakthroughs that allow us to estimate cycling potential down to the road network level based on open data.
+This involved implementing a highly computationally efficient routing algorithm in C++.
+Since commencing the project we have developed a method for re-allocating the results of the routing algorithm back onto the road network.
+A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version](http://rpubs.com/RobinLovelace/341996)):
+
+```{r, echo=FALSE, fig.cap="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential."}
+knitr::include_graphics("fig/accra-flow1-interactive.png")
+```
 
 # City overviews
 
@@ -57,48 +67,7 @@ This section provides a high-level overview about the geography of each city as 
 Both cities are included in this section, laying the ground for the next two sections which provide detailed results for Accra and then Kathmandu.
 Comparing the cities at the outset will help put the results in perspective and lay the foundation for a discussion of how a tool building on this work could be useful to different stakeholders in each city.
 
-## An overview of Accra from an active travel perspective
-
-Monsuru (1 day's work)
-
-- Institutions working in transport and their aims
-- References about the transport system in Accra
-- Photos of current set-up
-- What is the current modal split?
-- Recent transport policies.
-- How well developed are other infrastructures (e.g. sewerage.)
-
-## An overview of Kathmandu from an active travel perspective
-
-# Results I: Accra
-
-## Data quality
-
-- How well is the road network represented on OSM?
-
-```{r, fig.cap="Overview of Accra"}
-knitr::include_graphics("fig/accra-osm-overview.png")
-```
-
-
-The aggregated flows for Accra are illustrated below.
-
-```{r, fig.cap="Aggregated flows for Kathmandu"}
-knitr::include_graphics("fig/test.png")
-```
-
-We have developed a method for re-allocating the results of the routing algorithm back onto the road network.
-A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version](http://rpubs.com/RobinLovelace/341996)):
-
-```{r, echo=FALSE, fig.cap="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential."}
-knitr::include_graphics("fig/accra-flow1-interactive.png")
-```
-
-
-
-# Results II: Kathmandu
-
-# Data deliverables
+We already have some results from the OSM and demographic datasets, as outlined below.
 
 ## OpenStreetMap data
 
@@ -133,9 +102,57 @@ Estimates are available for total population density, as well as distributed
 between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
 
 Demographic data for Kathmandu are not as detailed, and also do not include age
-classes...
+classes.
+
+## An overview of Accra from an active travel perspective
+
+<!-- Monsuru (1 day's work) -->
+This section will provide background information on the following topics:
+
+- Institutions working in transport and their aims
+- References about the transport system in Accra
+- Photos of current set-up
+- What is the current modal split?
+- Recent transport policies.
+- How well developed are other infrastructures (e.g. sewerage.)
+
+## An overview of Kathmandu from an active travel perspective
+
+This section will provide background information on the following topics:
+
+- Institutions working in transport and their aims
+- References about the transport system in Accra
+- Photos of current set-up
+- What is the current modal split?
+- Recent transport policies.
+- How well developed are other infrastructures (e.g. sewerage.)
+
+# Results I: Accra
+
+This section is work in progress.
+We will explore how well the OSM road network illustrated in the map below represents the true state of the transport system.
+
+```{r, fig.cap="Overview of Accra"}
+knitr::include_graphics("fig/accra-osm-overview.png")
+```
+
+The result of an early uncalibrated model run for Accra are illustrated below.
+
+```{r, fig.cap="Aggregated flows for Kathmandu"}
+knitr::include_graphics("fig/test.png")
+```
+
+# Results II: Kathmandu
+
+This section is work in progress.
+
+# Validation and calibration
+
+This section is work in progress.
 
 # Discussion
+
+This section is work in progress.
 
 ## Policy relevance of results
 
@@ -148,6 +165,8 @@ classes...
 ## The potential uses of an online toolkit
 
 # Next steps
+
+This section is work in progress.
 
 # References
 
