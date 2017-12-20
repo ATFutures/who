@@ -6,7 +6,7 @@ title: "Estimating cycling potential on the route network in Accra and Kathmandu
 # output: pdf_document
 author: ATFutures
 date: '`r Sys.Date()`'
-bibliography: ../ATF-ideas/ATF.bib
+bibliography: who.bib
 output:
   pdf_document:
     number_sections: yes
@@ -42,8 +42,8 @@ This document represents an *interim report* on progress during the first week o
 
 Data were accessed from the following sources:
 
-- Transport network and building data from **OpenStreetMap (OSM)**, an open access, freely available, crowd-sourced online mapping database.
-- Population density and some demographic data from [worldpop](http://www.worldpop.org.uk/)
+- Transport network and building data from **OpenStreetMap (OSM)**, an open access, freely available, crowd-sourced online mapping database [@barrington-leigh_world_2017].
+- Population density and some demographic data from [worldpop](http://www.worldpop.org.uk/) [@tatem_worldpop_2017]
 <!-- - Topographic data from NASA's open SRTM data -->
 
 <!-- Additional data on population densities will be obtained from WorldPop and from NASA's Socioeconomic Data and Applications Center (SDAC). The -->
