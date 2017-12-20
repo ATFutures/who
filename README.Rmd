@@ -36,11 +36,13 @@ However many transport authorities lack strong and actionable evidence to suppor
 
 This project aims to tackle these problems by assessing the feasibility of tools to provide *actionable*, *publicly accessible* and *geographically detailed* evidence to prioritise investment in cycling for the case study cities of Accra and Kathmandu.
 
+This document represents an *interim report* on progress during the first week of this month-long project, which commenced on 18^th^ December 2017.
+
 # Input data
 
 Data were accessed from the following sources:
 
-- Transport network and building data from ***OpenStreetMap (OSM)**, an open access, freely available, crowd-sourced online mapping database.
+- Transport network and building data from **OpenStreetMap (OSM)**, an open access, freely available, crowd-sourced online mapping database.
 - Population density and some demographic data from [worldpop](http://www.worldpop.org.uk/)
 <!-- - Topographic data from NASA's open SRTM data -->
 
