@@ -27,8 +27,14 @@ knitr::opts_chunk$set(
 
 # Introduction
 
-There is now incontrovertible evidence of health benefits of active travel, especially cycling [e.g. @celis-morales_association_2017].
-This project aims to provide an evidence base to prioritise investment in cycling.
+With mounting evidence of health [@celis-morales_association_2017], environmental and social benefits of active travel, many cities are preparing ambitious walking and cycling plans.
+However many transport authorities lack strong and actionable evidence to support this investment for a number of reasons, including:
+
+- transport models have tended to focus on motor vehicles [@boyce_forecasting_2015]
+- data on active travel tends to be sparse and inaccessible [@kuzmyak_estimating_2014]
+- data and models that are available tend to be unavailable for many potential stakeholders (e.g. civil society groups) and in a format that is difficult to understand and use [@naess_transport_2014]
+
+This project aims to tackle these problems by assessing the feasibility of tools to provide *actionable*, *publicly accessible* and *geographically detailed* evidence to prioritise investment in cycling for the case study cities of Accra and Kathmandu.
 
 # Input data
 
