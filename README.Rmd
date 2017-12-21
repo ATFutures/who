@@ -4,7 +4,7 @@ title: "Estimating cycling potential on the route network in Accra and Kathmandu
 #   md_document:
 #     variant: markdown_github
 # output: pdf_document
-author: ATFutures
+author: Robin Lovelace and Mark Padgham
 date: '`r Sys.Date()`'
 bibliography: who.bib
 output:
@@ -72,6 +72,8 @@ Kathmandu has a population of just over 1.2 million, according to the [World Pop
 
 We already have some results from the OSM and demographic datasets, as outlined below.
 
+\newpage
+
 ## OpenStreetMap data
 
 The OpenStreetMap network for Accra has 145,827 street segments connecting
@@ -88,7 +90,7 @@ including many named buildings).
 ```{r, echo=FALSE}
 r = readRDS("extdata/r.rds")
 names(r) = c("City", "Street nodes", "Street segments", "Network distance (km)", "Population (on network)", "N. Buildings", "nb_no_desc", "Num. Building Classes")
-knitr::kable(r[1:4], caption = "Network characteristics of OSM route network data for case study cities.")
+knitr::kable(r[c(1, 5, 6, 8)], caption = "Basic OSM characteristics of case study cities")
 ```
 
 
@@ -96,6 +98,11 @@ The street network for Accra is more extensive, reflecting the greater spatial
 extent of the city, while data on buildings are considerable more detailed for
 Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping
 activity in response to the 2015 earthquake.
+
+```{r}
+knitr::kable(r[1:4], caption = "Characteristics of OSM route network data for case study cities.")
+```
+
 
 ## Demographic data
 
@@ -135,15 +142,11 @@ This section will provide background information on the following topics:
 This section is work in progress.
 We will explore how well the OSM road network illustrated in the map below represents the true state of the transport system.
 
-```{r, fig.cap="Overview of Accra"}
-knitr::include_graphics("fig/accra-osm-overview.png")
+```{r, fig.cap="Overview of Accra (left) and initial results of cycling potential (right).", fig.show='hold', out.width="49%"}
+knitr::include_graphics(c("fig/accra-osm-overview.png", "fig/test.png"))
 ```
 
-The result of an early uncalibrated model run for Accra are illustrated below.
-
-```{r, fig.cap="Aggregated flows for Kathmandu"}
-knitr::include_graphics("fig/test.png")
-```
+We have generated estimates for cycling potential across the larger of the two case study cities. The priority over the next 3 weeks of the project will be to calibrate this model and apply refined versions of it to both cities, using additional input datasets where available.
 
 # Results II: Kathmandu
 
