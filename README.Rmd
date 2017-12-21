@@ -67,6 +67,9 @@ This section provides a high-level overview about the geography of each city as 
 Both cities are included in this section, laying the ground for the next two sections which provide detailed results for Accra and then Kathmandu.
 Comparing the cities at the outset will help put the results in perspective and lay the foundation for a discussion of how a tool building on this work could be useful to different stakeholders in each city.
 
+Accra is the larger city, with a population approaching 5 million and a growth rate of around 3% per year in the Greater Accra Region according to the [Ghana Statistical Service](http://www.statsghana.gov.gh/docfiles/2010phc/Projected%20population%20by%20sex%202010%20-%202016.pdf).
+Kathmandu has a population of just over 1.2 million, according to the [World Population Review](http://worldpopulationreview.com/world-cities/kathmandu-population/).
+
 We already have some results from the OSM and demographic datasets, as outlined below.
 
 ## OpenStreetMap data
@@ -85,7 +88,7 @@ including many named buildings).
 ```{r, echo=FALSE}
 r = readRDS("extdata/r.rds")
 names(r) = c("City", "Street nodes", "Street segments", "Network distance (km)", "Population (on network)", "N. Buildings", "nb_no_desc", "Num. Building Classes")
-knitr::kable(r[-7])
+knitr::kable(r[1:4], caption = "Network characteristics of OSM route network data for case study cities.")
 ```
 
 
