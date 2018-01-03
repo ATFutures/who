@@ -73,14 +73,23 @@ An overview of Accra from an active travel perspective
 ------------------------------------------------------
 
 <!-- Monsuru (1 day's work) -->
-This section will provide background information on the following topics:
+<!-- This section will provide background information on the following topics: -->
+<!-- - Institutions working in transport and their aims -->
+<!-- - References about the transport system in Accra -->
+<!-- - Photos of current set-up -->
+<!-- - What is the current modal split? -->
+<!-- - Recent transport policies. -->
+<!-- - How well developed are other infrastructures (e.g. sewerage.) -->
+### Greater Accra Metropolitan Area (GAMA)
 
--   Institutions working in transport and their aims
--   References about the transport system in Accra
--   Photos of current set-up
--   What is the current modal split?
--   Recent transport policies.
--   How well developed are other infrastructures (e.g. sewerage.)
+The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Fig. xx). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Fifty six percent of the population is estimated to be under 24 years of age, with fifty-one percent (51%) of the population being females, and the remaining 49% males, giving a male-to-female ratio of 1:1.04.
+
+<img src="fig/study-area-accra.png" alt="Geographical location of Greater Accra Metropolitan Area (GAMA)" width="100%" />
+<p class="caption">
+Geographical location of Greater Accra Metropolitan Area (GAMA)
+</p>
+
+Accra city comprises 10 of the 216 local authority districts of the Republic of Ghana. Administratively, the Accra Metropolitan local authority district serves as the capital of Accra city, and is administered by Accra Metropolitan Assembly, which is the political and administrative authority for the entire Accra city.
 
 (Quarshie 2007)
 
