@@ -1,15 +1,14 @@
 ---
 title: "Estimating cycling potential on the route network in Accra and Kathmandu: a feasibility study using open data and open source software"
-# output:
-#   md_document:
-#     variant: markdown_github
-# output: pdf_document
+output:
+  md_document:
+    variant: markdown_github
 author: Robin Lovelace and Mark Padgham
 date: '`r Sys.Date()`'
 bibliography: who.bib
-output:
-  pdf_document:
-    number_sections: yes
+# output:
+#   pdf_document:
+#     number_sections: yes
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
@@ -23,6 +22,8 @@ knitr::opts_chunk$set(
   fig.path = "README-",
   echo = FALSE
 )
+# add citation
+# citr::tidy_bib_file(rmd_file = "README.Rmd", messy_bibliography = "~/allrefs.bib", file = "who.bib")
 ```
 
 # Introduction
@@ -42,7 +43,7 @@ This document represents an *interim report* on progress during the first week o
 
 Data were accessed from the following sources:
 
-- Transport network and building data from **OpenStreetMap (OSM)**, an open access, freely available, crowd-sourced online mapping database [@barrington-leigh_world_2017].
+- Transport network and building data from **OpenStreetMap (OSM)**, an open access, freely available, crowd-sourced online mapping database [@barrington-leigh_worlds_2017].
 - Population density and some demographic data from [worldpop](http://www.worldpop.org.uk/) [@tatem_worldpop_2017]
 <!-- - Topographic data from NASA's open SRTM data -->
 
@@ -125,6 +126,8 @@ This section will provide background information on the following topics:
 - What is the current modal split?
 - Recent transport policies.
 - How well developed are other infrastructures (e.g. sewerage.)
+
+[@quarshie_integrating_2007]
 
 ## An overview of Kathmandu from an active travel perspective
 
