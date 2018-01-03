@@ -1,5 +1,20 @@
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
 Can go elsewhere, e.g. as a vignette before this is open sourced. -->
+References to add - for Monsuru - delete this section when added:
+=================================================================
+
+(Agyemang 2015b)
+
+(Agyemang 2015a)
+
+(Agyemang 2014)
+
+(Birago, Opoku Mensah, and Sharma 2017)
+
+(Deng and Nelson 2011)
+
+(Levinson et al. 2003)
+
 Introduction
 ============
 
@@ -152,13 +167,25 @@ References
 ==========
 
 <!-- Anything else to consider here guys? -->
+Agyemang, Ernest. 2014. *Traffic Congestion & Public Transport in Ghana:A Triangulated Analysis*. Place of publication not identified: LAP LAMBERT Academic Publishing.
+
+———. 2015a. “The Bus Rapid Transit System in the Greater Accra Metropolitan Area, Ghana: Looking Back to Look Forward.” *Norsk Geografisk Tidsskrift - Norwegian Journal of Geography* 69 (1): 28–37. doi:[10.1080/00291951.2014.992808](https://doi.org/10.1080/00291951.2014.992808).
+
+———. 2015b. *The Bus Rapid Transit System in the Greater Accra Metropolitan Area, Ghana: Looking Back to Look Forward*. Vol. 69. doi:[10.1080/00291951.2014.992808](https://doi.org/10.1080/00291951.2014.992808).
+
 Barrington-Leigh, Christopher, and Adam Millard-Ball. 2017. “The World’s User-Generated Road Map Is More Than 80% Complete.” *PLOS ONE* 12 (8): e0180698. doi:[10.1371/journal.pone.0180698](https://doi.org/10.1371/journal.pone.0180698).
+
+Birago, Dora, Seth Opoku Mensah, and Somesh Sharma. 2017. “Level of Service Delivery of Public Transport and Mode Choice in Accra, Ghana.” *Transportation Research Part F: Traffic Psychology and Behaviour*, Special issue on special road safety as reflected by empirical non-crash data, 46 (Part B): 284–300. doi:[10.1016/j.trf.2016.09.033](https://doi.org/10.1016/j.trf.2016.09.033).
 
 Boyce, David E., and Huw C. W. L. Williams. 2015. *Forecasting Urban Travel: Past, Present and Future*. Edward Elgar Publishing.
 
 Celis-Morales, Carlos A, Donald M Lyall, Paul Welsh, Jana Anderson, Lewis Steell, Yibing Guo, Reno Maldonado, et al. 2017. “Association Between Active Commuting and Incident Cardiovascular Disease, Cancer, and Mortality: Prospective Cohort Study.” *BMJ*, April, j1456. doi:[10.1136/bmj.j1456](https://doi.org/10.1136/bmj.j1456).
 
+Deng, Taotao, and John D. Nelson. 2011. “Recent Developments in Bus Rapid Transit: A Review of the Literature.” *Transport Reviews* 31 (1): 69–96. doi:[10.1080/01441647.2010.492455](https://doi.org/10.1080/01441647.2010.492455).
+
 Kuzmyak, J. Richard, Jerry Walters, Mark Bradley, and KM Kockelman. 2014. *Estimating Bicycling and Walking for Planning and Project Development*. Nchrp National Cooperative Highway Research Program Report 770. Washington, DC: Transportation Research Board of the National Academies.
+
+Levinson, Herbert, Samuel Zimmerman, Jennifer Clinger, Scott Rutherford, Rodney Smith, John Cracknell, Richard Soberman, Transportation Research Board, Engineering National Academies of Sciences, and edicine. 2003. *Bus Rapid Transit, Volume 2: Implementation Guidelines*. Washington, D.C.: Transportation Research Board. doi:[10.17226/21947](https://doi.org/10.17226/21947).
 
 Naess, Petter, Jeppe Andersen, Morten Skou Nicolaisen, and Arvid Strand. 2014. “Transport Modelling in the Context of the ‘Predict and Provide’Paradigm.” *European Journal of Transport and Infrastructure Research* 14 (2): 102–21. <http://vbn.aau.dk/ws/files/197640305/N_ss_et_al._2014_Transport_modelling_in_the_context_of_the_predict_and_provide_paradigm.pdf>.
 

@@ -26,6 +26,20 @@ knitr::opts_chunk$set(
 # citr::tidy_bib_file(rmd_file = "README.Rmd", messy_bibliography = "~/allrefs.bib", file = "who.bib")
 ```
 
+# References to add - for Monsuru - delete this section when added:
+
+[@agyemang_bus_2015]
+
+[@agyemang_bus_2015a]
+
+[@agyemang_traffic_2014]
+
+[@birago_level_2017]
+
+[@deng_recent_2011]
+
+[@levinson_bus_2003]
+
 # Introduction
 
 With mounting evidence of health [@celis-morales_association_2017], environmental and social benefits of active travel, many cities are preparing ambitious walking and cycling plans.
