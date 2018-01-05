@@ -1,19 +1,5 @@
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
 Can go elsewhere, e.g. as a vignette before this is open sourced. -->
-References to add - for Monsuru - delete this section when added:
-=================================================================
-
-(Agyemang 2015b)
-
-(Agyemang 2015a)
-
-(Agyemang 2014)
-
-(Birago, Opoku Mensah, and Sharma 2017)
-
-(Deng and Nelson 2011)
-
-(Levinson et al. 2003)
 
 Introduction
 ============
