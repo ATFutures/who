@@ -270,30 +270,6 @@ This section is work in progress.
 
 # References
 
-Addo, S.T. (2002). “Provision of urban transport services in Accra,” SSATP Annual Conference and Stakeholders' Meeting, Accra, Ghana.
-
-Agyemang, E. 2009. Traffic Congestion: The Bane of a Bus Rapid Transit System in Accra, Ghana? Mphil thesis. Trondheim: Norwegian University of Science and Technology.
-
-Agyemang, E. 2013. Traffic Congestion & Public Transport in Ghana: A Triangulated Analysis. [Saarbrücken]: LAP LAMBERT Academic Publishing.
-
-Agyemang, E., 2015. The bus rapid transit system in the Greater Accra Metropolitan Area, Ghana: Looking back to look forward. Norsk Geografisk Tidsskrift-Norwegian Journal of Geography, 69(1), pp.28-37.
-
-Armah, F.A., Yawson, D.O. and Pappoe, A.A., 2010. A systems dynamics approach to explore traffic congestion and air pollution link in the city of Accra, Ghana. Sustainability, 2(1), pp.252-265.
-
-Birago, D., Mensah, S.O. and Sharma, S., 2017. Level of service delivery of public transport and mode choice in Accra, Ghana. Transportation research part F: traffic psychology and behaviour, 46, pp.284-300.
-
-Deng, T. & Nelson, J. 2011. Recent developments in bus rapid transit: A review of the literature. Transport Reviews 31, 69–96.
-
-Ghana, Y.P.I., 2013. Children, Adolescents & Young People In Ghana. Source: http://www.statsghana.gov.gh/docfiles/publications/
-
-Levinson, H., Zimmerman, S., Clinger, J., Gast, J., Rutherford, S. & Bruhn, E. 2003. Bus Rapid Transit: Implementation Guidelines, Vol. 2. Transit Cooperative Research Program (TCRP) Report 90. Washington, D.C.: Transportation Research Board of the National Academies.
-
-Oteng-Ababio, M. and Agyemang, E., 2012. Virtue out of necessity? Urbanisation, urban growth and Okada services in Accra, Ghana. Journal of Geography and Geology, 4(1), p.148.
-
-Quarshie, M., 2007. Integrating cycling in bus rapid transit system in Accra. In Highway and Urban Environment (pp. 103-116). Springer, Dordrecht.
-
-World Bank, 2010. Intelligent Transport Systems for Urban Transport. https://www.ssatp.org/sites/ssatp/files/publications/. Accessed on 04/01/2018.
-
 
 <!-- Anything else to consider here guys? -->
 
