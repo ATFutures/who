@@ -28,8 +28,6 @@ knitr::opts_chunk$set(
 
 # References to add - for Monsuru - delete this section when added:
 
-[@agyemang_bus_2015]
-
 [@agyemang_bus_2015a]
 
 [@agyemang_traffic_2014]
@@ -172,11 +170,14 @@ Over a half (56%) of daily passengers in Accra are carried by buses, and a furth
 
 **Issues with public transport**
 
-The public transport operators have been criticised for their disregard of operational standards and the safety of passengers, especially during late evening operation (Agyemang, 2015). It has been found that the transport unions had not been able to regulate some of the behaviour of their members (Addo, 2002). For example, it is a common practice amongst the drivers to increase their fares, especially after heavy downpours, at peak-hour times, or after slight fuel hikes. There are no regulations in place by the union to combat some of these unacceptable practices (Agyemang, 2009; 2013). Similar practices can also be observed amongst the taxis operators, who often charge twice or triple the bus journey fares (Addo, 2002).
+The public transport operators have been criticised for their disregard of operational standards and the safety of passengers, especially during late evening operation [@agyemang_bus_2015]. It has been found that the transport unions had not been able to regulate some of the behaviour of their members (Addo, 2002). For example, it is a common practice amongst the drivers to increase their fares, especially after heavy downpours, at peak-hour times, or after slight fuel hikes. There are no regulations in place by the union to combat some of these unacceptable practices (Agyemang, 2009; 2013). Similar practices can also be observed amongst the taxis operators, who often charge twice or triple the bus journey fares (Addo, 2002).
 
 ```{r, fig.cap="The mini buses at a terminal loading passengers"}
 knitr::include_graphics("fig/buses_at_terminal.png")
 ```
+<!-- **Governments efforts to address the issues** -->
+<!-- As a social policy intervention in 2003, the government instituted the Metro Mass Transit (MMT), a bus rapid transit (BRT)-like system for commuters within Accra city and beyond. This constituted the third generation of transport interventions in Accra, purposely to keep the activities of private operators in check, alongside encouraging better service. The first, in the late 80s and early 90s, and the second, in the late 90s, were infrastructure upgrades for roads and corresponding drainage. The coverage of the MMT network constituted only 3% of all the passengers’ movements and functioned until 2007 when it was phased out due to its inability to achieve its goals, which included providing adequate competitive environment in order to enforce good public transport services [@agyemang_traffic_2014]. Moreover, the MMT services ended up not being different to the existing transport services, due to the lack of several of the main components needed for ‘proper’ bus rapid transit infrastructures (Levinson et al., 2003; Deng and Nelson, 2011), such as dedicated bus lanes and enhanced ticketing systems -->
+
 <!-- In its continued effort to intervene in traffic management, the government commenced with a proper ‘BRT’ project in 2012, to cover Accra city and other major cities, such as the Ashanti Region and the Central Region of Ghana. Totalling $95 million, the project was supported by various financing from development partners, such as the World Bank, Agence Francaise de Development, and also received co-financing from the Federal government of Ghana. The new BRT system was meant to begin full operation in November of 2017.  -->
 
 <!-- **Some stats on daily travels within Accra.** -->
