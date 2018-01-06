@@ -84,7 +84,7 @@ An overview of Accra from an active travel perspective
 
 The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Fig. 1). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Forty three percent of the population is estimated to be between the age of 15 and 35 years.(Ghana, Y.P.I., 2013).
 
-<img src="fig/study-area-accra.png" alt="Geographical location of Greater Accra Metropolitan Area (GAMA)" width="100%" />
+<img src="fig/study-area-accra_2.png" alt="Geographical location of Greater Accra Metropolitan Area (GAMA)" width="100%" />
 <p class="caption">
 Geographical location of Greater Accra Metropolitan Area (GAMA)
 </p>
