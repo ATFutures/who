@@ -151,6 +151,17 @@ The positional accuracy is described as the position of a feature on a map relat
 
 *Assessment*
 
+A systematic visual inspection was carried out so as to assess both the positional accuracy and the completeness of the current OSM datasets covering the GAMA. This was accomplished by placing a 2km by 2km grid at the geometrical centre of each district (Fig.). From our observations, these grids provide a good cross-section of the street network across GAMA, from the high population density district of Accra metropolitan to the low population density of Shai Osudoku. Six out of sixteen of these grids cover little or no street segments, thereby reflecting the semi-urban landscape of those districts. On the other hand, the grids of highly urbanised districts, such as Ga Central Municipal and Accra Metropolis (highlighted in pink colour) contained very dense street networks, with total lengths of 64km and 45km, respectively.
+
+<img src="fig/quality grid_osm_accra.png" alt="Fig. xx. The OSM map of GAMA, with 2km x 2km grids placed at the geometrical centre of each district. The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts." width="100%" />
+<p class="caption">
+Fig. xx. The OSM map of GAMA, with 2km x 2km grids placed at the geometrical centre of each district. The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts.
+</p>
+
+The visual inspection of Ga Central Municipal and Accra Metropolis (highlighted in pink colour), two highly urbanised districts, revealed very high positional accuracy and completeness of the OSM datasets. The street segments are well-aligned and properly contained within the width of their respective raster representation. Only three and five cases of uncaptured street segments were identified in the grid of Ga Central and Accra Metropolis, respectively. This implies a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Axxx, Bxxx and Cxxx.
+
+To be continued....
+
 **Demography and population of Accra**
 
 The population of GAMA grew from 2,905,726 in 2000 to 4,010,054 in 2010 (Ghana Statistical Service, 2010). With a growth rate of 2.5% the population is estimated to increase to 5.9 million by 2040. The male and female population represents 49% and 51%, respectively. Based on the last population conducted in Ghana in 2010, the age distribution is given as follows: 0 -14 years as 31.3%, 15-35 years as 43.2%, and 36 and above as 25.5%.
