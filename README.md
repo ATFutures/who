@@ -158,9 +158,9 @@ A systematic visual inspection was carried out so as to assess both the position
 The OSM map of GAMA, with 2km x 2km grids placed at the geometrical centre of each district. The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts.
 </p>
 
-The visual inspection of Ga Central Municipal and Accra Metropolis (highlighted in pink colour), two highly urbanised districts, revealed very high positional accuracy and completeness of the OSM datasets. The street segments are well-aligned and properly contained within the width of their respective raster representation. Only three and five cases of uncaptured street segments were identified in the grid of Ga Central and Accra Metropolis, respectively. This implies a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Axxx, Bxxx and Cxxx.
+The visual inspection of Ga Central Municipal and Accra Metropolis (highlighted in pink colour), two highly urbanised districts, revealed very high positional accuracy and completeness of the OSM datasets. The street segments are well-aligned and properly contained within the width of their respective raster representation. Only three and five cases of uncaptured street segments were identified in the grid of Ga Central and Accra Metropolis, respectively. This implies a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Ledzokuku, Ga East Municipal and Adenta Municipal districts.
 
-\*\*To be \*continued....\*\*
+**To be continued....**
 
 **Demography and population of Accra**
 
