@@ -14,7 +14,7 @@ indx <- 1:1000
 # C++ re-coding.
 nodes <- nodes [indx, ]
 indx <- match_pts_to_graph (verts, nodes)
-dcol <- names (nodes) [which (grepl ("GHA15", names (nodes)))]
+dcol <- names (nodes) [which (grepl ("All.Ages", names (nodes)))]
 dens <- nodes [[dcol]]
 
 # remove duplicated points
@@ -29,15 +29,15 @@ dens <- dens [indx]
 # presumed to be the same), so `dodgr_spatial_interaction` will return an
 # estimate of the OD matrix. The optimiser will minimise a simple mean squared
 # error,
-f <- function (k = 2, net, nodes, dens, odmat)
-{
+f <- function (k = 2, net, nodes, dens, odmat) {
     s <- dodgr_spatial_interaction (net, nodes = nodes, dens = dens, k = k)
-    sum ((odmat - s) ^ 2
+    sum ((odmat - s) ^ 2)
 }
+
 
 # set a very rough tolerance here. It might also be necessary to fiddle with
 # lower and upper bounds a bit.
-res <- optimise (f, lower = 0.1, upper = 10, maximum = FALSE, tol = 1e-4)
+res <- optimise (f(2, net, nodes, dens) , lower = 0.1, upper = 10, maximum = FALSE, tol = 1e-4)
 res$objective # should give the calibrated value
 
 # The resultant value can then be fed into the following line in the `od-gen`
