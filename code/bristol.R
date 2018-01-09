@@ -54,3 +54,19 @@ qtm(pd_sf_sample) +
   qtm(nodes_sample) # explanation: many nodes have no points in!
 
 saveRDS(nodes_new, "../who-data/bristol/osm/nodes_new.Rds")
+
+download.file("https://github.com/Robinlovelace/geocompr/raw/master/extdata/bristol-od.rds", "bristol-od.rds")
+download.file("https://github.com/Robinlovelace/geocompr/raw/master/extdata/bristol-zones.rds", "bristol-zones.rds")
+download.file("https://github.com/npct/pct-outputs-national/raw/master/commute/msoa/c_all.Rds", "c_all.Rds")
+cents = readRDS("c_all.Rds") %>% st_as_sf()
+data(package = "ukboundaries")
+od = readRDS("bristol-od.rds")
+zones = readRDS("bristol-od.rds")
+od = readRDS("extdata/bristol-od.rds")
+zones_attr = group_by(od, o) %>% 
+  summarise_if(is.numeric, sum) %>% 
+  rename(geo_code = o)
+l = stplanr::od2line(od, cents)
+# Question: how to make this an OK matrix?
+plot(l[c("all", "bicycle")])
+saveRDS(l, "../who-data/bristol/l.Rds")
