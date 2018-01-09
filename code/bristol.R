@@ -70,3 +70,5 @@ l = stplanr::od2line(od, cents)
 # Question: how to make this an OK matrix?
 plot(l[c("all", "bicycle")])
 saveRDS(l, "../who-data/bristol/l.Rds")
+f = list.files(pattern = ".rds", ignore.case = T)
+file.remove(f)
