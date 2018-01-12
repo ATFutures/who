@@ -10,3 +10,9 @@ get_who_streets (city = "accra", n = 1)
 message ("\ndone; getting accra buildings ... ", appendLF = FALSE)
 get_who_buildings (city = "accra", n = 1)
 message ("\ndone")
+
+popdens::get_osm_streets (city = "bristol", n = 1)
+message ("\ndone; getting kathmandu buildings ... ", appendLF = FALSE)
+popdens::get_osm_buildings (city = "bristol", n = 2)
+# from bash: 
+

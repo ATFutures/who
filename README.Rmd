@@ -215,7 +215,7 @@ knitr::include_graphics("fig/quality assessment_osm_accra.png")
 
 The inspection of two semi-urban districts - Ga West Municipal and Ashaiman Municipal districts, reveal a relatively poor coverage of OSM datasets in comparison with urban districts. The oval yellow shape in Figure xx illustrate areas where many of the streets are missing. This visual inspection revealed that the majority of the uncovered oaths are either unpaved roads or wide footpaths. Despite the relatively lower data capturing activities in these areas, the positional accuracy of the datasets is almost the same as those of the urban districts. 
 
-**To be continued**
+**To be completed**
 
 **Demography and population of Accra**
 

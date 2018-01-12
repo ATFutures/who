@@ -5,6 +5,8 @@ library(raster)
 library(tmap)
 library(sf)
 
+city = "Bristol"
+
 boundary_bb = getbb("Accra")
 boundary = stplanr::bb2poly(boundary_bb) %>% 
   st_as_sf()
