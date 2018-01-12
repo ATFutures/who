@@ -232,10 +232,13 @@ The region recorded the lowest Infant Mortality Rate (deaths of infants under ag
 
 ## An overview of Kathmandu from an active travel perspective
 
-This section will provide background information on the following topics:
+
+## An overview of Kathmandu from an active travel perspective
+
+<!-- This section will provide background information on the following topics:
 
 - Institutions working in transport and their aims
-- References about the transport system in Accra
+- References about the transport system in Kathmandu
 - Photos of current set-up
 - What is the current modal split?
 - Recent transport policies.
@@ -243,9 +246,89 @@ This section will provide background information on the following topics:
 
 **Assessing the quality of OpenStreetMap of Kathmandu**
 
+**Demography and population of Kathmandu** -->
+
+### Kathmandu District, Kathmandu Metropolitan City and Kathmandu Valley
+
+The Federal Democratic Republic of Nepal consists of 7 provinces. Kathmandu District lies within Bagmati province, along with twelve other districts, which together occupy about 14% of the country. Kathmandu District consists of eleven municipalities, one of which is the municipality of Kathmandu Metropolitan City, the capital city. According to the Nepalese Central Bureau of Statistics (CBS) <!-- to do: insert link to CBS.gov.np site-->, Kathmandu is by far the most densely populated of all 75 districts, with 1,081,845 inhabitants (4.67% of the total Nepalese population) and a population density of 2,738.9 people per square kilometer (p/km^2) in 2001. The national average district density in 2001 was 157.3 p/km^2 and the only other district to have a population density of over one thousand was Bhaktapur (1.894,6), which borders it to the east. 
+
+For most statistical surveys and transport planning purposes, amongst others, Kathmandu municipality is considered as part of a different geographical unit, namely Kathmandu Valley, which spans 3 districts, two municipalities of which are in Kathmandu District, one in Lalitpur District, and two in Bhaktapur District. This mismatch between administrative authorities is part of the reason why it is hard to compose, finance and execute e.g. transportaion plans for this region. <!-- to do: insert the east-west ref--> 
+
+As Kathmandu Valley is the most urbanised region of Nepal, there is generally a good availability of utilities (water, gas, electricity), sanitation, education, and transportation. <!-- east-west ref --> 
+
+While the elevation in Kathmandu District varies between 1,262 and 2,732 meters above sea level, Kathmandu itself is relatively flat and located at an average elevation of 1400 meters <!-- to do: insert link to Wikipedia, because the government link they use is broken - or derive from a DEM -->. The dominant land-use type in Kathmandu Metropolitan City is classified as "Mixed" in the "Built up" category, covering nearly half the city (48.89%), followed by "Cultivation" (16.80%) and "Open area" (10.77%). Following those, a substantial part of the city is classified as Road (7.29%) or "Road median" (0.8%). <!-- east west ref-->
+
+<!-- to do: update the east west ref in caption-->
+```{r, fig.cap="Boundaries of Kathmandu, Lalitpur and Bhaktapur Districts, their municipalities, and Kathmandu Valley. Source: east-wst ref"}
+knitr::include_graphics("fig/KathmanduBoundaries.png")
+```
+
+**Weather and climate in Kathmandu**
+Since Kathmandu District and Kathmandu Valley both span a great elevational range, they also cover several climate zones, but Kathmandu itself falls in the warm temperate zone, with average daily temperatures ranging from 10.8°C in the coldest month (January) to 24.3°C in the warmest month (July). Annual precipitation is 1,454.9 mm, with November being the driest month with an average monthly precipition of 8.3 mm (1 precipitation day on average) and July the wettest with 363.4 mm (23 precipitation days). There is one monsoon season, which lasts from June through August, during which 64% of the annual precipitation falls over the course of 62 precipitation days <!-- to do: insert ref http://mfd.gov.np/city?id=31 for temps/rainfall and WMO for precip days http://worldweather.wmo.int/en/city.html?cityId=114-->.
+
+
+**Transportation in Kathmandu**
+
+used to be public, but cancelled, now private, etc. etc.
+
+most trip purposes are work/school commute, good split between household heads and dropping kids off on the way multi-purpose trips
+
+
+**Modal split**
+
+most trip destinations are in the city center
+used to be more cyclists but shift to motorcycles
+
+
+
+**Transport-related air pollution in Kathmandu**
+Due to the aforementioned modal split, Nepal/Kathmandu most polluted, increase bla bla
+
+Increasing pollution and respiratory diseases due to inc
+
+
+**Issues with public transport**
+
+gender issues timeliness privately owned etc
+
+
+**Government plans for alleviating congestion and pollution**
+in 1990(?) all diesel/petrol(=gasoline?) three-wheelers were banned, now only electric ones
+introduced green stickers (though apparently these can be bought for a bribe)
+ring road, bus rapid transit. metro has been examined a few times
+
+
+
+**Making a case for cycling**
+Clean Air Network, Kathmandu Cycle City etc
+
+most trips are under 30 mins/10 km, relatively flat, so could all be easily made on foot
+
+
+**People's attitudes towards cycling**
+poor people's thing, most own a bicycle, air too polluted, no space
+
+
+
+**Government sponsored infrastructures**
+already quite  a bit, but more plans than follow-through
+
+
+
+###Assessing the quality of OpenStreetMap of Kathmandu
+Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation <!-- link to KLL website-->. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitols in the area. Their webiste states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
+
 **Demography and population of Kathmandu**
 
-The City of Kathmandu is ....
+The population in Kathmandu municipality has been increasing rapidly, from 671,846 inhabitants in 2001 to 1,003,285 in 2011 (CBS <!-- to do: include ref link-->) and currently around 1.5 million <!-- to do: insert link to Wikipedia, no idea where they got it from, I can only find predictions and the 2014 population link on CBS website is broken-->.
+
+Nationally basically 50-50 split between men and women, but slightly more men in Kathmandu distrcit/valley/... The age group distributions etc. 
+
+While the national population has increased with only 1.35% <!-- to do: insert mmrda link, but don't know what their source is, or the time period, so preferably find another -->
+
+also mention floating population - seems to be 3-4 million in KTMV with about 2-2.5 floating?
+
+
 
 ```{r, fig.cap="Kathmandu population density (2011). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de"}
 knitr::include_graphics("fig/kathmandu_pop_density.png")
