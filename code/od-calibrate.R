@@ -1,51 +1,67 @@
 # aim: Calibrate dodgr_spatial_interaction output against Bristol OD data
 
-# generate OD flows
-net <- readRDS ("../who-data/bristol/osm/bristol-hw.Rds") %>% weight_streetnet ()
-nodes <- readRDS ("../who-data/bristol/osm/nodes_new.Rds")
+library (magrittr)
+library (sf)
+#library (dodgr)
+devtools::load_all (file.path (here::here(), "..", "dodgr"),
+                    export_all = FALSE)
+
+# load OSM data
+bristol_dir <- file.path (here::here(), "..", "who-data", "bristol")
+net <- readRDS (file.path (bristol_dir, "osm", "bristol-hw.Rds")) %>%
+    weight_streetnet ()
+nodes <- readRDS (file.path (bristol_dir, "osm", "nodes_new.Rds"))
 verts <- dodgr_vertices (net)
 
-library (sf)
-indx <- 1:1000
-# indx should actually be the OD points matched to the street network using
-# `match_pts_to_graph`, but pretend here that that's just the first 1,000 points
-# Note that this whole routine presumes that the OD matrix is square and has the
-# same origin and destination points. This can be changed, but will require some
-# C++ re-coding.
-nodes <- nodes [indx, ]
-indx <- match_pts_to_graph (verts, nodes)
-dcol <- names (nodes) [which (grepl ("All.Ages", names (nodes)))]
-dens <- nodes [[dcol]]
+# load OD data
+od <- readRDS (file.path (bristol_dir, "l.Rds"))
+od_id <- sort (unique (od$o))
+identical (od_id, sort (unique (od$d))) # Must be TRUE!
+indx <- match (od_id, od$o)
+od_xy <- t (sapply (od$geometry [indx], function (i) as.numeric (i [1, ])))
 
-# remove duplicated points
-dens <- dens [which (!duplicated (indx))]
-id <- verts$id [unique (indx)]
-indx <- which (!is.na (dens))
-id <- id [indx]
-dens <- dens [indx]
+# current bristol OSM data are smaller than the OD data, so cut OD data to size
+# of OSM net for the moment:
+indx_xy <- which (od_xy [, 1] > min (verts$x) & od_xy [, 1] < max (verts$x) &
+                  od_xy [, 2] > min (verts$y) & od_xy [, 2] < max (verts$y))
+od_xy <- od_xy [indx_xy, ]
 
-# construct function to be optimised for calibration. The above `indx` should
-# index the full set of origin and destination points (because these are
-# presumed to be the same), so `dodgr_spatial_interaction` will return an
-# estimate of the OD matrix. The optimiser will minimise a simple mean squared
-# error,
-f <- function (k = 2, net, nodes, dens, odmat) {
-    s <- dodgr_spatial_interaction (net, nodes = nodes, dens = dens, k = k)
-    sum ((odmat - s) ^ 2)
+indx <- match_pts_to_graph (verts, od_xy)
+dens <- as.numeric (sapply (unique (od$o), function (i)
+                sum (od$all [which (od$o == i)]))) [indx_xy]
+nodes <- verts$id [indx]
+# dens is the sum of all origin values in the OD matrix. The dodgr code
+# simulates an approximation of these using a spatial interaction model. First
+# construct OD in matrix form using only those values within the xy range of
+# verts:
+od_xy1 <- t (sapply (od$geometry, function (i) as.numeric (i [1, ])))
+od_xy2 <- t (sapply (od$geometry, function (i) as.numeric (i [2, ])))
+indx_xy <- which (od_xy1 [, 1] > min (verts$x) & od_xy1 [, 1] < max (verts$x) &
+                  od_xy1 [, 2] > min (verts$y) & od_xy1 [, 2] < max (verts$y) &
+                  od_xy2 [, 1] > min (verts$x) & od_xy2 [, 1] < max (verts$x) &
+                  od_xy2 [, 2] > min (verts$y) & od_xy2 [, 2] < max (verts$y))
+odmat <- data.frame (o = od$o [indx_xy], d = od$d [indx_xy],
+                     dens = od$all [indx_xy]) %>%
+    reshape2::dcast (o ~ d, value.var = "dens")
+odmat$o <- NULL
+
+# construct function to be optimised for calibration through minimising a simple
+# mean squared error. Note that self-flows are removed.
+f <- function (k) {
+    s <- dodgr_spatial_interaction (net, nodes, dens, k = k)
+    diag (s) <- NA
+    mean ((odmat - s) ^ 2, na.rm = TRUE)
 }
-
 
 # set a very rough tolerance here. It might also be necessary to fiddle with
 # lower and upper bounds a bit.
-res <- optimise (f(2, net, nodes, dens) , lower = 0.1, upper = 10, maximum = FALSE, tol = 1e-4)
-res$objective # should give the calibrated value
-
+res <- optimise (f (k) , lower = 0.1, upper = 10, maximum = FALSE, tol = 1e-4)
 # The resultant value can then be fed into the following line in the `od-gen`
 # script:
-k <- res$objective # i think?
+k <- res$minimum # 2.902971km
 
 # use that value of `k` to generate the flows:
-s <- dodgr_spatial_interaction (net, nodes = id, dens = dens, k = k)
+s <- dodgr_spatial_interaction (net, nodes = nodes, dens = dens, k = k)
 f <- dodgr_flows(net, id, id, flows = s, contract = T)
 dodgr_flowmap(f, "/data/who/flow")
 rnet_g <- dodgr_to_sf(net) 
