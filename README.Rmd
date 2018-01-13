@@ -325,13 +325,11 @@ A systematic visual inspection was carried out so as to assess both the position
 ```{r, fig.cap="The OSM map of GAMA, with 2km x 2km grids placed at the geometrical centre of each district. The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts."}
 knitr::include_graphics("fig/quality grid_osm_accra.png")
 ```
-
 The visual inspection of Ga Central Municipal and Accra Metropolis (highlighted in pink colour), two highly urbanised districts, revealed very high positional accuracy and completeness of the OSM datasets. The street segments are well-aligned and properly contained within the width of their respective raster representation. Only three and five cases of uncaptured street segments were identified in the grid of Ga Central and Accra Metropolis, respectively. This implies a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Ledzokuku Municipal, Ga East Municipal and Adenta Municipal districts.
 
 ```{r, fig.cap="Left image - Ga West Municipal and Right image - Ashaiman Municipal districts (left and right, respectively) – two semi-urban districts. The oval shapes indicate areas where streets are missing."}
 knitr::include_graphics("fig/quality assessment_osm_accra.png")
 ```
-
 The inspection of two semi-urban districts - Ga West Municipal and Ashaiman Municipal districts, reveal a relatively poor coverage of OSM datasets in comparison with urban districts. The oval yellow shape in Figure xx illustrate areas where many of the streets are missing. This visual inspection revealed that the majority of the uncovered oaths are either unpaved roads or wide footpaths. Despite the relatively lower data capturing activities in these areas, the positional accuracy of the datasets is almost the same as those of the urban districts. 
 
 **To be completed**
