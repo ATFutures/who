@@ -191,32 +191,6 @@ In 2008, the department of Urban Roads, in collaboration with the CCE, developed
 knitr::include_graphics("fig/Bike_masterplan.png")
 ```
 
-###Assessing the quality of OpenStreetMap of Accra
-
-The street network datasets used for this project were downloaded from the OpenStreetMap (OSM), an open access, freely available, online mapping database (Barrington-Leigh and Millard-Ball, 2017). Generated through crowd-sourcing (Goodchild, 2007) by volunteers, the current database has grown to almost 50 gigabytes, and thousands of features are being added by the day. One uniqueness of OSM is that it allows its users the chance to contribute their local knowledge about places, thereby ensuring the features’ accuracy, completeness and thoroughness. Furthermore, a backend control/validation is implemented in order to ensure that the datasets conform with the Open Geospatial Consortium standards, which is the internationally recognised set of data standards for the global geospatial community.
-
-For this project, we examined the quality of our OSM datasets and evaluate how well the datasets represent the reality on the ground. The quality of geospatial datasets can be evaluated using one, or a combination of metrics, such as positional accuracy, completeness, attribute accuracy and consistency (Haklay, 2010). The choice of any metrics often depends on the data requirements stipulated for a project, as well as the higher-quality baseline datasets available relating to the area in question. We chose OSM datasets for this project due to its relatively high positional accuracy with respect to the satellite basemap of the area, as well as its notion of continuous mapping, thereby leaning towards absolute completeness. Hence, we used ‘positional accuracy’ and ‘completeness’ metrics to evaluate the quality of our OSM datasets. 
-
-The positional accuracy is described as the position of a feature on a map relative to its actual position on the ground, while the completeness is an assessment of the amount of datasets that are missing on a map. For the baseline comparison datasets, we used the Bing areal imagery, which can be added as a background layer on OSM website, thereby allowing easy comparative analysis through visual inspection. The positional accuracy of the Bing areal imagery has been confirmed to be relatively better than that of Google Maps at nadir, with an RMSE of 7.9 as compared to 8.2 for the latter (Ubukawa, 2013). In the same study, the RMSE of OSM datasets was calculated to be 11.1m.  Furthermore, the new Bing areal imageries for every country are usually released every three to four months in order to ensure the imagery is as current as possible (Ref.).
-
-**Assessment**
-
-A systematic visual inspection was carried out so as to assess both the positional accuracy and the completeness of the current OSM datasets covering the GAMA. This was accomplished by placing a 2km by 2km grid at the geometrical centre of each district (Fig.). From our observations, these grids provide a good cross-section of the street network across GAMA, from the high population density district of Accra metropolitan to the low population density of Shai Osudoku. Six out of sixteen of these grids cover little or no street segments, thereby reflecting the semi-urban landscape of those districts. On the other hand, the grids of highly urbanised districts, such as Ga Central Municipal and Accra Metropolis (highlighted in pink colour) contained very dense street networks, with total lengths of 64km and 45km, respectively.
-
-```{r, fig.cap="The OSM map of GAMA, with 2km x 2km grids placed at the geometrical centre of each district. The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts."}
-knitr::include_graphics("fig/quality grid_osm_accra.png")
-```
-
-The visual inspection of Ga Central Municipal and Accra Metropolis (highlighted in pink colour), two highly urbanised districts, revealed very high positional accuracy and completeness of the OSM datasets. The street segments are well-aligned and properly contained within the width of their respective raster representation. Only three and five cases of uncaptured street segments were identified in the grid of Ga Central and Accra Metropolis, respectively. This implies a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Ledzokuku Municipal, Ga East Municipal and Adenta Municipal districts.
-
-```{r, fig.cap="Left image - Ga West Municipal and Right image - Ashaiman Municipal districts (left and right, respectively) – two semi-urban districts. The oval shapes indicate areas where streets are missing."}
-knitr::include_graphics("fig/quality assessment_osm_accra.png")
-```
-
-The inspection of two semi-urban districts - Ga West Municipal and Ashaiman Municipal districts, reveal a relatively poor coverage of OSM datasets in comparison with urban districts. The oval yellow shape in Figure xx illustrate areas where many of the streets are missing. This visual inspection revealed that the majority of the uncovered oaths are either unpaved roads or wide footpaths. Despite the relatively lower data capturing activities in these areas, the positional accuracy of the datasets is almost the same as those of the urban districts. 
-
-**To be completed**
-
 **Demography and population of Accra**
 
 The population of GAMA grew from 2,905,726 in 2000 to 4,010,054 in 2010 (Ghana Statistical Service, 2010). With a growth rate of 2.5% the population is estimated to increase to 5.9 million by 2040. The male and female population represents 49% and 51%, respectively. Based on the last population conducted in Ghana in 2010, the age distribution is given as follows: 0 -14 years as 31.3%, 15-35 years as 43.2%, and 36 and above as 25.5%.
@@ -250,7 +224,7 @@ The region recorded the lowest Infant Mortality Rate (deaths of infants under ag
 
 ### Kathmandu District, Kathmandu Metropolitan City and Kathmandu Valley
 
-The Federal Democratic Republic of Nepal consists of 7 provinces. Kathmandu District lies within Bagmati province, along with twelve other districts, which together occupy about 14% of the country. Kathmandu District consists of eleven municipalities, one of which is the municipality of Kathmandu Metropolitan City, the capital city. According to the Nepalese Central Bureau of Statistics (CBS) <!-- to do: insert link to CBS.gov.np site-->, Kathmandu is by far the most densely populated of all 75 districts, with 1,081,845 inhabitants (4.67% of the total Nepalese population) and a population density of 2,738.9 people per square kilometer $(p/{}^2)$ in 2001. The national average district density in 2001 was 157.3 $(p/{}^2)$ and the only other district to have a population density of over one thousand was Bhaktapur (1.894,6), which borders it to the east. 
+The Federal Democratic Republic of Nepal consists of 7 provinces. Kathmandu District lies within Bagmati province, along with twelve other districts, which together occupy about 14% of the country. Kathmandu District consists of eleven municipalities, one of which is the municipality of Kathmandu Metropolitan City, the capital city. According to the Nepalese Central Bureau of Statistics (CBS) <!-- to do: insert link to CBS.gov.np site-->, Kathmandu is by far the most densely populated of all 75 districts, with 1,081,845 inhabitants (4.67% of the total Nepalese population) and a population density of 2,738.9 people per square kilometer (p/km^2) in 2001. The national average district density in 2001 was 157.3 (p/km^2) and the only other district to have a population density of over one thousand was Bhaktapur (1.894,6), which borders it to the east. 
 
 For most statistical surveys and transport planning purposes, amongst others, Kathmandu municipality is considered as part of a different geographical unit, namely Kathmandu Valley, which spans 3 districts, two municipalities of which are in Kathmandu District, one in Lalitpur District, and two in Bhaktapur District. This mismatch between administrative authorities is part of the reason why it is hard to compose, finance and execute e.g. transportaion plans for this region. <!-- to do: insert the east-west ref--> 
 
@@ -336,8 +310,34 @@ knitr::include_graphics("fig/kathmandu_pop_density.png")
 
 # Results I: Accra
 
-This section is work in progress.
-We will explore how well the OSM road network illustrated in the map below represents the true state of the transport system.
+###Assessing the quality of OpenStreetMap of Accra
+
+The street network datasets used for this project were downloaded from the OpenStreetMap (OSM), an open access, freely available, online mapping database (Barrington-Leigh and Millard-Ball, 2017). Generated through crowd-sourcing (Goodchild, 2007) by volunteers, the current database has grown to almost 50 gigabytes, and thousands of features are being added by the day. One uniqueness of OSM is that it allows its users the chance to contribute their local knowledge about places, thereby ensuring the features’ accuracy, completeness and thoroughness. Furthermore, a backend control/validation is implemented in order to ensure that the datasets conform with the Open Geospatial Consortium standards, which is the internationally recognised set of data standards for the global geospatial community.
+
+For this project, we examined the quality of our OSM datasets and evaluate how well the datasets represent the reality on the ground. The quality of geospatial datasets can be evaluated using one, or a combination of metrics, such as positional accuracy, completeness, attribute accuracy and consistency (Haklay, 2010). The choice of any metrics often depends on the data requirements stipulated for a project, as well as the higher-quality baseline datasets available relating to the area in question. We chose OSM datasets for this project due to its relatively high positional accuracy with respect to the satellite basemap of the area, as well as its notion of continuous mapping, thereby leaning towards absolute completeness. Hence, we used ‘positional accuracy’ and ‘completeness’ metrics to evaluate the quality of our OSM datasets. 
+
+The positional accuracy is described as the position of a feature on a map relative to its actual position on the ground, while the completeness is an assessment of the amount of datasets that are missing on a map. For the baseline comparison datasets, we used the Bing areal imagery, which can be added as a background layer on OSM website, thereby allowing easy comparative analysis through visual inspection. The positional accuracy of the Bing areal imagery has been confirmed to be relatively better than that of Google Maps at nadir, with an RMSE of 7.9 as compared to 8.2 for the latter (Ubukawa, 2013). In the same study, the RMSE of OSM datasets was calculated to be 11.1m.  Furthermore, the new Bing areal imageries for every country are usually released every three to four months in order to ensure the imagery is as current as possible (Ref.).
+
+**Assessment**
+
+A systematic visual inspection was carried out so as to assess both the positional accuracy and the completeness of the current OSM datasets covering the GAMA. This was accomplished by placing a 2km by 2km grid at the geometrical centre of each district (Fig.). From our observations, these grids provide a good cross-section of the street network across GAMA, from the high population density district of Accra metropolitan to the low population density of Shai Osudoku. Six out of sixteen of these grids cover little or no street segments, thereby reflecting the semi-urban landscape of those districts. On the other hand, the grids of highly urbanised districts, such as Ga Central Municipal and Accra Metropolis (highlighted in pink colour) contained very dense street networks, with total lengths of 64km and 45km, respectively.
+
+```{r, fig.cap="The OSM map of GAMA, with 2km x 2km grids placed at the geometrical centre of each district. The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts."}
+knitr::include_graphics("fig/quality grid_osm_accra.png")
+```
+
+The visual inspection of Ga Central Municipal and Accra Metropolis (highlighted in pink colour), two highly urbanised districts, revealed very high positional accuracy and completeness of the OSM datasets. The street segments are well-aligned and properly contained within the width of their respective raster representation. Only three and five cases of uncaptured street segments were identified in the grid of Ga Central and Accra Metropolis, respectively. This implies a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Ledzokuku Municipal, Ga East Municipal and Adenta Municipal districts.
+
+```{r, fig.cap="Left image - Ga West Municipal and Right image - Ashaiman Municipal districts (left and right, respectively) – two semi-urban districts. The oval shapes indicate areas where streets are missing."}
+knitr::include_graphics("fig/quality assessment_osm_accra.png")
+```
+
+The inspection of two semi-urban districts - Ga West Municipal and Ashaiman Municipal districts, reveal a relatively poor coverage of OSM datasets in comparison with urban districts. The oval yellow shape in Figure xx illustrate areas where many of the streets are missing. This visual inspection revealed that the majority of the uncovered oaths are either unpaved roads or wide footpaths. Despite the relatively lower data capturing activities in these areas, the positional accuracy of the datasets is almost the same as those of the urban districts. 
+
+**To be completed**
+
+
+How well is the OSM road network represents the true state of the transport system.
 
 ```{r, fig.cap="Overview of Accra (left) and initial results of cycling potential (right).", fig.show='hold', out.width="49%"}
 knitr::include_graphics(c("fig/accra-osm-overview.png", "fig/test.png"))
