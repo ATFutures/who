@@ -257,7 +257,23 @@ The OSM map of GAMA, with 2km x 2km grids placed at the geometrical centre of ea
 </p>
 
 <!-- The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts. -->
-The visual inspection of Ga Central Municipal and Accra Metropolis (highlighted in pink colour), two highly urbanised districts, revealed very high positional accuracy and completeness of the OSM datasets. The street segments are well-aligned and properly contained within the width of their respective raster representation. Only three and five cases of uncaptured street segments were identified in the grid of Ga Central and Accra Metropolis, respectively. This implies a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Ledzokuku Municipal, Ga East Municipal and Adenta Municipal districts.
+The visual inspection of all the urban districts revealed very high positional accuracy and completeness of the OSM datasets. The road segments are well-aligned and properly contained within the width of their respective raster representation. However, there are significant examples of uncaptured segments, particularly in areas where the roads are 'unpaved'. For example, in fig xx(a), the large oval shape highlights the Campus of Accra Technology University College, whose roads are unpaved and generally missing in the OSM datasets.
+
+Fig xx(b) is the 2km by 2km grids of the centre of the
+
+Overall, the general coverage of OSM reflects the hierarchy of the road types, with the trunk and tertiary roads well-captured, while the residential (especially the 'unpaved') and
+
+The small oval shape highlights a typical example
+
+which is largely characterised by unpaved road segments.
+
+where road widths are particularly unpaved and/or may be considered footpath due to their relatively small width.
+
+Fig xx(a) is the 2km x 2km grid at the centre of Accra Metropolis district, providing a good example of different road classification and their associated coverage levels.
+
+linear settlements.
+
+. The small circle highlight .. The figure shows a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Ledzokuku Municipal, Ga East Municipal and Adenta Municipal districts.
 
 <img src="fig/quality assessment_osm_accra.png" alt="Left image - Ga West Municipal and Right image - Ashaiman Municipal districts (left and right, respectively) – two semi-urban districts. The oval shapes indicate areas where streets are missing." width="100%" />
 <p class="caption">
@@ -273,6 +289,8 @@ One most noticeable feature amongst the regions with lack of OSM coverage is tha
 ### Assessing the quality of OpenStreetMap of Kathmandu
 
 Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation <!-- link to KLL website-->. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their webiste states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
+
+whose geometric centre falls inside a sakumono Lagoon.
 
 ### Assessing the quality of OpenStreetMap of Bristol
 
