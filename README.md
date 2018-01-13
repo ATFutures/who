@@ -257,14 +257,16 @@ The OSM map of GAMA, with 2km x 2km grids placed at the geometrical centre of ea
 </p>
 
 <!-- The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts. -->
-The visual inspection of all the urban districts revealed very high positional accuracy and completeness of the OSM datasets. The road segments are well-aligned and properly contained within the width of their respective raster representation. However, there are significant examples of uncaptured segments, particularly in areas where the roads are 'unpaved'. For example, in fig xx(a), the large oval shape highlights the Campus of Accra Technology University College, whose roads are unpaved and generally missing in the OSM datasets.
+The visual inspection of all the urban districts revealed very high positional accuracy and completeness of the OSM datasets. The road segments are well-aligned and properly contained within the width of their respective raster representation. However, there are significant examples of uncaptured segments, particularly in areas where the roads are 'unpaved'. For example, in fig xx(a) represents the Accra Metropolis district, the large oval shape highlights the Campus of Accra Technology University College, whose roads are unpaved and generally missing in the OSM datasets.
 
 Fig xx(b) shows the 2km by 2km grid placed at the Ga West Municipal, a semi-urban district. This district is characterised by a highly densed OSM dataset coverage in the south and a very sparse OSM dataset coverage in the north. The 2km by 2km grid drawn covers a portion of the district with a relatively small OSM data capture. Similar positional accuracy as the rest of the region is observed. any other district. However, the fact that over 90% of the road network here are unpaved and are missing in the OSM dataset (oval shapes), further highlights the general patterns of lack of coverages for this type of roads.
 
-<img src="fig/quality assessment_osm_accra.png" alt="Left image - Ga West Municipal and Right image - Ashaiman Municipal districts (left and right, respectively) – two semi-urban districts. The oval shapes indicate areas where streets are missing." width="100%" />
+<div class="figure">
+<img src="fig/quality assessment_osm_accra.png" alt="(a) Accra Metropolis district - an urban district and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing." width="100%" />
 <p class="caption">
-Left image - Ga West Municipal and Right image - Ashaiman Municipal districts (left and right, respectively) – two semi-urban districts. The oval shapes indicate areas where streets are missing.
-</p>
+1.  Accra Metropolis district - an urban district and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing.
+    </p>
+    </div>
 
 In general, the "completeness" of OSM data across GAMA varies by road classes, from trunk roads (major road) having the highest coverage level, to an almost uncovered footpaths, with paved/unpaved ratios also decreasing in the same order.
 
