@@ -326,32 +326,13 @@ knitr::include_graphics("fig/quality grid_osm_accra.png")
 
 The visual inspection of all the urban districts revealed very high positional accuracy and completeness of the OSM datasets. The road segments are well-aligned and properly contained within the width of their respective raster representation. However, there are significant examples of uncaptured segments, particularly in areas where the roads are 'unpaved'. For example, in fig xx(a), the large oval shape highlights the Campus of Accra Technology University College, whose roads are unpaved and generally missing in the OSM datasets. 
 
-Fig xx(b) is the 2km by 2km grids of the centre of the  
-
-Overall, the general coverage of OSM reflects the hierarchy of the road types, with the trunk and tertiary roads well-captured, while the residential (especially the 'unpaved') and  
-
-The small oval shape highlights a typical example 
-
-
-
-which is largely characterised by unpaved road segments.  
-
-
-where road widths are particularly unpaved and/or may be considered footpath due to their relatively small width.  
-
-
-Fig xx(a) is the 2km x 2km grid at the centre of Accra Metropolis district, providing a good example of different road classification and their associated coverage levels. 
-
-linear settlements.
-
-. The small circle highlight ..  The figure shows a high ‘completeness’ level of dataset for both districts. Similar levels of positional accuracy and completeness were obtained in other similar districts, such as Ledzokuku Municipal, Ga East Municipal and Adenta Municipal districts.
+Fig xx(b) shows the 2km by 2km grid placed at the Ga West Municipal, a semi-urban district. This district is characterised by a highly densed OSM dataset coverage in the south and a very sparse OSM dataset coverage in the north. The 2km by 2km grid drawn covers a portion of the district with a relatively small OSM data capture. Similar positional accuracy as the rest of the region is observed. any other district. However, the fact that over 90% of the road network here are unpaved and are missing in the OSM dataset (oval shapes), further highlights the general patterns of lack of coverages for this type of roads.
 
 ```{r, fig.cap="Left image - Ga West Municipal and Right image - Ashaiman Municipal districts (left and right, respectively) – two semi-urban districts. The oval shapes indicate areas where streets are missing."}
 knitr::include_graphics("fig/quality assessment_osm_accra.png")
 ```
-The inspection of two semi-urban districts - Ga West Municipal and Ashaiman Municipal districts, reveal a relatively poor coverage of OSM datasets in comparison with urban districts. The oval yellow shape in Figure xx illustrate areas where many of the streets are missing. This visual inspection revealed that the majority of the uncovered oaths are either unpaved roads or wide footpaths. Despite the relatively lower data capturing activities in these areas, the positional accuracy of the datasets is almost the same as those of the urban districts. 
 
-One most noticeable feature amongst the regions with lack of OSM coverage is that their road network are generally unpaved. Thus, the only roads with OSM coverages in those regions are the trunk roads (major roads), connecting the cities out GAMA. Also, it can be observed that many of the roads within the urban and semi-urban districts that are missing are generally unpaved. For example, Fig. xx below is the .. 
+In general, the "completeness" of OSM data across GAMA varies by road classes, from trunk roads (major road) having the highest coverage level, to an almost uncovered footpaths, with paved/unpaved ratios also decreasing in the same order.
 
 
 **Assessment of Kathmandu's OSM datasets**
