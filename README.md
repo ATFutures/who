@@ -157,9 +157,6 @@ The region recorded the lowest Infant Mortality Rate (deaths of infants under ag
 An overview of Kathmandu from an active travel perspective
 ----------------------------------------------------------
 
-An overview of Kathmandu from an active travel perspective
-----------------------------------------------------------
-
 <!-- This section will provide background information on the following topics:
 
 - Institutions working in transport and their aims
@@ -200,7 +197,9 @@ most trip purposes are work/school commute, good split between household heads a
 
 most trip destinations are in the city center used to be more cyclists but shift to motorcycles
 
-**Transport-related air pollution in Kathmandu** Due to the aforementioned modal split, Nepal/Kathmandu most polluted, increase bla bla
+**Transport-related air pollution in Kathmandu**
+
+Due to the aforementioned modal split, Nepal/Kathmandu most polluted, increase bla bla
 
 Increasing pollution and respiratory diseases due to inc
 
@@ -208,19 +207,19 @@ Increasing pollution and respiratory diseases due to inc
 
 gender issues timeliness privately owned etc
 
-**Government plans for alleviating congestion and pollution** in 1990(?) all diesel/petrol(=gasoline?) three-wheelers were banned, now only electric ones introduced green stickers (though apparently these can be bought for a bribe) ring road, bus rapid transit. metro has been examined a few times
+**Government plans for alleviating congestion and pollution**
 
-**Making a case for cycling** Clean Air Network, Kathmandu Cycle City etc
+In 1990(?) all diesel/petrol(=gasoline?) three-wheelers were banned, now only electric ones introduced green stickers (though apparently these can be bought for a bribe) ring road, bus rapid transit. metro has been examined a few times
+
+**Making a case for cycling**
+
+Clean Air Network, Kathmandu Cycle City etc
 
 most trips are under 30 mins/10 km, relatively flat, so could all be easily made on foot
 
 **People's attitudes towards cycling** poor people's thing, most own a bicycle, air too polluted, no space
 
 **Government sponsored infrastructures** already quite a bit, but more plans than follow-through
-
-### Assessing the quality of OpenStreetMap of Kathmandu
-
-Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation <!-- link to KLL website-->. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitols in the area. Their webiste states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
 
 **Demography and population of Kathmandu**
 
@@ -266,9 +265,19 @@ Left image - Ga West Municipal and Right image - Ashaiman Municipal districts (l
 
 The inspection of two semi-urban districts - Ga West Municipal and Ashaiman Municipal districts, reveal a relatively poor coverage of OSM datasets in comparison with urban districts. The oval yellow shape in Figure xx illustrate areas where many of the streets are missing. This visual inspection revealed that the majority of the uncovered oaths are either unpaved roads or wide footpaths. Despite the relatively lower data capturing activities in these areas, the positional accuracy of the datasets is almost the same as those of the urban districts.
 
+One most noticeable feature amongst the regions with lack of OSM coverage is that their road network are generally unpaved. Thus, the only roads with OSM coverages in those regions are the trunk roads (major roads), connecting the cities out GAMA. Also, it can be observed that many of the roads within the urban and semi-urban districts that are missing are generally unpaved. For example, Fig. xx below is the ..
+
 **Assessment of Kathmandu's OSM datasets**
 
-How well is the OSM road network represents the true state of the transport system.
+### Assessing the quality of OpenStreetMap of Kathmandu
+
+Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation <!-- link to KLL website-->. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their webiste states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
+
+### Assessing the quality of OpenStreetMap of Bristol
+
+Bristol.....
+
+### Estimates of Cycling potentials in Accra
 
 <img src="fig/accra-osm-overview.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" /><img src="fig/test.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" />
 <p class="caption">
