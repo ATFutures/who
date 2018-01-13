@@ -331,7 +331,6 @@ The inspection of two semi-urban districts - Ga West Municipal and Ashaiman Muni
 One most noticeable feature amongst the regions with lack of OSM coverage is that their road network are generally unpaved. Thus, the only roads with OSM coverages in those regions are the trunk roads (major roads), connecting the cities out GAMA. Also, it can be observed that many of the roads within the urban and semi-urban districts that are missing are generally unpaved. For example, Fig. xx below is the .. 
 
 
-
 **Assessment of Kathmandu's OSM datasets**
 
 ###Assessing the quality of OpenStreetMap of Kathmandu
