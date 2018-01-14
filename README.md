@@ -289,7 +289,7 @@ To discuss here (~ size of kathmandu relative to accra?).
 1.  \*\* - an urban municipality and (b) \*\* - a semi-urban municipality. There are no missing roads in the case of Kathmandu
     </p>
     </div>
-    To discuss here (Very high positional accuracy and completeness)----
+    To discuss here (Incredible positional accuracy and completeness for both urban and semi-urban municipalities! - no single uncovered segment found)
 
 ### Assessing the quality of OpenStreetMap of Bristol
 

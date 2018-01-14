@@ -349,7 +349,7 @@ To discuss here (~ size of kathmandu relative to accra?).
 ```{r, fig.cap="(a) **  - an urban municipality and (b) ** - a semi-urban municipality. There are no missing roads in the case of Kathmandu"}
 knitr::include_graphics("fig/quality assessment_osm_kathmandu.png")
 ```
-To discuss here (Very high positional accuracy and completeness)----
+To discuss here (Incredible positional accuracy and completeness for both urban and semi-urban municipalities! - no single uncovered segment found)
 
 
 ###Assessing the quality of OpenStreetMap of Bristol
