@@ -284,16 +284,22 @@ The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre 
 To discuss here (~ size of kathmandu relative to accra?).
 
 <div class="figure">
-<img src="fig/quality assessment_osm_kathmandu.png" alt="(a) **  - an urban municipality and (b) ** - a semi-urban municipality. There are no missing roads in the case of Kathmandu" width="100%" />
+<img src="fig/quality assessment_osm_kathmandu.png" alt="(a) **  - an urban municipality and (b) ** - a semi-urban municipality." width="100%" />
 <p class="caption">
-1.  \*\* - an urban municipality and (b) \*\* - a semi-urban municipality. There are no missing roads in the case of Kathmandu
+1.  \*\* - an urban municipality and (b) \*\* - a semi-urban municipality.
     </p>
     </div>
-    To discuss here (Incredible positional accuracy and completeness for both urban and semi-urban municipalities! - no single uncovered segment found)
+
+To discuss here (Incredible positional accuracy and completeness for both urban and semi-urban municipalities! - no single uncovered segment found)
 
 ### Assessing the quality of OpenStreetMap of Bristol
 
-Bristol.....
+<div class="figure">
+<img src="fig/quality grid_osm_bristol_2.png" alt="(a) The OSM map of Bristol, with 2km x 2km grids placed at the geometrical centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward" width="100%" />
+<p class="caption">
+1.  The OSM map of Bristol, with 2km x 2km grids placed at the geometrical centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward
+    </p>
+    </div>
 
 ### Estimates of Cycling potentials in Accra
 
