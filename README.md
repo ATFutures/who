@@ -276,7 +276,10 @@ In general, the "completeness" of OSM data across GAMA varies by road classes, f
 
 Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation <!-- link to KLL website-->. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their webiste states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
 
-whose geometric centre falls inside a sakumono Lagoon.
+<img src="fig/quality grid_osm_kathmandu.png" alt="The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district." width="100%" />
+<p class="caption">
+The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district.
+</p>
 
 ### Assessing the quality of OpenStreetMap of Bristol
 
