@@ -345,6 +345,9 @@ Kathmandu is very well represented on OpenStreetMap, thanks to a number of proje
 knitr::include_graphics("fig/quality grid_osm_kathmandu.png")
 ```
 
+```{r, fig.cap="The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district."}
+knitr::include_graphics("fig/quality assessment_osm_kathmandu.png")
+```
 
 ###Assessing the quality of OpenStreetMap of Bristol
 

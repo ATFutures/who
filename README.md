@@ -281,6 +281,11 @@ Kathmandu is very well represented on OpenStreetMap, thanks to a number of proje
 The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district.
 </p>
 
+<img src="fig/quality assessment_osm_kathmandu.png" alt="The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district." width="100%" />
+<p class="caption">
+The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district.
+</p>
+
 ### Assessing the quality of OpenStreetMap of Bristol
 
 Bristol.....
