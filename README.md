@@ -281,7 +281,7 @@ Kathmandu is very well represented on OpenStreetMap, thanks to a number of proje
 The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district.
 </p>
 
-To discuss here----
+To discuss here (~ size of kathmandu relative to accra?).
 
 <div class="figure">
 <img src="fig/quality assessment_osm_kathmandu.png" alt="(a) **  - an urban municipality and (b) ** - a semi-urban municipality. There are no missing roads in the case of Kathmandu" width="100%" />
@@ -289,7 +289,7 @@ To discuss here----
 1.  \*\* - an urban municipality and (b) \*\* - a semi-urban municipality. There are no missing roads in the case of Kathmandu
     </p>
     </div>
-    To discuss here----
+    To discuss here (Very high positional accuracy and completeness)----
 
 ### Assessing the quality of OpenStreetMap of Bristol
 
