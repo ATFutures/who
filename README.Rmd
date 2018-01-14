@@ -345,9 +345,13 @@ Kathmandu is very well represented on OpenStreetMap, thanks to a number of proje
 knitr::include_graphics("fig/quality grid_osm_kathmandu.png")
 ```
 
+To discusds here----
+
 ```{r, fig.cap="(a) **  - an urban municipality and (b) ** - a semi-urban municipality. There are no missing roads in the case of Kathmandu"}
 knitr::include_graphics("fig/quality assessment_osm_kathmandu.png")
 ```
+To discusds here----
+
 
 ###Assessing the quality of OpenStreetMap of Bristol
 

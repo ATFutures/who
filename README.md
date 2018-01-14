@@ -281,12 +281,15 @@ Kathmandu is very well represented on OpenStreetMap, thanks to a number of proje
 The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district.
 </p>
 
+To discusds here----
+
 <div class="figure">
 <img src="fig/quality assessment_osm_kathmandu.png" alt="(a) **  - an urban municipality and (b) ** - a semi-urban municipality. There are no missing roads in the case of Kathmandu" width="100%" />
 <p class="caption">
 1.  \*\* - an urban municipality and (b) \*\* - a semi-urban municipality. There are no missing roads in the case of Kathmandu
     </p>
     </div>
+    To discusds here----
 
 ### Assessing the quality of OpenStreetMap of Bristol
 
