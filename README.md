@@ -262,7 +262,7 @@ The visual inspection of all the urban districts revealed very high positional a
 Fig xx(b) shows the 2km by 2km grid placed at the Ga West Municipal, a semi-urban district. This district is characterised by a highly densed OSM dataset coverage in the south and a very sparse OSM dataset coverage in the north. The 2km by 2km grid drawn covers a portion of the district with a relatively small OSM data capture. Similar positional accuracy as the rest of the region is observed. any other district. However, the fact that over 90% of the road network here are unpaved and are missing in the OSM dataset (oval shapes), further highlights the general patterns of lack of coverages for this type of roads.
 
 <div class="figure">
-<img src="fig/quality assessment_osm_accra.png" alt="(a) Accra Metropolis district - an urban district and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing." width="100%" />
+<img src="fig/quality assessment_osm_accra.png" alt=" (a) Accra Metropolis district - an urban district and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing." width="100%" />
 <p class="caption">
 1.  Accra Metropolis district - an urban district and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing.
     </p>
@@ -281,10 +281,12 @@ Kathmandu is very well represented on OpenStreetMap, thanks to a number of proje
 The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district.
 </p>
 
-<img src="fig/quality assessment_osm_kathmandu.png" alt="The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district." width="100%" />
+<div class="figure">
+<img src="fig/quality assessment_osm_kathmandu.png" alt="(a) **  - an urban municipality and (b) ** - a semi-urban municipality. There are no missing roads in the case of Kathmandu" width="100%" />
 <p class="caption">
-The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district.
-</p>
+1.  \*\* - an urban municipality and (b) \*\* - a semi-urban municipality. There are no missing roads in the case of Kathmandu
+    </p>
+    </div>
 
 ### Assessing the quality of OpenStreetMap of Bristol
 

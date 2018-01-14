@@ -328,7 +328,7 @@ The visual inspection of all the urban districts revealed very high positional a
 
 Fig xx(b) shows the 2km by 2km grid placed at the Ga West Municipal, a semi-urban district. This district is characterised by a highly densed OSM dataset coverage in the south and a very sparse OSM dataset coverage in the north. The 2km by 2km grid drawn covers a portion of the district with a relatively small OSM data capture. Similar positional accuracy as the rest of the region is observed. any other district. However, the fact that over 90% of the road network here are unpaved and are missing in the OSM dataset (oval shapes), further highlights the general patterns of lack of coverages for this type of roads.
 
-```{r, fig.cap="(a) Accra Metropolis district - an urban district and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing."}
+```{r, fig.cap=" (a) Accra Metropolis district - an urban district and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing."}
 knitr::include_graphics("fig/quality assessment_osm_accra.png")
 ```
 
@@ -345,7 +345,7 @@ Kathmandu is very well represented on OpenStreetMap, thanks to a number of proje
 knitr::include_graphics("fig/quality grid_osm_kathmandu.png")
 ```
 
-```{r, fig.cap="The OSM map of Kathmandu, with 2km x 2km grids placed at the geometrical centre of each district."}
+```{r, fig.cap="(a) **  - an urban municipality and (b) ** - a semi-urban municipality. There are no missing roads in the case of Kathmandu"}
 knitr::include_graphics("fig/quality assessment_osm_kathmandu.png")
 ```
 
