@@ -306,15 +306,13 @@ The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each muni
 Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (\*). The positional accuracy and the completeness of the OSM datasets is observed to be very similar to that of Bristol. In other words, in comparison with GAMA, the OSM dataset of kathmandu is better, in terms of both positional accuracy and completeness.
 
 <div class="figure">
-<img src="fig/quality assessment_osm_kathmandu.png" alt="(a) **  - an urban municipality and (b) ** - a semi-urban municipality." width="100%" />
+<img src="fig/quality assessment_osm_kathmandu.png" alt="(a) BaadBhanjyang - an urban municipality and (b) Lapsephedi - a semi-urban municipality." width="100%" />
 <p class="caption">
-1.  \*\* - an urban municipality and (b) \*\* - a semi-urban municipality.
+1.  BaadBhanjyang - an urban municipality and (b) Lapsephedi - a semi-urban municipality.
     </p>
     </div>
 
-In fig. xx(a) and fig(b),
-
-To discuss here (Incredible positional accuracy and completeness for both urban and semi-urban municipalities! - no single uncovered segment found)
+Zooming into the grids at the central of two randomly selected municipalities; BaadBhanjyang and Lapsephedi, representing an urban (fig. xx(a)) and semi-urban (fig. xx(b)) municipalities, respectively, we found the positional accuracy of the OSM road network to be very similar to that of Bristol area. Also, we found every single road segment to have been properly captured, indicating a 100% completeness level.
 
 Description of existing (or lack of) Cycling infrastructure
 ===========================================================
