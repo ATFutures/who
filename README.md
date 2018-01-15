@@ -262,10 +262,12 @@ A systematic visual inspection was carried out so as to assess highlight both th
 
 In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside each administrative sub-division of GAMA and Kathmandu.
 
-Accra
------
+GAMA
+----
 
-Fig. xx shows the distribution of the 2km x 2km grids drawn at the central of GAMA district sub-divisions. The grids also provides a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis to the low population density of Shai Osudoku. The districts are classified into three, namely (1) urban (2) semi-urban and (3) rural districts. This classification is based on the spatial extent of the road network across each district, roughly estimated from the satellite image. Thus, we have 51-100%, 25-50%, and 0-25% coverages classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for urbanisation (Fig. xx).
+In comparison with Bristol, GAMA is roughly thirty times bigger in spatial size than Bristol. Bristol is about the same size of Accra Metropolis, one of the 16 districts of GAMA. It is therefore, expected that more mapping efforts will be required to cover GAMA than Bristol.
+
+Fig. xx shows the distribution of the 2km x 2km grids drawn at the central of GAMA's district sub-divisions. The distibution of the grids also provides a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis to the low population density of Shai Osudoku. The districts are classified into three, namely (1) urban (2) semi-urban and (3) rural districts. This classification is based on the spatial extent of the road network across each district, roughly estimated from the satellite image. Thus, we have 51-100%, 25-50%, and 0-25% coverages classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for urbanisation (Fig. xx).
 
 Like many urban districts, two semi-urban districts; Ga West Municipal and Ga South Municipal districs, contain very dense street network within areas that are adjacent to the urban district of Ga Central Municipal district. The four eastern-most districts, classified as 'rural', consist largely of trunk roads connecting GAMA to the other regions of the country.
 
@@ -286,7 +288,7 @@ There is variations in completeness level based on the three district categorisa
     </p>
     </div>
 
-The "completeness" is also observed to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level. Even, in the rural districts, the majority of the trunk roads are properly well captured, with a very small number of primary roads, while the residential roads are almost non-existent.
+The "completeness" is also observed to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level. Even in the rural districts where the general completeness level is very poor, the trunk road class are the only well-captured roads.
 
 Kathmandu
 ---------
