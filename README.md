@@ -265,7 +265,7 @@ In order to inspect the positional accuracy and the completeness of both GAMA an
 GAMA
 ----
 
-In comparison with Bristol, GAMA is roughly thirty times bigger in size than Bristol. Bristol is about the same size of Accra Metropolis, one of the 16 districts of GAMA. It is therefore, expected that more mapping efforts will be required to cover GAMA than Bristol.
+In comparison with Bristol, GAMA is roughly thirty times bigger in size. Bristol is about the same size of Accra Metropolis, one of the 16 districts of GAMA. It is therefore, expected that more mapping efforts will be required to cover GAMA than Bristol.
 
 Fig. xx shows the distribution of the 2km x 2km grids drawn at the central of GAMA's district sub-divisions. The distibution of the grids also provides a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis to the low population density of Shai Osudoku. The districts are classified into three, namely (1) urban (2) semi-urban and (3) rural districts. This classification is based on the spatial extent of the road network across each district, roughly estimated from the satellite image. Thus, we have 51-100%, 25-50%, and 0-25% coverages classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for urbanisation (Fig. xx).
 
@@ -293,7 +293,7 @@ The "completeness" is also observed to vary by road classes, from trunk roads (m
 Kathmandu
 ---------
 
-In comparison with Bristol, Kathmandu is roughly four times bigger in size than Bristol, but approximately eight times smaller than GAMA. While we expect that more mapping efforts will be required to cover Kathmandu than Bristol, the former can still be covered relatively easier than GAMA.
+In comparison with Bristol, Kathmandu is roughly four times bigger in size, but approximately eight times smaller than GAMA. While we expect that more mapping efforts will be required to cover Kathmandu than Bristol, the former can still be covered relatively easier than GAMA.
 
 The same technique of drawing 2km x 2km grids central of administrative sub-divisions is employed. The distibution of the grids is also seen to provide a good cross-section of the street network across Kathmandu. We also employ the similar
 
