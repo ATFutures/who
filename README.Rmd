@@ -323,6 +323,7 @@ knitr::include_graphics("fig/quality grid_osm_bristol.png")
 ```  
 Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure show perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, no cases of uncapture road segment can be seen; indicating a 100% completeness.
 
+
 In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside each administrative sub-division of GAMA and Kathmandu. 
 
 ##Accra
