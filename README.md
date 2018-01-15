@@ -255,16 +255,6 @@ Bristol
     </p>
     </div>
 
-Description of existing (or lack of) Cycling infrastructure
-===========================================================
-
-This section describes the coverage of existing cylcing infrastructure in Accra and Kathmandu, in relation to Bristol (reference)
-
-<img src="fig/cylcing_infrastructures.png" alt="Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol" width="100%" />
-<p class="caption">
-Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol
-</p>
-
 Accra
 -----
 
@@ -314,6 +304,16 @@ To discuss here (~ size of kathmandu relative to accra?).
     </div>
 
 To discuss here (Incredible positional accuracy and completeness for both urban and semi-urban municipalities! - no single uncovered segment found)
+
+Description of existing (or lack of) Cycling infrastructure
+===========================================================
+
+This section describes the coverage of existing cylcing infrastructure in Accra and Kathmandu, in relation to Bristol (reference)
+
+<img src="fig/cylcing_infrastructures.png" alt="Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol" width="100%" />
+<p class="caption">
+Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol
+</p>
 
 Result II: Estimates of Cycling potentials in Accra
 ===================================================
