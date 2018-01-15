@@ -275,7 +275,9 @@ The OSM map of GAMA, with 2km x 2km grids placed at the centre of each district.
 </p>
 
 <!-- The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts. -->
-The OSM datasets of GAMA revealed very high positional accuracy across all the districts. Though, not as accurate as Bristol OSM, the road segments are still well-aligned and properly contained within the width of their respective raster representation. The completeness varies based on the three categorisation of the district, with urban district having the highest completeness, and the rural districts having the lowest completeness. In relation to the completeness, it is observed that paved roads are captured more than unpaved roads. This explains why more roads in the urban districts are captured better than both the semi-urban and rural districts. Figure xx(a) and Fig xx(b) are the 2km x 2km grid at the centre of the Accra Metropolis and Ga West Municipal districts, an urban and semi-urban districts, respectively. The oval shapes highlight the areas that are not captured at the centre of each district.
+The OSM datasets of GAMA revealed very high positional accuracy across all the districts. Though, not prefectly aligned at the central of the road's raster representation, the segments of GAMA's OSM are still contained within the widths of the roads. The positional accuracies are also similar for all road classes.
+
+There is variations in completeness level based on the three district categorisation, with urban district having the best completeness, followed by the semi-rural districts. Furthermore, it is observed that there are more OSM datasets in areas where roads are paved, than areas where roads are unpaved. This explains why more roads in the urban districts are captured better than both the semi-urban and rural districts. Figure xx(a) and Fig xx(b) are the 2km x 2km grid at the centre of the Accra Metropolis and Ga West Municipal districts, an urban and semi-urban districts, respectively. The oval shapes highlight examples of areas with missing OSM datasets, which are more prominents in the Fig xx(b) than Fig. xx(a).
 
 <div class="figure">
 <img src="fig/quality assessment_osm_accra.png" alt=" (a) Accra Metropolis district - an urban district and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing." width="100%" />
@@ -284,7 +286,7 @@ The OSM datasets of GAMA revealed very high positional accuracy across all the d
     </p>
     </div>
 
-Generally, the positional accuracy of the OSM dataset is similar for all road classes. However, the "completeness" appears to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level.
+However, the "completeness" appears to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level.
 
 Kathmandu
 ---------
