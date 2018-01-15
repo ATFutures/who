@@ -325,9 +325,11 @@ Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administ
 
 The cycling lanes, .....
 
+In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside each administrative sub-division of GAMA and Kathmandu. 
+
 ##Accra
 
-A systematic visual inspection was carried out so as to assess both the positional accuracy and the completeness of the current OSM datasets covering the GAMA. This was accomplished by placing a 2km by 2km grid at the geometrical centre of each district (Fig.). From our observations, these grids provide a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis to the low population density of Shai Osudoku. We classified the districts into three, namely (1) urban (2) semi-urban and (3) rural districts. This classification is based on the spatial extent of the road network across each district, roughly estimated from the satellite image. Thus, we have 51-100%, 25-50%, and 0-25% coverages classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for urbanisation (Fig. xx). 
+Fig. xx is the .. From our observations, these grids provide a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis to the low population density of Shai Osudoku. We classified the districts into three, namely (1) urban (2) semi-urban and (3) rural districts. This classification is based on the spatial extent of the road network across each district, roughly estimated from the satellite image. Thus, we have 51-100%, 25-50%, and 0-25% coverages classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for urbanisation (Fig. xx). 
 
 Like many urban districts which comprise very dense street networks, the semi-urban districts such as Ga West Municipal and Ga South Municipal districs, do also contain dense street network, within certain areas that are adjacent to the urban districts. The four eastern-most districts, classified as 'rural', largely consist of trunk roads connecting GAMA to the other regions of the country.
 
