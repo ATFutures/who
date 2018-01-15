@@ -324,7 +324,10 @@ knitr::include_graphics("fig/quality grid_osm_accra.png")
 
 <!-- The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts. -->
 
-The visual inspection of all the urban districts revealed very high positional accuracy and completeness of the OSM datasets. The road segments are well-aligned and properly contained within the width of their respective raster representation. However, a significant number of unpaved streets are uncaptured. For example, in fig xx(a) showing the 2km x 2km grid at the centre of the Accra Metropolis district, the large oval shape highlights the Campus of Accra Technology University College, whose roads are unpaved and are generally missing in the OSM datasets. 
+The visual inspection of the OSM datasets revealed very high positional accuracy across all the districts. The road segments are well-aligned and properly contained within the width of their respective raster representation. However, the completeness varies based on the three categorisation of the district, with urban district having the highest completeness, while the rural districts having the lowest completeness. Most noticeable 
+
+
+according to the level of urbaa significant number of unpaved streets are uncaptured. For example, in fig xx(a) showing the 2km x 2km grid at the centre of the Accra Metropolis district, the large oval shape highlights the Campus of Accra Technology University College, whose roads are unpaved and are generally missing in the OSM datasets. 
 
 Fig xx(b) is the 2km by 2km grid at the Ga West Municipal, a semi-urban district. Generally, the district is characterised by a highly densed OSM coverage in the southern part and a very sparse OSM coverage in the northern part. The 2km by 2km grid only covers a relatively small OSM data captured. Similar positional accuracy as the rest of the region can be observed. However, the fact that over 90% of the road network are unpaved, explains the relatively large number of missing OSM network in this district. These missing datasets are highlighted by the oval shapes. 
 
