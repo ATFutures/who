@@ -236,10 +236,8 @@ also mention floating population - seems to be 3-4 million in KTMV with about 2-
 Kathmandu population density (2011). Source: Thomas Brinkhoff: City Population, <http://www.citypopulation.de>
 </p>
 
-Results I: Accra
-================
-
-### Assessing the quality of OpenStreetMap
+Results I: Assessing the quality of OpenStreetMap
+=================================================
 
 The street network datasets used for this project were downloaded from the OpenStreetMap (OSM), an open access, freely available, online mapping database (Barrington-Leigh and Millard-Ball, 2017). Generated through crowd-sourcing (Goodchild, 2007) by volunteers, the current database has grown to almost 50 gigabytes, and thousands of features are being added by the day. One uniqueness of OSM is that it allows its users the chance to contribute their local knowledge about places, thereby ensuring the features’ accuracy, completeness and thoroughness. Furthermore, a backend control/validation is implemented in order to ensure that the datasets conform with the Open Geospatial Consortium standards, which is the internationally recognised set of data standards for the global geospatial community.
 
@@ -247,7 +245,8 @@ For this project, we examined the quality of our OSM datasets and evaluate how w
 
 The positional accuracy is described as the position of a feature on a map relative to its actual position on the ground, while the completeness is an assessment of the amount of datasets that are missing on a map. For the baseline comparison datasets, we used the Bing areal imagery, which can be added as a background layer on OSM website, thereby allowing easy comparative analysis through visual inspection. The positional accuracy of the Bing areal imagery has been confirmed to be relatively better than that of Google Maps at nadir, with an RMSE of 7.9 as compared to 8.2 for the latter (Ubukawa, 2013). In the same study, the RMSE of OSM datasets was calculated to be 11.1m. Furthermore, the new Bing areal imageries for every country are usually released every three to four months in order to ensure the imagery is as current as possible (Ref.).
 
-**Assessment of Accra's OSM**
+Accra
+-----
 
 A systematic visual inspection was carried out so as to assess both the positional accuracy and the completeness of the current OSM datasets covering the GAMA. This was accomplished by placing a 2km by 2km grid at the geometrical centre of each district (Fig.). From our observations, these grids provide a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis to the low population density of Shai Osudoku. We classified the districts into three, namely (1) urban (2) semi-urban and (3) rural districts. This classification is based on the spatial extent of the road network across each district, roughly estimated from the satellite image. Thus, we have 51-100%, 25-50%, and 0-25% coverages classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for urbanisation (Fig. xx).
 
@@ -272,9 +271,8 @@ Fig xx(b) is the 2km by 2km grid at the Ga West Municipal, a semi-urban district
 
 Generally, the positional accuracy of the OSM dataset is similar for all road classes. However, the "completeness" appears to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level.
 
-**Assessment of Kathmandu's OSM datasets**
-
-### Assessing the quality of OpenStreetMap of Kathmandu
+Kathmandu
+---------
 
 Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation <!-- link to KLL website-->. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them on how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their website states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
 
@@ -296,7 +294,8 @@ To discuss here (~ size of kathmandu relative to accra?).
 
 To discuss here (Incredible positional accuracy and completeness for both urban and semi-urban municipalities! - no single uncovered segment found)
 
-### Assessing the quality of OpenStreetMap of Bristol
+Bristol
+-------
 
 <div class="figure">
 <img src="fig/quality grid_osm_bristol.png" alt="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward" width="100%" />
@@ -305,17 +304,26 @@ To discuss here (Incredible positional accuracy and completeness for both urban 
     </p>
     </div>
 
-### Estimates of Cycling potentials in Accra
+Existing Cylcing Infrastructure
+===============================
+
+This section describes the coverage of existing cylcing infrastructure in Accra and Kathmandu (and Bristol as a reference)
+
+Result II: Estimates of Cycling potentials in Accra
+===================================================
+
+We have generated estimates for cycling potential across the larger of the two case study cities. The priority over the next 3 weeks of the project will be to calibrate this model and apply refined versions of it to both cities, using additional input datasets where available.
+
+Accra
+-----
 
 <img src="fig/accra-osm-overview.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" /><img src="fig/test.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" />
 <p class="caption">
 Overview of Accra (left) and initial results of cycling potential (right).
 </p>
 
-We have generated estimates for cycling potential across the larger of the two case study cities. The priority over the next 3 weeks of the project will be to calibrate this model and apply refined versions of it to both cities, using additional input datasets where available.
-
-Results II: Kathmandu
-=====================
+Kathmandu
+---------
 
 This section is work in progress.
 
