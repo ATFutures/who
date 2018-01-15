@@ -293,19 +293,21 @@ The "completeness" is also observed to vary by road classes, from trunk roads (m
 Kathmandu
 ---------
 
-In comparison with size of GAMA, Kathmandu is approximately 8 times smaller. Just like Accra metropolitan district in GAMA, Kathmandu Metropolitan City serves as the central municipality from which the road network spread out to other parts of the Kathmandu.
+In comparison with Bristol, Kathmandu is roughly four times bigger in spatial size than Bristol, but approximately eight times smaller than GAMA. While we expect that more mapping efforts will be required to cover Kathmandu than Bristol, the former can still be covered relatively easier than GAMA.
 
-ComKathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (\*). The positional accuracy and the completeness of the OSM datasets is on the same level as that of Bristol.
+The same technique of drawing 2km x 2km grids central of administrative sub-divisions is employed. The distibution of the grids is also seen to provide a good cross-section of the street network across Kathmandu. We also employ the similar
 
-<!-- link to KLL website-->
-. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them on how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their website states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
+ame The districts are classified into three, namely (1) urban (2) semi-urban and (3) rural districts. This classification is based on the spatial extent of the road network across each district, roughly estimated from the satellite image. Thus, we have 51-100%, 25-50%, and 0-25% coverages classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for urbanisation (Fig. xx).
 
+Like many urban districts, two semi-urban districts; Ga West Municipal and Ga South Municipal districs, contain very dense street network within areas that are adjacent to the urban district of Ga Central Municipal district. The four eastern-most districts, classified as 'rural', consist largely of trunk roads connecting GAMA to the other regions of the country.
+
+<!-- Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (*).KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them on how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their website states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads. -->
 <img src="fig/quality grid_osm_kathmandu.png" alt="The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each district." width="100%" />
 <p class="caption">
 The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each district.
 </p>
 
-To discuss here (~ size of kathmandu relative to accra?).
+Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (\*). The positional accuracy and the completeness of the OSM datasets is very close to that of Bristol. The
 
 <div class="figure">
 <img src="fig/quality assessment_osm_kathmandu.png" alt="(a) **  - an urban municipality and (b) ** - a semi-urban municipality." width="100%" />
