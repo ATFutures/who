@@ -304,7 +304,7 @@ Bristol
     </p>
     </div>
 
-Description of existing (or lack of) Cylcing infrastructure
+Description of existing (or lack of) Cycling infrastructure
 ===========================================================
 
 This section describes the coverage of existing cylcing infrastructure in Accra and Kathmandu, in relation to Bristol (reference)
@@ -316,13 +316,6 @@ Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) B
 
 Result II: Estimates of Cycling potentials in Accra
 ===================================================
-
-<div class="figure">
-<img src="fig/quality grid_osm_bristol.png" alt="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward" width="100%" />
-<p class="caption">
-1.  The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward
-    </p>
-    </div>
 
 We have generated estimates for cycling potential across the larger of the two case study cities. The priority over the next 3 weeks of the project will be to calibrate this model and apply refined versions of it to both cities, using additional input datasets where available.
 
