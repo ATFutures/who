@@ -344,9 +344,7 @@ Data for the study cities (Accra and Kathmandu) are primarily population densiti
 
 The calibration comprised the following three steps. First, the Bristol OD matrix was converted to total densities at all origin points by summing values for all destinations. These values are equivalent to the aggregate population densities obtained for the study cities. Second, an exponential spatial interaction model was applied to these densities to provide estimates of flows from each origin to each destination point, dependent on a single parameter quantifying the exponential decay in flow density with increasing distace. Finally, the calibration was performed by finding the value of the exponential decay parameter which best reproduced the observed OD matrix, with this procedure repeatedly separately for pedestrian and cyclist models.
 
-The resultant decay coefficients for pedestrians and cyclists had respective values of 1.3 and 13.7km, indicating that 63% (1-exp(-1)) of all pedestrian trips are 1.3km or less, while the same proportion of cycling trips are less than 13.7km. Both of these models generated using the above procedure were very significantly related to the actual OD matrices, with the pedestrian model reproducing 38.4% of the structure of the observed OD matrix, while the cycling model reproduced less than 10% of the equivalent structure.
-
-This value of 13.7km for cyclists likely reflects a small proportion of very active cyclists who commute relatively very long distances between home and work. (Add more here ...)
+The resultant decay coefficients for pedestrians and cyclists had respective values of 1.3 and 2.3km, indicating that 63% (1-exp(-1)) of all pedestrian trips are 1.3km or less, while the same proportion of cycling trips are less than 2.3km. Both of these models generated using the above procedure were very significantly related to the actual OD matrices, with the pedestrian model reproducing 46% of the structure of the observed OD matrix, and the cycling model reproducing 12%.
 
 Validation
 ----------
