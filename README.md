@@ -245,6 +245,26 @@ For this project, we examined the quality of our OSM datasets and evaluate how w
 
 The positional accuracy is described as the position of a feature on a map relative to its actual position on the ground, while the completeness is an assessment of the amount of datasets that are missing on a map. For the baseline comparison datasets, we used the Bing areal imagery, which can be added as a background layer on OSM website, thereby allowing easy comparative analysis through visual inspection. The positional accuracy of the Bing areal imagery has been confirmed to be relatively better than that of Google Maps at nadir, with an RMSE of 7.9 as compared to 8.2 for the latter (Ubukawa, 2013). In the same study, the RMSE of OSM datasets was calculated to be 11.1m. Furthermore, the new Bing areal imageries for every country are usually released every three to four months in order to ensure the imagery is as current as possible (Ref.).
 
+Bristol
+-------
+
+<div class="figure">
+<img src="fig/quality grid_osm_bristol.png" alt="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward" width="100%" />
+<p class="caption">
+1.  The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward
+    </p>
+    </div>
+
+Description of existing (or lack of) Cycling infrastructure
+===========================================================
+
+This section describes the coverage of existing cylcing infrastructure in Accra and Kathmandu, in relation to Bristol (reference)
+
+<img src="fig/cylcing_infrastructures.png" alt="Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol" width="100%" />
+<p class="caption">
+Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol
+</p>
+
 Accra
 -----
 
@@ -272,9 +292,12 @@ Generally, the positional accuracy of the OSM dataset is similar for all road cl
 Kathmandu
 ---------
 
-Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation <!-- link to KLL website-->. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them on how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their website states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
+In comparison with size of GAMA, Kathmandu is approximately 8 times smaller. Just like Accra metropolitan district in GAMA, Kathmandu Metropolitan City serves as the central municipality from which the road network spread out to other parts of the Kathmandu.
 
-The Kathmandu study area is approximately 8 times smaller than accra study area.
+ComKathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (\*). The positional accuracy and the completeness of the OSM datasets is on the same level as that of Bristol.
+
+<!-- link to KLL website-->
+. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them on how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their website states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads.
 
 <img src="fig/quality grid_osm_kathmandu.png" alt="The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each district." width="100%" />
 <p class="caption">
@@ -291,26 +314,6 @@ To discuss here (~ size of kathmandu relative to accra?).
     </div>
 
 To discuss here (Incredible positional accuracy and completeness for both urban and semi-urban municipalities! - no single uncovered segment found)
-
-Bristol
--------
-
-<div class="figure">
-<img src="fig/quality grid_osm_bristol.png" alt="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward" width="100%" />
-<p class="caption">
-1.  The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward
-    </p>
-    </div>
-
-Description of existing (or lack of) Cycling infrastructure
-===========================================================
-
-This section describes the coverage of existing cylcing infrastructure in Accra and Kathmandu, in relation to Bristol (reference)
-
-<img src="fig/cylcing_infrastructures.png" alt="Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol" width="100%" />
-<p class="caption">
-Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol
-</p>
 
 Result II: Estimates of Cycling potentials in Accra
 ===================================================
