@@ -286,7 +286,7 @@ There is variations in completeness level based on the three district categorisa
     </p>
     </div>
 
-However, the "completeness" appears to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level.
+The "completeness" is also observed to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level. Even, in the rural districts, the majority of the trunk roads are properly well captured, with a very small number of primary roads, while the residential roads are almost non-existent.
 
 Kathmandu
 ---------

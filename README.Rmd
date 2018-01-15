@@ -342,12 +342,12 @@ The OSM datasets of GAMA revealed very high positional accuracy across all the d
 
 There is variations in completeness level based on the three district categorisation, with urban district having the best completeness level, followed by the semi-rural districts. Furthermore, it is observed that there are more OSM datasets in areas where roads are paved, than areas where roads are unpaved. This explains why more roads in the urban districts are covered better than the roads in both the semi-urban and rural districts. Figure xx(a) and Fig xx(b) are the 2km x 2km grids at the centre of the Accra Metropolis and Ga West Municipal districts, an urban district and a semi-urban district, respectively. The oval shapes highlight examples of areas with missing OSM datasets. It can be observed that areas with missing OSM datasets are more prominent in semi-urban district than in the urban district. 
 
-
 ```{r, fig.cap=" (a) Accra Metropolis district - an urban district, and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing."}
 knitr::include_graphics("fig/quality assessment_osm_accra.png")
 ```
 
-However, the "completeness" appears to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level. 
+The "completeness" is also observed to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level. Even, in the rural districts, the majority of the trunk roads are properly well captured, with a very small number of primary roads, while the residential roads are almost non-existent.   
+
 
 ##Kathmandu
 
