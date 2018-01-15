@@ -248,6 +248,10 @@ The positional accuracy is described as the position of a feature on a map relat
 Bristol OSM network dataset - Showing an ideal positional accuracy and completeness
 -----------------------------------------------------------------------------------
 
+Bristol OSM network dataset is presented below showing an example ideal positional accuracy and completeness expected of an OSM dataset. As at 2010, the comparison of Bristol's OSM road names against that provided by the UK Ordnance Survey (national mapping agency), the City of Bristol is 97.34% complete, ranking it 63rd out of 408 in the UK (). There are currently 135 incorrect or missing road names in OSM in Bristol.
+
+Bristol is located in the we...
+
 <div class="figure">
 <img src="fig/quality grid_osm_bristol.png" alt="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward" width="100%" />
 <p class="caption">
