@@ -245,8 +245,8 @@ For this project, we examined the quality of our OSM datasets and evaluate how w
 
 The positional accuracy is described as the position of a feature on a map relative to its actual position on the ground, while the completeness is an assessment of the amount of datasets that are missing on a map. For the baseline comparison datasets, we used the Bing areal imagery, which can be added as a background layer on OSM website, thereby allowing easy comparative analysis through visual inspection. The positional accuracy of the Bing areal imagery has been confirmed to be relatively better than that of Google Maps at nadir, with an RMSE of 7.9 as compared to 8.2 for the latter (Ubukawa, 2013). In the same study, the RMSE of OSM datasets was calculated to be 11.1m. Furthermore, the new Bing areal imageries for every country are usually released every three to four months in order to ensure the imagery is as current as possible (Ref.).
 
-Bristol OSM network dataset - Showing an ideal positional accuracy and completeness
------------------------------------------------------------------------------------
+Bristol OSM network dataset as reference positional accuracy and completeness
+-----------------------------------------------------------------------------
 
 Bristol OSM network dataset is presented below; showing the ideal positional accuracy and completeness that are expected of an OSM dataset. Bristol is a city and county in South West England with a population density of 3,892/km2, according the the UK Office of National Statistics (2015), making the district one of the most densely populated district in the UK.
 
