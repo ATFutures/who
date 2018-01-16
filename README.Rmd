@@ -314,17 +314,17 @@ The positional accuracy is described as the position of a feature on a map relat
 
 ## Bristol OSM network dataset as reference positional accuracy and completeness  
 
-Bristol OSM network dataset is presented below; showing the ideal positional accuracy and  completeness that are  expected of an OSM dataset. Bristol is a city and county in South West England with a population density of 3,892/km2, according the the UK Office of National Statistics (2015), making the district one of the most densely populated district in the UK.
+Bristol is a city in South West England with a population density of 3,892/km2, according the the UK Office of National Statistics (2015), making the district one of the most densely populated district in the UK. Bristol OSM network dataset is shown in the figure below; showing what could be considered ideal positional accuracy and completeness expected of an OSM dataset. 
 
-A systematic visual inspection was carried out so as to assess highlight both the positional accuracy and the completeness of the OSM datasets of the Bristol area. This was accomplished by placing a 2km by 2km grid at the geometrical centre of each district (Fig.xx(a)). From our observations, these grid placements provide a good cross-section of the street network across Bristol.
+In order to inspect the dataset, we placed 2km by 2km grids at the geometrical centre of all the district (Fig.xx(a)), providing a good cross-section of the street network across Bristol. A careful visual inspection of each of the grid revealed very high positional accuracy and completeness of OSM network datasets. 
 
 ```{r, fig.cap="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward"}
 knitr::include_graphics("fig/quality grid_osm_bristol.png")
 ```  
-Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure show perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, no cases of uncapture road segment can be seen; indicating a 100% completeness.
+Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure shows perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, we could not find a single case of uncaptured road segment; indicating a hundred percent completeness.
 
 
-In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside each administrative sub-division of GAMA and Kathmandu. 
+In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside the administrative sub-division each study area, and visually inspect each of the grid. 
 
 
 ##GAMA
