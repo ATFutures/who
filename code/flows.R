@@ -8,8 +8,7 @@ devtools::load_all (pd_dir, export_all = FALSE)
 # If !is.null(n), then sample that number of nodes
 get_popdens_nodes <- function (city = "accra", n = NULL)
 {
-    #data_dir <- file.path (here::here(), "../who-data")
-    data_dir <- "/data/repos/atfutures/who-data"
+    data_dir <- file.path (here::here(), "../who-data")
     nodes <- readRDS (file.path (data_dir, city, "osm", "nodes_new.Rds"))
     if (!is.null (n))
     {
@@ -38,7 +37,6 @@ get_od_matrix <- function (net, nodes)
 }
 transport <- "bicycle" # for weighting profile
 data_dir <- file.path (here::here(), "../who-data")
-data_dir <- "/data/repos/atfutures/who-data"
 net <- readRDS (file.path (data_dir, "accra", "osm", "accra-hw.Rds")) %>%
     weight_streetnet (wt_profile = transport)
 od <- get_od_matrix (net, nodes)
