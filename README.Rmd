@@ -7,7 +7,7 @@ author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
 output:
-  pdf_document:
+  html_document:
     number_sections: yes
 ---
 
@@ -75,50 +75,6 @@ Comparing the cities at the outset will help put the results in perspective and 
 
 Accra is the larger city, with a population approaching 5 million and a growth rate of around 3% per year in the Greater Accra Region according to the [Ghana Statistical Service](http://www.statsghana.gov.gh/docfiles/2010phc/Projected%20population%20by%20sex%202010%20-%202016.pdf).
 Kathmandu has a population of just over 1.2 million, according to the [World Population Review](http://worldpopulationreview.com/world-cities/kathmandu-population/).
-
-We already have some results from the OSM and demographic datasets, as outlined below.
-
-\newpage
-
-## OpenStreetMap data
-
-The OpenStreetMap network for Accra has 145,827 street segments connecting
-131,349 distinct points, and extends over 4,072km. The OSM data also include
-24,490 buildings, of which 23,102 include geometric descriptions only, while the
-remaining 1,388 buildings are divided between 28 distinct categories.
-
-The equivalent network for Kathmandu has 79,832 street segments connecting
-37,770 distinct points, and extends over 1,062km. The OSM data also include 82,333
-buildings of which 75,778 include geometric descriptions only, while the
-remaining 6,555 are divided between 344 distinct categories (in this case
-including many named buildings).
-
-```{r, echo=FALSE}
-r = readRDS("extdata/r.rds")
-names(r) = c("City", "Street nodes", "Street segments", "Network distance (km)", "Population (on network)", "N. Buildings", "nb_no_desc", "Num. Building Classes")
-knitr::kable(r[c(1, 5, 6, 8)], caption = "Basic OSM characteristics of case study cities")
-```
-
-
-The street network for Accra is more extensive, reflecting the greater spatial
-extent of the city, while data on buildings are considerable more detailed for
-Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping
-activity in response to the 2015 earthquake.
-
-```{r}
-knitr::kable(r[1:4], caption = "Characteristics of OSM route network data for case study cities.")
-```
-
-
-## Demographic data
-
-Demographic data for Accra from worldpop include population density estimates
-at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells.
-Estimates are available for total population density, as well as distributed
-between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
-
-Demographic data for Kathmandu are not as detailed, and also do not include age
-classes.
 
 ## An overview of Accra from an active travel perspective
 
@@ -308,7 +264,7 @@ Overall, the majority of passengers (57.6%) rate the experience of using public 
 While the government has already introduced some measures previously (banning diesel- and petrol-operated three wheelers and introducing a green sticker system for vehicles in December 1999 (CEN, 2014b)), most focus to date has been on widening existing roads to 6 or 8 lanes and building more roads as the urbanization has spread. Since this has proven to be far from adequate in coping with the increased motorization, congestion and pollution, more sustainable and long-term plans have been constructed. In July 2015 an introduction of the "Project on Urban Transport Improvement for Kathmandu Valley in Federal Democratic Republic of Nepal" was presented. For the road system, a radial-circumferential system will be adopted, allowing vehicles whose origin or destination is not in the central business district to avoid having to pass through there. (Government of Nepal, 2015.)
 
 ```{r, fig.cap="Kathmandu road plans. Source: Government of Nepal, 2015."}
-knitr::include_graphics("fig/KathmanduRoadNetworkPlans")
+knitr::include_graphics("fig/KathmanduRoadNetworkPlans.png")
 ```
 
 Similarly, for the public transport system, a hierarchical route network will be made, keeping only a third of the routes based on mobility numbers, and four transfer terminals will be created in each cardinal direction, to alleviate pressure on the central terminal. By reducing the import fees for vehicles with a seating capacity of over 40 seats, they hope to encourage a shift towards larger public transport vehicles. Furthermore, they intended to have short-, mid- and long-term transport master plans in place in the following 5, 10 and 15 years respectively. They envisioned plans for a number of different sectors, including non-motorized transport. (Government of Nepal, 2015.)
@@ -369,8 +325,53 @@ The population in Kathmandu municipality has been increasing rapidly, from 671,8
 knitr::include_graphics("fig/kathmandu_pop_density.png")
 ```
 
+# Results I: Overviews of OSM and WorldPop data
 
-#Results I: Assessing the quality of OpenStreetMap
+Overview results from the OSM and demographic datasets, as outlined below.
+
+## OpenStreetMap data
+
+The OpenStreetMap network for Accra has 145,827 street segments connecting
+131,349 distinct points, and extends over 4,072km. The OSM data also include
+24,490 buildings, of which 23,102 include geometric descriptions only, while the
+remaining 1,388 buildings are divided between 28 distinct categories.
+
+The equivalent network for Kathmandu has 79,832 street segments connecting
+37,770 distinct points, and extends over 1,062km. The OSM data also include 82,333
+buildings of which 75,778 include geometric descriptions only, while the
+remaining 6,555 are divided between 344 distinct categories (in this case
+including many named buildings).
+
+```{r, echo=FALSE}
+r = readRDS("extdata/r.rds")
+names(r) = c("City", "Street nodes", "Street segments", "Network distance (km)", "Population (on network)", "N. Buildings", "nb_no_desc", "Num. Building Classes")
+knitr::kable(r[c(1, 5, 6, 8)], caption = "Basic OSM characteristics of case study cities")
+```
+
+The street network for Accra is more extensive, reflecting the greater spatial
+extent of the city, while data on buildings are considerable more detailed for
+Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping
+activity in response to the 2015 earthquake.
+
+```{r}
+knitr::kable(r[1:4], caption = "Characteristics of OSM route network data for case study cities.")
+```
+
+
+Demographic data for Accra from worldpop include population density estimates
+at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells.
+Estimates are available for total population density, as well as distributed
+between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
+
+Demographic data for Kathmandu are not as detailed, and also do not include age
+classes. An overview map of Accra, the most extensively studied of our case study cities,
+is illustrated in the Figure below.
+
+```{r, fig.cap="Overview of Accra (left) and initial results of cycling potential (right).", fig.show='hold', out.width="49%"}
+knitr::include_graphics(c("fig/accra-osm-overview.png", "fig/test.png"))
+```
+
+# Results II: Assessing the quality of OpenStreetMap
 
 The street network datasets used for this project were downloaded from the OpenStreetMap (OSM), an open access, freely available, online mapping database (Barrington-Leigh and Millard-Ball, 2017). Generated through crowd-sourcing (Goodchild, 2007) by volunteers, the current database has grown to almost 50 gigabytes, and thousands of features are being added by the day. One uniqueness of OSM is that it allows its users the chance to contribute their local knowledge about places, thereby ensuring the features’ accuracy, completeness and thoroughness. Furthermore, a backend control/validation is implemented in order to ensure that the datasets conform with the Open Geospatial Consortium standards, which is the internationally recognised set of data standards for the global geospatial community.
 
@@ -393,7 +394,7 @@ Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administ
 In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside the administrative sub-division each study area, and visually inspect each of the grid. 
 
 
-##GAMA
+## Accra
 
 In comparison with Bristol, GAMA is roughly thirty times bigger in size. Bristol is only about the same size as the Accra Metropolis, one of the 16 districts  of GAMA. As a result of the relative size of GAMA as compared to Bristol, it is expected that more mapping efforts will be required to cover GAMA. 
 
@@ -409,9 +410,7 @@ knitr::include_graphics("fig/quality grid_osm_accra.png")
 
 The OSM datasets of GAMA revealed very high positional accuracy across all the districts. The positional accuracy is also uniform for all road classes. Though, many of the OSM road segments are not prefectly aligned at the central of the roads' raster representation, they are nevetheless contained within the widths of the roads. 
 
-
 There is variations in completeness level based on the three district categorisations, with urban district having the best completeness level, followed by the semi-rural districts. Furthermore, it is observed that there are more OSM datasets in areas where roads are paved, than areas where roads are unpaved. This explains why more roads in the urban districts are captured better than the roads in both the semi-urban and rural districts. Figure xx(a) and Fig xx(b) are the 2km x 2km grids at the centre of the Accra Metropolis and Ga West Municipal districts, an urban district and a semi-urban district, respectively. The oval shapes highlight examples of areas with missing OSM datasets. It can be observed that areas with missing OSM datasets are more prominent in semi-urban district than in the urban district. 
-
 
 ```{r, fig.cap=" (a) Accra Metropolis district - an urban district, and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing."}
 knitr::include_graphics("fig/quality assessment_osm_accra.png")
@@ -419,8 +418,7 @@ knitr::include_graphics("fig/quality assessment_osm_accra.png")
 
 The "completeness" is also observed to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level. Even in the rural districts where the general completeness level is very poor, the trunk road class are the only well-captured roads.
 
-
-##Kathmandu
+## Kathmandu
 
 In comparison with Bristol, Kathmandu is roughly four times bigger in size, but approximately eight times smaller than GAMA. While we expect that more mapping efforts will be required to cover Kathmandu as compared to Bristol, the former can still be covered relatively easier than GAMA.  
 
@@ -440,7 +438,7 @@ Kathmandu is very well represented on OSM, thanks to a number of local mapping o
 knitr::include_graphics("fig/quality assessment_osm_kathmandu.png")
 ```
 
-#Description of existing (or lack of) Cycling infrastructure
+# Results III: Existing (or lack of) Cycling infrastructure
 
 This section describes the coverage of existing cylcing infrastructure in Accra and Kathmandu, in relation to Bristol (reference) 
 
@@ -448,19 +446,10 @@ This section describes the coverage of existing cylcing infrastructure in Accra 
 knitr::include_graphics("fig/cylcing_infrastructures.png")
 ```  
 
-#Result II: Estimates of Cycling potentials in Accra
+# Results III: Estimates of Cycling potentials in Accra
 
 We have generated estimates for cycling potential across the larger of the two case study cities. The priority over the next 3 weeks of the project will be to calibrate this model and apply refined versions of it to both cities, using additional input datasets where available.
 
-## Accra
-
-```{r, fig.cap="Overview of Accra (left) and initial results of cycling potential (right).", fig.show='hold', out.width="49%"}
-knitr::include_graphics(c("fig/accra-osm-overview.png", "fig/test.png"))
-```
-
-##Kathmandu
-
-This section is work in progress.
 
 # Validation and calibration
 
