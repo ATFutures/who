@@ -39,28 +39,33 @@ This project aims to tackle these problems by assessing the feasibility of tools
 
 This document represents an *interim report* on progress during the first week of this month-long project, which commenced on 18^th^ December 2017.
 
-# Input data
+# Input data and methods
 
-Data were accessed from the following sources:
+Two approaches were taken in parallel for this study:
+the collection and processing of open access data to gain an understanding of the feasibility of creating tools for active transport planning, and the analysis of secondary sources to ensure that any tool delivered in the case study cities is appropriate for local needs.
+
+In terms of **primary data**, these were accessed from the following open access sources, all of which (except the third) are available worldwide:
 
 - Transport network and building data from **OpenStreetMap (OSM)**, an open access, freely available, crowd-sourced online mapping database [@barrington-leigh_worlds_2017].
 - Population density and some demographic data from [worldpop](http://www.worldpop.org.uk/) [@tatem_worldpop_2017]
+- A 'benchmark' open access origin-destination dataset from the WICID census data portal for calibrating the route network model
 <!-- - Topographic data from NASA's open SRTM data -->
 
 <!-- Additional data on population densities will be obtained from WorldPop and from NASA's Socioeconomic Data and Applications Center (SDAC). The -->
 <!-- former provides static fine-resolution data (100$m^2$, for the year 2013 only), while the latter provides coarser (1$km^2$) future projections -->
 <!-- out to 2020. -->
 
-# Methods
-
-We have made a number of technical breakthroughs that allow us to estimate cycling potential down to the road network level based on open data.
-This involved implementing a highly computationally efficient routing algorithm in C++.
-Since commencing the project we have developed a method for re-allocating the results of the routing algorithm back onto the road network.
+The methods used to analyse the primary datasets involved a number of technical breakthroughs.
+These allow us to estimate cycling potential down to the road network level based on open data with, to our knowledge, unprecedented computational efficiency.
+This involved implementing a highly computationally efficient routing algorithm in C++ and, in a development that has arisen thanks to this project, new software for re-allocating the results of the routing algorithm back onto the road network.
 A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version](http://rpubs.com/RobinLovelace/341996)):
 
 ```{r, echo=FALSE, fig.cap="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential."}
 knitr::include_graphics("fig/accra-flow1-interactive.png")
 ```
+
+In terms of **secondary data** we made use of the published academic literature, 'grey literature' on each of the case study cities, and reports and statistical data published by the local authorities.
+More conventional methods were used to assess these data sources and make use of them to inform the feasibility of a tool for planning active transport future in Accra and Kathmandu (similar resources exist for other cities although the transport policies of the case study cities seem to be particularly interesting and hence relatively well-documented for low-income nations).
 
 # City overviews
 
