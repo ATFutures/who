@@ -93,12 +93,14 @@ Women aged 19-35, but especially those aged 19-25 years, were the most likely to
 
 Overcrowding is higher in the evening peak hours, than in morning peak hours, partially due to a lower operational fleet in the evenings. Safa Tempos will only have an additional 2-3 people during peak hours, due to their dimensions not allowing for standing passengers, unless hanging from the back. Micro buses will carry an additional 5-6 passengers during the morning and evening peak respectively, and mini buses 10 to 13. Both female (59.7%) and male (49.2%) passengers feel unsafe when traveling at night. (Udas (CEN), 201).
 
+<!--
 ```{r, fig.cap="Morning peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 15 from Udas (CEN), 2012 (originally KSUT Project Report)"}
 knitr::include_graphics("fig/KathmanduOvercrowdingMornings.png")
 ```
 ```{r, fig.cap="Evening peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 16 from Udas (CEN), 2012 (originally KSUT Project Report)"}
 knitr::include_graphics("fig/KathmanduOvercrowdingEvening.png")
 ```
+-->
 
 ```{r, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 & 9 from Udas (CEN), 2012 (originally KSUT Project Report)"}
 knitr::include_graphics("fig/KathmanduOvercrowdingNumbers.png")
