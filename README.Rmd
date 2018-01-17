@@ -3,7 +3,7 @@ title: "Estimating cycling potential on the route network in Accra and Kathmandu
 output:
   md_document:
     variant: markdown_github
-author: Robin Lovelace and Mark Padgham
+author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
 # output:
