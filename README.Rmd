@@ -25,6 +25,9 @@ knitr::opts_chunk$set(
 )
 # add citation
 # citr::tidy_bib_file(rmd_file = "README.Rmd", messy_bibliography = "~/allrefs.bib", file = "who.bib")
+# export as low-res pdf:
+msg = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=who-toolkit-feasibility-study.pdf README.pdf"
+system(msg)
 ```
 
 # Introduction
