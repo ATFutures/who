@@ -1,14 +1,14 @@
 ---
 title: "Estimating cycling potential on the route network in Accra and Kathmandu: a feasibility study using open data and open source software"
-output:
-  md_document:
-    variant: markdown_github
+# output:
+#   md_document:
+#     variant: markdown_github
 author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
-# output:
-#   html_document:
-#     number_sections: yes
+output:
+  pdf_document:
+    number_sections: yes
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
@@ -252,9 +252,11 @@ In 1993, USAID supported the introduction of seven Safa Tempos (electric three w
 ```{r, fig.cap="Distribution of the different public transport vehicle types in Kathmandu Valley (2010). Source: Fig. 5 from Udas (CEN), 2012 (originally KSUT Project Report)"}
 knitr::include_graphics("fig/KathmanduPublicTransportFleet2010(CANN).png")
 ```
+
 ```{r, fig.cap="Capacity and fleet of the different public transport vehicle types in Kathmandu Valley (2010). Source: Table 2 from Udas (CEN), 2012 (originally KSUT Project Report)"}
 knitr::include_graphics("fig/KathmanduVehicleCapacityFleet.png")
 ```
+
 ```{r, fig.cap="Routes and fleet size of the different public transport vehicle types in Kathmandu Valley (2010). Source: Fig.1 from CEN, 2014a (originally MoPIT/JICA 2012, Sahja Yatayat 2013)"}
 knitr::include_graphics("fig/KathmanduPTRoutesFleet.png") 
 ```
@@ -284,7 +286,7 @@ knitr::include_graphics("fig/KathmanduOvercrowdingEvening.png")
 ```
 -->
 
-```{r, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 & 9 from Udas (CEN), 2012 (originally KSUT Project Report)"}
+```{r, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)"}
 knitr::include_graphics("fig/KathmanduOvercrowdingNumbers.png")
 ```
 
