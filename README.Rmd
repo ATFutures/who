@@ -58,7 +58,7 @@ In terms of **primary data**, these were accessed from the following open access
 The methods used to analyse the primary datasets involved a number of technical breakthroughs.
 These allow us to estimate cycling potential down to the road network level based on open data with, to our knowledge, unprecedented computational efficiency.
 This involved implementing a highly computationally efficient routing algorithm in C++ and, in a development that has arisen thanks to this project, new software for re-allocating the results of the routing algorithm back onto the road network.
-A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version](http://rpubs.com/RobinLovelace/341996)):
+A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version at rpubs.com/RobinLovelace](http://rpubs.com/RobinLovelace/341996)):
 
 ```{r, echo=FALSE, fig.cap="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential."}
 knitr::include_graphics("fig/accra-flow1-interactive.png")
