@@ -13,26 +13,28 @@ This project aims to tackle these problems by assessing the feasibility of tools
 
 This document represents an *interim report* on progress during the first week of this month-long project, which commenced on 18<sup>th</sup> December 2017.
 
-Input data
-==========
+Input data and methods
+======================
 
-Data were accessed from the following sources:
+Two approaches were taken in parallel for this study: the collection and processing of open access data to gain an understanding of the feasibility of creating tools for active transport planning, and the analysis of secondary sources to ensure that any tool delivered in the case study cities is appropriate for local needs.
+
+In terms of **primary data**, these were accessed from the following open access sources, all of which (except the third) are available worldwide:
 
 -   Transport network and building data from **OpenStreetMap (OSM)**, an open access, freely available, crowd-sourced online mapping database (Barrington-Leigh and Millard-Ball 2017).
--   Population density and some demographic data from [worldpop](http://www.worldpop.org.uk/) (Tatem 2017) <!-- - Topographic data from NASA's open SRTM data -->
+-   Population density and some demographic data from [worldpop](http://www.worldpop.org.uk/) (Tatem 2017)
+-   A 'benchmark' open access origin-destination dataset from the WICID census data portal for calibrating the route network model <!-- - Topographic data from NASA's open SRTM data -->
 
 <!-- Additional data on population densities will be obtained from WorldPop and from NASA's Socioeconomic Data and Applications Center (SDAC). The -->
 <!-- former provides static fine-resolution data (100$m^2$, for the year 2013 only), while the latter provides coarser (1$km^2$) future projections -->
 <!-- out to 2020. -->
-Methods
-=======
-
-We have made a number of technical breakthroughs that allow us to estimate cycling potential down to the road network level based on open data. This involved implementing a highly computationally efficient routing algorithm in C++. Since commencing the project we have developed a method for re-allocating the results of the routing algorithm back onto the road network. A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version](http://rpubs.com/RobinLovelace/341996)):
+The methods used to analyse the primary datasets involved a number of technical breakthroughs. These allow us to estimate cycling potential down to the road network level based on open data with, to our knowledge, unprecedented computational efficiency. This involved implementing a highly computationally efficient routing algorithm in C++ and, in a development that has arisen thanks to this project, new software for re-allocating the results of the routing algorithm back onto the road network. A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version at rpubs.com/RobinLovelace](http://rpubs.com/RobinLovelace/341996)):
 
 <img src="fig/accra-flow1-interactive.png" alt="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential." width="100%" />
 <p class="caption">
 Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential.
 </p>
+
+In terms of **secondary data** we made use of the published academic literature, 'grey literature' on each of the case study cities, and reports and statistical data published by the local authorities. More conventional methods were used to assess these data sources and make use of them to inform the feasibility of a tool for planning active transport future in Accra and Kathmandu (similar resources exist for other cities although the transport policies of the case study cities seem to be particularly interesting and hence relatively well-documented for low-income nations).
 
 City overviews
 ==============
@@ -41,36 +43,15 @@ This section provides a high-level overview about the geography of each city as 
 
 Accra is the larger city, with a population approaching 5 million and a growth rate of around 3% per year in the Greater Accra Region according to the [Ghana Statistical Service](http://www.statsghana.gov.gh/docfiles/2010phc/Projected%20population%20by%20sex%202010%20-%202016.pdf). Kathmandu has a population of just over 1.2 million, according to the [World Population Review](http://worldpopulationreview.com/world-cities/kathmandu-population/).
 
-We already have some results from the OSM and demographic datasets, as outlined below.
+The remainder of this section goes into more depth on the transport context which will inform the future development of tools for planning active travel futures in Accra and Kathmandu. Illustrative photos of cycling provision in each case study city is provided below.
 
-OpenStreetMap data
-------------------
+<img src="fig/cylcing_infrastructures.png" alt="Figures illustrating cyclist in (a) Accra, (b) Kathmandu, (c) Bristol" width="100%" />
+<p class="caption">
+Figures illustrating cyclist in (a) Accra, (b) Kathmandu, (c) Bristol
+</p>
 
-The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km. The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
-
-The equivalent network for Kathmandu has 79,832 street segments connecting 37,770 distinct points, and extends over 1,062km. The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
-
-| City      |  Population (on network)|  N. Buildings|  Num. Building Classes|
-|:----------|------------------------:|-------------:|----------------------:|
-| accra     |                  2238470|         24490|                     29|
-| kathmandu |                       NA|         82333|                    344|
-
-The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
-
-| City      |  Street nodes|  Street segments|  Network distance (km)|
-|:----------|-------------:|----------------:|----------------------:|
-| accra     |        131349|           145827|                   4072|
-| kathmandu |         37770|            40405|                    539|
-
-Demographic data
-----------------
-
-Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells. Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
-
-Demographic data for Kathmandu are not as detailed, and also do not include age classes.
-
-An overview of Accra from an active travel perspective
-------------------------------------------------------
+Accra
+-----
 
 <!-- Monsuru (1 day's work) -->
 <!-- This section will provide background information on the following topics: -->
@@ -80,8 +61,7 @@ An overview of Accra from an active travel perspective
 <!-- - What is the current modal split? -->
 <!-- - Recent transport policies. -->
 <!-- - How well developed are other infrastructures (e.g. sewerage.) -->
-### Greater Accra Metropolitan Area (GAMA)
-
+<!-- ### Greater Accra Metropolitan Area (GAMA) -->
 The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Fig. 1). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Forty three percent of the population is estimated to be between the age of 15 and 35 years.(Ghana, Y.P.I., 2013).
 
 <img src="fig/study-area-accra.png" alt="Geographical location of Greater Accra Metropolitan Area (GAMA)" width="100%" />
@@ -91,13 +71,12 @@ Geographical location of Greater Accra Metropolitan Area (GAMA)
 
 GAMA contains 16 of the 216 local authority districts of the Republic of Ghana. Administratively, the Accra Metropolitan local authority district serves as the capital of Accra city, and is administered by Accra Metropolitan Assembly, which is the political and administrative authority for the entire Accra city.
 
-(Quarshie 2007)
-
-**Weather and Climate in Accra**
+<!-- [@quarshie_integrating_2007] -->
+**Weather and Climate**
 
 The annual average temperature of Accra city 27.6 °C, with mean monthly temperatures ranging from 25.9 °C in August (the coolest) 29.6 °C in March (the hottest). Relative humidity is high, ranging from 50% to 80%. Accra city, as with other southern cities, experiences two rainy seasons; April through June, and September through November. The harmattan is a dry desert wind that blows from the northeast from December to March. It lowers the humidity, bringing hot days and cool nights to northern parts of Ghana. This wind blows over the south in January. These atmospheric conditions have implications for cycling uptake, making it potentially uncomfortably hot and sweaty in the hotter months. However, the impact of climate can be overestimated. In Seville, which has a mean monthly temperature of 28.2 °C in summer, cycling grew from less than 1% to more than 5% following infrastructure investment (ref - RL).
 
-### Brief overview of the existing public transport infrastructure in Accra
+### Transport system
 
 **Modal Split**
 
@@ -154,10 +133,8 @@ Accra population density (2013). Source: Thomas Brinkhoff: City Population, <htt
 
 The region recorded the lowest Infant Mortality Rate (deaths of infants under age one) in 2011, with thirty-seven infant deaths per 1,000 live births. Child Mortality Rate (deaths of children between ages one and four) was 19 deaths per 1,000 live births and Under Five Mortality (number of children who die by age five) was reported at 61 deaths per 1,000 live births. Maternal Mortality Rate (the number of deaths due to pregnancy related causes to the number of women of child-bearing age, 15 - 49 years) in the region, was 355 per 100,000 live births in 2010, this was lower than the national value of 485 per 100,000 live births. The Total Fertility Rate (TFR) of the region is slightly lower (2.5) as compared to the national TFR of 4.0, indicating that on the average women in the Greater Accra Region give birth to three children. In addition there are two births per every 100 adolescents in the region, which is the lowest among the regions. With regards to Contraceptive Prevalence Rate (CPR), the use of modern contraceptives among currently married women, it was 19.4 % in 2014, one of the lowest in the country. In 2013, the HIV prevalence rate in the region was 2.7%, higher than the national HIV prevalence of 1.3%.
 
-An overview of Kathmandu from an active travel perspective
-----------------------------------------------------------
-
-### Kathmandu District, Metropolitan City and Valley
+Kathmandu
+---------
 
 The Federal Democratic Republic of Nepal consists of 7 provinces. Kathmandu District lies within Bagmati province, along with twelve other districts, which together occupy about 14% of the country. Kathmandu District consists of eleven municipalities, one of which is the municipality of Kathmandu Metropolitan City, the capital city. According to the Nepalese Central Bureau of Statistics (CBS, 2001), Kathmandu is by far the most densely populated of all 75 districts, with 1,081,845 inhabitants (4.67% of the total Nepalese population) and a population density of 2,738.9 people per square kilometre (p/km<sup>2</sup>) in 2001. The national average district density in 2001 was 157.3 p/km<sup>2</sup> and the only other district to have a population density of over one thousand was Bhaktapur (1.894,6), which borders it to the east.
 
@@ -176,7 +153,7 @@ Boundaries of Kathmandu, Lalitpur and Bhaktapur Districts, their municipalities,
 
 Since Kathmandu District and Kathmandu Valley both span a great elevation range, they also cover multiple climate zones, but Kathmandu itself falls in the warm temperate zone, with four seasons and average daily temperatures ranging from 10.8°C in the coldest month (January; average minimum 2,4°C, maximum 19.1°C) to 24.3°C in the warmest month (July; avg. min. 20.2°C, max. 28.4°C). Annual precipitation is 1,454.9 mm, with November being the driest month with an average monthly precipitation of 8.3 mm (1 precipitation day on average) and July the wettest with 363.4 mm (23 precipitation days). There is one monsoon season, which lasts from June through August, during which 64% of the annual precipitation falls over the course of 62 precipitation days. If September is included, 78% of the average annual precipitation is accounted for. (precipitation & temperatures: MFD, 2018; precipitation days: WMO, 2018)
 
-### Brief overview of the existing public transport infrastructure in Kathmandu
+### Transport system
 
 **Kathmandu Valley public transport and modal split**
 
@@ -244,9 +221,9 @@ Overcrowding is higher in the evening peak hours, than in morning peak hours, pa
 <p class="caption">Evening peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 16 from Udas (CEN), 2012 (originally KSUT Project Report)</p>
 </div>
 -->
-<img src="fig/KathmanduOvercrowdingNumbers.png" alt="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 &amp; 9 from Udas (CEN), 2012 (originally KSUT Project Report)" width="100%" />
+<img src="fig/KathmanduOvercrowdingNumbers.png" alt="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)" width="100%" />
 <p class="caption">
-Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 & 9 from Udas (CEN), 2012 (originally KSUT Project Report)
+Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)
 </p>
 
 Nearly one in six people was concerned with the transport fares, with some of the lower-waged workers having to allocate 20-40% of their wages to public transport costs. Many people had to relocate to save on commute costs. Since women have less access to personal vehicles, they tend to have to spend more on transport. Another concern, besides the actual costs, is that there is no consistent or transparent fare structure levied, despite the government providing a set distance-based fare structure. The government will adjust the fares, following for example fluctuations in petrol prices, but since the rates are not signposted inside the vehicle or elsewhere, people are at the mercy of what conductors feel like charging them. (World Bank, 2013.)
@@ -261,7 +238,7 @@ Overall, the majority of passengers (57.6%) rate the experience of using public 
 
 While the government has already introduced some measures previously (banning diesel- and petrol-operated three wheelers and introducing a green sticker system for vehicles in December 1999 (CEN, 2014b)), most focus to date has been on widening existing roads to 6 or 8 lanes and building more roads as the urbanization has spread. Since this has proven to be far from adequate in coping with the increased motorization, congestion and pollution, more sustainable and long-term plans have been constructed. In July 2015 an introduction of the "Project on Urban Transport Improvement for Kathmandu Valley in Federal Democratic Republic of Nepal" was presented. For the road system, a radial-circumferential system will be adopted, allowing vehicles whose origin or destination is not in the central business district to avoid having to pass through there. (Government of Nepal, 2015.)
 
-<img src="fig/KathmanduRoadNetworkPlans" alt="Kathmandu road plans. Source: Government of Nepal, 2015." width="100%" />
+<img src="fig/KathmanduRoadNetworkPlans.png" alt="Kathmandu road plans. Source: Government of Nepal, 2015." width="100%" />
 <p class="caption">
 Kathmandu road plans. Source: Government of Nepal, 2015.
 </p>
@@ -305,15 +282,6 @@ Planned (brown), being constructed (red) and existing (green) cycle tracks as of
 OpenStreetMap Cycle Map and Google Aerial for Kathmandu Metropolitan City. Source: openstreetmap.org.
 </p>
 
-### Assessing the quality of OpenStreetMap of Kathmandu
-
-Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping the 2600 schools and 300 hospitals in the area in 2013. Their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometres of roads. (KLL, 2018.)
-
-<img src="fig/KathmanduOSMbefore-after.jpg" alt="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018." width="100%" />
-<p class="caption">
-Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018.
-</p>
-
 **Demography and population of Kathmandu**
 
 The population in Kathmandu municipality has been increasing rapidly, from 671,846 inhabitants in 2001 to 1,003,285 (254,764 households) in 2011 (CBS, 2014) and currently around 1.5 million (Wikipedia, 2018a), thus increasing at a much higher rate than the national 1.35%. While nationally the sex ratio is close to parity, in Kathmandu municipality the male population was 113.39% that of the female population in 2011 (CSB, 2014). Based on the results from the CBS 2011 survey, 23.76% of Kathmandu Metropolitan City residents are aged 0-14, 48.59% is 15-35 and 27.65% is over 35, with the distributions being similar for both genders.
@@ -324,17 +292,49 @@ The population in Kathmandu municipality has been increasing rapidly, from 671,8
 Kathmandu population density (2011). Source: Thomas Brinkhoff: City Population, <http://www.citypopulation.de>
 </p>
 
-Results I: Assessing the quality of OpenStreetMap
-=================================================
+Results I: Overviews of OSM and WorldPop data
+=============================================
+
+Building on the previous section, this section provides an overview of the OSM and demographic datasets, which are the basis for the feasibility study and a key source of information for a tool to plan active transport future.
+
+The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km. The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
+
+The equivalent network for Kathmandu has 79,832 street segments connecting 37,770 distinct points, and extends over 1,062km. The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
+
+| City      |  Population (on network)|  N. Buildings|  Num. Building Classes|
+|:----------|------------------------:|-------------:|----------------------:|
+| accra     |                  2238470|         24490|                     29|
+| kathmandu |                       NA|         82333|                    344|
+
+The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
+
+| City      |  Street nodes|  Street segments|  Network distance (km)|
+|:----------|-------------:|----------------:|----------------------:|
+| accra     |        131349|           145827|                   4072|
+| kathmandu |         37770|            40405|                    539|
+
+Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells. Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
+
+Demographic data for Kathmandu are not as detailed, and also do not include age classes. An overview map of Accra, the most extensively studied of our case study cities, is illustrated in the Figure below.
+
+<img src="fig/accra-osm-overview.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" /><img src="fig/test.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" />
+<p class="caption">
+Overview of Accra (left) and initial results of cycling potential (right).
+</p>
+
+Results II: Assessing the quality of OpenStreetMap
+==================================================
 
 The street network datasets used for this project were downloaded from the OpenStreetMap (OSM), an open access, freely available, online mapping database (Barrington-Leigh and Millard-Ball, 2017). Generated through crowd-sourcing (Goodchild, 2007) by volunteers, the current database has grown to almost 50 gigabytes, and thousands of features are being added by the day. One uniqueness of OSM is that it allows its users the chance to contribute their local knowledge about places, thereby ensuring the features’ accuracy, completeness and thoroughness. Furthermore, a backend control/validation is implemented in order to ensure that the datasets conform with the Open Geospatial Consortium standards, which is the internationally recognised set of data standards for the global geospatial community.
 
 For this project, we examined the quality of our OSM datasets and evaluate how well the datasets represent the reality on the ground. The quality of geospatial datasets can be evaluated using one, or a combination of metrics, such as positional accuracy, completeness, attribute accuracy and consistency (Haklay, 2010). The choice of any metrics often depends on the data requirements stipulated for a project, as well as the higher-quality baseline datasets available relating to the area in question. We chose OSM datasets for this project due to its relatively high positional accuracy with respect to the satellite basemap of the area, as well as its notion of continuous mapping, thereby leaning towards absolute completeness. Hence, we used ‘positional accuracy’ and ‘completeness’ metrics to evaluate the quality of our OSM datasets.
 
-The positional accuracy is described as the position of a feature on a map relative to its actual position on the ground, while the completeness is an assessment of the amount of datasets that are missing on a map. For the baseline comparison datasets, we used the Bing areal imagery, which can be added as a background layer on OSM website, thereby allowing easy comparative analysis through visual inspection. The positional accuracy of the Bing areal imagery has been confirmed to be relatively better than that of Google Maps at nadir, with an RMSE of 7.9 as compared to 8.2 for the latter (Ubukawa, 2013). In the same study, the RMSE of OSM datasets was calculated to be 11.1m. Furthermore, the new Bing areal imageries for every country are usually released every three to four months in order to ensure the imagery is as current as possible (Ref.).
+The positional accuracy is described as the position of a feature on a map relative to its actual position on the ground, while the completeness is an assessment of the amount of datasets that are missing on a map. For the baseline comparison datasets, we used the Bing areal imagery, which can be added as a background layer on OSM website, thereby allowing easy comparative analysis through visual inspection. The positional accuracy of the Bing areal imagery has been confirmed to be relatively better than that of Google Maps at nadir, with an RMSE of 7.9 as compared to 8.2 for the latter (Ubukawa, 2013). In the same study, the RMSE of OSM datasets was calculated to be 11.1m. Furthermore, the new Bing areal imageries for every country are usually released every three to four months in order to ensure the imagery is as current as possible.
 
-Bristol OSM network dataset as reference positional accuracy and completeness
------------------------------------------------------------------------------
+This section provides an analysis of OSM quality in both case study cities compared with the 'benchmark' city of Bristol. Although Bristol is relatively well-mapped by international standards it should be noted that it was not chosen for the quality of its OSM data (which is surpassed by cities in Germany) but for its origin-destination data, which reveals a city with a diverse transport system and moderate but growing levels of cycling and walking.
+
+Bristol: a baseline for OSM
+---------------------------
 
 Bristol is a city in South West England with a population density of 3,892/km2, according the the UK Office of National Statistics (2015), making the district one of the most densely populated district in the UK. Bristol OSM network dataset is shown in the figure below; showing what could be considered ideal positional accuracy and completeness expected of an OSM dataset.
 
@@ -346,12 +346,13 @@ In order to inspect the dataset, we placed 2km by 2km grids at the geometrical c
 1.  The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward
     </p>
     </div>
-    Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure shows perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, we could not find a single case of uncaptured road segment; indicating a hundred percent completeness.
+
+Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure shows perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, we could not find a single case of uncaptured road segment; indicating a hundred percent completeness.
 
 In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside the administrative sub-division each study area, and visually inspect each of the grid.
 
-GAMA
-----
+Accra
+-----
 
 In comparison with Bristol, GAMA is roughly thirty times bigger in size. Bristol is only about the same size as the Accra Metropolis, one of the 16 districts of GAMA. As a result of the relative size of GAMA as compared to Bristol, it is expected that more mapping efforts will be required to cover GAMA.
 
@@ -383,6 +384,13 @@ Kathmandu
 
 In comparison with Bristol, Kathmandu is roughly four times bigger in size, but approximately eight times smaller than GAMA. While we expect that more mapping efforts will be required to cover Kathmandu as compared to Bristol, the former can still be covered relatively easier than GAMA.
 
+Overall, Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping the 2600 schools and 300 hospitals in the area in 2013. Their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometres of roads. (KLL, 2018.)
+
+<img src="fig/KathmanduOSMbefore-after.jpg" alt="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018." width="100%" />
+<p class="caption">
+Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018.
+</p>
+
 The same strategy of drawing 2km x 2km grids at the central of each administrative sub-division (here referred to as municipality) is employed. We also observed that the distibution of the grids is provide a good cross-section of the street network across the whole area. Based on the spatial extent of the road network across each municipality, we classified the municipalities into two, namely; (1) urban and (2) semi-urban municipalities, with 51-100% and 0-50% network coverages, respectively.
 
 <!-- Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (*).KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them on how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their website states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads. -->
@@ -400,36 +408,8 @@ Kathmandu is very well represented on OSM, thanks to a number of local mapping o
     </p>
     </div>
 
-Description of existing (or lack of) Cycling infrastructure
-===========================================================
-
-This section describes the coverage of existing cylcing infrastructure in Accra and Kathmandu, in relation to Bristol (reference)
-
-<img src="fig/cylcing_infrastructures.png" alt="Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol" width="100%" />
-<p class="caption">
-Figure showing a typical example of a cyclist in (a) Accra, (b) Kathmandu, (c) Bristol
-</p>
-
-Result II: Estimates of Cycling potentials in Accra
-===================================================
-
-We have generated estimates for cycling potential across the larger of the two case study cities. The priority over the next 3 weeks of the project will be to calibrate this model and apply refined versions of it to both cities, using additional input datasets where available.
-
-Accra
------
-
-<img src="fig/accra-osm-overview.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" /><img src="fig/test.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" />
-<p class="caption">
-Overview of Accra (left) and initial results of cycling potential (right).
-</p>
-
-Kathmandu
----------
-
-This section is work in progress.
-
-Validation and calibration
-==========================
+Results III: Estimating and Calibrating Cycling Potential
+=========================================================
 
 Calibration Method
 ------------------
@@ -442,27 +422,14 @@ The calibration comprised the following three steps. First, the Bristol OD matri
 
 The resultant decay coefficients for pedestrians and cyclists had respective values of 1.3 and 2.3km, indicating that 63% (1-exp(-1)) of all pedestrian trips are 1.3km or less, while the same proportion of cycling trips are less than 2.3km. Both of these models generated using the above procedure were very significantly related to the actual OD matrices, with the pedestrian model reproducing 46% of the structure of the observed OD matrix, and the cycling model reproducing 12%.
 
-Validation
-----------
-
-(MP: Is there really scope at this stage to comment on validation?)
-
-Discussion
-==========
-
-This section is work in progress.
-
-Policy relevance of results
----------------------------
-
+<!-- # Discussion -->
+<!-- This section is work in progress. -->
+<!-- ## Policy relevance of results -->
 <!-- To what extent has this deliverable (from phase 1) been delivered? -->
 <!-- **Deliverables:** This phase will provide clean datasets and summary information about the 'data landscape' of each case study city. -->
 <!-- This will relate primarily to population density, trip attractors and transport infrastructure from which to -->
 <!-- We will also deliver summaries of the relationships between demographic and transport infrastructure data and an assessment of the quality of local data and priorities for future data collection. -->
 <!-- The deliverables will be provided in the form of datasets provided to the WHO and interactive and high quality maps. -->
-The potential uses of an online toolkit
----------------------------------------
-
 Next steps
 ==========
 
@@ -574,7 +541,5 @@ Celis-Morales, Carlos A, Donald M Lyall, Paul Welsh, Jana Anderson, Lewis Steell
 Kuzmyak, J. Richard, Jerry Walters, Mark Bradley, and KM Kockelman. 2014. *Estimating Bicycling and Walking for Planning and Project Development*. Nchrp National Cooperative Highway Research Program Report 770. Washington, DC: Transportation Research Board of the National Academies.
 
 Naess, Petter, Jeppe Andersen, Morten Skou Nicolaisen, and Arvid Strand. 2014. “Transport Modelling in the Context of the ‘Predict and Provide’Paradigm.” *European Journal of Transport and Infrastructure Research* 14 (2): 102–21. <http://vbn.aau.dk/ws/files/197640305/N_ss_et_al._2014_Transport_modelling_in_the_context_of_the_predict_and_provide_paradigm.pdf>.
-
-Quarshie, Magnus. 2007. “Integrating Cycling in Bus Rapid Transit System in Accra.” In *Highway and Urban Environment*, edited by Gregory M. Morrison and S’ebastien Rauch, 103–16. Alliance for Global Sustainability Bookseries. Springer, Dordrecht. doi:[10.1007/978-1-4020-6010-6\_11](https://doi.org/10.1007/978-1-4020-6010-6_11).
 
 Tatem, Andrew J. 2017. “WorldPop, Open Data for Spatial Demography.” *Scientific Data* 4 (January): 170004. doi:[10.1038/sdata.2017.4](https://doi.org/10.1038/sdata.2017.4).
