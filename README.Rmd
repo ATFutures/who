@@ -1,15 +1,15 @@
 ---
 title: "Estimating cycling potential on the route network in Accra and Kathmandu: a feasibility study using open data and open source software"
-output:
-  md_document:
-    variant: markdown_github
+# output:
+#   md_document:
+#     variant: markdown_github
 author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
-# output:
-#   html_document:
-#     number_sections: yes
-#     toc: yes
+output:
+  bookdown::html_document2:
+    number_sections: yes
+    toc: yes
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
@@ -62,9 +62,9 @@ In terms of **primary data**, these were accessed from the following open access
 The methods used to analyse the primary datasets involved a number of technical breakthroughs.
 These allow us to estimate cycling potential down to the road network level based on open data with, to our knowledge, unprecedented computational efficiency.
 This involved implementing a highly computationally efficient routing algorithm in C++ and, in a development that has arisen thanks to this project, new software for re-allocating the results of the routing algorithm back onto the road network.
-A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential ([see interactive version at rpubs.com/RobinLovelace](http://rpubs.com/RobinLovelace/341996)):
+A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential, as illustrated in Figure \@ref(fig:seg) ([see interactive version at rpubs.com/RobinLovelace](http://rpubs.com/RobinLovelace/341996)):
 
-```{r, echo=FALSE, fig.cap="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential."}
+```{r seg, echo=FALSE, fig.cap="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential."}
 knitr::include_graphics("fig/accra-flow1-interactive.png")
 ```
 
@@ -81,9 +81,9 @@ Accra is the larger city, with a population approaching 5 million and a growth r
 Kathmandu has a population of just over 1.2 million, according to the [World Population Review](http://worldpopulationreview.com/world-cities/kathmandu-population/).
 
 The remainder of this section goes into more depth on the transport context which will inform the future development of tools for planning active travel futures in Accra and Kathmandu.
-Illustrative photos of cycling provision in each case study city is provided below.
+Illustrative photos of cycling provision in each case study city is provided in Figure \@ref(fig:cyclists).
 
-```{r, fig.cap="Figures illustrating cyclist in (a) Accra, (b) Kathmandu, (c) Bristol"}
+```{r cyclists, fig.cap="Figures illustrating cyclist in (a) Accra, (b) Kathmandu, (c) Bristol"}
 knitr::include_graphics("fig/cylcing_infrastructures.png")
 ```  
 
