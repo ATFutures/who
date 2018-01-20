@@ -118,7 +118,14 @@ The annual average temperature of Accra city 27.6 °C, with mean monthly tempera
 
 These atmospheric conditions have implications for cycling uptake, making it potentially uncomfortably hot and sweaty in the hotter months.
 The impact of climate can be overestimated, however, as demonstrated by the Seville in Spain which has a mean monthly temperature of 28.2 °C in summer, just 1.4 °C less than Accra.
-Despite high temperatures, cycling levels in the city quadrupled following investment in a carefully planned route network (illustrated in Figure \@ref(fig:sevnet)) from less than 2% before 2006 to more than 8% (in the survey month of November) following infrastructure investment [@marques_how_2015].
+Despite high temperatures, cycling levels in the city quadrupled following investment in a carefully planned route network (illustrated in Figure \@ref(fig:sevnet)).
+This network represents around 0.3 m of segregated cycle infrastructure per person (~200 km divided among the city's ~700,000 people) from less than 2% before 2006 to more than 8% (in the survey month of November) following infrastructure investment [@marques_how_2015].
+
+```{r sevnet, fig.cap="The core cycling network in Seville (which has mean monthly summer temperatures of up to 28.2 °C), composed of the 'basic' (77 km) and 'complementary' (120 km) protected cylce path network [@marques_how_2015]."}
+# (120 + 77) * 100 / 700
+knitr::include_graphics("fig/sevnet.png")
+```
+
 
 ### Transport system
 
