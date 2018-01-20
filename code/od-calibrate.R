@@ -73,13 +73,14 @@ k <- 1.164235 # foot
 # correlation between estimated and actual OD mat:
 s <- dodgr_spatial_interaction (net, nodes = nodes, dens = dens, k = k)
 s [s == 0] <- NA
+odmat [odmat == 0] <- NA
 mod <- lm (as.vector (log (s)) ~ as.vector (as.matrix (log (odmat))))
 summary (mod)
 # bicycle: R2 = 11.85%; foot: R2 = 45.96
 
 
 # use that value of `k` to generate the flows:
-f <- dodgr_flows(net, id, id, flows = s, contract = T)
+f <- dodgr_flows(net, od_id, od_id, flows = s, contract = T)
 dodgr_flowmap(f, "/data/who/flow")
 rnet_g <- dodgr_to_sf(net) 
 length(rnet_g)
