@@ -45,9 +45,10 @@ This project aims to tackle these problems by assessing the feasibility of tools
 This document represents the results of a one-month-long project, which commenced on 18^th^ December 2017, and provides preliminary evidence for the feasibility of developing detailed models of how these cities might best adapt to encourage active transport.
 
 Before diving into the case study cities and results of the feasibility study it is worth considering why it is important to map cycling potential **at high geographic resolution on the route network**.
-Rather than repeat the work done in excellent literature reviews [@aldred_cycling_2017] or regression analyses at low geographical resolution [@mueller_health_2018] on the subject, we focus on a single case study with a recently constructed cycling network **which serves desire lines with high cycling potential**.
+Rather than repeat the work done in excellent literature reviews [@aldred_cycling_2017] or regression analyses at low geographical resolution [@mueller_health_2018] on the subject, we use a single case study to demonstrate the point.
+Seville show the tranformative effect of constructing a high quality cycling network **which serves desire lines with high cycling potential**.
 
-Seville is a textbook example of how building the right infrastructure (protected cycle paths) in the right places (along key transport corridors, which can be identified with methods outlined later in this report) can lead to dramatic uptake of cycling.
+Seville demonstrates how building the right infrastructure (protected cycle paths) in the right places (along key transport corridors, which can be identified with methods outlined later in this report) can lead to dramatic uptake of cycling.
 Despite high temperatures approaching those in Accra, cycling levels in the city quadrupled following investment in a carefully planned route network (illustrated in Figure \@ref(fig:sevnet)).
 This network represents around 0.3 m of segregated cycle infrastructure per person (~200 km divided among the city's ~700,000 people) from less than 2% before 2006 to more than 8% (in the survey month of November) following infrastructure investment [@marques_how_2015].
 
