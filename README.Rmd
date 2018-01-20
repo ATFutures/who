@@ -313,7 +313,7 @@ The government of Kathmandu has proposed great plans for cycling infrastructure,
 knitr::include_graphics("fig/KatGovtCyclePlans(MaYA3Fig12).png")
 ```
 
-```{r, fig.cap="OpenStreetMap Cycle Map and Google Aerial for Kathmandu Metropolitan City. Source: openstreetmap.org."}
+```{r, fig.cap="OpenStreetMap Cycle Map and Google Aerial for Kathmandu Metropolitan City. Source: openstreetmap.org.", eval=FALSE}
 knitr::include_graphics("fig/KathmanduCycleMap.png")
 ```
 
