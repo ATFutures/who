@@ -327,8 +327,6 @@ The population in Kathmandu municipality has been increasing rapidly, from 671,8
 <!-- mention migration etc, birth rates, employment, have them for all of nepal, but not kathmandu -->
 
 
-
-
 ```{r, fig.cap="Kathmandu population density (2011). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de"}
 knitr::include_graphics("fig/kathmandu_pop_density.png")
 ```
