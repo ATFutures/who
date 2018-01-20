@@ -227,7 +227,7 @@ In 1993, USAID supported the introduction of seven Safa Tempos (electric three w
 knitr::include_graphics("fig/KathmanduPublicTransportFleet2010(CANN).png")
 ```
 
-```{r, fig.cap="Capacity and fleet of the different public transport vehicle types in Kathmandu Valley (2010). Source: Table 2 from Udas (CEN), 2012 (originally KSUT Project Report)"}
+```{r, fig.cap="Capacity and fleet of the different public transport vehicle types in Kathmandu Valley (2010). Source: Table 2 from Udas (CEN), 2012 (originally KSUT Project Report)", out.width="75%"}
 knitr::include_graphics("fig/KathmanduVehicleCapacityFleet.png")
 ```
 
@@ -261,7 +261,7 @@ knitr::include_graphics("fig/KathmanduOvercrowdingEvening.png")
 ```
 -->
 
-```{r katcrowd, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)"}
+```{r katcrowd, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)", out.width="50%"}
 knitr::include_graphics("fig/KathmanduOvercrowdingNumbers.png")
 ```
 
