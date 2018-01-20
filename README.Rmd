@@ -223,7 +223,7 @@ The electric trolley bus system, which had been a gift from the Chinese governme
 
 In 1993, USAID supported the introduction of seven Safa Tempos (electric three wheelers). In a further effort to control pollution, the government banned all diesel-operated three-wheelers in 1999/2000, resulting in the Safa Tempo fleet size increasing to the current capacity of 600 vehicles, as well as to the introduction of micro buses (CEN, 2014a). A Danida-funded project encouraged women to become Safa Tempo drivers, resulting in approximately 200 female drivers, with some being owners as well (World Bank, 2013). In addition to the Safa Tempos and the Sahja buses, minibuses and large buses also operate in Kathmandu Valley, resulting in a public transport fleet comprising over 5,321 vehicles, and servicing 222 routes in 2012/13 (CEN, 2014a). Additionally, there is a fleet of around seven thousand taxis, but very few people can afford to use them, and they will rarely use their meter, so their modal share is minimal, despite representing around 55% of all public transport vehicles (World Bank, 2013). The majority of passengers prefer to travel in the microbuses (49.3%), followed by buses and minibuses (39.5%), with only 10% expressing a preference for Safa Tempos. In general people prefer to travel in larger vehicles, due both to the greater likelihood of comfortable seats, and to increased  speeds (Udas (CEN), 2012).
 
-```{r, fig.cap="Distribution of the different public transport vehicle types in Kathmandu Valley (2010). Source: Fig. 5 from Udas (CEN), 2012 (originally KSUT Project Report)"}
+```{r, eval=FALSE, fig.cap="Distribution of the different public transport vehicle types in Kathmandu Valley (2010). Source: Fig. 5 from Udas (CEN), 2012 (originally KSUT Project Report)"}
 knitr::include_graphics("fig/KathmanduPublicTransportFleet2010(CANN).png")
 ```
 
@@ -249,7 +249,7 @@ The main issue with public transport in Kathmandu according to both men (80%%) a
 
 Women aged between 19 and 35 years, and especially those aged 19-25, are the most likely to list personal insecurity as an issue, with 43% of them mentioning it due to fearing or experiencing inappropriate touching. Men in the 19-25 age group on the other hand are among the least likely to list personal insecurity as in issue (just over 5%), together with those aged 65 or above. For both women and men of over 35, the fear of inappropriate touching is much less of an issue, though other personal insecurity concerns remain. While women feel most insecure while on vehicles, men mainly experience personal insecurity while boarding or disembarking. Of those for whom personal insecurity is an issue, it was revealed that 37% of women and 6% of men had actually experienced inappropriate touching during the preceding year. When taking the entire survey population into account, this figure was 26% for 19-35 year old women and 3.4% for men of all ages (World Bank, 2013). Both female (59.7%) and male (49.2%) passengers feel unsafe when traveling at night (Udas (CEN), 201).
 
-Overcrowding is higher in the evening than in the morning peak hours, partially due to fewer vehicles operating in the evenings. Safa Tempos will only accept an additional 2-3 passengers during peak hours, due to their dimensions not allowing for standing passengers unless hanging from the back. Micro buses can carry an additional 5-6 passengers during the morning and evening peak, and mini buses 10 to 13. 
+Overcrowding is higher in the evening than in the morning peak hours, partially due to fewer vehicles operating in the evenings. Safa Tempos will only accept an additional 2-3 passengers during peak hours, due to their dimensions not allowing for standing passengers unless hanging from the back. Micro buses can carry an additional 5-6 passengers during the morning and evening peak, and mini buses 10 to 13 (Figure \@ref(fig:katcrowd)). 
 
 
 <!--
@@ -261,7 +261,7 @@ knitr::include_graphics("fig/KathmanduOvercrowdingEvening.png")
 ```
 -->
 
-```{r, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)"}
+```{r katcrowd, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)"}
 knitr::include_graphics("fig/KathmanduOvercrowdingNumbers.png")
 ```
 
