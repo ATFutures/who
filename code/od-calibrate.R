@@ -2,9 +2,8 @@
 
 library (magrittr)
 library (sf)
-#library (dodgr)
-devtools::load_all (file.path (here::here(), "..", "dodgr"),
-                    export_all = FALSE)
+devtools::install_github("ATFutures/dodgr")
+library (dodgr)
 
 trmode <- "foot" # mode of transport to be analysed: "bicycle" or "foot"
 trmode <- "bicycle" # mode of transport to be analysed: "bicycle" or "foot"
