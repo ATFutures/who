@@ -63,7 +63,7 @@ f <- function (k) {
 # interpreted to reflect innacurate/missing knowledge than actual absence of
 # pedestrians/cyclists.
 odmat [odmat == 0] <- NA
-res <- optimise (f (k) , lower = 0.1, upper = 20, maximum = TRUE, tol = 1e-4)
+res <- optimise (f (k) , lower = 0.1, upper = 20, maximum = TRUE, tol = 0.01)
 # The resultant value can then be fed into the following line in the `od-gen`
 # script:
 #k <- res$maximum
