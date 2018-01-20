@@ -72,10 +72,8 @@ knitr::include_graphics("fig/accra-flow1-interactive.png")
 In terms of **secondary data** we made use of the published academic literature, 'grey literature' on each of the case study cities, and reports and statistical data published by the local authorities.
 More conventional methods were used to assess these data sources and make use of them to inform the feasibility of a tool for planning active transport futures in Accra and Kathmandu (similar resources exist for other cities although the transport policies of the case study cities seem to be particularly interesting and relatively well-documented for low-income nations).
 
-# City overviews
-
-This section provides a high-level overview about the geography of each city as it relates to active travel potential.
-Both cities are included in this section, laying the ground for the following two sections which provide detailed results for Accra and then Kathmandu.
+The next two sections summarises each city in relation to active travel potential.
+These foundations provide important context for the results and discussion sections.
 Comparing the cities at the outset helps put the results in perspective and provides a foundation for a discussion of how a tool building on this work is likely to be useful to different stakeholders in each city.
 
 Accra is the larger city, with a population approaching 5 million and a growth rate of around 3% per year in the Greater Accra Region according to the [Ghana Statistical Service](http://www.statsghana.gov.gh/docfiles/2010phc/Projected%20population%20by%20sex%202010%20-%202016.pdf).
@@ -88,7 +86,7 @@ Illustrative photos of cycling provision in each case study city are provided in
 knitr::include_graphics("fig/cylcing_infrastructures.png")
 ```  
 
-## Accra
+# Accra
 
 <!-- Monsuru (1 day's work) -->
 <!-- This section will provide background information on the following topics: -->
@@ -135,7 +133,7 @@ knitr::include_graphics("fig/sevnet.png")
 ```
 
 
-### Transport system
+## Transport system
 
 **Modal Split**
 
@@ -165,7 +163,7 @@ knitr::include_graphics("fig/buses_at_terminal.png")
 
 Traffic congestion is a major transport problem in Accra city, with 70% of major roads operating at an unacceptable level of capacity at certain times of the day. It has been argued that moving from low capacity vehicles, such as buses and taxis, to a high-capacity, well-planned BRT system may help to reduce this traffic congestion (Quarshie, 2007). However, relieving congestion alone will not necessarily alleviate problems ensuing from vehicular emissions, and there will still be a pressing need for investment in non-motorised active transport systems, such as cycling and walking. In developing countries, such active transport systems are generally not recognised as key components of urban transport; and transport policies commonly fail to acknowledge let alone plan for this increasingly important mode of transportation.
 
-### Cycling infrastructure in Accra
+## Cycling infrastructure in Accra
 
 **Peoples’ attitudes towards cycling**
 
@@ -183,7 +181,7 @@ knitr::include_graphics("fig/Bike_masterplan.png")
 
 <!-- The region recorded the lowest Infant Mortality Rate (deaths of infants under age one) in 2011, with thirty-seven infant deaths per 1,000 live births.  Child Mortality Rate (deaths of children between ages one and four) was 19 deaths per 1,000 live births and Under Five Mortality (number of children who die by age five) was reported at 61 deaths per 1,000 live births. Maternal Mortality Rate (the number of deaths due to pregnancy related causes to the number of women of child-bearing age, 15 - 49 years) in the region, was 355 per 100,000 live births in 2010, this was lower than the national value of 485 per 100,000 live births. The Total Fertility Rate (TFR) of the region is slightly lower (2.5) as compared to the national TFR of 4.0, indicating that on the average women in the Greater Accra Region give birth to three children. In addition there are two births per every 100 adolescents in the region, which is the lowest among the regions. With regards to Contraceptive Prevalence Rate (CPR), the use of modern contraceptives among currently married women, it was 19.4 % in 2014, one of the lowest in the country. In 2013, the HIV prevalence rate in the region was 2.7%, higher than the national HIV prevalence of 1.3%. -->
 
-## Kathmandu 
+# Kathmandu 
 
 The Federal Democratic Republic of Nepal consists of 7 provinces. Kathmandu District lies within Bagmati province, along with twelve other districts, which together occupy about 14% of the country. Kathmandu District consists of eleven municipalities, one of which is the municipality of Kathmandu Metropolitan City, the capital city.
 
@@ -211,7 +209,7 @@ While the elevation in Kathmandu District varies between 1,262 and 2,732 meters 
 Kathmandu District and Kathmandu Valley both span a great elevation range, and thus also cover multiple climate zones. The city itself lies in a warm temperate zone, with four seasons and average daily temperatures ranging from 10.8°C in the coldest month (January; average minimum 2,4°C, maximum 19.1°C) to 24.3°C in the warmest month (July; avg. min. 20.2°C, max. 28.4°C). Annual precipitation is 1,454.9 mm, with November being the driest month with an average monthly precipitation of 8.3 mm (1 precipitation day on average) and July the wettest with 363.4 mm (23 precipitation days). There is one monsoon season, which lasts from June through August, during which 64% of the annual precipitation falls over the course of 62 precipitation days. If September is included, 78% of the average annual precipitation is accounted for. (precipitation & temperatures: MFD, 2018; precipitation days: WMO, 2018)
 
 
-### Transport system
+## Transport system
 
 **Kathmandu Valley public transport and modal split**
 
@@ -315,7 +313,7 @@ While most children in Kathmandu Valley know how to cycle (77%), very few actual
 
 During the 2013 "Cycling in Nepal: Challenges and Opportunities" workshop, participants vowed to make Kathmandu a cycle city by 2020, and have made a declaration to this effect, noting various points of action to be followed through with the relevant stakeholders. The second of these involves ensuring cycle lanes are included in any future developments in a connected and well considered manner (CEN, 2013b).
 
-### Cycling infrastructure in Kathmandu
+## Cycling infrastructure in Kathmandu
 
 **People's attitudes towards cycling**
 
