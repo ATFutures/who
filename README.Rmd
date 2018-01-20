@@ -115,7 +115,10 @@ GAMA contains 16 of the 216 local authority districts of the Republic of Ghana. 
 **Weather and Climate**
 
 The annual average temperature of Accra city 27.6 °C, with mean monthly temperatures ranging from 25.9 °C in August (the coolest) 29.6 °C in March (the hottest). Relative humidity is high, ranging from 50% to 80%. Accra city, as with other southern cities, experiences two rainy seasons; April through June, and September through November. The harmattan is a dry desert wind that blows from the northeast from December to March. It lowers the humidity, bringing hot days and cool nights to northern parts of Ghana. This wind blows over the south in January. 
-These atmospheric conditions have implications for cycling uptake, making it potentially uncomfortably hot and sweaty in the hotter months. However, the impact of climate can be overestimated. In Seville, which has a mean monthly temperature of 28.2 °C in summer, cycling grew from less than 1% to more than 5% following infrastructure investment (ref - RL).
+
+These atmospheric conditions have implications for cycling uptake, making it potentially uncomfortably hot and sweaty in the hotter months.
+The impact of climate can be overestimated, however, as demonstrated by the Seville in Spain which has a mean monthly temperature of 28.2 °C in summer, just 1.4 °C less than Accra.
+Despite high temperatures, cycling levels in the city quadrupled following investment in a carefully planned route network (illustrated in Figure \@ref(fig:sevnet)) from less than 2% before 2006 to more than 8% (in the survey month of November) following infrastructure investment [@marques_how_2015].
 
 ### Transport system
 
