@@ -32,7 +32,6 @@ system(msg)
 
 # Introduction
 
-
 The benefits of active travel for individual and urban health, the environment, and society are becoming increasingly apparent [@celis-morales_association_2017], and many cities are preparing ambitious walking and cycling plans.
 However many transport authorities lack strong and actionable evidence to support this investment for a number of reasons, including:
 
@@ -154,7 +153,7 @@ Over a half (56%) of daily passengers in Accra are carried by buses, and a furth
 
 **Issues with public transport**
 
-The public transport operators have been criticised for their disregard of operational standards and the safety of passengers, especially during late evening operation [@agyemang_bus_2015]. It has been found that the transport unions had not been able to regulate some of the behaviour of their members (Addo, 2002). For example, it is a common practice amongst the drivers to increase their fares, especially after heavy downpours, at peak-hour times, or after slight fuel hikes. There are no regulations in place by the union to combat some of these unacceptable practices (Agyemang, 2009; 2013). Similar practices have also been observed amongst taxi operators, who often charge double or triple the equivalent bus journey fare (Addo, 2002).
+The public transport operators have been criticised for their disregard of operational standards and the safety of passengers, especially during late evening operation [@agyemang_bus_2015]. It has been found that the transport unions had not been able to regulate some of the behaviour of their members (Addo, 2002). For example, it is a common practice among the drivers to increase their fares, especially after heavy downpours, at peak-hour times, or after slight fuel hikes. There are no regulations in place by the union to combat some of these unacceptable practices (Agyemang, 2009; 2013). Similar practices have also been observed among st taxi operators, who often charge double or triple the equivalent bus journey fare (Addo, 2002).
 
 ```{r, fig.cap="The mini buses at a terminal loading passengers"}
 knitr::include_graphics("fig/buses_at_terminal.png")
@@ -232,10 +231,9 @@ A 2012 public transport survey revealed the main purposes of public transport jo
 
 Men are more likely than women to have access to a family owned vehicle (including bicycles), though as of 2013 women have been rapidly acquiring small scooters, leading to more women having alternatives to public transport than men (26% compared with 16%). The primary determining factor influencing mode of transportation for both genders nevertheless remains journey duration (men 84%, women 74%; World Bank, 2013.).
 
-
 **The forms of public transport in Kathmandu Valley**
 
-A wealth of different types of public transport vehicles have operated and are operating in Kathmandu Valley. All vehicles currently operating in the valley are privately owned and run by a syndicate, with exception of the Sahja buses which are operated by a cooperative. Most vehicles are individually owned and operated, although there are few individuals who own more than ten vehicles. (Wolrd Bank, 2013.)
+A wealth of different types of public transport vehicles have operated and are operating in Kathmandu Valley. All vehicles currently operating in the valley are privately owned and run by a syndicate, with exception of the Sahja buses which are operated by a cooperative. Most vehicles are individually owned and operated, although there are few individuals who own more than ten vehicles (World Bank, 2013.)
 
 The Nepal Transport Service initiated public transport in Kathmandu Valley in September 1959, eventually operating 11 buses between Kathmandu and Patan (in Lalitpur District, which borders Kathmandu municipality to the south). This system transported over ten thousand passengers each day during its prime, but shut down in 1966 (CEN, 2014a).
 
