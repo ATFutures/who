@@ -2,11 +2,12 @@ library (dodgr)
 library (sf)
 library (magrittr)
 # hard-code dirs for now; this will later be done with the drat archive
+city = "kathmandu"
 pd_dir <- file.path (here::here(), "../popdens")
 devtools::load_all (pd_dir, export_all = FALSE)
 
 # If !is.null(n), then sample that number of nodes
-get_popdens_nodes <- function (city = "accra", n = NULL)
+get_popdens_nodes <- function (city = city, n = NULL)
 {
     data_dir <- file.path (here::here(), "../who-data")
     nodes <- readRDS (file.path (data_dir, city, "osm", "nodes_new.Rds"))
@@ -17,7 +18,7 @@ get_popdens_nodes <- function (city = "accra", n = NULL)
     }
     return (nodes)
 }
-nodes <- get_popdens_nodes ("accra", n = 1000)
+nodes <- get_popdens_nodes (city, n = 1000)
 
 get_od_matrix <- function (net, nodes)
 {
@@ -32,12 +33,12 @@ get_od_matrix <- function (net, nodes)
     nodes <- verts$id [xy_index]
 
     od <- dodgr_spatial_interaction (graph = net, nodes = nodes, dens = dens,
-                                     k = 2, contract = TRUE)
+                                     k = 2.33, contract = TRUE)
     list (index = xy_index, od = od)
 }
 transport <- "bicycle" # for weighting profile
 data_dir <- file.path (here::here(), "../who-data")
-net <- readRDS (file.path (data_dir, "accra", "osm", "accra-hw.Rds")) %>%
+net <- readRDS (file.path (data_dir, city, "osm", paste0(city, "-hw.Rds"))) %>%
     weight_streetnet (wt_profile = transport)
 od <- get_od_matrix (net, nodes)
 
@@ -62,7 +63,6 @@ graph <- readRDS ("accra-flows.Rds")
 graph_sf <- dodgr_to_sf (graph)
 gc <- dodgr_contract_graph (graph)
 graphm <- merge_directed_flows (gc$graph)
-
 indx <- match (graphm$edge_id, names (graph_sf))
 graph_sf <- graph_sf [indx]
 # graph_sf then has the geometries and graphm the associated data
