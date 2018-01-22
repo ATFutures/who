@@ -365,7 +365,7 @@ Demographic data for Kathmandu are not as detailed, and also do not include age 
 knitr::include_graphics(c("fig/accra-osm-overview.png", "fig/test.png"))
 ```
 
-# Results II: Assessing the quality of OpenStreetMap
+# Assessment of OpenStreetMap Data Quality
 
 The street network datasets used for this project were downloaded from the OpenStreetMap (OSM), an open access, freely available, online mapping database (Barrington-Leigh and Millard-Ball, 2017). Generated through crowd-sourcing (Goodchild, 2007) by volunteers, the current database has grown to almost 50 gigabytes, and thousands of features are being added by the day. One uniqueness of OSM is that it allows its users the chance to contribute their local knowledge about places, thereby ensuring the features’ accuracy, completeness and thoroughness. Furthermore, a backend control/validation is implemented in order to ensure that the datasets conform with the Open Geospatial Consortium standards, which is the internationally recognised set of data standards for the global geospatial community.
 
@@ -440,9 +440,24 @@ Kathmandu is very well represented on OSM, thanks to a number of local mapping o
 knitr::include_graphics("fig/quality assessment_osm_kathmandu.png")
 ```
 
-# Results III: Estimating and Calibrating Cycling Potential
 
-In addition to using Bristol as a baseline for assessing the relative accuracy and complement of the OSM datasets for Accra and Kathmandu, Bristol was also chosen as a reference city because of freely available origin-destination (OD) data which are needed to calibrate model parameters. Data for both study cities for this report consist of static population densities, with the first of the following two sub-sections describing how the dynamic OD data for Bristol were used to convert these static estimates into realistically calibrated estimates of flow densities throughout the street networks of the cities. The second sub-section describes the currently state of our modelling software, many of the latest developments of which have been implemented directly to address this current project.
+
+# Methods
+
+## Data access and download
+
+To ensure that the results presented in this report are scalable we developed functions that are generalisable to other cities.
+The following functions were written to obtain population density and OSM data:
+
+- `crop_worldpop_tif` to access worlpop data for a specific city
+- `get_osm_buildings` to get buildings data
+- `get_streetnet` to get the street network
+
+These functions are in development and require further testing and documentation but we are confident they could form the basis of a 'back-end' of a larger international toolkit.
+
+## Route network analysis
+
+...
 
 ## Calibration Method
 
@@ -451,6 +466,25 @@ The preliminary results shown at the outset, and discussed further in the follow
 The calibration comprised the following three steps. First, the Bristol OD matrix was converted to total densities at all origin points by summing values for all destinations. These values are equivalent to the aggregate population densities obtained for the study cities. Second, an exponential spatial interaction model was applied to these densities to provide estimates of flows from each origin to each destination point, dependent on a single parameter quantifying the exponential decay in flow density with increasing distace.  Finally, the calibration was performed by finding the value of the exponential decay parameter which best reproduced the observed OD matrix, with this procedure repeatedly separately for pedestrian and cyclist models.
 
 The resultant decay coefficients for pedestrians and cyclists had respective values of 1.3 and 2.3km, indicating that 63% (1-exp(-1)) of all pedestrian trips are 1.3km or less, while the same proportion of cycling trips are less than 2.3km. Both of these models generated using the above procedure were very significantly related to the actual OD matrices, with the pedestrian model reproducing 46% of the structure of the observed OD matrix, and the cycling model reproducing 12%.
+
+# Preliminary results: cycling potential
+
+In addition to using Bristol as a baseline for assessing the relative accuracy and complement of the OSM datasets for Accra and Kathmandu, Bristol was also chosen as a reference city because of freely available origin-destination (OD) data which are needed to calibrate model parameters. Data for both study cities for this report consist of static population densities, with the first of the following two sub-sections describing how the dynamic OD data for Bristol were used to convert these static estimates into realistically calibrated estimates of flow densities throughout the street networks of the cities. The second sub-section describes the currently state of our modelling software, many of the latest developments of which have been implemented directly to address this current project.
+
+```{r calibbris, fig.cap="Estimated cycling potential on the route network in Bristol."}
+knitr::include_graphics("fig/flows-calib-bris.png")
+```
+
+```{r calibaccra, fig.cap="Estimated cycling potential on the route network in Accra."}
+knitr::include_graphics("fig/flows-calib-accra.png")
+```
+
+```{r calibkat, fig.cap="Estimated cycling potential on the route network in Kathmandu."}
+knitr::include_graphics("fig/flows-calib-kat.png")
+```
+
+
+# Discussion and next steps
 
 ## Current State of Modelling Software
 
@@ -480,7 +514,7 @@ This report has revealed that the OSM data for Accra are not as rich as those av
 <!-- We will also deliver summaries of the relationships between demographic and transport infrastructure data and an assessment of the quality of local data and priorities for future data collection. -->
 <!-- The deliverables will be provided in the form of datasets provided to the WHO and interactive and high quality maps. -->
 
-# Next steps
+## An outline for Phase II
 
 This section is work in progress.
 
