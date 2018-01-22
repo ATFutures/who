@@ -359,19 +359,23 @@ City         Population (on network)   N. Buildings   Num. Building Classes
 accra                        2238470          24490                      29
 kathmandu                         NA          82333                     344
 
-
+<!-- ```{r, fig.cap="Basic OSM characteristics of case study cities", eval=FALSE} -->
+<!-- knitr::include_graphics("fig/BasicOSM_Xteristics.png") -->
+<!-- ``` -->
 
 The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
 
 
-Table: (\#tab:unnamed-chunk-18)Characteristics of OSM route network data for case study cities.
+Table: (\#tab:unnamed-chunk-17)Characteristics of OSM route network data for case study cities.
 
 City         Street nodes   Street segments   Network distance (km)
 ----------  -------------  ----------------  ----------------------
 accra              131349            145827                    4072
 kathmandu           37770             40405                     539
 
-
+<!-- ```{r, fig.cap="Characteristics of OSM route network data for case study cities.", eval=FALSE} -->
+<!-- knitr::include_graphics("fig/Xteristics_Of_OSM.png") -->
+<!-- ``` -->
 
 Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells.  Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
 
@@ -379,7 +383,7 @@ Demographic data for Kathmandu are not as detailed, and also do not include age 
 
 <div class="figure">
 <img src="fig/accra-osm-overview.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" /><img src="fig/test.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" />
-<p class="caption">(\#fig:unnamed-chunk-20)Overview of Accra (left) and initial results of cycling potential (right).</p>
+<p class="caption">(\#fig:unnamed-chunk-18)Overview of Accra (left) and initial results of cycling potential (right).</p>
 </div>
 
 # Assessment of OpenStreetMap Data Quality
@@ -442,7 +446,7 @@ Overall, Kathmandu is very well represented on OpenStreetMap, thanks to a number
 
 <div class="figure">
 <img src="fig/KathmanduOSMbefore-after.jpg" alt="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018." width="100%" />
-<p class="caption">(\#fig:unnamed-chunk-21)Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018.</p>
+<p class="caption">(\#fig:unnamed-chunk-19)Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018.</p>
 </div>
 
 The same strategy of drawing 2km x 2km grids at the central of each administrative sub-division (here referred to as municipality) is employed. We also observed that the distibution of the grids is provide a good cross-section of the street network across the whole area. Based on the spatial extent of the road network across each municipality, we classified the municipalities into two, namely; (1) urban and (2) semi-urban municipalities, with 51-100% and 0-50% network coverages, respectively. 
@@ -452,7 +456,7 @@ The same strategy of drawing 2km x 2km grids at the central of each administrati
 
 <div class="figure">
 <img src="fig/quality grid_osm_kathmandu.png" alt="The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each municipality." width="100%" />
-<p class="caption">(\#fig:unnamed-chunk-22)The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each municipality.</p>
+<p class="caption">(\#fig:unnamed-chunk-20)The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each municipality.</p>
 </div>
 
 Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (X). The positional accuracy and the completeness of the OSM datasets is observed to be very similar to that of Bristol. In other words, in comparison with GAMA, the quality of OSM dataset of kathmandu is better. For example, zooming into two randomly selected municipalities; BaadBhanjyang and Lapsephedi (Figure \@ref(fig:osmkat)), representing an urban and semi-urban municipalities, respectively, we found the positional accuracy of the OSM road network to be very similar to that of Bristol area. Also, we found every single road segment to have been properly captured, indicating a 100% completeness level.
