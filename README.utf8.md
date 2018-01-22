@@ -1,7 +1,7 @@
 ---
-title: "Estimating cycling potential on the route networks in Accra and Kathmandu: a feasibility study using open data and open source software"
+title: "Estimating cycling potential on the route network in Accra and Kathmandu: a feasibility study using open data and open source software"
 author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
-date: '`r Sys.Date()`'
+date: '2018-01-22'
 bibliography: who.bib
 # uncomment for markdown output:
 # output:
@@ -17,19 +17,11 @@ output:
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
 Can go elsewhere, e.g. as a vignette before this is open sourced. -->
 
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  out.width = "100%",
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-",
-  echo = FALSE
-)
-# add citation
-# citr::tidy_bib_file(rmd_file = "README.Rmd", messy_bibliography = "~/allrefs.bib", file = "who.bib")
-# export as low-res pdf:
-msg = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=who-toolkit-feasibility-study.pdf README.pdf"
-system(msg)
+
+```
+## Warning: running command 'gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -
+## dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=who-toolkit-
+## feasibility-study.pdf README.pdf' had status 127
 ```
 
 # Introduction
@@ -53,10 +45,10 @@ Seville demonstrates how building the right infrastructure (protected cycle path
 Despite high temperatures approaching those in Accra, cycling levels in the city quadrupled following investment in a carefully planned route network (illustrated in Figure \@ref(fig:sevnet)).
 This network represents around 0.3 m of segregated cycle infrastructure per person (~200 km divided among the city's ~700,000 people) from less than 2% before 2006 to more than 8% (in the survey month of November) following infrastructure investment [@marques_how_2015].
 
-```{r sevnet, fig.cap="The core cycling network in Seville (which has mean monthly summer temperatures of up to 28.2 °C), composed of the 'basic' (77 km) and 'complementary' (120 km) protected cylce path network [from @marques_how_2015]. As described in that paper network led the mode share of cycling in the city to increase fourfold and now the mode accounts for almost 10% of trips."}
-# (120 + 77) * 100 / 700
-knitr::include_graphics("fig/sevnet.png")
-```
+<div class="figure">
+<img src="fig/sevnet.png" alt="The core cycling network in Seville (which has mean monthly summer temperatures of up to 28.2 °C), composed of the 'basic' (77 km) and 'complementary' (120 km) protected cylce path network [from @marques_how_2015]. As described in that paper network led the mode share of cycling in the city to increase fourfold and now the mode accounts for almost 10% of trips." width="100%" />
+<p class="caption">(\#fig:sevnet)The core cycling network in Seville (which has mean monthly summer temperatures of up to 28.2 °C), composed of the 'basic' (77 km) and 'complementary' (120 km) protected cylce path network [from @marques_how_2015]. As described in that paper network led the mode share of cycling in the city to increase fourfold and now the mode accounts for almost 10% of trips.</p>
+</div>
 
 The case of Seville raises the question: how can investment in cycling be as effective (or more so) as in Seville?
 The methods outlined in this report, and the tool it proposes, demonstrate that it is possible to create a cycling strategy based on recently available open access data and emerging open source software.
@@ -82,9 +74,10 @@ These allow us to estimate cycling potential down to the road network level base
 This involved implementing a highly computationally efficient routing algorithm in C++ and, in a development that has arisen thanks to this project, new software for re-allocating the results of the routing algorithm back onto the road network.
 A custom level of road segmentation was developed to create this geographical aggregated flow map, which clearly shows routes with high cycling potential, as illustrated in Figure \@ref(fig:seg) ([see interactive version at rpubs.com/RobinLovelace](http://rpubs.com/RobinLovelace/341996)):
 
-```{r seg, echo=FALSE, fig.cap="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential."}
-knitr::include_graphics("fig/accra-flow1-interactive.png")
-```
+<div class="figure">
+<img src="fig/accra-flow1-interactive.png" alt="Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential." width="100%" />
+<p class="caption">(\#fig:seg)Illustration of interactive map demonstrating the preliminary results: the routes in Accra with highest cycling potential.</p>
+</div>
 
 In terms of **secondary data** we made use of the published academic literature, 'grey literature' on each of the case study cities, and reports and statistical data published by the local authorities.
 More conventional methods were used to assess these data sources and make use of them to inform the feasibility of a tool for planning active transport futures in Accra and Kathmandu (similar resources exist for other cities although the transport policies of the case study cities seem to be particularly interesting and relatively well-documented for low-income nations).
@@ -99,9 +92,10 @@ Kathmandu has a population of just over 1.2 million, according to the [World Pop
 The remainder of this section provides more depth on the transport contexts of each city which will inform the future development of tools for planning active travel futures.
 Illustrative photos of cycling provision in each case study city are provided in Figure \@ref(fig:cyclists).
 
-```{r cyclists, fig.cap="Figures illustrating cyclist in (a) Accra, (b) Kathmandu, (c) Bristol"}
-knitr::include_graphics("fig/cylcing_infrastructures.png")
-```  
+<div class="figure">
+<img src="fig/cylcing_infrastructures.png" alt="Figures illustrating cyclist in (a) Accra, (b) Kathmandu, (c) Bristol" width="100%" />
+<p class="caption">(\#fig:cyclists)Figures illustrating cyclist in (a) Accra, (b) Kathmandu, (c) Bristol</p>
+</div>
 
 # Accra
 
@@ -119,9 +113,10 @@ knitr::include_graphics("fig/cylcing_infrastructures.png")
 
 The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Fig. 1). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Forty three percent of the population is estimated to be between the age of 15 and 35 years.(Ghana, Y.P.I., 2013).
 
-```{r, fig.cap="Geographical location of Greater Accra Metropolitan Area (GAMA)"}
-knitr::include_graphics("fig/study-area-accra.png")
-```
+<div class="figure">
+<img src="fig/study-area-accra.png" alt="Geographical location of Greater Accra Metropolitan Area (GAMA)" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-2)Geographical location of Greater Accra Metropolitan Area (GAMA)</p>
+</div>
  
 GAMA contains 16 of the 216 local authority districts of the Republic of Ghana. Administratively, the Accra Metropolitan local authority district serves as the capital of Accra city, and is administered by Accra Metropolitan Assembly, which is the political and administrative authority for the entire city of Accra.
 
@@ -131,9 +126,10 @@ The population of GAMA grew from 2,905,726 in 2000 to 4,010,054 in 2010 (Ghana S
 
 The region occupies a total land area of 3,245 sq. km, which makes it the geographically smallest region of the country. It has a population density of 1,235.8 people per sq. km, and is 90.5% urban with an annual urban growth rate of 3.1%, and recorded a positive net migration value of 1,275,425 in 2010. GAMA's labour force participation rate for its population aged 15 - 64 is estimated as 74.7%.
 
-```{r, fig.cap="Accra population density (2013). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de "}
-knitr::include_graphics("fig/accra_pop_density.png")
-```
+<div class="figure">
+<img src="fig/accra_pop_density.png" alt="Accra population density (2013). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de " width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-3)Accra population density (2013). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de </p>
+</div>
 
 **Weather and Climate**
 
@@ -157,9 +153,10 @@ Over a half (56%) of daily passengers in Accra are carried by buses, and a furth
 
 The public transport operators have been criticised for their disregard of operational standards and the safety of passengers, especially during late evening operation [@agyemang_bus_2015]. It has been found that the transport unions had not been able to regulate some of the behaviour of their members (Addo, 2002). For example, it is a common practice among the drivers to increase their fares, especially after heavy downpours, at peak-hour times, or after slight fuel hikes. There are no regulations in place by the union to combat some of these unacceptable practices (Agyemang, 2009; 2013). Similar practices have also been observed among st taxi operators, who often charge double or triple the equivalent bus journey fare (Addo, 2002).
 
-```{r, fig.cap="The mini buses at a terminal loading passengers"}
-knitr::include_graphics("fig/buses_at_terminal.png")
-```
+<div class="figure">
+<img src="fig/buses_at_terminal.png" alt="The mini buses at a terminal loading passengers" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-4)The mini buses at a terminal loading passengers</p>
+</div>
 <!-- **Governments efforts to address the issues** -->
 <!-- As a social policy intervention in 2003, the government instituted the Metro Mass Transit (MMT), a bus rapid transit (BRT)-like system for commuters within Accra city and beyond. This constituted the third generation of transport interventions in Accra, purposely to keep the activities of private operators in check, alongside encouraging better service. The first, in the late 80s and early 90s, and the second, in the late 90s, were infrastructure upgrades for roads and corresponding drainage. The coverage of the MMT network constituted only 3% of all the passengers’ movements and functioned until 2007 when it was phased out due to its inability to achieve its goals, which included providing adequate competitive environment in order to enforce good public transport services [@agyemang_traffic_2014]. Moreover, the MMT services ended up not being different to the existing transport services, due to the lack of several of the main components needed for ‘proper’ bus rapid transit infrastructures ([@levinson_bus_2003]; [@deng_recent_2011]), such as dedicated bus lanes and enhanced ticketing systems -->
 
@@ -186,9 +183,10 @@ In a white paper prepared by the Ministry of Transportation in 2004, cycling was
 
 In 2008, the department of Urban Roads, in collaboration with the CCE, developed the first ever Bicycle Masterplan (BMP) for Accra city. A comprehensive study was carried out in order to generate the technical details regarding the design, such as what type of bike facilities are required for a particular route. 
 
-```{r, fig.cap="Accra bicycle masterplan (Quarshie, 2007)"}
-knitr::include_graphics("fig/Bike_masterplan.png")
-```
+<div class="figure">
+<img src="fig/Bike_masterplan.png" alt="Accra bicycle masterplan (Quarshie, 2007)" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-5)Accra bicycle masterplan (Quarshie, 2007)</p>
+</div>
 
 <!-- The region recorded the lowest Infant Mortality Rate (deaths of infants under age one) in 2011, with thirty-seven infant deaths per 1,000 live births.  Child Mortality Rate (deaths of children between ages one and four) was 19 deaths per 1,000 live births and Under Five Mortality (number of children who die by age five) was reported at 61 deaths per 1,000 live births. Maternal Mortality Rate (the number of deaths due to pregnancy related causes to the number of women of child-bearing age, 15 - 49 years) in the region, was 355 per 100,000 live births in 2010, this was lower than the national value of 485 per 100,000 live births. The Total Fertility Rate (TFR) of the region is slightly lower (2.5) as compared to the national TFR of 4.0, indicating that on the average women in the Greater Accra Region give birth to three children. In addition there are two births per every 100 adolescents in the region, which is the lowest among the regions. With regards to Contraceptive Prevalence Rate (CPR), the use of modern contraceptives among currently married women, it was 19.4 % in 2014, one of the lowest in the country. In 2013, the HIV prevalence rate in the region was 2.7%, higher than the national HIV prevalence of 1.3%. -->
 
@@ -199,17 +197,19 @@ The Federal Democratic Republic of Nepal consists of 7 provinces. Kathmandu Dist
 For most statistical surveys and also for transport planning purposes, Kathmandu municipality is considered as part of a different geographical unit: namely Kathmandu Valley (KV).
 KV spans 3 districts, two municipalities of which are in Kathmandu District, one in Lalitpur District, and two in Bhaktapur District (Figure \@ref(fig:katbound). This mismatch between administrative authorities presents a notable difficulty in composing, financing, and implementing transportation (and other) plans for this region (East-West Center, 2009). 
 
-```{r katbound, fig.cap="Boundaries of Kathmandu, Lalitpur and Bhaktapur Districts, their municipalities, and Kathmandu Valley. Source: East-West Center, 2009"}
-knitr::include_graphics("fig/KathmanduBoundaries.png")
-```
+<div class="figure">
+<img src="fig/KathmanduBoundaries.png" alt="Boundaries of Kathmandu, Lalitpur and Bhaktapur Districts, their municipalities, and Kathmandu Valley. Source: East-West Center, 2009" width="100%" />
+<p class="caption">(\#fig:katbound)Boundaries of Kathmandu, Lalitpur and Bhaktapur Districts, their municipalities, and Kathmandu Valley. Source: East-West Center, 2009</p>
+</div>
 
 **Demography and population of Kathmandu**
 
 According to the Nepalese Central Bureau of Statistics (CBS, 2001), Kathmandu is by far the most densely populated of all 75 districts, with 1,081,845 inhabitants (4.67% of the total Nepalese population) and a population density of 2,738.9 people per square kilometre (p/km^2^) in 2001 (Figure \@ref(fig:katdens). The national average district density in 2001 was 157.3 p/km^2^ and the only other district to have a population density of over one thousand was Bhaktapur (1.894,6), which borders it to the east. The Kathmandu Valley is even more densely populated, at 4,400 p/km^2, and a density of 19,250 p/km^2^ in Kathmandu municipality alone (World Bank, 2013). In September 2017 the population of Kathmandu Valley was estimated at approximately 3 million permanent residents, with an additional floating population of 2.5 million. Since Kathmandu has had an annual growth rate of 4.63% for at least the last decade (compared to 1.53% nationally), this means an increase of the population with 57% over this period of time. New municipalities in Kathmandu Valley even exhibit annual growth rates of 5.7% (Pradhan, 2017).
 
-```{r katdens, fig.cap="Kathmandu population density (2011). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de"}
-knitr::include_graphics("fig/kathmandu_pop_density.png")
-```
+<div class="figure">
+<img src="fig/kathmandu_pop_density.png" alt="Kathmandu population density (2011). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de" width="100%" />
+<p class="caption">(\#fig:katdens)Kathmandu population density (2011). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de</p>
+</div>
 
 As Kathmandu Valley is the most urbanized region of Nepal, there is generally a good availability of utilities (water, gas, electricity), sanitation, education, and transportation, although recent rapid and haphazard urbanization has exacerbated conditions in the expanding areas, and has increased pressures on the existing infrastructure and facilities (East-West Center, 2009). In 2011 there were 1329 people per kilometre of sewerage service in Kathmandu municipality, with the Nepalese average being 1942. The roads in Kathmandu District were 67.7% black topped, 15.4% gravelled and 16.8% earthen in 2011. The district had 7896 people per km of road at the time, with a total road length of 220.89 km, and a density of 56 km of road per square km, as opposed to 2445 people/km and 7 km/km~2~ on average nationally. In Kathmandu Municipality nearly all roads were black topped in 2011 (99.7%), with the remainder being gravelled, and there were just over ten thousand people per kilometre of road (CBS, 2014.)
 
@@ -226,9 +226,10 @@ Kathmandu District and Kathmandu Valley both span a great elevation range, and t
 
 In 2011 3.5 million trips were made each day on average in Kathmandu Valley. Walking was the dominant mode of transportation (40.7%), followed by  bus (27.6%), motorcycle (26.0%) and car (4.2%). Bicycle trips comprised only 1.5%, although the equivalent figure two decades prior had been 6.6%, prior to the advent of rapid urbanization and motorization, whereas the motorcycle share had only been just over a third of the 2011 share in 1991 (9.3%). The share of trips made by public transport has remained broadly similar (27.2% in 1991). Walking also decreased in 2011, down from its 1991 share of 53%. During this time, pavements were removed from  major roads in an attempt to create more space for motorized traffic, yet a 2011 study revealed that three of these roads still saw foot traffic at average rates of 690-2010 people per hour (maximum 816-2214/hr). Kathmandu was classed as "not walkable" and Kathmandu came out as one of the least walkable cities of Asia in a 2010 study. There are also no provisions for people with disabilities. In 2012 an average 270 cyclists per hour were found to be headed in each direction on Tundhikel Road during rush hour (9-11 a.m.) and 194 per hour during the rest of the day. (CEN, 2013c; Khanal & Shrestha (CEN), 2012) Although motorcycles and cars together account for 93% of the vehicles in Kathmandu Valley, and public transportation buses for 3%, their travel mode share in 2011 was comparable. During the decade up to 2011, the annual rate of increase in newly registered vehicles greatly outpaced the population increase in Kathmandu Valley, at 14% more vehicles per year across all vehicles and 17% more motorcycles (CEN, 2013a).
 
-```{r, fig.cap="Congestion in Kathmandu. Source: Cover photo from Udas (CEN), 2012; photo by Keshav Thapa (CEN)"}
-knitr::include_graphics("fig/KathmanduCongestionUdas2012.png")
-```
+<div class="figure">
+<img src="fig/KathmanduCongestionUdas2012.png" alt="Congestion in Kathmandu. Source: Cover photo from Udas (CEN), 2012; photo by Keshav Thapa (CEN)" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-6)Congestion in Kathmandu. Source: Cover photo from Udas (CEN), 2012; photo by Keshav Thapa (CEN)</p>
+</div>
 Kathmandu Valley public transport operates from 4:30-21:00, with peak hours from 8:30-11:00 and 17:00-19:00. An attempt in 2012 to run public transport services until 11 p.m. with the help of armed police on each vehicle, was found to be financially intractable due to the low number of passengers and the high security costs. People requiring transportation for work-related purposes at night are commonly provided company transportation or taxi fares. Work or education represent the main purposes of transport in Kathmandu (40% of all trips by men, 36% by women). Other journeys are generally made between noon and 4 p.m. Most journeys last 15-30 minutes and only 10% last more than an hour. One third to one half of all travellers during peak travel times are female. 'Trip chaining', commonly  because of child care or for shopping, is done by men and women in equal measures. The majority of people walk 5-10 minutes to reach a public transport service (46.2%) and a further 5-10 minutes (39.1%) to reach their final destination. Most passengers have to wait 5-10 minutes for an available vehicle at their origin and destination stops, both during morning peak hours (55%), during the evening peak (45.8%), and in transit (49.2% during morning peak hours, 47.7% in the evenings). (World Bank, 2013)
 
 A 2012 public transport survey revealed the main purposes of public transport journeys in Kathmandu Valley  to be work (38.64%) or study (34.3%). Nearly a third (32.2%) of all journey destinations were in the 'city core area', with just under a third (29.73%) of all transits also occurring in this area (Udas (CEN), 2012).
@@ -247,17 +248,14 @@ The electric trolley bus system, which had been a gift from the Chinese governme
 
 In 1993, USAID supported the introduction of seven Safa Tempos (electric three wheelers). In a further effort to control pollution, the government banned all diesel-operated three-wheelers in 1999/2000, resulting in the Safa Tempo fleet size increasing to the current capacity of 600 vehicles, as well as to the introduction of micro buses (CEN, 2014a). A Danida-funded project encouraged women to become Safa Tempo drivers, resulting in approximately 200 female drivers, with some being owners as well (World Bank, 2013). In addition to the Safa Tempos and the Sahja buses, minibuses and large buses also operate in Kathmandu Valley, resulting in a public transport fleet comprising over 5,321 vehicles, and servicing 222 routes in 2012/13 (CEN, 2014a). Additionally, there is a fleet of around seven thousand taxis, but very few people can afford to use them, and they will rarely use their meter, so their modal share is minimal, despite representing around 55% of all public transport vehicles (World Bank, 2013). The majority of passengers prefer to travel in the microbuses (49.3%), followed by buses and minibuses (39.5%), with only 10% expressing a preference for Safa Tempos. In general people prefer to travel in larger vehicles, due both to the greater likelihood of comfortable seats, and to increased  speeds (Udas (CEN), 2012).
 
-```{r, eval=FALSE, fig.cap="Distribution of the different public transport vehicle types in Kathmandu Valley (2010). Source: Fig. 5 from Udas (CEN), 2012 (originally KSUT Project Report)"}
-knitr::include_graphics("fig/KathmanduPublicTransportFleet2010(CANN).png")
-```
 
-```{r, fig.cap="Capacity and fleet of the different public transport vehicle types in Kathmandu Valley (2010). Source: Table 2 from Udas (CEN), 2012 (originally KSUT Project Report)", out.width="75%"}
-knitr::include_graphics("fig/KathmanduVehicleCapacityFleet.png")
-```
 
-```{r, fig.cap="Routes and fleet size of the different public transport vehicle types in Kathmandu Valley (2010). Source: Fig.1 from CEN, 2014a (originally MoPIT/JICA 2012, Sahja Yatayat 2013)", eval=FALSE}
-knitr::include_graphics("fig/KathmanduPTRoutesFleet.png") 
-```
+<div class="figure">
+<img src="fig/KathmanduVehicleCapacityFleet.png" alt="Capacity and fleet of the different public transport vehicle types in Kathmandu Valley (2010). Source: Table 2 from Udas (CEN), 2012 (originally KSUT Project Report)" width="75%" />
+<p class="caption">(\#fig:unnamed-chunk-8)Capacity and fleet of the different public transport vehicle types in Kathmandu Valley (2010). Source: Table 2 from Udas (CEN), 2012 (originally KSUT Project Report)</p>
+</div>
+
+
 
 **Transport-related air pollution in Kathmandu**
 
@@ -277,17 +275,20 @@ Overcrowding is higher in the evening than in the morning peak hours, partially 
 
 
 <!--
-```{r, fig.cap="Morning peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 15 from Udas (CEN), 2012 (originally KSUT Project Report)"}
-knitr::include_graphics("fig/KathmanduOvercrowdingMornings.png")
-```
-```{r, fig.cap="Evening peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 16 from Udas (CEN), 2012 (originally KSUT Project Report)"}
-knitr::include_graphics("fig/KathmanduOvercrowdingEvening.png")
-```
+<div class="figure">
+<img src="fig/KathmanduOvercrowdingMornings.png" alt="Morning peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 15 from Udas (CEN), 2012 (originally KSUT Project Report)" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-10)Morning peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 15 from Udas (CEN), 2012 (originally KSUT Project Report)</p>
+</div>
+<div class="figure">
+<img src="fig/KathmanduOvercrowdingEvening.png" alt="Evening peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 16 from Udas (CEN), 2012 (originally KSUT Project Report)" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-11)Evening peak hours vehicle type occupancy in Kathmandu Valley (2010). Source: Fig. 16 from Udas (CEN), 2012 (originally KSUT Project Report)</p>
+</div>
 -->
 
-```{r katcrowd, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)", out.width="50%"}
-knitr::include_graphics("fig/KathmanduOvercrowdingNumbers.png")
-```
+<div class="figure">
+<img src="fig/KathmanduOvercrowdingNumbers.png" alt="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)" width="50%" />
+<p class="caption">(\#fig:katcrowd)Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)</p>
+</div>
 
 Nearly one in six people was concerned with transport fares, with some lower-waged workers having to allocate 20-40% of their wages to public transport costs. Many people have to relocate to save on commute costs. Since women have less access to personal vehicles, they tend to have to spend more on transport. Another concern beyond cost is the lack of consistent or transparent fare structure, in spite of the government-provided distance-based fare structure. The government actually adjusts fares according to such factors as fluctuations in petrol prices, yet since the rates are not signposted inside vehicles or elsewhere, people are at the mercy of what conductors deign to charge them (World Bank, 2013).
 
@@ -301,15 +302,17 @@ Overall, the majority of passengers (57.6%) rate the experience of using public 
 
 While the government has already introduced some measures (banning diesel- and petrol-operated three wheelers, and introducing a green sticker system for vehicles in December 1999 (CEN, 2014b)), most focus to date has been on widening existing roads to 6 or 8 lanes, and on building more roads to accommodate increasing urbanization. Such measure have proven to be far from adequate in coping with the increased motorization, congestion and pollution, resulting in more sustainable and long-term plans being constructed. In July 2015 an introduction of the "Project on Urban Transport Improvement for Kathmandu Valley in Federal Democratic Republic of Nepal" was presented. This plan will involve the adoption of a radial-circumferential road system will be adopted, allowing vehicles whose origins or destinations are not in the central business district to avoid having to pass through there (Government of Nepal, 2015).
 
-```{r, fig.cap="Kathmandu road plans. Source: Government of Nepal, 2015."}
-knitr::include_graphics("fig/KathmanduRoadNetworkPlans.png")
-```
+<div class="figure">
+<img src="fig/KathmanduRoadNetworkPlans.png" alt="Kathmandu road plans. Source: Government of Nepal, 2015." width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-12)Kathmandu road plans. Source: Government of Nepal, 2015.</p>
+</div>
 
 A hierarchical public transport route network will also be implemented, restricting to one-third those routes operated on passenger numbers, and creating four transfer terminals, one in each cardinal direction, to alleviate pressure on the central terminal. By reducing the import fees for vehicles with a seating capacity of over 40 seats, the plan aims to encourage a shift towards larger public transport vehicles. Furthermore, it envisions short-, mid- and long-term transport master plans to guide development during the subsequent 5, 10 and 15 years. These envisioned a number of different transport sectors, including non-motorized transport (Government of Nepal, 2015).
 
-```{r, fig.cap="Kathmandu Sustainable Urban Transport Project public transport plans. Source: KSUTP, 2016"}
-knitr::include_graphics("fig/KathmanduSustainableUrbanTransportProject_Plans.png")
-```
+<div class="figure">
+<img src="fig/KathmanduSustainableUrbanTransportProject_Plans.png" alt="Kathmandu Sustainable Urban Transport Project public transport plans. Source: KSUTP, 2016" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-13)Kathmandu Sustainable Urban Transport Project public transport plans. Source: KSUTP, 2016</p>
+</div>
 
 **Making a case for cycling**
 
@@ -333,13 +336,12 @@ While cycling was an historically popular mode of transportation in Kathmandu Va
 
 The government of Kathmandu has proposed great plans for cycling infrastructure, yet it has taken a lot of pressure from Cycle City Network Nepal (CCNN) to get the Maitighar-Tinkune (both towards the southern boundary of Kathmandu Metropolitan City) cycle lane realised well over a decade after it was promised back in 2000 (CEN, 2013c). However, the Clean Air Network Nepal found this 2.7 km long cycle track to be rarely used, due to it serious deficiencies in signage, connectivity, surfacing, and safe passage at intersections and bridges, as well as the presence of obstructions (CEN & CANN, 2015). Most cyclist prefer instead to remain on the main vehicular carriageway. The 44 km of cycle tracks promised in 2005 as part of the 'Velo Mondial Charter and Action Plan for Bicycle Friendly Communities', and cycle lanes on roads wider than 22 meters, have yet to materialise. The first cycle track to be constructed runs from Tilganga to Sinamagal towards the easternmost boundary of the metropolitan city. This 1.2 km track benefits from being separated from the road and offers a lane for pedestrians as well, yet is again underused because most cyclists prefer instead to stay on the carriageway (CEN, 2012).
 
-```{r, fig.cap="Planned (brown), being constructed (red) and existing (green) cycle tracks as of December 2013. Source: Fig. 12 CEN, 2013c"}
-knitr::include_graphics("fig/KatGovtCyclePlans(MaYA3Fig12).png")
-```
+<div class="figure">
+<img src="fig/KatGovtCyclePlans(MaYA3Fig12).png" alt="Planned (brown), being constructed (red) and existing (green) cycle tracks as of December 2013. Source: Fig. 12 CEN, 2013c" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-14)Planned (brown), being constructed (red) and existing (green) cycle tracks as of December 2013. Source: Fig. 12 CEN, 2013c</p>
+</div>
 
-```{r, fig.cap="OpenStreetMap Cycle Map and Google Aerial for Kathmandu Metropolitan City. Source: openstreetmap.org.", eval=FALSE}
-knitr::include_graphics("fig/KathmanduCycleMap.png")
-```
+
 
 # Input data: Overviews of OSM and WorldPop data
 
@@ -349,11 +351,13 @@ The OpenStreetMap network for Accra has 145,827 street segments connecting 131,3
 
 The equivalent network for Kathmandu has 79,832 street segments connecting 37,770 distinct points, and extends over 1,062km. The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
 
-```{r, echo=FALSE}
-r = readRDS("extdata/r.rds")
-names(r) = c("City", "Street nodes", "Street segments", "Network distance (km)", "Population (on network)", "N. Buildings", "nb_no_desc", "Num. Building Classes")
-knitr::kable(r[c(1, 5, 6, 8)], caption = "Basic OSM characteristics of case study cities")
-```
+
+Table: (\#tab:unnamed-chunk-16)Basic OSM characteristics of case study cities
+
+City         Population (on network)   N. Buildings   Num. Building Classes
+----------  ------------------------  -------------  ----------------------
+accra                        2238470          24490                      29
+kathmandu                         NA          82333                     344
 
 <!-- ```{r, fig.cap="Basic OSM characteristics of case study cities", eval=FALSE} -->
 <!-- knitr::include_graphics("fig/BasicOSM_Xteristics.png") -->
@@ -361,9 +365,13 @@ knitr::kable(r[c(1, 5, 6, 8)], caption = "Basic OSM characteristics of case stud
 
 The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
 
-```{r}
-knitr::kable(r[1:4], caption = "Characteristics of OSM route network data for case study cities.")
-```
+
+Table: (\#tab:unnamed-chunk-17)Characteristics of OSM route network data for case study cities.
+
+City         Street nodes   Street segments   Network distance (km)
+----------  -------------  ----------------  ----------------------
+accra              131349            145827                    4072
+kathmandu           37770             40405                     539
 
 <!-- ```{r, fig.cap="Characteristics of OSM route network data for case study cities.", eval=FALSE} -->
 <!-- knitr::include_graphics("fig/Xteristics_Of_OSM.png") -->
@@ -373,9 +381,10 @@ Demographic data for Accra from worldpop include population density estimates at
 
 Demographic data for Kathmandu are not as detailed, and also do not include age classes. An overview map of Accra, the most extensively studied of our case study cities, is illustrated in the Figure below.
 
-```{r, fig.cap="Overview of Accra (left) and initial results of cycling potential (right).", fig.show='hold', out.width="49%"}
-knitr::include_graphics(c("fig/accra-osm-overview.png", "fig/test.png"))
-```
+<div class="figure">
+<img src="fig/accra-osm-overview.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" /><img src="fig/test.png" alt="Overview of Accra (left) and initial results of cycling potential (right)." width="49%" />
+<p class="caption">(\#fig:unnamed-chunk-18)Overview of Accra (left) and initial results of cycling potential (right).</p>
+</div>
 
 # Assessment of OpenStreetMap Data Quality
 
@@ -393,9 +402,10 @@ Bristol is a city in South West England with a population density of 3,892/km2, 
 
 In order to inspect the dataset, we placed 2km by 2km grids at the geometrical centre of all the district (Figure \@ref(fig:osmbris), left), providing a good cross-section of the street network across Bristol. A careful visual inspection of each of the grid revealed very high positional accuracy and completeness of OSM network datasets. 
 
-```{r osmbris, fig.cap="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward"}
-knitr::include_graphics("fig/quality grid_osm_bristol.png")
-```  
+<div class="figure">
+<img src="fig/quality grid_osm_bristol.png" alt="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward" width="100%" />
+<p class="caption">(\#fig:osmbris)(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward</p>
+</div>
 
 Figure \@ref(fig:osmbris) (right) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure shows perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, we could not find a single case of uncaptured road segment; indicating a hundred percent completeness.
 
@@ -409,9 +419,10 @@ Figure \@ref(fig:osmaccra) shows the distribution of the 2km x 2km grids drawn a
 
 Like many urban districts, two semi-urban districts; Ga West Municipal and Ga South Municipal districs, contain very dense street network in areas that are adjacent to the urban district of Ga Central Municipal district. The four eastern-most districts, classified as 'rural', consist largely of trunk roads connecting GAMA to the other regions of the country.
 
-```{r osmaccra, fig.cap="The OSM map of GAMA, with 2km x 2km grids placed at the centre of each district."}
-knitr::include_graphics("fig/quality grid_osm_accra.png")
-```
+<div class="figure">
+<img src="fig/quality grid_osm_accra.png" alt="The OSM map of GAMA, with 2km x 2km grids placed at the centre of each district." width="100%" />
+<p class="caption">(\#fig:osmaccra)The OSM map of GAMA, with 2km x 2km grids placed at the centre of each district.</p>
+</div>
 
 <!-- The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts. -->
 
@@ -419,9 +430,10 @@ The OSM datasets of GAMA revealed very high positional accuracy across all the d
 
 There is variations in completeness level based on the three district categorisations, with urban district having the best completeness level, followed by the semi-rural districts. Furthermore, it is observed that there are more OSM datasets in areas where roads are paved, than areas where roads are unpaved. This explains why more roads in the urban districts are captured better than the roads in both the semi-urban and rural districts. Figure \@ref(fig:osmaccrab) (a) and Figure \@ref(fig:osmaccrab) (b) are the 2km x 2km grids at the centre of the Accra Metropolis and Ga West Municipal districts, an urban district and a semi-urban district, respectively. The oval shapes highlight examples of areas with missing OSM datasets. It can be observed that areas with missing OSM datasets are more prominent in semi-urban district than in the urban district. 
 
-```{r osmaccrab, fig.cap=" (a) Accra Metropolis district - an urban district, and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing."}
-knitr::include_graphics("fig/quality assessment_osm_accra.png")
-```
+<div class="figure">
+<img src="fig/quality assessment_osm_accra.png" alt=" (a) Accra Metropolis district - an urban district, and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing." width="100%" />
+<p class="caption">(\#fig:osmaccrab) (a) Accra Metropolis district - an urban district, and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing.</p>
+</div>
 
 The "completeness" is also observed to vary by road classes, from trunk roads (major road) having the highest completeness level, to the residential (unpaved) with the lowest completeness level. Even in the rural districts where the general completeness level is very poor, the trunk road class are the only well-captured roads.
 
@@ -432,25 +444,28 @@ In comparison with Bristol, Kathmandu is roughly four times bigger in size, but 
 Overall, Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping the 2600 schools and 300 hospitals in the area in 2013. Their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometres of roads. (KLL, 2018.)
 
 
-```{r, fig.cap="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018."}
-knitr::include_graphics("fig/KathmanduOSMbefore-after.jpg")
-```
+<div class="figure">
+<img src="fig/KathmanduOSMbefore-after.jpg" alt="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018." width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-19)Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018.</p>
+</div>
 
 The same strategy of drawing 2km x 2km grids at the central of each administrative sub-division (here referred to as municipality) is employed. We also observed that the distibution of the grids is provide a good cross-section of the street network across the whole area. Based on the spatial extent of the road network across each municipality, we classified the municipalities into two, namely; (1) urban and (2) semi-urban municipalities, with 51-100% and 0-50% network coverages, respectively. 
 
 <!-- Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (*).KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them on how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping schools and hospitals in the area. Their website states that their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometers of roads. -->
 
 
-```{r, fig.cap="The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each municipality."}
-knitr::include_graphics("fig/quality grid_osm_kathmandu.png")
-```
+<div class="figure">
+<img src="fig/quality grid_osm_kathmandu.png" alt="The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each municipality." width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-20)The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each municipality.</p>
+</div>
 
 Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (X). The positional accuracy and the completeness of the OSM datasets is observed to be very similar to that of Bristol. In other words, in comparison with GAMA, the quality of OSM dataset of kathmandu is better. For example, zooming into two randomly selected municipalities; BaadBhanjyang and Lapsephedi (Figure \@ref(fig:osmkat)), representing an urban and semi-urban municipalities, respectively, we found the positional accuracy of the OSM road network to be very similar to that of Bristol area. Also, we found every single road segment to have been properly captured, indicating a 100% completeness level.
 
 
-```{r osmkat, fig.cap="(a) BaadBhanjyang - an urban municipality and (b) Lapsephedi - a semi-urban municipality."}
-knitr::include_graphics("fig/quality assessment_osm_kathmandu.png")
-```
+<div class="figure">
+<img src="fig/quality assessment_osm_kathmandu.png" alt="(a) BaadBhanjyang - an urban municipality and (b) Lapsephedi - a semi-urban municipality." width="100%" />
+<p class="caption">(\#fig:osmkat)(a) BaadBhanjyang - an urban municipality and (b) Lapsephedi - a semi-urban municipality.</p>
+</div>
 
 
 
@@ -496,58 +511,50 @@ We hope to refine these estimates in future work, building on this feasibility s
 
 The results for Bristol are illustrated in Figure \@ref(calibbris).
 This demonstrates that the method creates a detailed route network that highlights the most important routes from a cycling perspective.
-The comparison with the results derived from a different method which was far more data-intensive and took much longer to generate [@lovelace_propensity_2017] is encouraging, with arterial and orbital routes both prominent.
+The comparison with the results derived from a different method which took much longer to generate [@lovelace_propensity_2017] is encouraging, with arterial and orbital routes both prominent.
 
-```{r calibbris, fig.cap="Estimated cycling potential on the route network in Bristol.", fig.show='hold', out.width="49%"}
-knitr::include_graphics(c("fig/flows-calib-bris.png", "fig/pct-bris.png"))
-```
+<div class="figure">
+<img src="fig/flows-calib-bris.png" alt="Estimated cycling potential on the route network in Bristol." width="49%" /><img src="fig/pct-bris.png" alt="Estimated cycling potential on the route network in Bristol." width="49%" />
+<p class="caption">(\#fig:calibbris)Estimated cycling potential on the route network in Bristol.</p>
+</div>
 
 The results for Accra are illustrated in Figure \@ref(fig:calibaccra).
 This is the largest of the three cities and has the most estensive network with high cycling potential.
-It is interesting to note that, unlike Bristol, it has a 'polycentric' distribution of cycling potential, suggesting an extensive network will be needed for a cycling revolution in all parts of the city.
-Alternatively, it suggests that cycling investment should be prioritised in phases, with a an initial phase along route segments with highest potential, such as the are around Abossey Okai to the north-west of the ring road.
-The evidence would nevertheless need to be interpreted by local stakeholders before such concrete recommendations are made.
+It is interesting to note that, unlike Bristol, it has a 'polycentric' distribution of cycling potential, suggesting an extensive network is needed for a cycling revolution in all parts of the city.
+Alternatively, it suggests cycling investment should be prioritised in phases, with a an initial phase along route segments with highest potential, such as the are around Abossey Okai to the north-west of the ring road.
+The evidence would need to be interpreted by local stakeholders before such concrete recommendations are make, however.
 
-```{r calibaccra, fig.cap="Estimated cycling potential on the route network in Accra."}
-knitr::include_graphics("fig/flows-calib-accra.png")
-```
+<div class="figure">
+<img src="fig/flows-calib-accra.png" alt="Estimated cycling potential on the route network in Accra." width="100%" />
+<p class="caption">(\#fig:calibaccra)Estimated cycling potential on the route network in Accra.</p>
+</div>
 
 The results for Kathmandu are illustrated in Figure \@ref(fig:calibkat).
 This shows a more 'monocentric' city with high cycling potential on arterial routes north, east, south and west of the central area.
 Again the policy implications of this evidence depend on how many kilometres of protected infrastructure are on the table but suggest a city-wide network of the type illustrated in Figure \@ref(fig:sevnet) would appropriate be if the investment for such an extensive network available.
 
-```{r calibkat, fig.cap="Estimated cycling potential on the route network in Kathmandu."}
-knitr::include_graphics("fig/flows-calib-kat.png")
-```
+<div class="figure">
+<img src="fig/flows-calib-kat.png" alt="Estimated cycling potential on the route network in Kathmandu." width="100%" />
+<p class="caption">(\#fig:calibkat)Estimated cycling potential on the route network in Kathmandu.</p>
+</div>
 
 # Discussion and next steps
 
 ## Current State of Modelling Software
 
-Our modelling software primarily consists of a custom-developed routing engine designed specifically for the task of routing very large numbers of origins to very large numbers of destinations, and for aggregating expected 'flows' along all segments of a network from such routing.
-The software is currently around 10 times more efficient that the industry-standard open-source routing library ('igraph'), and scales to far greater numbers of origins and destinations than does the google routing API.
-(Performance of the latter can not be directly compared because timing depends on sending and receiving data; the google API is also very expensive for large queries of the type needed in this context.)
+Our modelling software primarily consists of a custom-developed routing engine designed specifically for the task of routing very large numbers of origins to very large numbers of destinations, and for aggregating expected 'flows' along all segments of a network from such routing. The software is currently around 10 times more efficient that the industry-standard open-source routing library ('igraph'), and scales to far greater numbers of origins and destinations than does the google routing API. (Performance of the latter can not be directly compared because timing depends on sending and receiving data; the google API is also very expensive for large queries of the type needed in this context.)
 
-One of the features we implemented for this preliminary report was the ability to allocate static population densities to sets of dynamic origins and destinations distributed according to a calibrated decay in relative numbers of trips with increasing distance.
-Not only is our implementation highly efficient, routing a test set of 1,000 origins to every single potential destination within the entire Accra network in around one minute, but to the best of our knowledge such highly scalable network allocation is simply not possible with any piece of existing transport planning software.
+One of the features we implemented for this preliminary report was the ability to allocate static population densities to sets of dynamic origins and destinations distributed according to a calibrated decay in relative numbers of trips with increasing distance. Not only is our implementation highly efficient, routing a test set of 1,000 origins to every single potential destination within the entire Accra network in around one minute, but to the best of our knowledge such highly scalable network allocation is simply not possible with any piece of existing transport planning software.
 
-Although this present sub-section is intended to reflect the current state of our software, we note that the network allocation algorithm has been developed in order to be immediately extended to provide far more realistic allocations, through identifying different categories of typical destinations from OSM data (in terms of 'trip attractors' reflecting typical activities such as education, employment, leisure, or shopping), and developing different calibration models for each of these categories.
-The calibration model above reproduced only 12% of the actual variation in cycling behaviour in Bristol, yet presumed all cycling trips to reflect a generic purpose, with behaviour quantified by a single calibration parameter.
-A detailed application would involve fitting several distinct models for different categories of movement, and aggregating the results of each resultant flow layer across the network.
-Although categorical trip attractors were neither identified nor used in the present report, the software is already able to automatically extract such data directly from the OSM data base, directly enabling the construction of this series of categorical models as part of our subsequent work, as described below.
+Although this present sub-section is intended to reflect the current state of our software, we note that the network allocation algorithm has been developed in order to be immediately extended to provide far more realistic allocations, through identifying different categories of typical destinations from OSM data (such as education, employment, leisure, and shopping), and developing different calibration models for each of these categories. The calibration model above reproduced only 12% of the actual variation in cycling behaviour in Bristol; we expect that combining distinct categorical models would greatly increase resultant accuracy.
 
-In summary, our open-source software is able to accept two primary, publicly available, global-scale data sets (OSM and worldpop), and convert these data to highly detailed and realistic estimates of likely densities of bicycle and pedestrian trips along every single segment of the entire street networks of both study cities.
-The configuration of the software as used in this preliminary study is in many ways proof-of-principle only, yet all components have been developed to accept more detailed locally available data, greatly increasing model accuracy.
+In summary, our open-source software is able to accept two primary, publicly available, global-scale data sets (OSM and worldpop), and convert these data to highly detailed and realistic estimates of likely densities of bicycle and pedestrian trips along every single segment of the entire street networks of both study cities. The configuration of the software as used in this preliminary study is in many ways proof-of-principle only, yet all components have been developed to accept more detailed locally available data, greatly increasing model accuracy.
 
 ## Subsequent Data Needs
 
-The previous section reveals one of the clearest data needs to emerge from this preliminary report: detailed descriptions of transit behaviour separated into different categories of trips.
-These kinds of data are commonly aggregated as origin-destination matrices, yet may also be collated in terms of travel diary surveys, as in our more detailed calibration procedure to be implemented in subsequent phases as described below.
-Absolute numbers are not necessary, but the ability to distinguish differences in travel behaviour for different primary purposes will be highly desirable.
+The previous section reveals one of the clearest data needs to emerge from this preliminary report: detailed descriptions of transit behaviour separated into different categories of trips. These kinds of data are commonly aggregated as origin-destination matrices, yet may also be collated in terms of travel diary surveys. Absolute numbers are not necessary, but the ability to distinguish differences in travel behaviour for different primary purposes (employment, education, and recreation/shopping) will be highly desirable.
 
-This report has revealed that the OSM data for Accra are not as rich as those available for Kathmandu, and it may be necessary to supplement current Accra OSM data with more detailed local data on the street network.
-Conversely, the population density data for Accra are far more detailed than those available for Kathmandu and, although this preliminary report has not examined the age-specific demographics of Accra, doing so will also enrich resultant models, and obtaining similarly detailed demographic data for Kathmandu would also enable more directly comparison of model outputs.
-Importantly, such comparison is likely to be very mutually beneficial for both cities.
+This report has revealed that the OSM data for Accra are not as rich as those available for Kathmandu, and it may be necessary to supplement current Accra OSM data with more detailed local data on the street network. Conversely, the population density data for Accra are far more detailed than those available for Kathmandu and, although this preliminary report has not examined the age-specific demographics of Accra, doing so will also enrich resultant models, and obtaining similarly detailed demographic data for Kathmandu would also enable more directly comparison of model outputs. Importantly, such comparison is likely to be very mutually beneficial for both cities.
 
 <!-- # Discussion -->
 
@@ -576,17 +583,20 @@ An outline of this plan is provided below, in 3 main phases:
     - **Description:** this stage will build on the work presented in this report but will incorporate new datasets, with the aim of refining the methods and resulting toolkit so that it is adaptive to local data, a key part of toolkits for transport planning.
     - **Deliverables:** This phase will provide further data about each city, building on the data provided as part of this report, and providing a strong foundation for city-wide toolkits.
 
-
 - Phase 2: Scenarios of cycling uptake
 
     - **Anticipated Duration:** 3 months.
-    - **Description:** This phase will estimate current travel patterns and latent demand for cycling. The data collected from Phase 1 and documented in this report will be fed into refining the prototype spatial interaction and network analysis models, to estimate where people currently travel. In particular, the calibration model will also be refined as a series of models reflecting distinct journey purposes, each of which will yield its own calibration parameter. These calibrations will be developed using highly detailed time-use data from just under half a million individuals (429,572) from eight countries (Austria, Canada, Finland, France, the Netherlands, Spain, the U.K., and the U.S.A.). These time-use diaries include detailed information on modes of transport, journey times, and purposes. The pseudo-anonymized locations for each respondent will be used to extract the surrounding street network and associated categories of buildings and other structures from OSM in order to geo-locate local trip attractors.  The combination of street network and travel time data will then be used to calibrate separate models for each distinct purpose. Model calibrations will also be enhanced where possible through the use of locally-provided data from the study cities.
-    - **Deliverables:** This phase will deliver estimated spatial and temporal patterns of flow throughout down to the street network level, and representing both different categories of journeys and, for Accra, different age demographics. These outputs will be provided as geographic datasets, high resolution maps and reproducible scripts, enabling travel patterns to be updated in the future.
+    - **Description:** This phase will estimate current travel patterns and latent demand for cycling. The data collected from Phase 1 and documented in this report will be fed into refining the prototype spatial interaction and network analysis models, to estimate where people currently travel. 
+The models will be cross-validated and refined using "ground truth" data based on international open source datasets or, where available, local data.
+    - **Deliverables:** This phase will deliver estimated spatial and temporal patterns of flow throughout down to the street network level.
+Models will be calibrated using "ground truth" data and (where available) local expertise and data.
+These outputs will be provided as geographic datasets, high resolution maps and reproducible scripts, enabling travel patterns to be updated in the future.
 
 - Phase 3: Extension to walking potential and health impact assessment of change
     - **Anticipated Duration:** 6 months.
-    - **Description:** This will build on the analysis developed Phase 2 to estimate to provide scenarios of change in both cycling and walking behaviour **following specific interventions**, building on our work on the Cycling Infrastructure Prioritisation Toolkit (CyIPT). This phase will also seek to estimate benefit-cost ratios (BCRs) of different options based on physical activity and behavioural change fed-into health and health-economic models such as HEAT.
-    - **Deliverables:** This phase will ultimately result in the production of an Active Transport Future Toolkit (ATFT) for Accra and Kathmandu, with these toolkits providing a benchmark and role-model for other cities.
+    - **Description:** This will build on the analysis developed Phase 2 to estimate to provide scenarios cycling uptake **following specific interventions**, building on our work on the Cycling Infrastructure Prioritisation Toolkit (CyIPT). This phase will also seek to estimate benefit-cost ratios (BCRs) of different options based on physical activity
+and behavioural change fed-into health and health-economic models such as HEAT.
+    - **Deliverables:** By the end of this phase we will put into-production an Active Transport Future Toolkit (ATFT) for Accra and Kathmandu with an aim of extending this to other cities.
     
 ## Deliverables
 

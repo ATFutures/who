@@ -1,5 +1,9 @@
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
 Can go elsewhere, e.g. as a vignette before this is open sourced. -->
+    ## Warning: running command 'gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -
+    ## dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=who-toolkit-
+    ## feasibility-study.pdf README.pdf' had status 127
+
 Introduction
 ============
 
@@ -494,12 +498,12 @@ This report has revealed that the OSM data for Accra are not as rich as those av
 <!-- This will relate primarily to population density, trip attractors and transport infrastructure from which to -->
 <!-- We will also deliver summaries of the relationships between demographic and transport infrastructure data and an assessment of the quality of local data and priorities for future data collection. -->
 <!-- The deliverables will be provided in the form of datasets provided to the WHO and interactive and high quality maps. -->
-An outline for Phase II
------------------------
+Next steps
+----------
 
 In autumn 2017 we developed a plan for the development of a toolkit for transport planning, an 'Active Travel Futures Toolkit' (ATFT). Based on the work documented in this report, we are confident that this work can yield great benefits to transport planning and health departments in cities internationally, and encourage collaboration between them.
 
-The feasibility suggests that Accra and Kathmandu are appropriate cities for the development of such a toolkit: rather than aiming for an internationally toolkit directly, our experience with the PCT and subsequently CyIPT suggests that intensive development focussed on specific case study cities where there is a well-defined policy question is an effective way to test and iterate online interactive tools. We therefore suggest we progress from the feasibility stage to the implementation stage for the two cities (and potentially others), with oversight from the WHO and engagement with local stakeholders. An outline of this plan is provided below:
+The feasibility suggests that Accra and Kathmandu are appropriate cities for the development of such a toolkit: rather than aiming for an internationally toolkit directly, our experience with the PCT and subsequently CyIPT suggests that intensive development focussed on specific case study cities where there is a well-defined policy question is an effective way to test and iterate online interactive tools. We therefore suggest we progress from the feasibility stage to the implementation stage for the two cities (and potentially others), with oversight from the WHO and engagement with local stakeholders. An outline of this plan is provided below, in 3 main phases:
 
 -   Phase 1: Data collection, processing and characterisation of infrastructure
     -   **Anticipated Duration:** 3 months.
