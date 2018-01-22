@@ -310,6 +310,9 @@ The equivalent network for Kathmandu has 79,832 street segments connecting 37,77
 | accra     |                  2238470|         24490|                     29|
 | kathmandu |                       NA|         82333|                    344|
 
+<!-- ```{r, fig.cap="Basic OSM characteristics of case study cities", eval=FALSE} -->
+<!-- knitr::include_graphics("fig/BasicOSM_Xteristics.png") -->
+<!-- ``` -->
 The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
 
 | City      |  Street nodes|  Street segments|  Network distance (km)|
@@ -317,6 +320,9 @@ The street network for Accra is more extensive, reflecting the greater spatial e
 | accra     |        131349|           145827|                   4072|
 | kathmandu |         37770|            40405|                    539|
 
+<!-- ```{r, fig.cap="Characteristics of OSM route network data for case study cities.", eval=FALSE} -->
+<!-- knitr::include_graphics("fig/Xteristics_Of_OSM.png") -->
+<!-- ``` -->
 Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells. Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
 
 Demographic data for Kathmandu are not as detailed, and also do not include age classes. An overview map of Accra, the most extensively studied of our case study cities, is illustrated in the Figure below.
@@ -448,14 +454,14 @@ Using the methods described in the previous section, we ran the model to estimat
 
 With this caveat in mind, these preliminary results aim at demonstrating the feasibility of methods to develop toolkits for investment in active travel. They are not aimed at providing a definitive 'core network' where investment should go (although they are an evidence based starting point). We hope to refine these estimates in future work, building on this feasibility study.
 
-The results for Bristol are illustrated in Figure @ref(calibbris). This demonstrates that the method creates a detailed route network that highlights the most important routes from a cycling perspective. The comparison with the results derived from a different method which took much longer to generate (Lovelace et al. 2017) is encouraging, with arterial and orbital routes both prominent.
+The results for Bristol are illustrated in Figure @ref(calibbris). This demonstrates that the method creates a detailed route network that highlights the most important routes from a cycling perspective. The comparison with the results derived from a different method which was far more data-intensive and took much longer to generate (Lovelace et al. 2017) is encouraging, with arterial and orbital routes both prominent.
 
 <img src="fig/flows-calib-bris.png" alt="Estimated cycling potential on the route network in Bristol." width="49%" /><img src="fig/pct-bris.png" alt="Estimated cycling potential on the route network in Bristol." width="49%" />
 <p class="caption">
 Estimated cycling potential on the route network in Bristol.
 </p>
 
-The results for Accra are illustrated in Figure @ref(fig:calibaccra). This is the largest of the three cities and has the most estensive network with high cycling potential. It is interesting to note that, unlike Bristol, it has a 'polycentric' distribution of cycling potential, suggesting an extensive network is needed for a cycling revolution in all parts of the city. Alternatively, it suggests cycling investment should be prioritised in phases, with a an initial phase along route segments with highest potential, such as the are around Abossey Okai to the north-west of the ring road. The evidence would need to be interpreted by local stakeholders before such concrete recommendations are make, however.
+The results for Accra are illustrated in Figure @ref(fig:calibaccra). This is the largest of the three cities and has the most estensive network with high cycling potential. It is interesting to note that, unlike Bristol, it has a 'polycentric' distribution of cycling potential, suggesting an extensive network will be needed for a cycling revolution in all parts of the city. Alternatively, it suggests that cycling investment should be prioritised in phases, with a an initial phase along route segments with highest potential, such as the are around Abossey Okai to the north-west of the ring road. The evidence would nevertheless need to be interpreted by local stakeholders before such concrete recommendations are made.
 
 <img src="fig/flows-calib-accra.png" alt="Estimated cycling potential on the route network in Accra." width="100%" />
 <p class="caption">
@@ -479,14 +485,14 @@ Our modelling software primarily consists of a custom-developed routing engine d
 
 One of the features we implemented for this preliminary report was the ability to allocate static population densities to sets of dynamic origins and destinations distributed according to a calibrated decay in relative numbers of trips with increasing distance. Not only is our implementation highly efficient, routing a test set of 1,000 origins to every single potential destination within the entire Accra network in around one minute, but to the best of our knowledge such highly scalable network allocation is simply not possible with any piece of existing transport planning software.
 
-Although this present sub-section is intended to reflect the current state of our software, we note that the network allocation algorithm has been developed in order to be immediately extended to provide far more realistic allocations, through identifying different categories of typical destinations from OSM data (such as education, employment, leisure, and shopping), and developing different calibration models for each of these categories. The calibration model above reproduced only 12% of the actual variation in cycling behaviour in Bristol; we expect that combining distinct categorical models would greatly increase resultant accuracy.
+Although this present sub-section is intended to reflect the current state of our software, we note that the network allocation algorithm has been developed in order to be immediately extended to provide far more realistic allocations, through identifying different categories of typical destinations from OSM data (in terms of 'trip attractors' reflecting typical activities such as education, employment, leisure, or shopping), and developing different calibration models for each of these categories. The calibration model above reproduced only 12% of the actual variation in cycling behaviour in Bristol, yet presumed all cycling trips to reflect a generic purpose, with behaviour quantified by a single calibration parameter. A detailed application would involve fitting several distinct models for different categories of movement, and aggregating the results of each resultant flow layer across the network. Although categorical trip attractors were neither identified nor used in the present report, the software is already able to automatically extract such data directly from the OSM data base, directly enabling the construction of this series of categorical models as part of our subsequent work, as described below.
 
 In summary, our open-source software is able to accept two primary, publicly available, global-scale data sets (OSM and worldpop), and convert these data to highly detailed and realistic estimates of likely densities of bicycle and pedestrian trips along every single segment of the entire street networks of both study cities. The configuration of the software as used in this preliminary study is in many ways proof-of-principle only, yet all components have been developed to accept more detailed locally available data, greatly increasing model accuracy.
 
 Subsequent Data Needs
 ---------------------
 
-The previous section reveals one of the clearest data needs to emerge from this preliminary report: detailed descriptions of transit behaviour separated into different categories of trips. These kinds of data are commonly aggregated as origin-destination matrices, yet may also be collated in terms of travel diary surveys. Absolute numbers are not necessary, but the ability to distinguish differences in travel behaviour for different primary purposes (employment, education, and recreation/shopping) will be highly desirable.
+The previous section reveals one of the clearest data needs to emerge from this preliminary report: detailed descriptions of transit behaviour separated into different categories of trips. These kinds of data are commonly aggregated as origin-destination matrices, yet may also be collated in terms of travel diary surveys, as in our more detailed calibration procedure to be implemented in subsequent phases as described below. Absolute numbers are not necessary, but the ability to distinguish differences in travel behaviour for different primary purposes will be highly desirable.
 
 This report has revealed that the OSM data for Accra are not as rich as those available for Kathmandu, and it may be necessary to supplement current Accra OSM data with more detailed local data on the street network. Conversely, the population density data for Accra are far more detailed than those available for Kathmandu and, although this preliminary report has not examined the age-specific demographics of Accra, doing so will also enrich resultant models, and obtaining similarly detailed demographic data for Kathmandu would also enable more directly comparison of model outputs. Importantly, such comparison is likely to be very mutually beneficial for both cities.
 
@@ -498,8 +504,8 @@ This report has revealed that the OSM data for Accra are not as rich as those av
 <!-- This will relate primarily to population density, trip attractors and transport infrastructure from which to -->
 <!-- We will also deliver summaries of the relationships between demographic and transport infrastructure data and an assessment of the quality of local data and priorities for future data collection. -->
 <!-- The deliverables will be provided in the form of datasets provided to the WHO and interactive and high quality maps. -->
-Next steps
-----------
+Next step
+---------
 
 In autumn 2017 we developed a plan for the development of a toolkit for transport planning, an 'Active Travel Futures Toolkit' (ATFT). Based on the work documented in this report, we are confident that this work can yield great benefits to transport planning and health departments in cities internationally, and encourage collaboration between them.
 
@@ -512,13 +518,13 @@ The feasibility suggests that Accra and Kathmandu are appropriate cities for the
 -   Phase 2: Scenarios of cycling uptake
 
     -   **Anticipated Duration:** 3 months.
-    -   **Description:** This phase will estimate current travel patterns and latent demand for cycling. The data collected from Phase 1 and documented in this report will be fed into refining the prototype spatial interaction and network analysis models, to estimate where people currently travel. The models will be cross-validated and refined using "ground truth" data based on international open source datasets or, where available, local data.
-    -   **Deliverables:** This phase will deliver estimated spatial and temporal patterns of flow throughout down to the street network level. Models will be calibrated using "ground truth" data and (where available) local expertise and data. These outputs will be provided as geographic datasets, high resolution maps and reproducible scripts, enabling travel patterns to be updated in the future.
+    -   **Description:** This phase will estimate current travel patterns and latent demand for cycling. The data collected from Phase 1 and documented in this report will be fed into refining the prototype spatial interaction and network analysis models, to estimate where people currently travel. In particular, the calibration model will also be refined as a series of models reflecting distinct journey purposes, each of which will yield its own calibration parameter. These calibrations will be developed using highly detailed time-use data from just under half a million individuals (429,572) from eight countries (Austria, Canada, Finland, France, the Netherlands, Spain, the U.K., and the U.S.A.). These time-use diaries include detailed information on modes of transport, journey times, and purposes. The pseudo-anonymized locations for each respondent will be used to extract the surrounding street network and associated categories of buildings and other structures from OSM in order to geo-locate local trip attractors. The combination of street network and travel time data will then be used to calibrate separate models for each distinct purpose. Model calibrations will also be enhanced where possible through the use of locally-provided data from the study cities.
+    -   **Deliverables:** This phase will deliver estimated spatial and temporal patterns of flow throughout down to the street network level, and representing both different categories of journeys and, for Accra, different age demographics. These outputs will be provided as geographic datasets, high resolution maps and reproducible scripts, enabling travel patterns to be updated in the future.
 
 -   Phase 3: Extension to walking potential and health impact assessment of change
     -   **Anticipated Duration:** 6 months.
-    -   **Description:** This will build on the analysis developed Phase 2 to estimate to provide scenarios cycling uptake **following specific interventions**, building on our work on the Cycling Infrastructure Prioritisation Toolkit (CyIPT). This phase will also seek to estimate benefit-cost ratios (BCRs) of different options based on physical activity and behavioural change fed-into health and health-economic models such as HEAT.
-    -   **Deliverables:** By the end of this phase we will put into-production an Active Transport Future Toolkit (ATFT) for Accra and Kathmandu with an aim of extending this to other cities.
+    -   **Description:** This will build on the analysis developed Phase 2 to estimate to provide scenarios of change in both cycling and walking behaviour **following specific interventions**, building on our work on the Cycling Infrastructure Prioritisation Toolkit (CyIPT). This phase will also seek to estimate benefit-cost ratios (BCRs) of different options based on physical activity and behavioural change fed-into health and health-economic models such as HEAT.
+    -   **Deliverables:** This phase will ultimately result in the production of an Active Transport Future Toolkit (ATFT) for Accra and Kathmandu, with these toolkits providing a benchmark and role-model for other cities.
 
 Deliverables
 ------------
