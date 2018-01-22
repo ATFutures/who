@@ -517,7 +517,7 @@ This report has revealed that the OSM data for Accra are not as rich as those av
 
 ## An outline for Phase II
 
-In autumn 2017 we developed a plan for the development of a toolkit for transport planning, a 'Active Travel Futures Toolkit'.
+In autumn 2017 we developed a plan for the development of a toolkit for transport planning, an 'Active Travel Futures Toolkit' (ATFT).
 Based on the work documented in this report, we are confident that this work can yield great benefits to transport planning and health departments in cities internationally, and encourage collaboration between them.
 
 The feasibility suggests that Accra and Kathmandu are appropriate cities for the development of such a toolkit:
