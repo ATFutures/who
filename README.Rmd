@@ -355,10 +355,18 @@ names(r) = c("City", "Street nodes", "Street segments", "Network distance (km)",
 knitr::kable(r[c(1, 5, 6, 8)], caption = "Basic OSM characteristics of case study cities")
 ```
 
+```{r, fig.cap="Basic OSM characteristics of case study cities", eval=FALSE}
+knitr::include_graphics("fig/BasicOSM_Xteristics.png")
+```
+
 The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
 
 ```{r}
 knitr::kable(r[1:4], caption = "Characteristics of OSM route network data for case study cities.")
+```
+
+```{r, fig.cap="Characteristics of OSM route network data for case study cities.", eval=FALSE}
+knitr::include_graphics("fig/Xteristics_Of_OSM.png")
 ```
 
 Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells.  Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
