@@ -293,7 +293,7 @@ knitr::include_graphics("fig/KathmanduOvercrowdingEvening.png")
 ```
 -->
 
-```{r katcrowd, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)", out.width="50%"}
+```{r katcrowd, fig.cap="Peak hours vehicle type occupancy numbers in Kathmandu Valley (2010). Source: Tables 8 and 9 from Udas (CEN), 2012 (originally KSUT Project Report)", fig.align="center", out.width="50%"}
 knitr::include_graphics("fig/KathmanduOvercrowdingNumbers.png")
 ```
 
@@ -349,27 +349,28 @@ knitr::include_graphics("fig/KathmanduPlansCycleMap_smaller.png")
 
 The OSM data is constantly evolving and has recently reached a point where it is thought to cover 80% of the world's roads  and demographic datasets , which are the basis for the feasibility study and a key source of information for a tool to plan active transport futures.
 
-The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km (see Figure \@ref(fig:xterOSM)). The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
+The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km, see Figure \@ref(fig:xterOSM). The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
 
-The equivalent network for Kathmandu has 40,405 street segments connecting 37,770 distinct points, and extends over 539km (see Figure \@ref(fig:xterOSM)). The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
+The equivalent network for Kathmandu has 40,405 street segments connecting 37,770 distinct points, and extends over 539km, see Figure \@ref(fig:xterOSM). The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
 
-```{r xterOSM, fig.cap="Characteristics of OSM route network data for case study cities.", eval=FALSE}
-knitr::include_graphics("fig/Xteristics_Of_OSM.png")
+```{r xterOSM, fig.cap="Characteristics of OSM route network data for case study cities.", fig.align="center", out.width = '60%'}
+knitr::include_graphics("fig/Xteristics-Of-OSM.png")
 ```
+
 <!-- ```{r, echo=FALSE} -->
 <!-- r = readRDS("extdata/r.rds") -->
 <!-- names(r) = c("City", "Street nodes", "Street segments", "Network distance (km)", "Population (on network)", "N. Buildings", "nb_no_desc", "Num. Building Classes") -->
 <!-- knitr::kable(r[c(1, 5, 6, 8)], caption = "Basic OSM characteristics of case study cities") -->
 <!-- ``` -->
 
-The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra (see Figure \@ref(fig:basicOSM)), presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
+The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, see Figure \@ref(fig:basicOSM), presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
 
 <!-- ```{r} -->
 <!-- knitr::kable(r[1:4], caption = "Characteristics of OSM route network data for case study cities.") -->
 <!-- ``` -->
 
-```{r basicOSM, fig.cap="Basic OSM characteristics of case study cities", eval=FALSE}
-knitr::include_graphics("fig/BasicOSM_Xteristics.png")
+```{r basicOSM, fig.cap="Basic OSM characteristics of case study cities", fig.align="center", out.width = '60%'}
+knitr::include_graphics("fig/BasicOSM-Xteristics.png")
 ```
 
 Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells.  Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
