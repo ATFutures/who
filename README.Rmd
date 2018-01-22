@@ -131,7 +131,6 @@ The population of GAMA grew from 2,905,726 in 2000 to 4,010,054 in 2010 (Ghana S
 
 The region occupies a total land area of 3,245 sq. km, which makes it the geographically smallest region of the country. It has a population density of 1,235.8 people per sq. km, and is 90.5% urban with an annual urban growth rate of 3.1%, and recorded a positive net migration value of 1,275,425 in 2010. GAMA's labour force participation rate for its population aged 15 - 64 is estimated as 74.7%.
 
-```{r, fig.cap="Accra population density (2013). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de "}
 ```{r AccraPopDen, fig.cap="Accra population density (2013). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de "}
 knitr::include_graphics("fig/accra_pop_density.png")
 ```
