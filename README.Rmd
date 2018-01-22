@@ -174,7 +174,9 @@ Traffic congestion is a major transport problem in Accra city, with 70% of major
 
 **Peoples’ attitudes towards cycling**
 
-A study conducted for the World Bank in 2010 estimated that only 1 to 4 percent of people in Accra city use a bicycle as their means of commuting within the city. However, according to an earlier study by the Centre for Cycling increasingly important Expertise (CCE), the estimate was given as 9-10%. Although, cycling is the predominant means of transportation in the northern (rural) parts of the country, it is generally not seen as an acceptable means of transport in the cities, such as Accra. An extensive study on bicycle use among the urban poor in Nima and Jamestown of Accra (Turner et al., 1995) revealed the generally negative attitudes within certain communities toward cyclists. Many people do not think that cycling is safe in the present urban settings, such as Accra city. This is largely due to the belief that the existing transport infrastructure lacks adequate support for active, non-motorised transport systems, such as cycling.  
+A study conducted for the World Bank in 2010 estimated that only 1 to 4 percent of people in Accra city use a bicycle as their means of commuting within the city. However, according to an earlier study by the Centre for Cycling increasingly important Expertise (CCE), the estimate was given as 9-10%. Although, cycling is the predominant means of transportation in the northern (rural) parts of the country, it is generally not seen as an acceptable means of transport in the cities, such as Accra. An extensive study on bicycle use among the urban poor in Nima and Jamestown of Accra revealed the generally negative attitudes within certain communities toward cyclists[@turner_transport_1996].
+
+Many people do not think that cycling is safe in the present urban settings, such as Accra city. This seems largely due to the belief that the existing transport infrastructure lacks adequate support for active, non-motorised transport systems, such as cycling.  
 
 **Government sponsored infrastructures**
 
