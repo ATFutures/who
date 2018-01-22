@@ -10,15 +10,9 @@ bibliography: who.bib
 #     variant: markdown_github
 # uncomment for html output:
 output:
-<<<<<<< HEAD
  bookdown::html_document2:
    number_sections: yes
    toc: yes
-=======
-  bookdown::html_document2:
-    number_sections: yes
-    toc: yes
->>>>>>> 6d741e41c5f3f005dfd9ec6b6e40a8c0cb547359
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
@@ -268,8 +262,6 @@ knitr::include_graphics("fig/KathmanduPTRoutesFleet.png")
 
 **Transport-related air pollution in Kathmandu**
 
-**Transport-related air pollution in Kathmandu**
-
 Due to the bowl-shaped topography of Kathmandu Valley, emissions from vehicles and other sources can get trapped in the Valley for prolonged periods, especially during the winter months when atmospheric inversion occurs, and during the rest of the dry season. Combined with the aforementioned recent rapid rise in motorized transport in Kathmandu - 12% per year in the Bagmati zone (which encompasses the three Kathmandu Valley districts and five others) in the decade from 2002/03 to 2012/13 - this has led to 2-hourly PM~10~ levels recorded in the Putali Sadak area of Kathmandu during the winter of 2013/14 exceeding the national limits (NAAQS) by up to seven times, and exceeding recommended WHO limits by up to 15 times (CEN, 2014b).
 
 Already in 2006, when there were far fewer vehicles in Kathmandu Valley, 63% of PM~10~ emissions were attributable to transportation, with vehicular emissions themselves accounting for 38% of, and resuspended dust from unpaved and degraded roads for the remaining 25%. A more recent study from 2010 attributed 98% of PM~10~ emissions to the transportation sector(CEN, 2014b).
@@ -310,14 +302,12 @@ Overall, the majority of passengers (57.6%) rate the experience of using public 
 
 While the government has already introduced some measures (banning diesel- and petrol-operated three wheelers, and introducing a green sticker system for vehicles in December 1999 (CEN, 2014b)), most focus to date has been on widening existing roads to 6 or 8 lanes, and on building more roads to accommodate increasing urbanization. Such measure have proven to be far from adequate in coping with the increased motorization, congestion and pollution, resulting in more sustainable and long-term plans being constructed. In July 2015 an introduction of the "Project on Urban Transport Improvement for Kathmandu Valley in Federal Democratic Republic of Nepal" was presented. This plan will involve the adoption of a radial-circumferential road system will be adopted, allowing vehicles whose origins or destinations are not in the central business district to avoid having to pass through there (Government of Nepal, 2015).
 
-```{r, fig.cap="Kathmandu road plans. Source: Government of Nepal, 2015."}
-knitr::include_graphics("fig/KathmanduRoadNetworkPlans.png")
-```
-
 A hierarchical public transport route network will also be implemented, restricting to one-third those routes operated on passenger numbers, and creating four transfer terminals, one in each cardinal direction, to alleviate pressure on the central terminal. By reducing the import fees for vehicles with a seating capacity of over 40 seats, the plan aims to encourage a shift towards larger public transport vehicles. Furthermore, it envisions short-, mid- and long-term transport master plans to guide development during the subsequent 5, 10 and 15 years. These envisioned a number of different transport sectors, including non-motorized transport (Government of Nepal, 2015).
 
-```{r, fig.cap="Kathmandu Sustainable Urban Transport Project public transport plans. Source: KSUTP, 2016"}
-knitr::include_graphics("fig/KathmanduSustainableUrbanTransportProject_Plans.png")
+<!-- larger version of the image is "fig/KathmanduRoadTransportPlans.png", smaller version is "fig/KathmanduRoadTransportPlans_smaller.png"-->
+
+```{r katplans, fig.cap="Kathmandu Sustainable Urban Transport Project plans. Left: Road network plans. Right: Public transport network plans. Scale: Outer ring road central E-W diameter approx. 4.5 km. Source: KSUTP, 2016"}
+knitr::include_graphics("fig/KathmanduRoadTransportPlans_mid.png")
 ```
 
 **Making a case for cycling**
@@ -342,12 +332,10 @@ While cycling was an historically popular mode of transportation in Kathmandu Va
 
 The government of Kathmandu has proposed great plans for cycling infrastructure, yet it has taken a lot of pressure from Cycle City Network Nepal (CCNN) to get the Maitighar-Tinkune (both towards the southern boundary of Kathmandu Metropolitan City) cycle lane realised well over a decade after it was promised back in 2000 (CEN, 2013c). However, the Clean Air Network Nepal found this 2.7 km long cycle track to be rarely used, due to it serious deficiencies in signage, connectivity, surfacing, and safe passage at intersections and bridges, as well as the presence of obstructions (CEN & CANN, 2015). Most cyclist prefer instead to remain on the main vehicular carriageway. The 44 km of cycle tracks promised in 2005 as part of the 'Velo Mondial Charter and Action Plan for Bicycle Friendly Communities', and cycle lanes on roads wider than 22 meters, have yet to materialise. The first cycle track to be constructed runs from Tilganga to Sinamagal towards the easternmost boundary of the metropolitan city. This 1.2 km track benefits from being separated from the road and offers a lane for pedestrians as well, yet is again underused because most cyclists prefer instead to stay on the carriageway (CEN, 2012).
 
-```{r, fig.cap="Planned (brown), being constructed (red) and existing (green) cycle tracks as of December 2013. Source: Fig. 12 CEN, 2013c"}
-knitr::include_graphics("fig/KatGovtCyclePlans(MaYA3Fig12).png")
-```
+<!--larger version of the image is "fig/KathmanduPlansCycleMap.png"-->
 
-```{r, fig.cap="OpenStreetMap Cycle Map and Google Aerial for Kathmandu Metropolitan City. Source: openstreetmap.org.", eval=FALSE}
-knitr::include_graphics("fig/KathmanduCycleMap.png")
+```{r katcycle, fig.cap="Left: Planned (brown), being constructed (red) and existing (green) cycle tracks as of December 2013. Source: Fig. 12 CEN, 2013c, background Google Maps. Right: OpenStreetMap Cycle Map and Google Aerial for Kathmandu Metropolitan City. Legend: Existing cycle tracks (blue) according to OSM. Source: openstreetmap.org."}
+knitr::include_graphics("fig/KathmanduPlansCycleMap_smaller.png")
 ```
 
 # Input data: Overviews of OSM and WorldPop data
