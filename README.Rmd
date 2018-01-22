@@ -393,11 +393,11 @@ In order to inspect the positional accuracy and the completeness of both GAMA an
 
 In comparison with Bristol, GAMA is roughly thirty times bigger in size. Bristol is only about the same size as the Accra Metropolis, one of the 16 districts  of GAMA. As a result of the relative size of GAMA as compared to Bristol, it is expected that more mapping efforts will be required to cover GAMA. 
 
-Fig. xx shows the distribution of the 2km x 2km grids drawn at the central of district sub-divisions of GAMA. The distibution of the grids also portrays a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis in the south west, to the low population density of Shai Osudoku in the far east. We classified the districts into three, namely (1) urban (2) semi-urban and (3) rural districts. We based this classification on the spatial extent of the road network across each district, roughly estimated from the satellite image, through visual inspection. Thus, we have the districts whose network coverage have between 51-100%, 25-50%, and 0-25%, classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for city classification (Fig. xx). 
+Figure \@ref(fig:osmaccra) shows the distribution of the 2km x 2km grids drawn at the central of district sub-divisions of GAMA. The distibution of the grids also portrays a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis in the south west, to the low population density of Shai Osudoku in the far east. We classified the districts into three, namely (1) urban (2) semi-urban and (3) rural districts. We based this classification on the spatial extent of the road network across each district, roughly estimated from the satellite image, through visual inspection. Thus, we have the districts whose network coverage have between 51-100%, 25-50%, and 0-25%, classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for city classification (Figure \@ref(fig:osmaccra)). 
 
 Like many urban districts, two semi-urban districts; Ga West Municipal and Ga South Municipal districs, contain very dense street network in areas that are adjacent to the urban district of Ga Central Municipal district. The four eastern-most districts, classified as 'rural', consist largely of trunk roads connecting GAMA to the other regions of the country.
 
-```{r, fig.cap="The OSM map of GAMA, with 2km x 2km grids placed at the centre of each district."}
+```{r osmaccra, fig.cap="The OSM map of GAMA, with 2km x 2km grids placed at the centre of each district."}
 knitr::include_graphics("fig/quality grid_osm_accra.png")
 ```
 
@@ -405,9 +405,9 @@ knitr::include_graphics("fig/quality grid_osm_accra.png")
 
 The OSM datasets of GAMA revealed very high positional accuracy across all the districts. The positional accuracy is also uniform for all road classes. Though, many of the OSM road segments are not prefectly aligned at the central of the roads' raster representation, they are nevetheless contained within the widths of the roads. 
 
-There is variations in completeness level based on the three district categorisations, with urban district having the best completeness level, followed by the semi-rural districts. Furthermore, it is observed that there are more OSM datasets in areas where roads are paved, than areas where roads are unpaved. This explains why more roads in the urban districts are captured better than the roads in both the semi-urban and rural districts. Figure xx(a) and Fig xx(b) are the 2km x 2km grids at the centre of the Accra Metropolis and Ga West Municipal districts, an urban district and a semi-urban district, respectively. The oval shapes highlight examples of areas with missing OSM datasets. It can be observed that areas with missing OSM datasets are more prominent in semi-urban district than in the urban district. 
+There is variations in completeness level based on the three district categorisations, with urban district having the best completeness level, followed by the semi-rural districts. Furthermore, it is observed that there are more OSM datasets in areas where roads are paved, than areas where roads are unpaved. This explains why more roads in the urban districts are captured better than the roads in both the semi-urban and rural districts. Figure \@ref(fig:osmaccrab) (a) and Figure \@ref(fig:osmaccrab) (b) are the 2km x 2km grids at the centre of the Accra Metropolis and Ga West Municipal districts, an urban district and a semi-urban district, respectively. The oval shapes highlight examples of areas with missing OSM datasets. It can be observed that areas with missing OSM datasets are more prominent in semi-urban district than in the urban district. 
 
-```{r, fig.cap=" (a) Accra Metropolis district - an urban district, and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing."}
+```{r osmaccrab, fig.cap=" (a) Accra Metropolis district - an urban district, and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing."}
 knitr::include_graphics("fig/quality assessment_osm_accra.png")
 ```
 
@@ -433,10 +433,10 @@ The same strategy of drawing 2km x 2km grids at the central of each administrati
 knitr::include_graphics("fig/quality grid_osm_kathmandu.png")
 ```
 
-Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (X). The positional accuracy and the completeness of the OSM datasets is observed to be very similar to that of Bristol. In other words, in comparison with GAMA, the quality of OSM dataset of kathmandu is better. For example, zooming into two randomly selected municipalities; BaadBhanjyang (fig. xx(a)) and Lapsephedi (fig. xx(b)), representing an urban and semi-urban municipalities, respectively, we found the positional accuracy of the OSM road network to be very similar to that of Bristol area. Also, we found every single road segment to have been properly captured, indicating a 100% completeness level.
+Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (X). The positional accuracy and the completeness of the OSM datasets is observed to be very similar to that of Bristol. In other words, in comparison with GAMA, the quality of OSM dataset of kathmandu is better. For example, zooming into two randomly selected municipalities; BaadBhanjyang and Lapsephedi (Figure \@ref(fig:osmkat)), representing an urban and semi-urban municipalities, respectively, we found the positional accuracy of the OSM road network to be very similar to that of Bristol area. Also, we found every single road segment to have been properly captured, indicating a 100% completeness level.
 
 
-```{r, fig.cap="(a) BaadBhanjyang - an urban municipality and (b) Lapsephedi - a semi-urban municipality."}
+```{r osmkat, fig.cap="(a) BaadBhanjyang - an urban municipality and (b) Lapsephedi - a semi-urban municipality."}
 knitr::include_graphics("fig/quality assessment_osm_kathmandu.png")
 ```
 
