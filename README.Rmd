@@ -4,14 +4,14 @@ author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
 # uncomment for markdown output:
-output:
-  md_document:
-    variant: markdown_github
-# uncomment for html output:
 # output:
-#   bookdown::html_document2:
-#     number_sections: yes
-#     toc: yes
+#   md_document:
+#     variant: markdown_github
+# uncomment for html output:
+output:
+ bookdown::html_document2:
+   number_sections: yes
+   toc: yes
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
@@ -258,6 +258,8 @@ knitr::include_graphics("fig/KathmanduVehicleCapacityFleet.png")
 ```{r, fig.cap="Routes and fleet size of the different public transport vehicle types in Kathmandu Valley (2010). Source: Fig.1 from CEN, 2014a (originally MoPIT/JICA 2012, Sahja Yatayat 2013)", eval=FALSE}
 knitr::include_graphics("fig/KathmanduPTRoutesFleet.png") 
 ```
+
+**Transport-related air pollution in Kathmandu**
 
 **Transport-related air pollution in Kathmandu**
 
