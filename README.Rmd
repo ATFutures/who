@@ -483,7 +483,6 @@ knitr::include_graphics("fig/flows-calib-accra.png")
 knitr::include_graphics("fig/flows-calib-kat.png")
 ```
 
-
 # Discussion and next steps
 
 ## Current State of Modelling Software
@@ -516,7 +515,41 @@ This report has revealed that the OSM data for Accra are not as rich as those av
 
 ## An outline for Phase II
 
-This section is work in progress.
+In autumn 2017 we developed a plan for the development of a toolkit for transport planning, a 'Active Travel Futures Toolkit'.
+Based on the work documented in this report, we are confident that this work can yield great benefits to transport planning and health departments in cities internationally, and encourage collaboration between them.
+
+The feasibility suggests that Accra and Kathmandu are appropriate cities for the development of such a toolkit:
+rather than aiming for an internationally toolkit directly, our experience with the PCT and subsequently CyIPT suggests that intensive development focussed on specific case study cities where there is a well-defined policy question is an effective way to test and iterate online interactive tools.
+We therefore suggest we progress from the feasibility stage to the implementation stage for the two cities (and potentially others), with oversight from the WHO and engagement with local stakeholders.
+An outline of this plan is provided below:
+
+- Phase 1: Data collection, processing and characterisation of infrastructure
+    - **Anticipated Duration:** 3 months.
+    - **Description:** this stage will build on the work presented in this report but will incorporate new datasets, with the aim of refining the methods and resulting toolkit so that it is adaptive to local data, a key part of toolkits for transport planning.
+    - **Deliverables:** This phase will provide further data about each city, building on the data provided as part of this report, and providing a strong foundation for city-wide toolkits.
+
+- Phase 2: Scenarios of cycling uptake
+
+    - **Anticipated Duration:** 3 months.
+    - **Description:** This phase will estimate current travel patterns and latent demand for cycling. The data collected from Phase 1 and documented in this report will be fed into refining the prototype spatial interaction and network analysis models, to estimate where people currently travel. 
+The models will be cross-validated and refined using "ground truth" data based on international open source datasets or, where available, local data.
+    - **Deliverables:** This phase will deliver estimated spatial and temporal patterns of flow throughout down to the street network level.
+Models will be calibrated using "ground truth" data and (where available) local expertise and data.
+These outputs will be provided as geographic datasets, high resolution maps and reproducible scripts, enabling travel patterns to be updated in the future.
+
+- Phase 3: Extension to walking potential and health impact assessment of change
+    - **Anticipated Duration:** 6 months.
+    - **Description:** This will build on the analysis developed Phase 2 to estimate to provide scenarios cycling uptake **following specific interventions**, building on our work on the Cycling Infrastructure Prioritisation Toolkit (CyIPT). This phase will also seek to estimate benefit-cost ratios (BCRs) of different options based on physical activity
+and behavioural change fed-into health and health-economic models such as HEAT.
+    - **Deliverables:** By the end of this phase we will put into-production an Active Transport Future Toolkit (ATFT) for Accra and Kathmandu with an aim of extending this to other cities.
+    
+## Deliverables
+
+The source code underlying this project and data generated are available from the following repositories, which we hope to build-on in future work:
+
+- Code and prose: https://github.com/ATFutures/who
+- Data: https://github.com/ATFutures/who-data
+- Interactive map of route network in Accra: http://rpubs.com/RobinLovelace/341996
 
 # References
 
