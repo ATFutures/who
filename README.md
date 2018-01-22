@@ -504,8 +504,8 @@ This report has revealed that the OSM data for Accra are not as rich as those av
 <!-- This will relate primarily to population density, trip attractors and transport infrastructure from which to -->
 <!-- We will also deliver summaries of the relationships between demographic and transport infrastructure data and an assessment of the quality of local data and priorities for future data collection. -->
 <!-- The deliverables will be provided in the form of datasets provided to the WHO and interactive and high quality maps. -->
-Next step
----------
+Next steps
+----------
 
 In autumn 2017 we developed a plan for the development of a toolkit for transport planning, an 'Active Travel Futures Toolkit' (ATFT). Based on the work documented in this report, we are confident that this work can yield great benefits to transport planning and health departments in cities internationally, and encourage collaboration between them.
 
