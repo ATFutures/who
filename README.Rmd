@@ -176,7 +176,7 @@ Traffic congestion is a major transport problem in Accra city, with 70% of major
 
 A study conducted for the World Bank in 2010 estimated that only 1 to 4 percent of people in Accra city use a bicycle as their means of commuting within the city. However, according to an earlier study by the Centre for Cycling increasingly important Expertise (CCE), the estimate was given as 9-10%. Although, cycling is the predominant means of transportation in the northern (rural) parts of the country, it is generally not seen as an acceptable means of transport in the cities, such as Accra. An extensive study on bicycle use among the urban poor in Nima and Jamestown of Accra (Turner et al., 1995) revealed the generally negative attitudes within certain communities toward cyclists. Many people do not think that cycling is safe in the present urban settings, such as Accra city. This is largely due to the belief that the existing transport infrastructure lacks adequate support for active, non-motorised transport systems, such as cycling.  
 
-**Government sponsored infrastructures (if any?)**
+**Government sponsored infrastructures**
 
 In a white paper prepared by the Ministry of Transportation in 2004, cycling was highlighted as a key component of the sustainable national transport policy. However, there has not been any real policy formulation regarding the incorporation of cycling within existing transport infrastructure, nor for promoting or encouraging cycling within the city. A further demonstration of the lack of enthusiasm for non-motorised transport options was revealed in the upgrade of the National Highway 1 (N1) motorway, which was completed in 2012. The project added more lanes to some of the sections of the N1 motorways, such as those connecting the neighbourhoods within Accra's functional boundaries. Along one expressway's 14km stretch for example, there are only 1.6km of segregated bicycling lanes, and only six bridges for cyclists and pedestrians to cross. This comparatively huge investment nevertheless resulted in cyclists being forced to share the road with the vehicles in most cases, thereby exacerbating the safety concerns that many people hold towards cycling. 
 
@@ -213,8 +213,8 @@ While the elevation in Kathmandu District varies between 1,262 and 2,732 meters 
 
 **Weather and climate in Kathmandu**
 
-Kathmandu District and Kathmandu Valley both span a great elevation range, and thus also cover multiple climate zones. The city itself lies in a warm temperate zone, with four seasons and average daily temperatures ranging from 10.8°C in the coldest month (January; average minimum 2,4°C, maximum 19.1°C) to 24.3°C in the warmest month (July; avg. min. 20.2°C, max. 28.4°C). Annual precipitation is 1,454.9 mm, with November being the driest month with an average monthly precipitation of 8.3 mm (1 precipitation day on average) and July the wettest with 363.4 mm (23 precipitation days). There is one monsoon season, which lasts from June through August, during which 64% of the annual precipitation falls over the course of 62 precipitation days. If September is included, 78% of the average annual precipitation is accounted for. (precipitation & temperatures: MFD, 2018; precipitation days: WMO, 2018)
-
+Kathmandu District and Kathmandu Valley both span a great elevation range, and thus also cover multiple climate zones. The city itself lies in a warm temperate zone, with four seasons and average daily temperatures ranging from 10.8°C in the coldest month (January; average minimum 2,4°C, maximum 19.1°C) to 24.3°C in the warmest month (July; avg. min. 20.2°C, max. 28.4°C). Annual precipitation is 1,454.9 mm, with November being the driest month with an average monthly precipitation of 8.3 mm (1 precipitation day on average) and July the wettest with 363.4 mm (23 precipitation days). There is one monsoon season, which lasts from June through August, during which 64% of the annual precipitation falls over the course of 62 precipitation days. If September is included, 78% of the average annual precipitation is accounted for.
+<!-- (precipitation & temperatures: MFD, 2018; precipitation days: WMO, 2018) -->
 
 ## Transport system
 
@@ -337,9 +337,9 @@ knitr::include_graphics("fig/KatGovtCyclePlans(MaYA3Fig12).png")
 knitr::include_graphics("fig/KathmanduCycleMap.png")
 ```
 
-# Results I: Overviews of OSM and WorldPop data
+# Input data: Overviews of OSM and WorldPop data
 
-Building on the previous section, this section provides an overview of the OSM and demographic datasets, which are the basis for the feasibility study and a key source of information for a tool to plan active transport futures.
+The OSM data is constantly evolving and has recently reached a point where it is thought to cover 80% of the world's roads  and demographic datasets , which are the basis for the feasibility study and a key source of information for a tool to plan active transport futures.
 
 The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km. The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
 
@@ -379,13 +379,13 @@ This section provides an analysis of OSM quality in both case study cities compa
 
 Bristol is a city in South West England with a population density of 3,892/km2, according the the UK Office of National Statistics (2015), making the district one of the most densely populated district in the UK. Bristol OSM network dataset is shown in the figure below; showing what could be considered ideal positional accuracy and completeness expected of an OSM dataset. 
 
-In order to inspect the dataset, we placed 2km by 2km grids at the geometrical centre of all the district (Fig.xx(a)), providing a good cross-section of the street network across Bristol. A careful visual inspection of each of the grid revealed very high positional accuracy and completeness of OSM network datasets. 
+In order to inspect the dataset, we placed 2km by 2km grids at the geometrical centre of all the district (Figure \@ref(fig:osmbris), left), providing a good cross-section of the street network across Bristol. A careful visual inspection of each of the grid revealed very high positional accuracy and completeness of OSM network datasets. 
 
-```{r, fig.cap="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward"}
+```{r osmbris, fig.cap="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward"}
 knitr::include_graphics("fig/quality grid_osm_bristol.png")
 ```  
 
-Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure shows perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, we could not find a single case of uncaptured road segment; indicating a hundred percent completeness.
+Figure \@ref(fig:osmbris) (right) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure shows perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, we could not find a single case of uncaptured road segment; indicating a hundred percent completeness.
 
 In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside the administrative sub-division each study area, and visually inspect each of the grid. 
 
