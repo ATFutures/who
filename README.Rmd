@@ -3,15 +3,22 @@ title: "Estimating cycling potential on the route networks in Accra and Kathmand
 author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
+
 # uncomment for markdown output:
 # output:
 #   md_document:
 #     variant: markdown_github
 # uncomment for html output:
 output:
+<<<<<<< HEAD
  bookdown::html_document2:
    number_sections: yes
    toc: yes
+=======
+  bookdown::html_document2:
+    number_sections: yes
+    toc: yes
+>>>>>>> 6d741e41c5f3f005dfd9ec6b6e40a8c0cb547359
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
@@ -119,11 +126,11 @@ knitr::include_graphics("fig/cylcing_infrastructures.png")
 
 The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Fig. 1). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Forty three percent of the population is estimated to be between the age of 15 and 35 years.(Ghana, Y.P.I., 2013).
 
-```{r, fig.cap="Geographical location of Greater Accra Metropolitan Area (GAMA)"}
+```{r GAMA, fig.cap="Geographical location of Greater Accra Metropolitan Area (GAMA)"}
 knitr::include_graphics("fig/study-area-accra.png")
 ```
  
-GAMA contains 16 of the 216 local authority districts of the Republic of Ghana. Administratively, the Accra Metropolitan local authority district serves as the capital of Accra city, and is administered by Accra Metropolitan Assembly, which is the political and administrative authority for the entire city of Accra.
+GAMA contains 16 of the 216 local authority districts of the Republic of Ghana as illustrated in Figure \@ref(fig:GAMA). Administratively, the Accra Metropolitan local authority district serves as the capital of Accra city, and is administered by Accra Metropolitan Assembly, which is the political and administrative authority for the entire city of Accra.
 
 **Demography and population of Accra**
 
