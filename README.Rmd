@@ -457,9 +457,9 @@ The following functions were written to obtain population density and OSM data:
 
 These functions are in development and require further testing and documentation but we are confident they could form the basis of a 'back-end' of a larger international toolkit.
 
-## Route network analysis
+<!-- ## Route network analysis -->
 
-...
+<!-- ... -->
 
 ## Calibration Method
 
