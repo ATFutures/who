@@ -2,7 +2,7 @@ library (dodgr)
 library (sf)
 library (magrittr)
 # hard-code dirs for now; this will later be done with the drat archive
-city = "kathmandu"
+city = "bristol"
 pd_dir <- file.path (here::here(), "../popdens")
 devtools::load_all (pd_dir, export_all = FALSE)
 
