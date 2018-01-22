@@ -5,7 +5,7 @@ aaa.Rmd
 .*.swp
 .Rhistory
 who-data
-README.html
+*.html
 README.pdf
 who-toolkit-feasibility-study.pdf
 libs
