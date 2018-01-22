@@ -4,14 +4,14 @@ author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
 # uncomment for markdown output:
-# output:
-#   md_document:
-#     variant: markdown_github
-# uncomment for html output:
 output:
-  bookdown::html_document2:
-    number_sections: yes
-    toc: yes
+  md_document:
+    variant: markdown_github
+# uncomment for html output:
+# output:
+#   bookdown::html_document2:
+#     number_sections: yes
+#     toc: yes
 ---
 
 <!-- Note: this is where I'm adding the write-up for now for maximum visibility.
