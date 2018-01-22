@@ -108,7 +108,7 @@ Over a half (56%) of daily passengers in Accra are carried by buses, and a furth
 <!-- A large percentage of the buses and taxis operate under the control of Transport Unions through routing, loading by turns and permission to operate on specific routes. The Ghana Private Road Transport Union (GPRTU) is the biggest transport union and a member of the Ghana Trades Union Congress (TUC) oversees commercial vehicles, whose owners have registered with them (Okoye et al., 2010). The rest of the operators who do not belong to any transport unions are not allowed to load passengers at the Union’s bus terminals, and may have to depend solely on road-side pick-ups. These buses enjoy the flexibility of operating at any time and on any routes, and further, are not bound to pay the levies imposed by the Unions.  -->
 **Issues with public transport**
 
-The public transport operators have been criticised for their disregard of operational standards and the safety of passengers, especially during late evening operation (Agyemang 2015). It has been found that the transport unions had not been able to regulate some of the behaviour of their members (Addo, 2002). For example, it is a common practice amongst the drivers to increase their fares, especially after heavy downpours, at peak-hour times, or after slight fuel hikes. There are no regulations in place by the union to combat some of these unacceptable practices (Agyemang, 2009; 2013). Similar practices have also been observed amongst taxi operators, who often charge double or triple the equivalent bus journey fare (Addo, 2002).
+The public transport operators have been criticised for their disregard of operational standards and the safety of passengers, especially during late evening operation (Agyemang 2015). It has been found that the transport unions had not been able to regulate some of the behaviour of their members (Addo, 2002). For example, it is a common practice among the drivers to increase their fares, especially after heavy downpours, at peak-hour times, or after slight fuel hikes. There are no regulations in place by the union to combat some of these unacceptable practices (Agyemang, 2009; 2013). Similar practices have also been observed among st taxi operators, who often charge double or triple the equivalent bus journey fare (Addo, 2002).
 
 <img src="fig/buses_at_terminal.png" alt="The mini buses at a terminal loading passengers" width="100%" />
 <p class="caption">
@@ -129,9 +129,11 @@ Cycling infrastructure in Accra
 
 **Peoples’ attitudes towards cycling**
 
-A study conducted for the World Bank in 2010 estimated that only 1 to 4 percent of people in Accra city use a bicycle as their means of commuting within the city. However, according to an earlier study by the Centre for Cycling increasingly important Expertise (CCE), the estimate was given as 9-10%. Although, cycling is the predominant means of transportation in the northern (rural) parts of the country, it is generally not seen as an acceptable means of transport in the cities, such as Accra. An extensive study on bicycle use among the urban poor in Nima and Jamestown of Accra (Turner et al., 1995) revealed the generally negative attitudes within certain communities toward cyclists. Many people do not think that cycling is safe in the present urban settings, such as Accra city. This is largely due to the belief that the existing transport infrastructure lacks adequate support for active, non-motorised transport systems, such as cycling.
+A study conducted for the World Bank in 2010 estimated that only 1 to 4 percent of people in Accra city use a bicycle as their means of commuting within the city. However, according to an earlier study by the Centre for Cycling increasingly important Expertise (CCE), the estimate was given as 9-10%. Although, cycling is the predominant means of transportation in the northern (rural) parts of the country, it is generally not seen as an acceptable means of transport in the cities, such as Accra. An extensive study on bicycle use among the urban poor in Nima and Jamestown of Accra revealed the generally negative attitudes within certain communities toward cyclists(Turner and Kwakye 1996).
 
-**Government sponsored infrastructures (if any?)**
+Many people do not think that cycling is safe in the present urban settings, such as Accra city. This seems largely due to the belief that the existing transport infrastructure lacks adequate support for active, non-motorised transport systems, such as cycling.
+
+**Government sponsored infrastructures**
 
 In a white paper prepared by the Ministry of Transportation in 2004, cycling was highlighted as a key component of the sustainable national transport policy. However, there has not been any real policy formulation regarding the incorporation of cycling within existing transport infrastructure, nor for promoting or encouraging cycling within the city. A further demonstration of the lack of enthusiasm for non-motorised transport options was revealed in the upgrade of the National Highway 1 (N1) motorway, which was completed in 2012. The project added more lanes to some of the sections of the N1 motorways, such as those connecting the neighbourhoods within Accra's functional boundaries. Along one expressway's 14km stretch for example, there are only 1.6km of segregated bicycling lanes, and only six bridges for cyclists and pedestrians to cross. This comparatively huge investment nevertheless resulted in cyclists being forced to share the road with the vehicles in most cases, thereby exacerbating the safety concerns that many people hold towards cycling.
 
@@ -170,7 +172,7 @@ While the elevation in Kathmandu District varies between 1,262 and 2,732 meters 
 
 **Weather and climate in Kathmandu**
 
-Kathmandu District and Kathmandu Valley both span a great elevation range, and thus also cover multiple climate zones. The city itself lies in a warm temperate zone, with four seasons and average daily temperatures ranging from 10.8°C in the coldest month (January; average minimum 2,4°C, maximum 19.1°C) to 24.3°C in the warmest month (July; avg. min. 20.2°C, max. 28.4°C). Annual precipitation is 1,454.9 mm, with November being the driest month with an average monthly precipitation of 8.3 mm (1 precipitation day on average) and July the wettest with 363.4 mm (23 precipitation days). There is one monsoon season, which lasts from June through August, during which 64% of the annual precipitation falls over the course of 62 precipitation days. If September is included, 78% of the average annual precipitation is accounted for. (precipitation & temperatures: MFD, 2018; precipitation days: WMO, 2018)
+Kathmandu District and Kathmandu Valley both span a great elevation range, and thus also cover multiple climate zones. The city itself lies in a warm temperate zone, with four seasons and average daily temperatures ranging from 10.8°C in the coldest month (January; average minimum 2,4°C, maximum 19.1°C) to 24.3°C in the warmest month (July; avg. min. 20.2°C, max. 28.4°C). Annual precipitation is 1,454.9 mm, with November being the driest month with an average monthly precipitation of 8.3 mm (1 precipitation day on average) and July the wettest with 363.4 mm (23 precipitation days). There is one monsoon season, which lasts from June through August, during which 64% of the annual precipitation falls over the course of 62 precipitation days. If September is included, 78% of the average annual precipitation is accounted for. <!-- (precipitation & temperatures: MFD, 2018; precipitation days: WMO, 2018) -->
 
 Transport system
 ----------------
@@ -192,7 +194,7 @@ Men are more likely than women to have access to a family owned vehicle (includi
 
 **The forms of public transport in Kathmandu Valley**
 
-A wealth of different types of public transport vehicles have operated and are operating in Kathmandu Valley. All vehicles currently operating in the valley are privately owned and run by a syndicate, with exception of the Sahja buses which are operated by a cooperative. Most vehicles are individually owned and operated, although there are few individuals who own more than ten vehicles. (Wolrd Bank, 2013.)
+A wealth of different types of public transport vehicles have operated and are operating in Kathmandu Valley. All vehicles currently operating in the valley are privately owned and run by a syndicate, with exception of the Sahja buses which are operated by a cooperative. Most vehicles are individually owned and operated, although there are few individuals who own more than ten vehicles (World Bank, 2013.)
 
 The Nepal Transport Service initiated public transport in Kathmandu Valley in September 1959, eventually operating 11 buses between Kathmandu and Patan (in Lalitpur District, which borders Kathmandu municipality to the south). This system transported over ten thousand passengers each day during its prime, but shut down in 1966 (CEN, 2014a).
 
@@ -290,10 +292,10 @@ The government of Kathmandu has proposed great plans for cycling infrastructure,
 Planned (brown), being constructed (red) and existing (green) cycle tracks as of December 2013. Source: Fig. 12 CEN, 2013c
 </p>
 
-Results I: Overviews of OSM and WorldPop data
-=============================================
+Input data: Overviews of OSM and WorldPop data
+==============================================
 
-Building on the previous section, this section provides an overview of the OSM and demographic datasets, which are the basis for the feasibility study and a key source of information for a tool to plan active transport futures.
+The OSM data is constantly evolving and has recently reached a point where it is thought to cover 80% of the world's roads and demographic datasets , which are the basis for the feasibility study and a key source of information for a tool to plan active transport futures.
 
 The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km. The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
 
@@ -320,8 +322,8 @@ Demographic data for Kathmandu are not as detailed, and also do not include age 
 Overview of Accra (left) and initial results of cycling potential (right).
 </p>
 
-Results II: Assessing the quality of OpenStreetMap
-==================================================
+Assessment of OpenStreetMap Data Quality
+========================================
 
 The street network datasets used for this project were downloaded from the OpenStreetMap (OSM), an open access, freely available, online mapping database (Barrington-Leigh and Millard-Ball, 2017). Generated through crowd-sourcing (Goodchild, 2007) by volunteers, the current database has grown to almost 50 gigabytes, and thousands of features are being added by the day. One uniqueness of OSM is that it allows its users the chance to contribute their local knowledge about places, thereby ensuring the features’ accuracy, completeness and thoroughness. Furthermore, a backend control/validation is implemented in order to ensure that the datasets conform with the Open Geospatial Consortium standards, which is the internationally recognised set of data standards for the global geospatial community.
 
@@ -336,7 +338,7 @@ Bristol: a baseline for OSM
 
 Bristol is a city in South West England with a population density of 3,892/km2, according the the UK Office of National Statistics (2015), making the district one of the most densely populated district in the UK. Bristol OSM network dataset is shown in the figure below; showing what could be considered ideal positional accuracy and completeness expected of an OSM dataset.
 
-In order to inspect the dataset, we placed 2km by 2km grids at the geometrical centre of all the district (Fig.xx(a)), providing a good cross-section of the street network across Bristol. A careful visual inspection of each of the grid revealed very high positional accuracy and completeness of OSM network datasets.
+In order to inspect the dataset, we placed 2km by 2km grids at the geometrical centre of all the district (Figure @ref(fig:osmbris), left), providing a good cross-section of the street network across Bristol. A careful visual inspection of each of the grid revealed very high positional accuracy and completeness of OSM network datasets.
 
 <div class="figure">
 <img src="fig/quality grid_osm_bristol.png" alt="(a) The OSM map of Bristol, with 2km x 2km grids placed at the centre of each administrative ward, and (b) the 2km x 2km grid at the centre of Bishopston administrative ward" width="100%" />
@@ -345,7 +347,7 @@ In order to inspect the dataset, we placed 2km by 2km grids at the geometrical c
     </p>
     </div>
 
-Fig. xx (b) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure shows perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, we could not find a single case of uncaptured road segment; indicating a hundred percent completeness.
+Figure @ref(fig:osmbris) (right) is the 2km x 2km grid at the central of a randomly selected administrative ward - Bishopston. The figure shows perfectly aligned road segments along the central of their raster representation - indicating a very high positional accuracy. Furthermore, we could not find a single case of uncaptured road segment; indicating a hundred percent completeness.
 
 In order to inspect the positional accuracy and the completeness of both GAMA and Kathmandu, we used the same strategy of drawing 2km x 2km grids inside the administrative sub-division each study area, and visually inspect each of the grid.
 
@@ -354,7 +356,7 @@ Accra
 
 In comparison with Bristol, GAMA is roughly thirty times bigger in size. Bristol is only about the same size as the Accra Metropolis, one of the 16 districts of GAMA. As a result of the relative size of GAMA as compared to Bristol, it is expected that more mapping efforts will be required to cover GAMA.
 
-Fig. xx shows the distribution of the 2km x 2km grids drawn at the central of district sub-divisions of GAMA. The distibution of the grids also portrays a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis in the south west, to the low population density of Shai Osudoku in the far east. We classified the districts into three, namely (1) urban (2) semi-urban and (3) rural districts. We based this classification on the spatial extent of the road network across each district, roughly estimated from the satellite image, through visual inspection. Thus, we have the districts whose network coverage have between 51-100%, 25-50%, and 0-25%, classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for city classification (Fig. xx).
+Figure @ref(fig:osmaccra) shows the distribution of the 2km x 2km grids drawn at the central of district sub-divisions of GAMA. The distibution of the grids also portrays a good cross-section of the street network across GAMA, from the high population density district of Accra metropolis in the south west, to the low population density of Shai Osudoku in the far east. We classified the districts into three, namely (1) urban (2) semi-urban and (3) rural districts. We based this classification on the spatial extent of the road network across each district, roughly estimated from the satellite image, through visual inspection. Thus, we have the districts whose network coverage have between 51-100%, 25-50%, and 0-25%, classified as urban, semi-urban and rural districts, respectively. In other words, we use road infrastructure as a proxy for city classification (Figure @ref(fig:osmaccra)).
 
 Like many urban districts, two semi-urban districts; Ga West Municipal and Ga South Municipal districs, contain very dense street network in areas that are adjacent to the urban district of Ga Central Municipal district. The four eastern-most districts, classified as 'rural', consist largely of trunk roads connecting GAMA to the other regions of the country.
 
@@ -366,7 +368,7 @@ The OSM map of GAMA, with 2km x 2km grids placed at the centre of each district.
 <!-- The pink grids represent the centres of Ga Central Municipal and Accra Metropolis district (from left to right) – the two highly urbanised districts). The blue grids represent the centres of Ga West Municipal and Ashaiman Municipal districts (from left to right) – two moderately urbanised districts. -->
 The OSM datasets of GAMA revealed very high positional accuracy across all the districts. The positional accuracy is also uniform for all road classes. Though, many of the OSM road segments are not prefectly aligned at the central of the roads' raster representation, they are nevetheless contained within the widths of the roads.
 
-There is variations in completeness level based on the three district categorisations, with urban district having the best completeness level, followed by the semi-rural districts. Furthermore, it is observed that there are more OSM datasets in areas where roads are paved, than areas where roads are unpaved. This explains why more roads in the urban districts are captured better than the roads in both the semi-urban and rural districts. Figure xx(a) and Fig xx(b) are the 2km x 2km grids at the centre of the Accra Metropolis and Ga West Municipal districts, an urban district and a semi-urban district, respectively. The oval shapes highlight examples of areas with missing OSM datasets. It can be observed that areas with missing OSM datasets are more prominent in semi-urban district than in the urban district.
+There is variations in completeness level based on the three district categorisations, with urban district having the best completeness level, followed by the semi-rural districts. Furthermore, it is observed that there are more OSM datasets in areas where roads are paved, than areas where roads are unpaved. This explains why more roads in the urban districts are captured better than the roads in both the semi-urban and rural districts. Figure @ref(fig:osmaccrab) (a) and Figure @ref(fig:osmaccrab) (b) are the 2km x 2km grids at the centre of the Accra Metropolis and Ga West Municipal districts, an urban district and a semi-urban district, respectively. The oval shapes highlight examples of areas with missing OSM datasets. It can be observed that areas with missing OSM datasets are more prominent in semi-urban district than in the urban district.
 
 <div class="figure">
 <img src="fig/quality assessment_osm_accra.png" alt=" (a) Accra Metropolis district - an urban district, and (b) Ga West Municipal district - a semi-urban district. The oval shapes indicate areas where streets are missing." width="100%" />
@@ -397,7 +399,7 @@ The same strategy of drawing 2km x 2km grids at the central of each administrati
 The OSM map of Kathmandu, with 2km x 2km grids placed at the centre of each municipality.
 </p>
 
-Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (X). The positional accuracy and the completeness of the OSM datasets is observed to be very similar to that of Bristol. In other words, in comparison with GAMA, the quality of OSM dataset of kathmandu is better. For example, zooming into two randomly selected municipalities; BaadBhanjyang (fig. xx(a)) and Lapsephedi (fig. xx(b)), representing an urban and semi-urban municipalities, respectively, we found the positional accuracy of the OSM road network to be very similar to that of Bristol area. Also, we found every single road segment to have been properly captured, indicating a 100% completeness level.
+Kathmandu is very well represented on OSM, thanks to a number of local mapping organisations such as Kathmandu Living Labs (KLL) (X). The positional accuracy and the completeness of the OSM datasets is observed to be very similar to that of Bristol. In other words, in comparison with GAMA, the quality of OSM dataset of kathmandu is better. For example, zooming into two randomly selected municipalities; BaadBhanjyang and Lapsephedi (Figure @ref(fig:osmkat)), representing an urban and semi-urban municipalities, respectively, we found the positional accuracy of the OSM road network to be very similar to that of Bristol area. Also, we found every single road segment to have been properly captured, indicating a 100% completeness level.
 
 <div class="figure">
 <img src="fig/quality assessment_osm_kathmandu.png" alt="(a) BaadBhanjyang - an urban municipality and (b) Lapsephedi - a semi-urban municipality." width="100%" />
@@ -406,19 +408,65 @@ Kathmandu is very well represented on OSM, thanks to a number of local mapping o
     </p>
     </div>
 
-Results III: Estimating and Calibrating Cycling Potential
-=========================================================
+Methods
+=======
 
-In addition to using Bristol as a baseline for assessing the relative accuracy and complement of the OSM datasets for Accra and Kathmandu, Bristol was also chosen as a reference city because of freely available origin-destination (OD) data which are needed to calibrate model parameters. Data for both study cities for this report consist of static population densities, with the first of the following two sub-sections describing how the dynamic OD data for Bristol were used to convert these static estimates into realistically calibrated estimates of flow densities throughout the street networks of the cities. The second sub-section describes the currently state of our modelling software, many of the latest developments of which have been implemented directly to address this current project.
+Data access and download
+------------------------
 
+To ensure that the results presented in this report are scalable we developed functions that are generalisable to other cities. The following functions were written to obtain population density and OSM data:
+
+-   `crop_worldpop_tif` to access worlpop data for a specific city
+-   `get_osm_buildings` to get buildings data
+-   `get_streetnet` to get the street network
+
+These functions are in development and require further testing and documentation but we are confident they could form the basis of a 'back-end' of a larger international toolkit.
+
+<!-- ## Route network analysis -->
+<!-- ... -->
 Calibration Method
 ------------------
+
+In addition to using Bristol as a baseline for assessing the relative accuracy and complement of the OSM datasets for Accra and Kathmandu, Bristol was also chosen as a reference city because of freely available origin-destination (OD) data which are needed to calibrate model parameters. Data for both study cities for this report consist of static population densities.
+
+This section describes how the dynamic OD data for Bristol were used to convert these static estimates into realistically calibrated estimates of flow densities throughout the street networks of the cities.
 
 The preliminary results shown at the outset, and discussed further in the following sub-section, were generated by calibrating models to known behaviour of both pedestrians and cyclists in Bristol, U.K., using extensive existent behavioural data. This calibration procedure is proof-of-concept only, and relies on a single parameter which quantifies the decay in cycling propensity with distance. Data for the study cities (Accra and Kathmandu) are primarily population densities within single raster grid squares, while calibration data for Bristol were full origin--destination (OD) matrices quantifying densities or probabilities of trips between each population density grid point and all others. We developed a computationally efficient method to convert static population densities into estimates of dynamic flow between each grid point and all others, using a very well-established spatial interaction model dependent on a single parameter quantifying the extent to which 'interactions' -- in this context, flow densities -- decrease with increasing distance (Wilson 2008).
 
 The calibration comprised the following three steps. First, the Bristol OD matrix was converted to total densities at all origin points by summing values for all destinations. These values are equivalent to the aggregate population densities obtained for the study cities. Second, an exponential spatial interaction model was applied to these densities to provide estimates of flows from each origin to each destination point, dependent on a single parameter quantifying the exponential decay in flow density with increasing distace. Finally, the calibration was performed by finding the value of the exponential decay parameter which best reproduced the observed OD matrix, with this procedure repeatedly separately for pedestrian and cyclist models.
 
 The resultant decay coefficients for pedestrians and cyclists had respective values of 1.3 and 2.3km, indicating that 63% (1-exp(-1)) of all pedestrian trips are 1.3km or less, while the same proportion of cycling trips are less than 2.3km. Both of these models generated using the above procedure were very significantly related to the actual OD matrices, with the pedestrian model reproducing 46% of the structure of the observed OD matrix, and the cycling model reproducing 12%.
+
+Results: cycling potential at the Route Network level
+=====================================================
+
+Using the methods described in the previous section, we ran the model to estimate cycling potential at the route network level for each city. To derive estimates of cycling we calibrated the model against data for Bristol. Note that Bristol is a city with moderate levels of cycling: 5%. If a different city were used to calibrate the model (recommended if cities are aiming for the kind of cycling uptake observed in Seville) the results would be different.
+
+With this caveat in mind, these preliminary results aim at demonstrating the feasibility of methods to develop toolkits for investment in active travel. They are not aimed at providing a definitive 'core network' where investment should go (although they are an evidence based starting point). We hope to refine these estimates in future work, building on this feasibility study.
+
+The results for Bristol are illustrated in Figure @ref(calibbris). This demonstrates that the method creates a detailed route network that highlights the most important routes from a cycling perspective. The comparison with the results derived from a different method which took much longer to generate (Lovelace et al. 2017) is encouraging, with arterial and orbital routes both prominent.
+
+<img src="fig/flows-calib-bris.png" alt="Estimated cycling potential on the route network in Bristol." width="49%" /><img src="fig/pct-bris.png" alt="Estimated cycling potential on the route network in Bristol." width="49%" />
+<p class="caption">
+Estimated cycling potential on the route network in Bristol.
+</p>
+
+The results for Accra are illustrated in Figure @ref(fig:calibaccra). This is the largest of the three cities and has the most estensive network with high cycling potential. It is interesting to note that, unlike Bristol, it has a 'polycentric' distribution of cycling potential, suggesting an extensive network is needed for a cycling revolution in all parts of the city. Alternatively, it suggests cycling investment should be prioritised in phases, with a an initial phase along route segments with highest potential, such as the are around Abossey Okai to the north-west of the ring road. The evidence would need to be interpreted by local stakeholders before such concrete recommendations are make, however.
+
+<img src="fig/flows-calib-accra.png" alt="Estimated cycling potential on the route network in Accra." width="100%" />
+<p class="caption">
+Estimated cycling potential on the route network in Accra.
+</p>
+
+The results for Kathmandu are illustrated in Figure @ref(fig:calibkat). This shows a more 'monocentric' city with high cycling potential on arterial routes north, east, south and west of the central area. Again the policy implications of this evidence depend on how many kilometres of protected infrastructure are on the table but suggest a city-wide network of the type illustrated in Figure @ref(fig:sevnet) would appropriate be if the investment for such an extensive network available.
+
+<img src="fig/flows-calib-kat.png" alt="Estimated cycling potential on the route network in Kathmandu." width="100%" />
+<p class="caption">
+Estimated cycling potential on the route network in Kathmandu.
+</p>
+
+Discussion and next steps
+=========================
 
 Current State of Modelling Software
 -----------------------------------
@@ -446,10 +494,36 @@ This report has revealed that the OSM data for Accra are not as rich as those av
 <!-- This will relate primarily to population density, trip attractors and transport infrastructure from which to -->
 <!-- We will also deliver summaries of the relationships between demographic and transport infrastructure data and an assessment of the quality of local data and priorities for future data collection. -->
 <!-- The deliverables will be provided in the form of datasets provided to the WHO and interactive and high quality maps. -->
-Next steps
-==========
+An outline for Phase II
+-----------------------
 
-This section is work in progress.
+In autumn 2017 we developed a plan for the development of a toolkit for transport planning, an 'Active Travel Futures Toolkit' (ATFT). Based on the work documented in this report, we are confident that this work can yield great benefits to transport planning and health departments in cities internationally, and encourage collaboration between them.
+
+The feasibility suggests that Accra and Kathmandu are appropriate cities for the development of such a toolkit: rather than aiming for an internationally toolkit directly, our experience with the PCT and subsequently CyIPT suggests that intensive development focussed on specific case study cities where there is a well-defined policy question is an effective way to test and iterate online interactive tools. We therefore suggest we progress from the feasibility stage to the implementation stage for the two cities (and potentially others), with oversight from the WHO and engagement with local stakeholders. An outline of this plan is provided below:
+
+-   Phase 1: Data collection, processing and characterisation of infrastructure
+    -   **Anticipated Duration:** 3 months.
+    -   **Description:** this stage will build on the work presented in this report but will incorporate new datasets, with the aim of refining the methods and resulting toolkit so that it is adaptive to local data, a key part of toolkits for transport planning.
+    -   **Deliverables:** This phase will provide further data about each city, building on the data provided as part of this report, and providing a strong foundation for city-wide toolkits.
+-   Phase 2: Scenarios of cycling uptake
+
+    -   **Anticipated Duration:** 3 months.
+    -   **Description:** This phase will estimate current travel patterns and latent demand for cycling. The data collected from Phase 1 and documented in this report will be fed into refining the prototype spatial interaction and network analysis models, to estimate where people currently travel. The models will be cross-validated and refined using "ground truth" data based on international open source datasets or, where available, local data.
+    -   **Deliverables:** This phase will deliver estimated spatial and temporal patterns of flow throughout down to the street network level. Models will be calibrated using "ground truth" data and (where available) local expertise and data. These outputs will be provided as geographic datasets, high resolution maps and reproducible scripts, enabling travel patterns to be updated in the future.
+
+-   Phase 3: Extension to walking potential and health impact assessment of change
+    -   **Anticipated Duration:** 6 months.
+    -   **Description:** This will build on the analysis developed Phase 2 to estimate to provide scenarios cycling uptake **following specific interventions**, building on our work on the Cycling Infrastructure Prioritisation Toolkit (CyIPT). This phase will also seek to estimate benefit-cost ratios (BCRs) of different options based on physical activity and behavioural change fed-into health and health-economic models such as HEAT.
+    -   **Deliverables:** By the end of this phase we will put into-production an Active Transport Future Toolkit (ATFT) for Accra and Kathmandu with an aim of extending this to other cities.
+
+Deliverables
+------------
+
+The source code underlying this project and data generated are available from the following repositories, which we hope to build-on in future work:
+
+-   Code and prose: <https://github.com/ATFutures/who>
+-   Data: <https://github.com/ATFutures/who-data>
+-   Interactive map of route network in Accra: <http://rpubs.com/RobinLovelace/341996>
 
 References
 ==========
@@ -558,6 +632,8 @@ Celis-Morales, Carlos A, Donald M Lyall, Paul Welsh, Jana Anderson, Lewis Steell
 
 Kuzmyak, J. Richard, Jerry Walters, Mark Bradley, and KM Kockelman. 2014. *Estimating Bicycling and Walking for Planning and Project Development*. Nchrp National Cooperative Highway Research Program Report 770. Washington, DC: Transportation Research Board of the National Academies.
 
+Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open Source Online System for Sustainable Transport Planning.” *Journal of Transport and Land Use* 10 (1). doi:[10.5198/jtlu.2016.862](https://doi.org/10.5198/jtlu.2016.862).
+
 Marqués, R., V. Hernández-Herrador, M. Calvo-Salazar, and J.A. García-Cebrián. 2015. “How Infrastructure Can Promote Cycling in Cities: Lessons from Seville.” *Research in Transportation Economics* 53 (November): 31–44. doi:[10.1016/j.retrec.2015.10.017](https://doi.org/10.1016/j.retrec.2015.10.017).
 
 Mueller, Natalie, David Rojas-Rueda, Maëlle Salmon, David Martinez, Albert Ambros, Christian Brand, Audrey de Nazelle, et al. 2018. “Health Impact Assessment of Cycling Network Expansions in European Cities.” *Preventive Medicine*, January. doi:[10.1016/j.ypmed.2017.12.011](https://doi.org/10.1016/j.ypmed.2017.12.011).
@@ -565,5 +641,7 @@ Mueller, Natalie, David Rojas-Rueda, Maëlle Salmon, David Martinez, Albert Ambr
 Naess, Petter, Jeppe Andersen, Morten Skou Nicolaisen, and Arvid Strand. 2014. “Transport Modelling in the Context of the ‘Predict and Provide’Paradigm.” *European Journal of Transport and Infrastructure Research* 14 (2): 102–21. <http://vbn.aau.dk/ws/files/197640305/N_ss_et_al._2014_Transport_modelling_in_the_context_of_the_predict_and_provide_paradigm.pdf>.
 
 Tatem, Andrew J. 2017. “WorldPop, Open Data for Spatial Demography.” *Scientific Data* 4 (January): 170004. doi:[10.1038/sdata.2017.4](https://doi.org/10.1038/sdata.2017.4).
+
+Turner, Jeff, and Edward Kwakye. 1996. “Transport and Survival Strategies in a Developing Economy: Case Evidence from Accra, Ghana.” *Journal of Transport Geography* 4 (3): 161–68. doi:[10.1016/0966-6923(96)00019-1](https://doi.org/10.1016/0966-6923(96)00019-1).
 
 Wilson, Alan. 2008. “Boltzmann, Lotka and Volterra and Spatial Structural Evolution: An Integrated Methodology for Some Dynamical Systems.” *Journal of the Royal Society Interface* 5 (25): 865–71. doi:[10.1098/rsif.2007.1288](https://doi.org/10.1098/rsif.2007.1288).
