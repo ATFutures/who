@@ -475,13 +475,36 @@ The resultant decay coefficients for pedestrians and cyclists had respective val
 
 # Results: cycling potential at the Route Network level
 
-```{r calibbris, fig.cap="Estimated cycling potential on the route network in Bristol."}
-knitr::include_graphics("fig/flows-calib-bris.png")
+Using the methods described in the previous section, we ran the model to estimate cycling potential at the route network level for each city.
+To derive estimates of cycling we calibrated the model against data for Bristol.
+Note that Bristol is a city with moderate levels of cycling: 5%.
+If a different city were used to calibrate the model (recommended if cities are aiming for the kind of cycling uptake observed in Seville) the results would be different.
+
+With this caveat in mind, these preliminary results aim at demonstrating the feasibility of methods to develop toolkits for investment in active travel.
+They are not aimed at providing a definitive 'core network' where investment should go (although they are an evidence based starting point).
+We hope to refine these estimates in future work, building on this feasibility study.
+
+The results for Bristol are illustrated in Figure \@ref(calibbris).
+This demonstrates that the method creates a detailed route network that highlights the most important routes from a cycling perspective.
+The comparison with the results derived from a different method which took much longer to generate [@lovelace_propensity_2017] is encouraging, with arterial and orbital routes both prominent.
+
+```{r calibbris, fig.cap="Estimated cycling potential on the route network in Bristol.", fig.show='hold', out.width="49%"}
+knitr::include_graphics(c("fig/flows-calib-bris.png", "fig/pct-bris.png"))
 ```
+
+The results for Accra are illustrated in Figure \@ref(fig:calibaccra).
+This is the largest of the three cities and has the most estensive network with high cycling potential.
+It is interesting to note that, unlike Bristol, it has a 'polycentric' distribution of cycling potential, suggesting an extensive network is needed for a cycling revolution in all parts of the city.
+Alternatively, it suggests cycling investment should be prioritised in phases, with a an initial phase along route segments with highest potential, such as the are around Abossey Okai to the north-west of the ring road.
+The evidence would need to be interpreted by local stakeholders before such concrete recommendations are make, however.
 
 ```{r calibaccra, fig.cap="Estimated cycling potential on the route network in Accra."}
 knitr::include_graphics("fig/flows-calib-accra.png")
 ```
+
+The results for Kathmandu are illustrated in Figure \@ref(fig:calibkat).
+This shows a more 'monocentric' city with high cycling potential on arterial routes north, east, south and west of the central area.
+Again the policy implications of this evidence depend on how many kilometres of protected infrastructure are on the table but suggest a city-wide network of the type illustrated in Figure \@ref(fig:sevnet) would appropriate be if the investment for such an extensive network available.
 
 ```{r calibkat, fig.cap="Estimated cycling potential on the route network in Kathmandu."}
 knitr::include_graphics("fig/flows-calib-kat.png")
