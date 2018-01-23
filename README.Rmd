@@ -57,7 +57,7 @@ This network represents around 0.3 m of segregated cycle infrastructure per pers
 
 ```{r sevnet, fig.cap="The core cycling network in Seville (which has mean monthly summer temperatures of up to 28.2 °C), composed of the 'basic' (77 km) and 'complementary' (120 km) protected cylce path network [from @marques_how_2015]. As described in that paper network led the mode share of cycling in the city to increase fourfold and now the mode accounts for almost 10% of trips."}
 # (120 + 77) * 100 / 700
-knitr::include_graphics("fig/sevnet.png")
+knitr::include_graphics("fig/sevnet2.png")
 ```
 
 The case of Seville raises the question: how can investment in cycling be as effective (or more so) as in Seville?
@@ -119,7 +119,7 @@ knitr::include_graphics("fig/cylcing_infrastructures.png")
 
 <!-- ### Greater Accra Metropolitan Area (GAMA) -->
 
-The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Fig. 1). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Forty three percent of the population is estimated to be between the age of 15 and 35 years.(Ghana, Y.P.I., 2013).
+The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Figure \@ref(fig:GAMA)). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Forty three percent of the population is estimated to be between the age of 15 and 35 years.(Ghana, Y.P.I., 2013).
 
 ```{r GAMA, fig.cap="Geographical location of Greater Accra Metropolitan Area (GAMA)"}
 knitr::include_graphics("fig/study-area-accra.png")
@@ -151,7 +151,7 @@ The impact of climate can be overestimated, however, as demonstrated by the Sevi
 **Modal Split**
 
 <!-- The vast majority of public transport services in Accra are provided by private operators, comprising of buses (locally called ‘tro-tros’) and taxis operators, which account for about 70 percent and 15 percent of passenger movements, respectively [@birago_level_2017]. The remaining 15 percent is split between people who walk and people who ride bicycles, estimated to be 11 percent and 4 percent, respectively, according to the Centre for Cycling Expertise, a Ghana-based, non-profit organisation in Accra focused on promoting cycling in cities.   -->
-Over a half (56%) of daily passengers in Accra are carried by buses, and a further 15% by taxi, with approximately 1 million passenger trips made each day in and out of the central area by both mode of transportation (Quarshie, 2007). Additionally, a recent study by the World Bank in 2010 on Accra resident's primary transportation mode choice to and from shopping and work also indicates that buses (tro-tros) are the most popular mode of motorised transport, accounting for 70 percent of public transport. This is followed by private cars (10%), taxis (8%) with the Metro Mass Transit (MMT), quasi-private company buses, carrying the lowest proportion of 0.3% (Fig. 4X). The above studies emphasise the inefficiency of these vehicles in terms of the amount of road space used, congestion caused, and inconveniences caused to the passengers.
+Over a half (56%) of daily passengers in Accra are carried by buses, and a further 15% by taxi, with approximately 1 million passenger trips made each day in and out of the central area by both mode of transportation (Quarshie, 2007). Additionally, a recent study by the World Bank in 2010 on Accra resident's primary transportation mode choice to and from shopping and work also indicates that buses (tro-tros) are the most popular mode of motorised transport, accounting for 70 percent of public transport. This is followed by private cars (10%), taxis (8%) with the Metro Mass Transit (MMT), quasi-private company buses, carrying the lowest proportion of 0.3%. The above studies emphasise the inefficiency of these vehicles in terms of the amount of road space used, congestion caused, and inconveniences caused to the passengers.
 
 <!-- The buses are typically mini-buses or vans, with the most popular type being Nissan Urvan 15-seaters and Mercedes Benz Sprinter 17-seaters. The routes followed by the buses are typically fixed, while the routine patterns of taxis are flexible, depending largely on the drivers’ or passengers’ knowledge of the area in question. While there are bus terminals that usually mark the origin and destinations of bus journeys, drivers are generally allowed to pick up passengers in-between terminals. The transport fares are generally pre-decided for passengers, however, boarding in-between terminals often requires passengers to negotiate the fares with the bus drivers themselves. Generally, en-route boarding or alighting are considered illegal on heavy traffic routes. However, the lackadaisical attitude of the bus drivers regarding the legal consequences has further popularised the ‘tro-tro’ culture, as they are rarely caught by the police. -->
 
@@ -349,9 +349,9 @@ knitr::include_graphics("fig/KathmanduPlansCycleMap_smaller.png")
 
 The OSM data is constantly evolving and has recently reached a point where it is thought to cover 80% of the world's roads  and demographic datasets , which are the basis for the feasibility study and a key source of information for a tool to plan active transport futures.
 
-The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km, see Figure \@ref(fig:xterOSM). The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
+The OpenStreetMap network for Accra has 145,827 street segments connecting 131,349 distinct points, and extends over 4,072km, (Figure \@ref(fig:xterOSM)). The OSM data also include 24,490 buildings, of which 23,102 include geometric descriptions only, while the remaining 1,388 buildings are divided between 28 distinct categories.
 
-The equivalent network for Kathmandu has 40,405 street segments connecting 37,770 distinct points, and extends over 539km, see Figure \@ref(fig:xterOSM). The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
+The equivalent network for Kathmandu has 40,405 street segments connecting 37,770 distinct points, and extends over 539km (see Figure \@ref(fig:xterOSM)). The OSM data also include 82,333 buildings of which 75,778 include geometric descriptions only, while the remaining 6,555 are divided between 344 distinct categories (in this case including many named buildings).
 
 ```{r xterOSM, fig.cap="Characteristics of OSM route network data for case study cities.", fig.align="center", out.width = '60%'}
 knitr::include_graphics("fig/Xteristics-Of-OSM.png")
@@ -363,7 +363,7 @@ knitr::include_graphics("fig/Xteristics-Of-OSM.png")
 <!-- knitr::kable(r[c(1, 5, 6, 8)], caption = "Basic OSM characteristics of case study cities") -->
 <!-- ``` -->
 
-The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra, see Figure \@ref(fig:basicOSM), presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
+The street network for Accra is more extensive, reflecting the greater spatial extent of the city, while data on buildings are considerable more detailed for Kathmandu than for Accra (see Figure \@ref(fig:basicOSM)), presumably reflecting extensive humanitarian mapping activity in response to the 2015 earthquake.
 
 <!-- ```{r} -->
 <!-- knitr::kable(r[1:4], caption = "Characteristics of OSM route network data for case study cities.") -->
@@ -375,10 +375,14 @@ knitr::include_graphics("fig/BasicOSM-Xteristics.png")
 
 Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells.  Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
 
-Demographic data for Kathmandu are not as detailed, and also do not include age classes. An overview map of Accra, the most extensively studied of our case study cities, is illustrated in the Figure below.
+Demographic data for Kathmandu are not as detailed, and also do not include age classes. An overview map of Accra, the most extensively studied of our case study cities, is illustrated in the Figure \@ref(fig:CyclingPotential).
 
-```{r, fig.cap="Overview of Accra (left) and initial results of cycling potential (right).", fig.show='hold', out.width="49%"}
-knitr::include_graphics(c("fig/accra-osm-overview.png", "fig/test.png"))
+<!-- ```{r CyclingPotential, fig.cap="Overview of Accra road network (left) and initial results of cycling potential (right).", fig.show='hold', out.width="49%"} -->
+<!-- knitr::include_graphics(c("fig/accra-osm-overview.png", "fig/test.png")) -->
+<!-- ``` -->
+
+```{r CyclingPotential, fig.cap="Overview of Accra road network (left) and initial results of cycling potential (right).", fig.show='hold', out.width="100%"}
+knitr::include_graphics(c("fig/preliminary-result-Accra.png"))
 ```
 
 # Assessment of OpenStreetMap Data Quality
@@ -433,10 +437,10 @@ The "completeness" is also observed to vary by road classes, from trunk roads (m
 
 In comparison with Bristol, Kathmandu is roughly four times bigger in size, but approximately eight times smaller than GAMA. While we expect that more mapping efforts will be required to cover Kathmandu as compared to Bristol, the former can still be covered relatively easier than GAMA.  
 
-Overall, Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping the 2600 schools and 300 hospitals in the area in 2013. Their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometres of roads. (KLL, 2018.)
+Overall, Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping the 2600 schools and 300 hospitals in the area in 2013. Their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometres of roads. (KLL, 2018.). A typical result of those efforts can be illustrated with Figure \@ref(fig:compareKat) showing the Narayan Gopal Chowk area being mapped completely within a period of nine months.  
 
 
-```{r, fig.cap="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018."}
+```{r compareKat, fig.cap="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018."}
 knitr::include_graphics("fig/KathmanduOSMbefore-after.jpg")
 ```
 
@@ -502,8 +506,12 @@ The results for Bristol are illustrated in Figure \@ref(calibbris).
 This demonstrates that the method creates a detailed route network that highlights the most important routes from a cycling perspective.
 The comparison with the results derived from a different method which was far more data-intensive and took much longer to generate [@lovelace_propensity_2017] is encouraging, with arterial and orbital routes both prominent.
 
-```{r calibbris, fig.cap="Estimated cycling potential on the route network in Bristol.", fig.show='hold', out.width="49%"}
-knitr::include_graphics(c("fig/flows-calib-bris.png", "fig/pct-bris.png"))
+<!-- ```{r calibbris, fig.cap="Estimated cycling potential on the route network in Bristol.", fig.show='hold', out.width="49%"} -->
+<!-- knitr::include_graphics(c("fig/flows-calib-bris.png", "fig/pct-bris.png")) -->
+<!-- ``` -->
+
+```{r calibbris, fig.cap="Estimated cycling potential on the route network in Bristol.", out.width="100%"}
+knitr::include_graphics("fig/pct-bris-combined.png")
 ```
 
 The results for Accra are illustrated in Figure \@ref(fig:calibaccra).
