@@ -1,5 +1,6 @@
 ---
-title: "Estimating cycling potential on the route networks in Accra and Kathmandu: a feasibility study using open data and open source software"
+title: "Estimating cycling potential on route networks in Accra and Kathmandu"
+subtitle: "a feasibility study using open data and open source software"
 author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
@@ -31,6 +32,10 @@ knitr::opts_chunk$set(
 msg = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=who-toolkit-feasibility-study.pdf README.pdf"
 system(msg)
 ```
+
+Note: an interactive online version of this report can be found at https://bookdown.org/robinlovelace/who-active-travel-tool-feasibility/
+
+For a pdf version of this report please see the [releases](https://github.com/ATFutures/who/releases) page on the project's GitHub repo at [github.com/ATFutures/who](https://github.com/ATFutures/who).
 
 
 # Introduction
