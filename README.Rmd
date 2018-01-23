@@ -389,9 +389,9 @@ Demographic data for Kathmandu are not as detailed, and also do not include age 
 By contrast Kathmandu has more detailed OSM data.
 An overview map of OSM data for Accra, the larger of the case study cities, is illustrated in the Figure below to provide an indication of OSM data in developing cities.
 
-```{r, fig.cap="Overview of OSM data in Accra.", fig.show='hold', out.width="70%", fig.align='center'}
-knitr::include_graphics(c("fig/accra-osm-overview.png"))
-```
+<!-- ```{r, fig.cap="Overview of OSM data in Accra.", fig.show='hold', out.width="70%", fig.align='center'} -->
+<!-- knitr::include_graphics(c("fig/accra-osm-overview.png")) -->
+<!-- ``` -->
 
 # Assessment of OpenStreetMap Data Quality
 
