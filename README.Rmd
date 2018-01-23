@@ -383,14 +383,14 @@ Demographic data for Kathmandu are not as detailed, and also do not include age 
 
 ```{r CyclingPotential, fig.cap="Overview of Accra road network (left) and initial results of cycling potential (right).", fig.show='hold', out.width="100%"}
 knitr::include_graphics(c("fig/preliminary-result-Accra.png"))
-=======
+```
+
 Demographic data for Kathmandu are not as detailed, and also do not include age classes.
 By contrast Kathmandu has more detailed OSM data.
 An overview map of OSM data for Accra, the larger of the case study cities, is illustrated in the Figure below to provide an indication of OSM data in developing cities.
 
 ```{r, fig.cap="Overview of OSM data in Accra.", fig.show='hold', out.width="70%", fig.align='center'}
 knitr::include_graphics(c("fig/accra-osm-overview.png"))
->>>>>>> 87a22bb4530af898a69e54e0f7b1a5ddc09ce90f
 ```
 
 # Assessment of OpenStreetMap Data Quality
