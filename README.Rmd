@@ -522,6 +522,14 @@ The comparison with the results derived from a different method which was far mo
 knitr::include_graphics("fig/pct-bris-combined.png")
 ```
 
+
+A notable difference between the two route networks illustrated in Figure \@ref(fig:calibbris) is that our method tends to concentrate flows more along existing routes than the Propensity to Cycle Tool does.
+This is partly due to the weighting profiles used in our new method, which emphasise routes *already* conducive to cycling.
+The PCT, by contrast emphasises the fastest routes.
+Eploring the impact of different routing profiles is part of the plan for the next phase of this project.
+**The results from these route network-level estimates of cycling potential can be found in the `flows.Rds` files in the who-data repo.** 
+See Section \@ref(deliverables) for an overview of the deliverables.
+
 The results for Accra are illustrated in Figure \@ref(fig:calibaccra).
 This is the largest of the three cities and has the most estensive network with high cycling potential.
 It is interesting to note that, unlike Bristol, it has a 'polycentric' distribution of cycling potential, suggesting an extensive network will be needed for a cycling revolution in all parts of the city.
@@ -541,6 +549,19 @@ knitr::include_graphics("fig/flows-calib-kat.png")
 ```
 
 # Discussion and next steps
+
+We have demonstrated a new method for estimating cycling potential down to the route-network that can scale to large cities such as Accra and can work in data-poor environments, that lack access to origin-destination data.
+The results are promising.
+We have demonstrated that there are clear links between cycling potential and demographic variables, primarily population density.
+Contrary to the trend in wealthy cities for wealthy areas to have highest cycling potential, at least in terms of the 'near-market', the results presented in this report suggest that cycling potential is relatively evenly spread around developing-world cities and perhaps is higher around high-density but low income areas where average trip distances are low and people cannot afford cars.
+
+This hypothesis would need verifying against evidence and there are strong reasons why cycling uptake is challenging among the poorest areas.
+Anecdotal evidence for Kathmandu (from Dr Helen Elsey who has spent time cycling in the city) suggests that, roughly speaking, two types of people cycle: wealthy people with enough confidence and high-quality to pedal through congested streets, and poor people who cannot afford alternative modes of transport but require wheels and efficiency for labour-intensive work.
+If this is true then the challenge is not only one of infrastructure but attitudes.
+
+Protected and well-maintained cycling infrastructure is especially important in this context as it provides a safe space for less confident groups to venture out and signals that cycling is a legitimate mode of transport.
+The appropriate cycling network, and appropriate mix of wider sustainable transport policies of which a cycling strategy should be a part, therefore depends on many factors beyond demographics and the existing infrastructure.
+This means tools for transport planning should be linked-in to existing schemes and integrated with wider policies such as public health programs, equality and air pollution policies.
 
 ## Current State of Modelling Software
 
