@@ -118,19 +118,15 @@ knitr::include_graphics("fig/cylcing_infrastructures.png")
 
 <!-- ### Greater Accra Metropolitan Area (GAMA) -->
 
-The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Figure \@ref(fig:GAMA)). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Forty-three percent of the population is estimated to be between the age of 15 and 35 years.(Ghana, Y.P.I., 2013).
+The Greater Accra Metropolitan Area, simply referred to as Accra city, is the smallest geographical region of Ghana’s 10 administrative regions, covering only 1.4 percent of the total land area of Ghana (see Figure \@ref(fig:AccraPopDen)). It is the second most populous region, after the Ashanti region. According to the Ghana Statistical Service, Accra city’s population is estimated to be approaching 5 million, with a growth rate of around 3% per year. Forty-three percent of the population is estimated to be between the age of 15 and 35 years (Ghana, Y.P.I., 2013).
 
-```{r GAMA, fig.cap="Geographical location of Greater Accra Metropolitan Area (GAMA)"}
-knitr::include_graphics("fig/study-area-accra.png")
-```
- 
-GAMA contains 16 of the 216 local authority districts of the Republic of Ghana as shown in Figure \@ref(fig:GAMA). Administratively, the Accra Metropolitan local authority district serves as the capital of Accra city, and is administered by Accra Metropolitan Assembly, which is the political and administrative authority for the entire city of Accra.
+GAMA contains 16 of the 216 local authority districts of the Republic of Ghana as shown in Figure \@ref(fig:AccraPopDen). Administratively, the Accra Metropolitan local authority district serves as the capital of Accra city, and is administered by Accra Metropolitan Assembly, which is the political and administrative authority for the entire city of Accra.
 
 **Demography and population of Accra**
 
-The population of GAMA grew from 2,905,726 in 2000 to 4,010,054 in 2010 (Ghana Statistical Service, 2010). With a growth rate of 2.5% - below the current level of 3% - the population is estimated to increase to 5.9 million by 2040. The male and female population represents 49% and 51%, respectively. Based on the last population survey conducted in Ghana in 2010, the age distribution is given as follows: 0 -14 years as 31.3%, 15-35 years as 43.2%, and 36 and above as 25.5%.
+The population of GAMA grew from 2,905,726 in 2000 to 4,010,054 in 2010 (Ghana Statistical Service, 2010). With a growth rate of 2.5% - below the current level of 3% - the population is estimated to increase to 5.9 million by 2040. The male and female population represents 49% and 51%, respectively. Based on the last population survey conducted in Ghana in 2010, the age distribution is given as follows: 0-14 years as 31%, 15-35 years as 43%, and 36 and above as 26%.
 
-The region occupies a total land area of 3,245 km^2^, which makes it the geographically smallest region of the country. It has a population density of 1,235.8 people per km^2^, and is 90.5% urban with an annual urban growth rate of 3.1%, and recorded a positive net migration value of 1,275,425 in 2010. GAMA's labour force participation rate for its population aged 15 - 64 is estimated as 74.7%.
+The region occupies a total land area of 3,245 km^2^, which makes it the geographically smallest region of the country. It has a population density of 1,235.8 people per km^2^, and is 90.5% urban with an annual urban growth rate of 3.1%, and recorded a positive net migration value of 1,275,425 in 2010 (Figure \@ref(fig:AccraPopDen)). GAMA's labour force participation rate for its population aged 15 - 64 is estimated as 74.7%.
 
 ```{r AccraPopDen, fig.cap="Accra population density (2013). Source: Thomas Brinkhoff: City Population, http://www.citypopulation.de "}
 knitr::include_graphics("fig/accra_pop_density.png")
