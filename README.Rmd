@@ -637,6 +637,8 @@ The source code underlying this project and data generated are available from th
 
 # References
 
+## Grey Literature
+
 CBS. 2001. ["Population Density."](http://cbs.gov.np/image/data/Gis_Maps/Population/Population%20Density.gif)
 
 CBS. 2014. ["Environmental Statistics of Nepal - 2013."](http://cbs.gov.np/image/data/2015/Environment%20Statistics%20of%20Nepal%202013.pdf) _CNN Printing Press, Kathmandu, Nepal._
@@ -681,7 +683,7 @@ WMO. 2018. ["Kathmandu."](http://worldweather.wmo.int/en/city.html?cityId=114) _
 
 World Bank. 2013. _Gender and Public Transport: Kathmandu, Nepal._ Nepal. © [World Bank.](https://openknowledge.worldbank.org/handle/10986/17872) License: CC BY 3.0 IGO.
 
-
+## Academic literature
 
 
 <!-- with italics and without inline-style links
