@@ -3,7 +3,6 @@ title: "Estimating cycling potential on the route networks in Accra and Kathmand
 author: Robin Lovelace, Mark Padgham, Monsuru Adepeju and Nikée Groot
 date: '`r Sys.Date()`'
 bibliography: who.bib
-
 # uncomment for markdown output:
 # output:
 #   md_document:
@@ -375,6 +374,7 @@ knitr::include_graphics("fig/BasicOSM-Xteristics.png")
 
 Demographic data for Accra from worldpop include population density estimates at 172,238 points, corresponding to estimates in roughly 30-by-30m grid cells.  Estimates are available for total population density, as well as distributed between 14 5-year age classes from 0-5 years up to 60-65 years, and 65+ years.
 
+<<<<<<< HEAD
 Demographic data for Kathmandu are not as detailed, and also do not include age classes. An overview map of Accra, the most extensively studied of our case study cities, is illustrated in the Figure \@ref(fig:CyclingPotential).
 
 <!-- ```{r CyclingPotential, fig.cap="Overview of Accra road network (left) and initial results of cycling potential (right).", fig.show='hold', out.width="49%"} -->
@@ -383,6 +383,14 @@ Demographic data for Kathmandu are not as detailed, and also do not include age 
 
 ```{r CyclingPotential, fig.cap="Overview of Accra road network (left) and initial results of cycling potential (right).", fig.show='hold', out.width="100%"}
 knitr::include_graphics(c("fig/preliminary-result-Accra.png"))
+=======
+Demographic data for Kathmandu are not as detailed, and also do not include age classes.
+By contrast Kathmandu has more detailed OSM data.
+An overview map of OSM data for Accra, the larger of the case study cities, is illustrated in the Figure below to provide an indication of OSM data in developing cities.
+
+```{r, fig.cap="Overview of OSM data in Accra.", fig.show='hold', out.width="70%", fig.align='center'}
+knitr::include_graphics(c("fig/accra-osm-overview.png"))
+>>>>>>> 87a22bb4530af898a69e54e0f7b1a5ddc09ce90f
 ```
 
 # Assessment of OpenStreetMap Data Quality

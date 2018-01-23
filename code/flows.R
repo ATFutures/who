@@ -18,7 +18,7 @@ get_popdens_nodes <- function (city = city, n = NULL)
     }
     return (nodes)
 }
-nodes <- get_popdens_nodes (city, n = 100)
+nodes <- get_popdens_nodes (city, n = 1000)
 
 get_od_matrix <- function (net, nodes)
 {
@@ -55,7 +55,7 @@ get_flows <- function (net, od, filename = NULL)
     return (flows)
 }
 flows <- get_flows (net, od)
-saveRDS (flows, file = paste0 (city, "-flows.Rds"))
+saveRDS (flows, file = paste0 ("../who-data/", city, "/flows.Rds"))
 
 # --------- Merge directed flows and convert to sf geometries
 library (sf) # has to be in namespace for this to work
