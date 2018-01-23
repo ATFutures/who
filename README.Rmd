@@ -53,7 +53,7 @@ This document represents the results of a one-month-long project, which commence
 
 Before diving into the case study cities and results of the feasibility study it is worth considering why it is important to map cycling potential **at high geographic resolution on the route network**.
 Rather than repeat the work done on the subject in excellent literature reviews [@aldred_cycling_2017] or regression analyses at low geographical resolution [@mueller_health_2018], we use a single case study to demonstrate the point.
-Seville (Spain) shows the tranformative effect of constructing a high quality cycling network **built where there it is needed**.
+Seville (Spain) shows the tranformative effect of constructing a high quality cycling network **built where it is needed**.
 
 Seville demonstrates how building appropriate infrastructure (protected cycle paths) in appropriate places (along key transport corridors, which can be identified with methods outlined later in this report) can lead to dramatic uptake of cycling.
 Despite high temperatures approaching those in Accra, cycling levels in the city quadrupled following investment in a carefully planned route network (illustrated in Figure \@ref(fig:sevnet)).
