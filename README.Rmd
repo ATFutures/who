@@ -98,7 +98,7 @@ Accra is the larger city, with a population approaching 5 million and a growth r
 Kathmandu has a population of just over 1.2 million, according to the [World Population Review](http://worldpopulationreview.com/world-cities/kathmandu-population/), with the larger Kathmandu region currently growing by over 4.5% per year.
 
 The remainder of this section provides more depth on the transport contexts of each city which will inform the future development of tools for planning active travel futures.
-Illustrative photos of cycling provision in each case study city are provided in Figure \@ref(fig:cyclists).
+Illustrative photos of lack of cycling provision on the major roads in Accra and Kathmandu, and a typical example of a residential road in Bristol in which cycling lane is provided, are shown in Figure \@ref(fig:cyclists).
 
 ```{r cyclists, fig.cap="Figures illustrating cyclist in (a) Accra, (b) Kathmandu, (c) Bristol"}
 knitr::include_graphics("fig/cylcing_infrastructures.png")
@@ -448,8 +448,8 @@ In comparison with Bristol, Kathmandu is roughly four times bigger in size, but 
 Overall, Kathmandu is very well represented on OpenStreetMap, thanks to a number of projects by the Kathmandu Living Labs (KLL) organisation. KLL has not only informed residents about the importance of having accurate and freely available spatial data, and how these can help improve interactions between the local governing authorities and citizens, but also arranged training workshops to educate them in how to map their environments accurately, which by 2015 had been provided to over 1,400 people. In addition to this, they have had a specific project which involved mapping the 2600 schools and 300 hospitals in the area in 2013. Their initiative has resulted in the mapping of 2,054,436 buildings and 135,063 kilometres of roads. (KLL, 2018.). A typical result of those efforts can be illustrated with Figure \@ref(fig:compareKat) showing the Narayan Gopal Chowk area being mapped completely within a period of nine months.  
 
 
-```{r compareKat, fig.cap="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Source: KLL, 2018."}
-knitr::include_graphics("fig/KathmanduOSMbefore-after.jpg")
+```{r compareKat, fig.cap="Improved representation of Kathmandu on OpenStreetMap after KLL efforts. Zooming-in view of a typical intersection in Narayan Gopal Chowk area of Kathmandu. Source: KLL, 2018."}
+knitr::include_graphics("fig/KathmanduOSMbefore-after.png")
 ```
 
 The same strategy of drawing 2km x 2km grids at the central of each administrative sub-division (here referred to as municipality) is employed. We also observed that the distibution of the grids is provide a good cross-section of the street network across the whole area. Based on the spatial extent of the road network across each municipality, we classified the municipalities into two, namely; (1) urban and (2) semi-urban municipalities, with 51-100% and 0-50% network coverages, respectively. 
