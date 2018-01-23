@@ -510,7 +510,7 @@ With this caveat in mind, these preliminary results aim at demonstrating the fea
 They are not aimed at providing a definitive 'core network' where investment should go (although they are an evidence based starting point).
 We hope to refine these estimates in future work, building on this feasibility study.
 
-The results for Bristol are illustrated in Figure \@ref(calibbris).
+The results for Bristol are illustrated in Figure \@ref(fig:calibbris).
 This demonstrates that the method creates a detailed route network that highlights the most important routes from a cycling perspective.
 The comparison with the results derived from a different method which was far more data-intensive and took much longer to generate [@lovelace_propensity_2017] is encouraging, with arterial and orbital routes both prominent.
 

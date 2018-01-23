@@ -2,7 +2,7 @@ library (dodgr)
 library (sf)
 library (magrittr)
 # hard-code dirs for now; this will later be done with the drat archive
-city = "bristol"
+city = "kathmandu"
 pd_dir <- file.path (here::here(), "../popdens")
 devtools::load_all (pd_dir, export_all = FALSE)
 
@@ -59,7 +59,7 @@ saveRDS (flows, file = paste0 ("../who-data/", city, "/flows.Rds"))
 
 # --------- Merge directed flows and convert to sf geometries
 library (sf) # has to be in namespace for this to work
-graph <- readRDS (paste0 (city, "-flows.Rds"))
+graph <- readRDS (paste0 ("../who-data/", city, "/flows.Rds"))
 graph_sf <- dodgr_to_sf (graph)
 gc <- dodgr_contract_graph (graph)
 graphm <- merge_directed_flows (gc$graph)
