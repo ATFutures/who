@@ -11,7 +11,7 @@ city <- tolower (city)
 boundary_bb = getbb(city)
 boundary = stplanr::bb2poly(boundary_bb) %>% 
   st_as_sf()
-data_dir <- "/data/data/who-data" # change that 
+data_dir <- "../who-data"
 if (city == "accra")
     pop_layer <- "GHA15_040213.tif"
 else if (city == "kathmandu")
@@ -27,7 +27,7 @@ pd_sf = pd %>%
 osm_dir <- file.path (data_dir, city, "osm")
 ways = readRDS (file.path (osm_dir, paste0 (city, "-hw.Rds")))
 # Following line recycles OSM IDs from ways, not nodes as required here.
-nodes = st_cast(ways, "POINT") # 172,238 nodes
+nodes = st_cast(ways, "POINT") # 172,238 nodes for Accra
 # Following 2 lines re-extract the proper IDs:
 xy <- lapply (ways$geometry, function (i) as.matrix (i))
 nodes$osm_id <- rownames (do.call (rbind, xy))
@@ -36,30 +36,21 @@ nodes_joined = st_join(nodes, pd_sf)
 # nodes_agg = aggregate(pd_sf, nodes, mean) # works but how to divide them again?
 layer_name <- gsub (".tif", "", pop_layer)
 sf_dens <- pd_sf [[layer_name]]
-nodes_aggregated = nodes_joined %>% 
-  st_set_geometry(NULL) %>% 
-  group_by(id) %>% 
-  summarise(pop = mean(sf_dens, na.rm = T) / sum(!is.na(sf_dens)))
-sum(sf_dens)
-sum(nodes_joined [[layer_name]], na.rm = T) # higher
-sum(nodes_aggregated$pop, na.rm = T) # too few
-nodes_new = inner_join(nodes_joined, nodes_aggregated)
-sum(nodes_new$pop, na.rm = T) # 1/3 less - why?
+
+# sf aggregation is crap; this is about 1,000 times faster (guessing there, but
+# sure feels like it):
+dat <- data.frame (osm_id = nodes_joined$osm_id,
+                   pop = nodes_joined [[layer_name]]) %>%
+    group_by (osm_id) %>%
+    summarize (pop = sum (pop))
+nodes_new <- nodes_joined [match (dat$osm_id, nodes_joined$osm_id), ]
+names (nodes_new) [which (names (nodes_new) == layer_name)] <- "pop"
+nodes_new$pop <- dat$pop
 
 pd_sf_sample = pd_sf %>% filter(layer_name > 3000)
 nodes_sample = nodes_new[pd_sf_sample,]
 tmap_mode("view")
 qtm(pd_sf_sample) +
   qtm(nodes_sample) # explanation: many nodes have no points in!
-
-# now we're in a place to consolidate multiple densities that map on to the same
-# points. sf only pretends to be able to do this stuff but can't at all.
-# De-sf-ing at the outset is about 1,000 times faster:
-dat <- data.frame (osm_id = nodes_new$osm_id, pop = nodes_new$pop) %>%
-    group_by (osm_id) %>%
-    summarize (pop = sum (pop))
-nodes_new <- nodes_new [match (dat$osm_id, nodes_new$osm_id), ]
-# replace densities with aggregate values:
-nodes_new$pop <- dat$pop
 
 saveRDS (nodes_new, file.path (data_dir, city, "osm", "nodes_new.Rds"))
