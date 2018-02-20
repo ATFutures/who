@@ -5,7 +5,7 @@ library(raster)
 library(tmap)
 library(sf)
 
-city <- "kathmandu"
+city <- "accra"
 city <- tolower (city)
 
 boundary_bb = getbb(city)
@@ -26,7 +26,11 @@ pd_sf = pd %>%
   st_as_sf()
 osm_dir <- file.path (data_dir, city, "osm")
 ways = readRDS (file.path (osm_dir, paste0 (city, "-hw.Rds")))
-nodes = st_cast(ways, "POINT")
+# Following line recycles OSM IDs from ways, not nodes as required here.
+nodes = st_cast(ways, "POINT") # 172,238 nodes
+# Following 2 lines re-extract the proper IDs:
+xy <- lapply (ways$geometry, function (i) as.matrix (i))
+nodes$osm_id <- rownames (do.call (rbind, xy))
 pd_sf$id = 1:nrow(pd_sf)
 nodes_joined = st_join(nodes, pd_sf) 
 # nodes_agg = aggregate(pd_sf, nodes, mean) # works but how to divide them again?
@@ -47,5 +51,15 @@ nodes_sample = nodes_new[pd_sf_sample,]
 tmap_mode("view")
 qtm(pd_sf_sample) +
   qtm(nodes_sample) # explanation: many nodes have no points in!
+
+# now we're in a place to consolidate multiple densities that map on to the same
+# points. sf only pretends to be able to do this stuff but can't at all.
+# De-sf-ing at the outset is about 1,000 times faster:
+dat <- data.frame (osm_id = nodes_new$osm_id, pop = nodes_new$pop) %>%
+    group_by (osm_id) %>%
+    summarize (pop = sum (pop))
+nodes_new <- nodes_new [match (dat$osm_id, nodes_new$osm_id), ]
+# replace densities with aggregate values:
+nodes_new$pop <- dat$pop
 
 saveRDS (nodes_new, file.path (data_dir, city, "osm", "nodes_new.Rds"))
