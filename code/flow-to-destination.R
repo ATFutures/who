@@ -5,16 +5,22 @@
 devtools::load_all ("../dodgr", export_all = FALSE)
 devtools::load_all ("../m4ra", export_all = FALSE)
 #devtools::load_all (".", export_all = FALSE)
+require (sf) # very important to use sf.[] method!
+
 hw <- readRDS ("../who-data/accra/osm/accra-hw.Rds")
 graph <- weight_streetnet (hw, wt_profile = "foot")
 verts <- dodgr_vertices (graph)
+graph_sf <- dodgr_to_sf (graph)
 
-# get one accra bus stop:
+# get ten accra bus stops:
 bs <- readRDS ("../who-data/accra/osm/accra-bs.Rds")
 xy <- t (vapply (bs$geometry, function (i) as.numeric (i), numeric (2)))
 colnames (xy) <- c ("x", "y")
-bs <- xy [sample (nrow (xy), 1), , drop = FALSE]
-node <- verts$id [match_pts_to_graph (verts, bs)]
+#nstops <- 10
+#bs <- xy [sample (nrow (xy), nstops), , drop = FALSE]
+#bus_nodes <- verts$id [match_pts_to_graph (verts, bs)]
+# all 2,451 stops:
+bus_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 
 # and pop densities
 dens <- readRDS ("../who-data/accra/osm/nodes_new.Rds")$pop
@@ -23,39 +29,39 @@ if (length (dens) != nrow (verts)) stop ("nope")
 # spatial interaction from all density points to that bus stop:
 # Note k = 2.5 or so is okay for bike, so arbitrarily set pedestrians at k = 0.1
 k <- 0.5
-si <- m4ra_spatial_interaction1 (graph, node = node, dens = dens, k = k)
-
-# comparing si with distance gives precisely the expected results
-plotsi <- FALSE
-if (plotsi)
+# quicker to loop over each bus stop because flow aggregation is much more
+# efficient for a single source, because there are far fewer nodes_to in each
+# case. flow aggregation is not parallelised (in C++), so this code can be
+# directly run in parallel
+pb <- txtProgressBar (style = 3)
+flows <- rep (0, nrow (graph))
+for (i in seq (bus_nodes))
 {
-    d <- dodgr_dists (graph, from = node, to = verts$id) [1, ]
-    sip <- si / max (si, na.rm = TRUE)
-    plot (d, sip, col = "grey", log = "y")
-    dfit <- seq (min (d, na.rm = TRUE), max (d, na.rm = TRUE), length.out = 100) [-1]
-    yfit <- exp (-dfit / k)
-    lines (dfit, yfit, col = "red", lwd = 2)
+    si <- m4ra_spatial_interaction1 (graph, node = bus_nodes [i],
+                                     dens = dens, k = k)
+    indx <- which (si > 0 & !is.na (si))
+    si <- si [indx]
+    nodes_to <- verts$id [indx] # this is why the explicit loop saves!
+
+    if ("flow" %in% names (graph)) graph$flow <- NULL
+    flows <- flows + dodgr_flows_aggregate (graph, from = bus_nodes [i],
+                                            to = nodes_to, flows = si)$flow
+    setTxtProgressBar (pb, i / length (bus_nodes))
 }
+close (pb)
 
-indx <- which (si > 0 & !is.na (si))
-length (indx)
-si <- si [indx]
-nodes_to <- verts$id [indx]
+saveRDS (flows, file = "accra-all-busstop-flows.Rds")
 
-if ("flow" %in% names (graph)) graph$flow <- NULL
-graph <- dodgr_flows_aggregate (graph, from = node, to = nodes_to, flows = si)
-require (sf) # very important to use sf.[] method!
-graph_sf <- dodgr_to_sf (graph)
+graph$flow <- flows
 gc <- dodgr_contract_graph (graph)
 graphm <- merge_directed_flows (gc$graph)
 indx <- match (graphm$edge_id, names (graph_sf))
 graph_sf <- graph_sf [indx]
 
-# cut out lowest 1% of flows:
-#indx <- which (graphm$flow > 0.01 * max (graphm$flow))
-#graphm <- graphm [indx, ]
-#graph_sf <- graph_sf [indx]
-
+# cut out lowest 1% of flows; speeds up rendering significantly
+indx <- which (graphm$flow > 0.01 * max (graphm$flow))
+graphm <- graphm [indx, ]
+graph_sf <- graph_sf [indx]
 
 require (mapview)
 ncols <- 30
