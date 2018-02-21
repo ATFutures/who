@@ -59,6 +59,11 @@ bhts <- as.numeric (bldg$building.levels) # 88 / 24490 buildings
 areas <- bldg %>% st_area () # in m^2
 bhts [is.na (bhts)] <- 1
 areas <- areas * bhts
+# code to reduce employment densities of schools and hospitals, but not
+# implemented coz education can readily be conflated with employment here
+#indx <- which (bldg$building %in% c ("school", "hospital"))
+#areas [indx] <- areas [indx] / 20 # 20-to-1 student
+
 # Then map centroids of those areas onto the street network:
 xy <- st_transform (bldg, 29101) %>%
     st_centroid () %>%

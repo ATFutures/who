@@ -10,7 +10,6 @@ require (sf) # very important to use sf.[] method!
 hw <- readRDS ("../who-data/accra/osm/accra-hw.Rds")
 graph <- weight_streetnet (hw, wt_profile = "foot")
 verts <- dodgr_vertices (graph)
-graph_sf <- dodgr_to_sf (graph)
 
 # get ten accra bus stops:
 bs <- readRDS ("../who-data/accra/osm/accra-bs.Rds")
@@ -53,6 +52,7 @@ for (i in seq (bus_nodes))
 close (pb)
 
 graph$flow <- flows
+graph_sf <- dodgr_to_sf (graph)
 gc <- dodgr_contract_graph (graph)
 graphm <- merge_directed_flows (gc$graph)
 indx <- match (graphm$edge_id, names (graph_sf))
