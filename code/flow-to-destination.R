@@ -1,5 +1,5 @@
-# This script maps flows from the **entire** population density data set to one
-# single bus stop in Accra
+# This script maps flows from the **entire** population density data set to
+# every single bus stop in Accra. These are **first-mile** flows.
 
 #library (dodgr) # needs latest version
 devtools::load_all ("../dodgr", export_all = FALSE)
@@ -46,11 +46,11 @@ for (i in seq (bus_nodes))
     if ("flow" %in% names (graph)) graph$flow <- NULL
     flows <- flows + dodgr_flows_aggregate (graph, from = bus_nodes [i],
                                             to = nodes_to, flows = si)$flow
+    saveRDS (flows, file = "accra-flows-to-busstops.Rds")
+
     setTxtProgressBar (pb, i / length (bus_nodes))
 }
 close (pb)
-
-saveRDS (flows, file = "accra-all-busstop-flows.Rds")
 
 graph$flow <- flows
 gc <- dodgr_contract_graph (graph)
