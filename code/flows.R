@@ -1,5 +1,5 @@
-# devtools::install_github("ATFutures/m4ra")
-devtools::install("../m4ra/")
+# devtools::install_github("ATFutures/m4ra") # not out yet
+# devtools::install("../m4ra/")
 library (dodgr)
 library (sf)
 library (magrittr)
@@ -75,6 +75,10 @@ ncols <- 30
 flow <- graphm$flow / max (graphm$flow)
 cols <- colorRampPalette (c ("lawngreen", "red")) (ncols) [ceiling (ncols * flow)]
 mapview (graph_sf, color = cols, lwd = 10 * flow)
+
+# save route net ----
+graph_sf = st_as_sf(graphm, geometry = graph_sf)
+st_write(graph_sf, paste0("../who-data/", city, "/flows.gpkg"))
 
 # --------- interactive plot with tmap:
 # requires construction of full sf data.frame
