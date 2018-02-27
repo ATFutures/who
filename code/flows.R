@@ -1,3 +1,5 @@
+# devtools::install_github("ATFutures/m4ra")
+devtools::install("../m4ra/")
 library (dodgr)
 library (sf)
 library (magrittr)
@@ -32,7 +34,7 @@ get_od_matrix <- function (net, nodes)
     xy_index <- match_pts_to_graph (verts = verts, xy = xy)
     nodes <- verts$id [xy_index]
 
-    od <- dodgr_spatial_interaction (graph = net, nodes = nodes, dens = dens,
+    od <- m4ra::m4ra_spatial_interaction (graph = net, nodes = nodes, dens = dens,
                                      k = 2.33, contract = TRUE)
     list (index = xy_index, od = od)
 }
