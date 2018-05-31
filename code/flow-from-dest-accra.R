@@ -34,18 +34,20 @@ bus_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 # And the buildings (polygons only; not multipolygons
 bldg <- readRDS ("../who-data/accra/osm/accra-bldg.Rds")$osm_polygons
 # try to identify buildings with some kind of purpose:
-indx1 <- which (!is.na (bldg$name) | !is.na (bldg$alt_name) |
+library (tidyverse)
+library (magrittr)
+bldg %<>% filter (!is.na (bldg$name) | !is.na (bldg$alt_name) |
                 !is.na (bldg$amenity) | !is.na (bldg$diplomatic) |
                 !is.na (bldg$government) | !is.na (bldg$leisure) |
                 !is.na (bldg$office) | !is.na (bldg$opening_hours) |
                 !is.na (bldg$operator) | !is.na (bldg$shop) |
-                !is.na (bldg$sport) | bldg$tourism == "museum")
-indx2 <- which (bldg$building %in%
-                c ("civic", "commerical", "garage", "hangar",
-                   "hospital", "hotel", "industrial",
-                   "lecture halls", "manufacture", "office",
-                   "public", "retail", "school", "service",
-                   "supermarket", "university", "warehouse"))
+                !is.na (bldg$sport) | bldg$tourism == "museum" |
+                bldg$building %in%
+                c ("civic", "commerical", "garage", "hangar", "hospital",
+                   "hotel", "industrial", "lecture halls", "manufacture",
+                   "office", "public", "retail", "school", "service",
+                   "supermarket", "university", "warehouse") &
+                bldg$building != "residential")
 
 indx <- unique (c (indx1, indx2))
 # Remove residential buildings:
