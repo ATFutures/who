@@ -1,5 +1,6 @@
-# This script maps flows from every bus stop in Accra to every commercial
-# building, in an attempt to capture last-mile flows related to employment.
+# This script maps flows from every residential location in Kathmanudu to
+# three categories of building (reflecting trips for purposes of education,
+# shopping, and employment), as well as to bus stops.
 
 #library (dodgr) # needs latest version
 devtools::load_all ("../dodgr", export_all = FALSE)
@@ -24,38 +25,32 @@ graph$to_id <- from_id
 graph$to_lon <- from_lon
 graph$to_lat <- from_lat
 
-# get ten accra bus stops:
-bs <- readRDS ("../who-data/accra/osm/accra-bs.Rds")
+# get ten kathmandu bus stops:
+bs <- readRDS ("../who-data/kathmandu/osm/kathmandu-bs.Rds")
 xy <- t (vapply (bs$geometry, function (i) as.numeric (i), numeric (2)))
-colnames (xy) <- c ("x", "y")
-# all 2,451 stops:
+colnames (xy) <- c ("x", "y") # Only 134 bus stops in Kathmandu
 bus_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 
 # And the buildings (polygons only; not multipolygons
-bldg <- readRDS ("../who-data/accra/osm/accra-bldg.Rds")$osm_polygons
+bldg <- rbind (
+        readRDS ("../who-data/kathmandu/osm/kathmandu-bldg1.Rds")$osm_polygons,
+        readRDS ("../who-data/kathmandu/osm/kathmandu-bldg2.Rds")$osm_polygons)
 # try to identify buildings with some kind of purpose:
 library (tidyverse)
 library (magrittr)
-bldg %<>% filter (!is.na (bldg$name) | !is.na (bldg$alt_name) |
-                !is.na (bldg$amenity) | !is.na (bldg$diplomatic) |
-                !is.na (bldg$government) | !is.na (bldg$leisure) |
-                !is.na (bldg$office) | !is.na (bldg$opening_hours) |
-                !is.na (bldg$operator) | !is.na (bldg$shop) |
-                !is.na (bldg$sport) | bldg$tourism == "museum" |
-                bldg$building %in%
-                c ("civic", "commerical", "garage", "hangar", "hospital",
-                   "hotel", "industrial", "lecture halls", "manufacture",
-                   "office", "public", "retail", "school", "service",
-                   "supermarket", "university", "warehouse") &
+bldgf <- bldg %>% filter ((!is.na (bldg$amenity) |  !is.na (bldg$leisure) |
+                !is.na (bldg$office) | !is.na (bldg$office.name) |
+                !is.na (bldg$office.type) | !is.na (bldg$opening_hours) |
+                !is.na (bldg$opening.hours) | !is.na (bldg$operator) | 
+                !is.na (bldg$operator.type) | !is.na (bldg$shop) |
+                !is.na (bldg$sport) | bldg$tourism == "museum") &
                 bldg$building != "residential")
 
-indx <- unique (c (indx1, indx2))
-# Remove residential buildings:
-indx <- indx [which (!indx %in% which (bldg$building == "residential"))]
-# That gives 678 / 24,490 = 2.7% of buildings
+# First cut with all building together
 
-bldg <- bldg [indx, ]
-bhts <- as.numeric (bldg$building.levels) # 88 / 24490 buildings
+bhts <- as.numeric (bldg$building.levels)
+length (which (!is.na (bhts))) # 11,375
+length (which (!is.na (bhts))) / length (bhts) # 13.8%
 
 # Get building areas and presume working density is proportional:
 areas <- bldg %>% st_area () # in m^2
@@ -67,20 +62,25 @@ areas <- areas * bhts
 #areas [indx] <- areas [indx] / 20 # 20-to-1 student
 
 # Then map centroids of those areas onto the street network:
-xy <- st_transform (bldg, 29101) %>%
-    st_centroid () %>%
-    st_transform (., st_crs (bldg)$proj4string) %>%
+###### @Robin: This transform does not work - can you figure out why?
+#xy <- st_transform (bldg, 29101) %>%
+#    st_centroid () %>%
+#    st_transform (., st_crs (bldg)$proj4string) %>%
+#    st_geometry () %>%
+#    lapply (as.numeric) %>%
+#    do.call (rbind, .)
+xy <- st_centroid (bldg) %>%
     st_geometry () %>%
     lapply (as.numeric) %>%
     do.call (rbind, .)
 colnames (xy) <- c ("x", "y")
-work_nodes <- verts$id [match_pts_to_graph (verts, xy)]
+bldg_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 # `m4ra_spatial_intreaction1` requires density estimates at all vertices, so
 # simply set the rest to 0
 dens <- rep (0, nrow (verts))
-dens [match (work_nodes, verts$id)] <- areas
+dens [match (bldg_nodes, verts$id)] <- areas
 
-# spatial interaction from all density points to the bus stops:
+# spatial interaction from all density points to the buidlings
 # Note k = 2.5 or so is okay for bike, so arbitrarily set pedestrians at k = 0.1
 k <- 0.5
 # quicker to loop over each bus stop because flow aggregation is much more
@@ -89,18 +89,18 @@ k <- 0.5
 # directly run in parallel
 pb <- txtProgressBar (style = 3)
 flows <- rep (0, nrow (graph))
-for (i in seq (bus_nodes))
+for (i in seq (bldg_nodes))
 {
-    si <- m4ra_spatial_interaction1 (graph, node = bus_nodes [i],
+    si <- m4ra_spatial_interaction1 (graph, node = bldg_nodes [i],
                                      dens = dens, k = k)
     indx <- which (si > 0 & !is.na (si))
     si <- si [indx]
     nodes_to <- verts$id [indx] # this is why the explicit loop saves!
 
     if ("flow" %in% names (graph)) graph$flow <- NULL
-    flows <- flows + dodgr_flows_aggregate (graph, from = bus_nodes [i],
+    flows <- flows + dodgr_flows_aggregate (graph, from = bldg_nodes [i],
                                             to = nodes_to, flows = si)$flow
-    saveRDS (flows, file = "accra-flows-from-busstops.Rds")
+    saveRDS (flows, file = "kathmandu-flows-from-bldgs")
 
     setTxtProgressBar (pb, i / length (bus_nodes))
 }
