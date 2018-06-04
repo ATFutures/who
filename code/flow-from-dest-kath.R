@@ -105,7 +105,7 @@ fname <- "kathmandu-flows-from-bldgs-k25.Rds"
 # directly run in parallel
 pb <- txtProgressBar (style = 3)
 flows <- rep (0, nrow (graph$graph))
-for (i in seq (bldg_nodes))
+for (i in seq (bldg_nodes$node))
 {
     si <- m4ra_spatial_interaction1 (graph$graph, node = bldg_nodes$node [i],
                                      dens = dens, k = k)
@@ -120,12 +120,24 @@ for (i in seq (bldg_nodes))
                                             flows = si)$flow
     saveRDS (flows, file = fname)
 
-    setTxtProgressBar (pb, i / length (bldg_nodes))
+    setTxtProgressBar (pb, i / length (bldg_nodes$node))
 }
 close (pb)
 
+
 # Map flows on contracted graph back on to full network using code from
 # https://github.com/ATFutures/m4ra/blob/master/R/flows.R
+#indx_to_full <- match (graph$edge_map$edge_old, graph_full$edge_id)
+#indx_to_contr <- match (graph$edge_map$edge_new, graph$graph$edge_id)
+# edge_map only has the contracted edges; flows from the original
+# non-contracted edges also need to be inserted
+#edges <- graph$graph$edge_id [which (!graph$graph$edge_id %in%
+#                                     graph$edge_map$edge_new)]
+#indx_to_full <- c (indx_to_full, match (edges, graph_full$edge_id))
+#indx_to_contr <- c (indx_to_contr, match (edges, graph$graph$edge_id))
+#graph_full$flow <- 0
+#graph_full$flow [indx_to_full] <- flows [indx_to_contr]
+
 
 #graph$flow <- flows
 #gc <- dodgr_contract_graph (graph)
