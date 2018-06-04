@@ -1,18 +1,18 @@
 # This script maps flows from the **entire** population density data set to
-# every single bus stop in Accra. These are **first-mile** flows.
+# every single building in Kathmandu These are **first-mile** flows.
 
 #library (dodgr) # needs latest version
-devtools::load_all ("../dodgr", export_all = FALSE)
-devtools::load_all ("../m4ra", export_all = FALSE)
+devtools::load_all (file.path (here::here(), "..", "dodgr"), export_all = FALSE)
+devtools::load_all (file.path (here::here(), "..", "m4ra"), export_all = FALSE)
 #devtools::load_all (".", export_all = FALSE)
 require (sf) # very important to use sf.[] method!
 
-hw <- readRDS ("../who-data/accra/osm/accra-hw.Rds")
+data_dir <- file.path (here::here(), "..", "who-data", "kathmandu")
+hw <- readRDS (file.path (data_dir, "osm", "kathmandu-hw.Rds"))
 graph <- weight_streetnet (hw, wt_profile = "foot")
 verts <- dodgr_vertices (graph)
 
-# get ten accra bus stops:
-bs <- readRDS ("../who-data/accra/osm/accra-bs.Rds")
+bs <- readRDS (file.path (data_dir, "osm", "kathmandu-bs.Rds"))
 xy <- t (vapply (bs$geometry, function (i) as.numeric (i), numeric (2)))
 colnames (xy) <- c ("x", "y")
 #nstops <- 10
@@ -22,7 +22,7 @@ colnames (xy) <- c ("x", "y")
 bus_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 
 # and pop densities
-dens <- readRDS ("../who-data/accra/osm/nodes_new.Rds")$pop
+dens <- readRDS (file.path (data_dir, "osm", "nodes_new.Rds"))$pop
 if (length (dens) != nrow (verts)) stop ("nope")
 
 # spatial interaction from all density points to that bus stop:
