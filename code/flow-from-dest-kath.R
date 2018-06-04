@@ -1,19 +1,21 @@
-# This script maps flows from every residential location in Kathmanudu to
-# three categories of building (reflecting trips for purposes of education,
-# shopping, and employment), as well as to bus stops.
+# This script maps randomly-dispersed flows from every non-residential location
+# in Kathmanudu.
 
 #library (dodgr) # needs latest version
 devtools::load_all (file.path (here::here(), "..", "dodgr"), export_all = FALSE)
 devtools::load_all (file.path (here::here(), "..", "m4ra"), export_all = FALSE)
 #devtools::load_all (".", export_all = FALSE)
 require (sf) # very important to use sf.[] method!
+require (tidyverse)
 
+data_dir <- file.path (here::here(), "..", "who-data", "kathmandu")
 hw <- readRDS (file.path (data_dir, "osm", "kathmandu-hw.Rds"))
-graph <- weight_streetnet (hw, wt_profile = "foot")
-verts <- dodgr_vertices (graph)
-graph_sf <- dodgr_to_sf (graph)
+graph_full <- weight_streetnet (hw, wt_profile = "foot")
+graph <- dodgr_contract_graph (graph_full)
+verts <- dodgr_vertices (graph$graph)
+#graph_sf <- dodgr_to_sf (graph)
 
-# For flows **from** particular points (here, the bus stops), the graph has to
+# For flows **from** particular points (here, the buildings), the graph has to
 # be reversed:
 from_id <- graph$from_id
 from_lon <- graph$from_lon
@@ -25,31 +27,36 @@ graph$to_id <- from_id
 graph$to_lon <- from_lon
 graph$to_lat <- from_lat
 
-# get ten kathmandu bus stops:
-bs <- readRDS (file.path (data_dir, "osm", "kathmandu-bs.Rds"))
-xy <- t (vapply (bs$geometry, function (i) as.numeric (i), numeric (2)))
-colnames (xy) <- c ("x", "y") # Only 134 bus stops in Kathmandu
-bus_nodes <- verts$id [match_pts_to_graph (verts, xy)]
+# get kathmandu bus stops (not used at present):
+#bs <- readRDS (file.path (data_dir, "osm", "kathmandu-bs.Rds"))
+#xy <- t (vapply (bs$geometry, function (i) as.numeric (i), numeric (2)))
+#colnames (xy) <- c ("x", "y") # Only 134 bus stops in Kathmandu
+#bus_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 
 # And the buildings (polygons only; not multipolygons
-bldg <- rbind (
-        readRDS (file.path (data_dir, "osm", "kathmandu-bldg1.Rds"))$osm_polygons,
-        readRDS (file.path (data_dir, "osm", "kathmandu-bldg2.Rds"))$osm_polygons)
+message ("loading buildings ... ", appendLF = FALSE)
+b1 <- file.path (data_dir, "osm", "kathmandu-bldg1.Rds")
+b2 <- file.path (data_dir, "osm", "kathmandu-bldg2.Rds")
+bldg <- rbind (readRDS (b1)$osm_polygons, readRDS (b1)$osm_polygons)
 # try to identify buildings with some kind of purpose:
-library (tidyverse)
-bldgf <- bldg %>% filter ((!is.na (bldg$amenity) |  !is.na (bldg$leisure) |
+bldgf <- bldg %>% filter ( (!is.na (bldg$amenity) |  !is.na (bldg$leisure) |
                 !is.na (bldg$office) | !is.na (bldg$office.name) |
                 !is.na (bldg$office.type) | !is.na (bldg$opening_hours) |
-                !is.na (bldg$opening.hours) | !is.na (bldg$operator) | 
+                !is.na (bldg$opening.hours) | !is.na (bldg$operator) |
                 !is.na (bldg$operator.type) | !is.na (bldg$shop) |
                 !is.na (bldg$sport) | bldg$tourism == "museum") &
                 bldg$building != "residential")
+message ("done")
 
-# First cut with all building together
+# First cut with all buildings together
 
 bhts <- as.numeric (bldg$building.levels)
-length (which (!is.na (bhts))) # 11,375
-length (which (!is.na (bhts))) / length (bhts) # 13.8%
+message ("There are ", format (length (which (!is.na (bhts))), big.mark = ","),
+         " buldings with heights, or ",
+         formatC (100 * length (which (!is.na (bhts))) / length (bhts),
+                  format = "f", digits = 1),
+         "% of all ", format (nrow (bldg), big.mark = ","), " buildings")
+message ("Calculating centroids ... ", appendLF = FALSE)
 
 # Get building areas and presume working density is proportional:
 areas <- bldg %>% st_area () # in m^2
@@ -61,46 +68,64 @@ areas <- areas * bhts
 #areas [indx] <- areas [indx] / 20 # 20-to-1 student
 
 # Then map centroids of those areas onto the street network:
-###### @Robin: This transform does not work - can you figure out why?
-
-xy <- st_transform (bldg, 6207) %>%
-   st_centroid () %>%
-   st_transform (., st_crs (bldg)$proj4string) %>%
-   st_geometry () %>%
-   lapply (as.numeric) %>%
-   do.call (rbind, .)
+suppressWarnings ({
+    xy <- st_transform (bldg, 6207) %>%
+        st_centroid () %>%
+        st_transform (., st_crs (bldg)$proj4string) %>%
+        st_geometry () %>%
+        lapply (as.numeric) %>%
+        do.call (rbind, .)
+})
 colnames (xy) <- c ("x", "y")
+message ("done\nMatching centroids to street network ... ", appendLF = FALSE)
 bldg_nodes <- verts$id [match_pts_to_graph (verts, xy)]
+# Those are mapped onto nodes on the contracted graph, so lots of overlap. Areas
+# mapping onto same nodes are then added:
+bldg_nodes <- tibble::tibble (node = bldg_nodes, area = areas) %>%
+    dplyr::group_by (node) %>%
+    dplyr::summarise (area = sum (area))
+
+
 # `m4ra_spatial_intreaction1` requires density estimates at all vertices, so
 # simply set the rest to 0
 dens <- rep (0, nrow (verts))
-dens [match (bldg_nodes, verts$id)] <- areas
+dens [match (bldg_nodes$node, verts$id)] <- bldg_nodes$area
+
+message ("done\nFinal calculation of flows dispersed from ",
+         format (nrow (bldg_nodes), big.mark = ","), " buildings out to ",
+         format (nrow (verts), big.mark = ","), " street network vertices")
 
 # spatial interaction from all density points to the buidlings
 # Note k = 2.5 or so is okay for bike, so arbitrarily set pedestrians at k = 0.1
-k <- 0.5
+k <- 2.5
+fname <- "kathmandu-flows-from-bldgs-k25.Rds"
 # quicker to loop over each bus stop because flow aggregation is much more
 # efficient for a single source, because there are far fewer nodes_to in each
 # case. flow aggregation is not parallelised (in C++), so this code can be
 # directly run in parallel
 pb <- txtProgressBar (style = 3)
-flows <- rep (0, nrow (graph))
+flows <- rep (0, nrow (graph$graph))
 for (i in seq (bldg_nodes))
 {
-    si <- m4ra_spatial_interaction1 (graph, node = bldg_nodes [i],
+    si <- m4ra_spatial_interaction1 (graph$graph, node = bldg_nodes$node [i],
                                      dens = dens, k = k)
     indx <- which (si > 0 & !is.na (si))
     si <- si [indx]
     nodes_to <- verts$id [indx] # this is why the explicit loop saves!
 
     if ("flow" %in% names (graph)) graph$flow <- NULL
-    flows <- flows + dodgr_flows_aggregate (graph, from = bldg_nodes [i],
-                                            to = nodes_to, flows = si)$flow
-    saveRDS (flows, file = "kathmandu-flows-from-bldgs")
+    flows <- flows + dodgr_flows_aggregate (graph$graph,
+                                            from = bldg_nodes$node [i],
+                                            to = nodes_to,
+                                            flows = si)$flow
+    saveRDS (flows, file = fname)
 
-    setTxtProgressBar (pb, i / length (bus_nodes))
+    setTxtProgressBar (pb, i / length (bldg_nodes))
 }
 close (pb)
+
+# Map flows on contracted graph back on to full network using code from
+# https://github.com/ATFutures/m4ra/blob/master/R/flows.R
 
 #graph$flow <- flows
 #gc <- dodgr_contract_graph (graph)
