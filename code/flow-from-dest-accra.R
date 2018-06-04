@@ -2,12 +2,13 @@
 # building, in an attempt to capture last-mile flows related to employment.
 
 #library (dodgr) # needs latest version
-devtools::load_all ("../dodgr", export_all = FALSE)
-devtools::load_all ("../m4ra", export_all = FALSE)
+devtools::load_all (file.path (here::here(), "..", "dodgr"), export_all = FALSE)
+devtools::load_all (file.path (here::here(), "..", "m4ra"), export_all = FALSE)
 #devtools::load_all (".", export_all = FALSE)
 require (sf) # very important to use sf.[] method!
 
-hw <- readRDS ("../who-data/accra/osm/accra-hw.Rds")
+data_dir <- file.path (here::here(), "..", "who-data", "accra")
+hw <- readRDS (file.path (data_dir, "osm", "accra-hw.Rds"))
 graph <- weight_streetnet (hw, wt_profile = "foot")
 verts <- dodgr_vertices (graph)
 graph_sf <- dodgr_to_sf (graph)
@@ -25,14 +26,14 @@ graph$to_lon <- from_lon
 graph$to_lat <- from_lat
 
 # get ten accra bus stops:
-bs <- readRDS ("../who-data/accra/osm/accra-bs.Rds")
+bs <- readRDS (file.path (data_dir, "osm", "accra-bs.Rds"))
 xy <- t (vapply (bs$geometry, function (i) as.numeric (i), numeric (2)))
 colnames (xy) <- c ("x", "y")
 # all 2,451 stops:
 bus_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 
 # And the buildings (polygons only; not multipolygons
-bldg <- readRDS ("../who-data/accra/osm/accra-bldg.Rds")$osm_polygons
+bldg <- readRDS (file.path (data_dir, "osm", "accra-bldg.Rds"))$osm_polygons
 # try to identify buildings with some kind of purpose:
 library (tidyverse)
 library (magrittr)

@@ -3,13 +3,12 @@
 # shopping, and employment), as well as to bus stops.
 
 #library (dodgr) # needs latest version
-devtools::load_all ("../dodgr", export_all = FALSE)
-devtools::load_all ("../m4ra", export_all = FALSE)
+devtools::load_all (file.path (here::here(), "..", "dodgr"), export_all = FALSE)
+devtools::load_all (file.path (here::here(), "..", "m4ra"), export_all = FALSE)
 #devtools::load_all (".", export_all = FALSE)
 require (sf) # very important to use sf.[] method!
 
-# hw <- readRDS ("../who-data/kathmandu/osm/accra-hw.Rds")
-hw <- readRDS ("../who-data/kathmandu/osm/kathmandu-hw.Rds")
+hw <- readRDS (file.path (data_dir, "osm", "kathmandu-hw.Rds"))
 graph <- weight_streetnet (hw, wt_profile = "foot")
 verts <- dodgr_vertices (graph)
 graph_sf <- dodgr_to_sf (graph)
@@ -27,15 +26,15 @@ graph$to_lon <- from_lon
 graph$to_lat <- from_lat
 
 # get ten kathmandu bus stops:
-bs <- readRDS ("../who-data/kathmandu/osm/kathmandu-bs.Rds")
+bs <- readRDS (file.path (data_dir, "osm", "kathmandu-bs.Rds"))
 xy <- t (vapply (bs$geometry, function (i) as.numeric (i), numeric (2)))
 colnames (xy) <- c ("x", "y") # Only 134 bus stops in Kathmandu
 bus_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 
 # And the buildings (polygons only; not multipolygons
 bldg <- rbind (
-        readRDS ("../who-data/kathmandu/osm/kathmandu-bldg1.Rds")$osm_polygons,
-        readRDS ("../who-data/kathmandu/osm/kathmandu-bldg2.Rds")$osm_polygons)
+        readRDS (file.path (data_dir, "osm", "kathmandu-bldg1.Rds"))$osm_polygons,
+        readRDS (file.path (data_dir, "osm", "kathmandu-bldg2.Rds"))$osm_polygons)
 # try to identify buildings with some kind of purpose:
 library (tidyverse)
 bldgf <- bldg %>% filter ((!is.na (bldg$amenity) |  !is.na (bldg$leisure) |
