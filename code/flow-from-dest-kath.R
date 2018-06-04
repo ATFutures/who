@@ -8,7 +8,6 @@ devtools::load_all (file.path (here::here(), "..", "m4ra"), export_all = FALSE)
 #devtools::load_all (".", export_all = FALSE)
 require (sf) # very important to use sf.[] method!
 
-data_dir <- file.path (here::here(), "..", "who-data", "kathmandu")
 hw <- readRDS (file.path (data_dir, "osm", "kathmandu-hw.Rds"))
 graph <- weight_streetnet (hw, wt_profile = "foot")
 verts <- dodgr_vertices (graph)
@@ -38,7 +37,6 @@ bldg <- rbind (
         readRDS (file.path (data_dir, "osm", "kathmandu-bldg2.Rds"))$osm_polygons)
 # try to identify buildings with some kind of purpose:
 library (tidyverse)
-library (magrittr)
 bldgf <- bldg %>% filter ((!is.na (bldg$amenity) |  !is.na (bldg$leisure) |
                 !is.na (bldg$office) | !is.na (bldg$office.name) |
                 !is.na (bldg$office.type) | !is.na (bldg$opening_hours) |
@@ -64,16 +62,13 @@ areas <- areas * bhts
 
 # Then map centroids of those areas onto the street network:
 ###### @Robin: This transform does not work - can you figure out why?
-#xy <- st_transform (bldg, 29101) %>%
-#    st_centroid () %>%
-#    st_transform (., st_crs (bldg)$proj4string) %>%
-#    st_geometry () %>%
-#    lapply (as.numeric) %>%
-#    do.call (rbind, .)
-xy <- st_centroid (bldg) %>%
-    st_geometry () %>%
-    lapply (as.numeric) %>%
-    do.call (rbind, .)
+
+xy <- st_transform (bldg, 6207) %>%
+   st_centroid () %>%
+   st_transform (., st_crs (bldg)$proj4string) %>%
+   st_geometry () %>%
+   lapply (as.numeric) %>%
+   do.call (rbind, .)
 colnames (xy) <- c ("x", "y")
 bldg_nodes <- verts$id [match_pts_to_graph (verts, xy)]
 # `m4ra_spatial_intreaction1` requires density estimates at all vertices, so
