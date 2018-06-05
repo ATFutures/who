@@ -9,7 +9,7 @@ trmode <- "foot" # mode of transport to be analysed: "bicycle" or "foot"
 trmode <- "bicycle" # mode of transport to be analysed: "bicycle" or "foot"
 
 # load OSM data
-bristol_dir <- file.path (here::here(), "..", "who-data", "bristol")
+bristol_dir <- file.path (dirname (here::here()), "who-data", "bristol")
 net <- readRDS (file.path (bristol_dir, "osm", "bristol-hw.Rds")) %>%
     weight_streetnet (wt_profile = trmode)
 nodes <- readRDS (file.path (bristol_dir, "osm", "nodes_new.Rds"))

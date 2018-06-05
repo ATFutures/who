@@ -4,7 +4,7 @@ library (magrittr)
 count_streets <- function (city = "accra")
 {
     transport <- "bicycle" # for weighting profile
-    data_dir <- file.path (here::here(), "../who-data")
+    data_dir <- file.path (dirname (here::here()), "who-data")
     fname <- paste0 (city, "-hw.Rds")
     net <- readRDS (file.path (data_dir, city, "osm", fname)) %>%
         weight_streetnet (wt_profile = transport)
@@ -29,7 +29,7 @@ count_streets <- function (city = "accra")
 count_buildings <- function (city = "accra")
 {
     # ignore multipolygon buildings here
-    data_dir <- file.path (here::here(), "../who-data")
+    data_dir <- file.path (dirname (here::here()), "who-data")
     fname <- paste0 (city, "-bldg.Rds") %>%
         file.path (data_dir, city, "osm", .)
     if (!file.exists (fname))
@@ -72,7 +72,7 @@ count_buildings <- function (city = "accra")
 
 count_popdens_nodes <- function (city = "accra")
 {
-    data_dir <- file.path (here::here(), "../who-data")
+    data_dir <- file.path (dirname (here::here()), "who-data")
     nodes <- readRDS (file.path (data_dir, city, "osm", "nodes_new.Rds"))
     message ("Population density contains values for ",
              format (nrow (nodes), big.mark = ","), " points")

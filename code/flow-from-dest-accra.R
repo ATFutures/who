@@ -2,12 +2,12 @@
 # building, in an attempt to capture last-mile flows related to employment.
 
 #library (dodgr) # needs latest version
-devtools::load_all (file.path (here::here(), "..", "dodgr"), export_all = FALSE)
-devtools::load_all (file.path (here::here(), "..", "m4ra"), export_all = FALSE)
+devtools::load_all (file.path (dirname (here::here()), "dodgr"), export_all = FALSE)
+devtools::load_all (file.path (dirname (here::here()), "m4ra"), export_all = FALSE)
 #devtools::load_all (".", export_all = FALSE)
 require (sf) # very important to use sf.[] method!
 
-data_dir <- file.path (here::here(), "..", "who-data", "accra")
+data_dir <- file.path (dirname (here::here()), "who-data", "accra")
 hw <- readRDS (file.path (data_dir, "osm", "accra-hw.Rds"))
 graph <- weight_streetnet (hw, wt_profile = "foot")
 verts <- dodgr_vertices (graph)

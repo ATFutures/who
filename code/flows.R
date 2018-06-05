@@ -5,13 +5,13 @@ library (sf)
 library (magrittr)
 # hard-code dirs for now; this will later be done with the drat archive
 city = "kathmandu"
-pd_dir <- file.path (here::here(), "../popdens")
+pd_dir <- file.path (dirname (here::here()), "popdens")
 devtools::load_all (pd_dir, export_all = FALSE)
 
 # If !is.null(n), then sample that number of nodes
 get_popdens_nodes <- function (city = city, n = NULL)
 {
-    data_dir <- file.path (here::here(), "../who-data")
+    data_dir <- file.path (dirname (here::here()), "who-data")
     nodes <- readRDS (file.path (data_dir, city, "osm", "nodes_new.Rds"))
     if (!is.null (n))
     {
@@ -39,7 +39,7 @@ get_od_matrix <- function (net, nodes)
     list (index = xy_index, od = od)
 }
 transport <- "bicycle" # for weighting profile
-data_dir <- file.path (here::here(), "../who-data")
+data_dir <- file.path (dirname (here::here()), "who-data")
 net <- readRDS (file.path (data_dir, city, "osm", paste0(city, "-hw.Rds"))) %>%
     weight_streetnet (wt_profile = transport)
 od <- get_od_matrix (net, nodes)
