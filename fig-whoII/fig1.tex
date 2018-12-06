@@ -1,0 +1,152 @@
+% NOTE: First line is for "make" with svg output for html rendering;
+%       Second line is for "make png" with png output for pdf/github rendering.
+\documentclass[tikz,convert={outfile=fig1.svg}]{standalone}
+%\documentclass[tikz]{standalone}
+\usepackage[utf8x]{inputenc}
+\usepackage{tikz}
+\usepackage{epsfig,pict2e}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Adapted from example in http://www.texample.net/tikz/examples/tag/flowcharts/
+% compile direct to svg via
+% https://tex.stackexchange.com/questions/51757/how-can-i-use-tikz-to-make-standalone-svg-graphics#51766
+
+\usetikzlibrary{shapes.geometric,backgrounds, positioning-plus,node-families,calc}
+\tikzset{
+    basic box/.style = {
+        shape = rectangle,
+        align = center,
+        draw  = #1,
+        fill  = #1!25,
+        rounded corners},
+    diamond box/.style = {
+        shape = diamond,
+        align = center,
+        draw  = #1,
+        fill  = #1!25,
+        rounded corners},
+    ellipse box/.style = {
+        shape = ellipse,
+        align = center,
+        draw  = #1,
+        fill  = #1!25},
+    header node/.style = {
+        Minimum Width = header nodes,
+        font          = \strut\Large\ttfamily,
+        text depth    = +0pt,
+        fill          = white,
+        draw},
+    header/.style = {%
+        inner ysep = +1.5em,
+        append after command = {
+            \pgfextra{\let\TikZlastnode\tikzlastnode}
+            node [header node] (header-\TikZlastnode) at
+            (\TikZlastnode.north) {#1}
+            node [span = (\TikZlastnode)(header-\TikZlastnode)]
+            at (fit bounding box) (h-\TikZlastnode) {}
+        }
+    },
+    hv/.style = {to path = {-|(\tikztotarget)\tikztonodes}},
+    vh/.style = {to path = {|-(\tikztotarget)\tikztonodes}},
+    blue line/.style = {ultra thick, blue},
+    green line/.style = {ultra thick, black!60!green},
+    double green line/.style = {ultra thick, double, black!30!green}
+    }
+
+\begin{document}
+    \begin{tikzpicture}[node distance = 1.2cm, thick, nodes = {align = center}, >=latex]
+        % Elements go bottom to top
+        \node[basic box = green, header = Population data] (popdens)
+            {Downloaded from worldpop};
+        \node[right = of popdens, basic box = green, header = OSM data] (osm)
+            {OpenStreetMap (OSM) data\\
+            on street networks, buildings,\\
+            and public transport (bus stops)};
+        \node[right = 0.0of (osm)](osm-r){};
+        \node[left = -0.0of (osm)](osm-l){};
+
+        % --- row 2
+        \node[above = of (osm), ellipse box = blue, header = public transport] (bus)
+            {Extract bus stops and\\
+            scale to local density\\
+            of buildings (residential
+            \\or non-residential)};
+        \node[left = of (bus), ellipse box = blue] (densnodes)
+            {Map population\\
+            density grid onto\\
+            individual nodes of\\
+            street networks};
+        \node[right = of (bus), ellipse box = blue, header = buildings] (buildings)
+            {Extract non-\\
+            residential\\
+            buildings and
+            \\assoiciated areas};
+
+        % --- row 3
+        \node[above = of (bus), diamond box = green] (popmod)
+            {Model population\\density at\\bus stops\\and buildings};
+        \node[right = of (popmod), ellipse box = blue] (osmclean)
+            {Clean OSM\\building data};
+
+        % --- row 4
+        \node[above = of (popmod), diamond box = orange] (dodgr1)
+            {Flow\\aggregator:\\(first/last)\\mile};
+        \node[left = of (dodgr1), xshift=-2.2cm, diamond box = orange] (dodgr2)
+            {Flow\\aggregator:\\residential/\\activity};
+
+        % --- row 5
+        \node[above = of (dodgr1)(dodgr2), basic box = green, header = Output] (output)
+            {Aggregate final flows and 
+            serve to interactive tool};
+
+        % connectors row1 -> row2
+        \path[blue line, ->] ({$(popdens.north)!0.2!(densnodes.south)$}-|popdens.north) edge
+                ({$(popdens.north)!.95!(densnodes.south)$}-|densnodes.south);
+        \draw[->,blue line]({$(osm-l)!0.9!(popdens)$}-|osm-l) --
+                ++(-0.5,0cm) -- 
+                ++(0,1cm) --
+                (densnodes);
+        \path[->,blue line] ({$(osm.north)!0.3!(bus.south)$}-|osm) edge (bus);
+        \draw[->,blue line] (osm-r) -- 
+                ++(1,0cm) --
+                (buildings);
+
+        % connectors row2 -> row3
+        \draw[->,blue line] (bus.east)+(0.1,0cm) --
+                ++(0.5,0cm) --
+                ++ (0,5cm) --
+                ++ (0.6,0cm) (osmclean);
+        \draw[->,blue line] (buildings.north)+(-0.6,0.4cm) -- (osmclean);
+        \draw[->,blue line] (densnodes.north)+(0.5,0.3cm) --
+                ++(0.5,3.5cm) --
+                ++(3.5,0cm) (popmod);
+        \path[->,blue line] ({$(bus.north)!0.3!(popmod.south)$}-|bus.north) edge (popmod);
+        \draw[->,blue line] (osmclean.north)+(-0.3,0.1cm) --
+            ++(-0.3,0.5cm) --
+            ++(-3.4,0.0cm)(popmod);
+
+        % connectors row2/row3 -> row4
+        \draw[->,double green line](densnodes)+(-0.15,1.4cm) -- ++(-0.15,9.5cm)(dodgr2);
+        \draw[->,double green line](osm.south)+(-0.6,0cm) --
+                ++(-0.6,-0.5cm) --
+                ++(-7.7,-0.0cm) --
+                ++(0,15.5cm)(dodgr2);
+        \draw[->,double green line](popmod) -- (dodgr1);
+        \draw[->,double green line](osmclean)+(0.2,0.8cm) --
+                ++(0.2,4.3cm) --
+                ++(-4.3,0cm) (dodgr2);
+        \draw[->,double green line](osm.south)+(0.6,0cm) --
+                ++(0.6,-0.5cm) --
+                ++(7.7,0cm) --
+                ++(0,17.7cm) --
+                ++(-7.3,0cm) (dodgr2);
+
+        % connectors row4 -> row5
+        \draw[->,double green line](dodgr2.east)+(0.1,0cm) --
+                ++(1.0,0cm) --
+                ++(0,3cm) (output);
+        \draw[->,double green line](dodgr1.west)+(-0.1,0cm) --
+                ++(-1.0,0cm) --
+                ++(0,3cm) (output);
+    \end{tikzpicture}
+\end{document}

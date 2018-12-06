@@ -1,0 +1,68 @@
+
+# Exposure graph
+
+```{r}
+library (tidyverse)
+x <- 0:10 / 20
+# These "h" values come from the flowlayers::flow_exposure() function applied to
+# the range of exponential coefficients (k) defined by x
+h <- c (0.00000000, 0.03546923, 0.07273492, 0.11175601, 0.15248895, 0.19488863,
+        0.23890898, 0.28450350, 0.33162557, 0.38022878, 0.43026705)
+# These values were calculated assuming reduction in car use equal to
+# proportional increase in distance, calculated from control and comparison
+# exposure (E0 and E1) as h = 1 - E1 * (1 - x) / E0. The value of E1 / E0 is
+# then E1 / E0 = (1 - h) / (1 - x), which can be converted to half-strength
+# reduction in car usage as:
+# h2 = 1 - E1 * (1 - x / 2) / E0
+#    = 1 - (1 - x / 2) * (1 - h) / (1 - x)
+h2 <- 1 - (1 - x / 2) * (1 - h) / (1 - x)
+n <- length (x)
+g <- data.frame (change = rep (x, 3),
+            effect = c (h, h2, x ^ 2),
+            type = c (rep ("further (equal offset)", n),
+                      rep ("further (half offset)", n),
+                      rep ("more", n))) %>%
+    ggplot (aes (x = change, y = effect, colour = type)) +
+    xlab ("Relative increase in walking") +
+    ylab ("Relative reduction in exposure") +
+    labs (colour = "Type of change") + # changes legend tite
+    geom_point () +
+    geom_line () +
+    geom_line (aes (change, change), colour = "gray", linetype = "dashed") +
+    annotate ("text", max (x), max (x), hjust = 1.5, vjust = -0.5, angle = 45,
+              colour = "gray", label = "Linear")
+ggsave (g, file = "exposure-quadratic.png", width = 7, height = 4, units = "in")
+```
+
+Distribution of relative changes in exposure throughout the city
+
+```{r}
+devtools::load_all ("/data/mega/code/repos/atfutures/flowlayers",
+                    export_all = FALSE)
+f15 <- aggregate_flow_layers (k = 1.5)
+f16 <- aggregate_flow_layers (k = 1.5 * 1.05)
+graph <- get_street_network (city = "accra", wt_profile = "motorcar")
+fv <- flow_vehicle (city = "accra", graph = graph, n = 1000)
+pe15 <- flow_exposure (f15, fv, d_pollutant = 20, d_raster = 1000, raster = FALSE)
+pe16 <- flow_exposure (f16, fv, d_pollutant = 20, d_raster = 1000, raster = FALSE)
+indx <- which (pe15$exposure > 0 | pe16$exposure > 0)
+pe15 <- pe15 [indx, ]
+pe16 <- pe16 [indx, ]
+length (which (0.95 * pe16$exposure > pe15$exposure)) / nrow (pe15)
+length (which (0.95 * pe16$exposure < pe15$exposure)) / nrow (pe15)
+hist (0.95 * pe16$exposure / pe15$exposure)
+```
+```{r}
+e <- data.frame (e = 0.95 * pe16$exposure / pe15$exposure)
+library (tidyverse)
+g <- ggplot (e, aes (e)) +
+    geom_freqpoly () +
+    xlim (min (e$e), 1.2) +
+    xlab ("Relative exposure in response to 5% increase in walking") +
+    ylab ("Number of street segments") +
+    geom_vline (xintercept = mean (e$e), colour = "gray") +
+    annotate ("text", mean (e$e), 1000, angle = 90, vjust = -1, hjust = 0, 
+              colour = "grey", label = "Mean exposure")
+ggsave (g, file = "exposure-histogram.png", width = 7, height = 4, units = "in")
+```
+
